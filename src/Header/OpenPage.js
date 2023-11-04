@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
-export default function OpenPage(arg) {
-    console.log(arg);
+const OpenPage = (arg) => {    
     const navigate = useNavigate();
-
     navigate(arg);
+    console.log(arg);
+
 };
+
+export default OpenPage;

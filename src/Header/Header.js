@@ -24,18 +24,19 @@ export default function Header() {
                     <p>Schulich Offroad</p>
                 </div>
                 <div>
-                    <button type = "button" onClick = {OpenPage('/')}>About Us</button>
-                    <button type = "button" onClick = {OpenPage('/Teams')}>Teams</button>
-                    <button type = "button" onClick = {OpenPage('/OurSponsors')}>Our Sponsors</button>
-                    <button type = "button" onClick = {OpenPage('/BecomeASponsor')}>Become a Sponsor</button>
+                    <button type = "button" onClick = {() => OpenPage('/')}>About Us</button>
+                    <button type = "button" onClick = {() => OpenPage('/Teams')}>Teams</button>
+                    <button type = "button" onClick = {() => OpenPage('/OurSponsors')}>Our Sponsors</button>
+                    <button type = "button" onClick = {() => OpenPage('/BecomeASponsor')}>Become a Sponsor</button>
                     <div
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    style={{background: "red"}}
                     >
-                        <button>Club Membership & Upcoming Events</button>
+                        <button type = "button">Club Membership & Upcoming Events</button>
                         {isDropdownVisible && <DropdownMenu />}
                     </div>
-                    <button type = "button" onClick = {OpenPage('/Gallery')}>Gallery</button>
+                    <button type = "button" onClick = {() => OpenPage('/Gallery')}>Gallery</button>
                 </div>
             </header>
             <Outlet />
