@@ -1,6 +1,5 @@
 import logo from './logo.png';
 import DropdownMenu from "./DropdownMenu";
-// import OpenPage from "./OpenPage";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
@@ -9,11 +8,6 @@ import "./Header.css";
 export default function Header() {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const navigate = useNavigate();
-
-    const OpenPage = (arg) => {    
-        navigate(arg);
-        console.log(arg);
-    };
 
     const handleMouseEnter = () => {
         setDropdownVisible(true);
@@ -27,23 +21,22 @@ export default function Header() {
         <>
             <header>
                 <div>
-                    <img style={{background: "gray"}} onClick = {() => OpenPage('/')} src={logo} alt="logo" />
+                    <img onClick = {() => navigate('/')} src={logo} alt="logo" />
                     <p>Schulich Offroad</p>
                 </div>
                 <div>
-                    <button type = "button" onClick = {() => OpenPage('/')}>About Us</button>
-                    <button type = "button" onClick = {() => OpenPage('/Teams')}>Teams</button>
-                    <button type = "button" onClick = {() => OpenPage('/OurSponsors')}>Our Sponsors</button>
-                    <button type = "button" onClick = {() => OpenPage('/BecomeASponsor')}>Become a Sponsor</button>
+                    <button type = "button" onClick = {() => navigate('/')}>About Us</button>
+                    <button type = "button" onClick = {() => navigate('/Teams')}>Teams</button>
+                    <button type = "button" onClick = {() => navigate('/OurSponsors')}>Our Sponsors</button>
+                    <button type = "button" onClick = {() => navigate('/BecomeASponsor')}>Become a Sponsor</button>
                     <div
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
-                    style={{background: "red"}}
                     >
                         <button type = "button">Club Membership & Upcoming Events</button>
                         {isDropdownVisible && <DropdownMenu />}
                     </div>
-                    <button type = "button" onClick = {() => OpenPage('/Gallery')}>Gallery</button>
+                    <button type = "button" onClick = {() => navigate('/Gallery')}>Gallery</button>
                 </div>
             </header>
             <Outlet />
