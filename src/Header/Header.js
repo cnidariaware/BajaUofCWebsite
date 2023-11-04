@@ -20,23 +20,24 @@ export default function Header() {
     return (
         <>
             <header>
-                <div>
-                    <img onClick = {() => navigate('/')} src={logo} alt="logo" />
-                    <p>Schulich Offroad</p>
+                <div className='banner'>
+                    <img className='logo' onClick = {() => navigate('/')} src={logo} alt="logo" />
+                    <p id='title'>Schulich Offroad</p>
                 </div>
-                <div>
-                    <button type = "button" onClick = {() => navigate('/')}>About Us</button>
-                    <button type = "button" onClick = {() => navigate('/Teams')}>Teams</button>
-                    <button type = "button" onClick = {() => navigate('/OurSponsors')}>Our Sponsors</button>
-                    <button type = "button" onClick = {() => navigate('/BecomeASponsor')}>Become a Sponsor</button>
+                <div className='navigationBar'>
+                    <button className='navigateButton' type = "button" onClick = {() => navigate('/')}>About Us</button>
+                    <button className='navigateButton' type = "button" onClick = {() => navigate('/Teams')}>Teams</button>
+                    <button className='navigateButton' type = "button" onClick = {() => navigate('/OurSponsors')}>Our Sponsors</button>
+                    <button className='navigateButton' type = "button" onClick = {() => navigate('/BecomeASponsor')}>Become a Sponsor</button>
                     <div
+                    className='dropDown'
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     >
-                        <button type = "button">Club Membership & Upcoming Events</button>
+                        <button className='navigateButton' type = "button">Club Membership & Upcoming Events</button>
                         {isDropdownVisible && <DropdownMenu />}
                     </div>
-                    <button type = "button" onClick = {() => navigate('/Gallery')}>Gallery</button>
+                    <button className='navigateButton' type = "button" onClick = {() => navigate('/Gallery')}>Gallery</button>
                 </div>
             </header>
             <Outlet />
