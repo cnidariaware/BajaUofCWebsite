@@ -1,12 +1,19 @@
-import logo from './logo.jpg';
+import logo from './logo.svg';
 import DropdownMenu from "./DropdownMenu";
-import OpenPage from "./OpenPage";
+// import OpenPage from "./OpenPage";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
+    const navigate = useNavigate();
+
+    const OpenPage = (arg) => {    
+        navigate(arg);
+        console.log(arg);
+    };
 
     const handleMouseEnter = () => {
         setDropdownVisible(true);
@@ -20,7 +27,7 @@ export default function Header() {
         <>
             <header>
                 <div>
-                    <img src={logo} alt="logo" />
+                    <img style={{background: "gray"}} onClick = {() => OpenPage('/')} src={logo} alt="logo" />
                     <p>Schulich Offroad</p>
                 </div>
                 <div>
