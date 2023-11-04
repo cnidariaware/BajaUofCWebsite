@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import DropdownMenu from "./DropdownMenu";
 // import OpenPage from "./OpenPage";
 import { useNavigate } from "react-router-dom";
