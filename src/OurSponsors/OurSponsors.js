@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './OurSponsors.css'
 //can be removed later
 import fakeDelay from '../TestingTools/fakeDelay';
+import { useNavigate } from 'react-router-dom';
 
 /* 
 things to do
@@ -24,6 +25,12 @@ const OurSponsors = () => {
    useEffect(() => {
     getSponsors();  //get sponsors on startup of page
    }, []);
+
+   const OpenPage = (arg) => {    
+        const navigate = useNavigate();
+        navigate(arg);
+        console.log(arg);
+    };
 
     const getSponsors = async () => {
         /* 
@@ -126,6 +133,9 @@ const OurSponsors = () => {
     }
     if(sponsorsDict) {  //maps out the dictionary and displays the content
             return (<div id='OurSponsors'>
+                    <div id='BecomeASponsors'>
+                        <button onClick={() => OpenPage('/BecomeASponsor')}>Become A Sponsor</button>
+                    </div>
                     {Object.keys(sponsorsDict).map((sponsorTier) => (
                         <div key={sponsorTier} className={sponsorTier}>
                             <h2>{sponsorTier}</h2>
