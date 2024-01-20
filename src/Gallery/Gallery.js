@@ -7,7 +7,8 @@ const images = [
   { src: 'https://wallpapers.com/images/featured-full/cool-anime-6kbwj9794wpnsfr1.jpg', alt: 'Image 2' },
   { src: 'https://wallpapers.com/images/featured/cool-anime-pfp-pictures-71urutpksg13vkbk.jpg', alt: 'Image 3' },
   { src: 'https://i.pinimg.com/236x/ab/dc/52/abdc52db893674a7b5dcb767be8776e5.jpg', alt: 'Image 4' },
-  { src: 'https://qph.cf2.quoracdn.net/main-qimg-a3fdbac7bf9f8db58f147887ffa76d88-lq', alt: 'Image 5' }
+  { src: 'https://qph.cf2.quoracdn.net/main-qimg-a3fdbac7bf9f8db58f147887ffa76d88-lq', alt: 'Image 5' },
+  { src: 'https://i.redd.it/people-already-making-good-use-of-that-public-domain-v0-krh76hi874ac1.png?width=2000&format=png&auto=webp&s=405581952294275a5d6cf05a97c05b3387b73f34', alt: 'Image 6'}
 ];
 
 export default function Gallery() {
@@ -42,10 +43,13 @@ export default function Gallery() {
                             overlay: {
                                 display: 'flex',
                                 alignItems: 'center',
-                                justifyContent: 'center'
+                                justifyContent: 'center',
                             },
                             content: {
-                                position: 'initial'
+                                position: 'initial',
+                                border: 'none',
+                                borderRadius: '0px',
+                                padding: '0px'
                             }
                         }}
                     >   
