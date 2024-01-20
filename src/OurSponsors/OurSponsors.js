@@ -5,25 +5,19 @@ import './OurSponsors.css'
 import fakeDelay from '../TestingTools/fakeDelay';
 import { useNavigate } from 'react-router-dom';
 
-/* 
-things to do
-    *add link to become a sponsor at top, and thank you message
-*/
-
+/**
+ * @param {null} null - requires onthing
+ * @returns {JSX.Element} JSX - HTML tags and JS functionality
+ * @description Our Sponsors Page
+ * @author Brock <darkicewolf50@gmail.com>
+ * @todo add link to become a sponsor at top, and thank you message
+ */
 const OurSponsors = () => {
-    /* 
-    OurSponsors Page
-    REQUIRES:
-        Nothing
-    PROMISES:
-        HTML tags and functionality
-    Develop in part by: Brock
-    Contact: darkicewolf50@gmail.com
-    */
+    
    const [sponsorsDict, setSponsorsDict] = useState();  //variable states for the dictionary of sponsors
 
-   useEffect(() => {
-    getSponsors();  //get sponsors on startup of page
+   useEffect(() => { //get sponsors on startup of page not optimized
+    getSponsors();
    }, []);
 
    const OpenPage = (arg) => {    
@@ -32,16 +26,14 @@ const OurSponsors = () => {
         console.log(arg);
     };
 
+    /**
+     * @param {null} null - requires nothing (link)
+     * @returns {Object} sponsorsDict - gets a Dictionary of our sponsors from synology drive
+     * @description Gets the list of sponsors from the synology drive (not implemented), converts the json file into a dictionary
+     * @author Brock <darkicewolf50@gmail.com>
+     * @todo add gPRC to backend and front end
+    */
     const getSponsors = async () => {
-        /* 
-        Gets the list of sponsors from the synology drive (not implemented), converts the json file into a dictionary
-        REQUIRES:
-            constant html link to synology drive
-        PROMISES:
-        returns Dictionary list of all our sponsors in this format of json file
-        Develop in part by: Brock
-        Contact: darkicewolf50@gmail.com
-        */
         const tempListOfSponsors = {
             "Main Tier": {
                 1:{
