@@ -11,6 +11,13 @@ const images = [
   { src: 'https://i.redd.it/people-already-making-good-use-of-that-public-domain-v0-krh76hi874ac1.png?width=2000&format=png&auto=webp&s=405581952294275a5d6cf05a97c05b3387b73f34', alt: 'Image 6'}
 ];
 
+/**
+ * @param {null} null - requires onthing
+ * @returns {JSX.Element} JSX - HTML tags and JS functionality
+ * @description Gallery Page
+ * @author Sarim <sheikhsarim20@gmail.com>
+ * @todo move url links to json file until backend is imlemented
+ */
 export default function Gallery() {
     const [open, setOpen] = useState(false)
     const [display, setDisplay] = useState('')
