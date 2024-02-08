@@ -8,14 +8,13 @@ import imagesData from '../Images/Images.json'; // Import the JSON file
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description Gallery Page
  * @author Sarim <sheikhsarim20@gmail.com>
- * @todo Add comments
+ * @todo Seperate the Modal section into its own seperate function, and add comments
  */
 export default function Gallery() {
     const [open, setOpen] = useState(false)
     const [display, setDisplay] = useState('')
     
     const handleClick = (arg) => {
-        console.log("Test")
         setDisplay(arg)
         setOpen(true)
         console.log(open)
