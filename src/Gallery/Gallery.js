@@ -1,7 +1,7 @@
 import Modal from 'react-modal';
 import { useState } from "react";
 import './Gallery.css';
-import imagesData from '../Images/Images.json'; // Import the JSON file
+import { ImageFinder } from '../Images/ImageFinder.js';
 
 /**
  * @param {null} null - requires onthing
@@ -13,9 +13,12 @@ import imagesData from '../Images/Images.json'; // Import the JSON file
 export default function Gallery() {
     const [open, setOpen] = useState(false)
     const [display, setDisplay] = useState('')
-    
-    const handleClick = (arg) => {
-        setDisplay(arg)
+    const [altDisplay, setAltDisplay] =useState('')
+    const allImages = ImageFinder('all')
+
+    const handleClick = (image, alt) => {
+        setDisplay(image)
+        setAltDisplay(alt)
         setOpen(true)
         console.log(open)
     }
@@ -23,39 +26,39 @@ export default function Gallery() {
     return (
         <div>
             <div className="gallery">
-                {imagesData.map((image, index) => (
+                {allImages.map((image, index) => (
                     <img
                     key={index}
                     className="galleryItem"
                     src={image.src}
                     alt={image.alt}
-                    onClick={() => handleClick(image.src)}
+                    onClick={() => handleClick(image.src, image.alt)}
                     />
                 ))}
             </div>
             <div>
-                    <Modal
-                        isOpen={open}
-                        onRequestClose={() => setOpen(false)}
-                        style={{
-                            overlay: {
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            },
-                            content: {
-                                position: 'initial',
-                                border: 'none',
-                                borderRadius: '0px',
-                                padding: '0px'
-                            }
-                        }}
-                    >   
-                        <div className="container">
-                            <button className="modalButton" onClick={() => setOpen(false)}>x</button>
-                            <img className="modalImage" src={display} onClick={() => setOpen(false)} />
-                        </div>
-                    </Modal>
+                <Modal
+                    isOpen={open}
+                    onRequestClose={() => setOpen(false)}
+                    style={{
+                        overlay: {
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        },
+                        content: {
+                            position: 'initial',
+                            border: 'none',
+                            borderRadius: '0px',
+                            padding: '0px'
+                        }
+                    }}
+                >   
+                    <div className="container">
+                        <button className="modalButton" onClick={() => setOpen(false)}>x</button>
+                        <img className="modalImage" src={display} alt={altDisplay} onClick={() => setOpen(false)} />
+                    </div>
+                </Modal>
             </div>
         </div>
     );

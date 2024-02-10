@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import imagesData from './Images.json'; // Import the JSON file
+import { ImageFinder } from './ImageFinder.js';
+import RenderImage from './RenderImage.js';
 
 const ImageSlider = ({ category }) => {
+    // Time Interval before the ImageSlider moves to the next image
+    const timeInterval = 5000;
+
     // State to hold the images of the specified category and the current index
     const [categoryImages, setCategoryImages] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
   
-    // Effect to filter images based on the provided category and set the current index to 0
+    // Effect to filter images based on the provided category when it changes
     useEffect(() => {
-        const filteredImages = imagesData.filter(image => image.category === category);
+        const filteredImages = ImageFinder(category);
         setCategoryImages(filteredImages);
         setCurrentIndex(0);
     }, [category]);
   
-    // Effect to automatically move to the next image every 5 seconds
+    // Effect to automatically move to the next image after a certain time interval
     useEffect(() => {
-        const intervalId = setInterval(() => {handleNext();}, 5000);
+        const intervalId = setInterval(() => {handleNext();}, timeInterval);
   
         // Cleanup: Clear the interval on component unmount or when currentIndex or categoryImages changes
         return () => clearInterval(intervalId);
@@ -23,35 +27,12 @@ const ImageSlider = ({ category }) => {
   
     // Function to handle moving to the next image
     const handleNext = () => {
-        setCurrentIndex(prevIndex => (prevIndex + 1) % categoryImages.length);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % categoryImages.length);
     };
   
     // Function to handle moving to the previous image
     const handlePrev = () => {
-        setCurrentIndex(prevIndex => (prevIndex - 1 + categoryImages.length) % categoryImages.length);
-    };
-  
-    // Function to handle custom click actions on the image
-    const handleImageClick = () => {
-        // Will be worked on later
-    };
-  
-    // Function to render an image based on the provided index
-    const renderImage = (index) => {
-        // Check if categoryImages is not empty before accessing its properties
-        if (categoryImages.length > 0) {
-            return (
-                <img
-                    key={index}
-                    src={categoryImages[index].src}
-                    alt={categoryImages[index].alt}
-                    onClick={handleImageClick}
-                    style={{ maxWidth: '100%', maxHeight: '100%' }}
-                />
-            );
-        } else {
-            return null; // or you can render a placeholder image or handle this case as needed
-        }
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + categoryImages.length) % categoryImages.length);
     };
   
     return (
@@ -61,11 +42,11 @@ const ImageSlider = ({ category }) => {
                 {/* Button to move to the previous image */}
                 <button onClick={handlePrev}>Previous</button>
                 {/* Render the previous image */}
-                {renderImage((currentIndex - 1 + categoryImages.length) % categoryImages.length)}
+                {RenderImage((currentIndex - 1 + categoryImages.length) % categoryImages.length, categoryImages)}
                 {/* Render the current image */}
-                {renderImage(currentIndex)}
+                {RenderImage(currentIndex, categoryImages)}
                 {/* Render the next image */}
-                {renderImage((currentIndex + 1) % categoryImages.length)}
+                {RenderImage((currentIndex + 1) % categoryImages.length, categoryImages)}
                 {/* Button to move to the next image */}
                 <button onClick={handleNext}>Next</button>
             </div>

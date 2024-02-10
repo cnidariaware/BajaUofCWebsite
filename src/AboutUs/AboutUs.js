@@ -3,14 +3,14 @@ import ImageSlider from '../Images/ImageSlider'; // Adjust the import path based
 
 
 export default function AboutsUs() {
-    return (
-        <p>About Us</p>
-    );
-
     // return (
-    //     <div>
-    //       <h1>Image Slider</h1>
-    //       <ImageSlider category="Car" />
-    //     </div>
+    //     <p>About Us</p>
     // );
+
+    return (
+        <div>
+          <h1>Image Slider</h1>
+          <ImageSlider category="Car" />
+        </div>
+    );
 };
