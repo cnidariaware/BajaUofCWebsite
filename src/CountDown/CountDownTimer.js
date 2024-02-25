@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-const CountDownTimer = ({ DateFinished, MessageDisplayAfter }) => {
-	const [days, hours, minutes, seconds] = 0;
+const CountDownTimer = ({ dateFinished, messageDisplayAfter }) => {
+	const [days, hours, minutes, seconds] = useCountdown(dateFinished);
 	if (days + hours + minutes + seconds <= 0) {
 		return (
 			<div>
 				{ShowCounter(days, hours, minutes, seconds)}
-				<p>{MessageDisplayAfter}</p>
+				<p>{messageDisplayAfter}</p>
 			</div>
 		);
 	} else {
@@ -44,36 +44,47 @@ const getReturnValues = (countDown) => {
 		(countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
 	);
 	const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
-	const seconds = MAth.floor((countDown % (1000 * 60)) / 1000);
+	const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
 
 	return [days, hours, minutes, seconds];
 };
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
+	let danger = days <= 3;
 	return (
-		<div className="show-counter">
-			<a
-				href="https://tapasadhikary.com"
-				target="_blank"
-				rel="noopener noreferrer"
-				className="countdown-link">
-				{DateTimeDisplay(days, "Days", days <= 3)}
-				<p>:</p>
-				{DateTimeDisplay(hours, "Hours", false)}
-				<p>:</p>
-				{DateTimeDisplay(minutes, "Mins", false)}
-				<p>:</p>
-				{DateTimeDisplay(seconds, "Seconds", false)}
-			</a>
+		<div>
+			<DateTimeDisplay
+				valueAwayFrom={days}
+				discriptor={"Days"}
+				isInDanger={danger}
+			/>
+			<p>:</p>
+			<DateTimeDisplay
+				valueAwayFrom={hours}
+				discriptor={"Hours"}
+				isInDanger={false}
+			/>
+			<p>:</p>
+			<DateTimeDisplay
+				valueAwayFrom={minutes}
+				discriptor={"Mins"}
+				isInDanger={false}
+			/>
+			<p>:</p>
+			<DateTimeDisplay
+				valueAwayFrom={seconds}
+				discriptor={"Seconds"}
+				isInDanger={false}
+			/>
 		</div>
 	);
 };
 
-const DateTimeDisplay = ({ value, type, isDanger }) => {
+const DateTimeDisplay = ({ valueAwayFrom, discriptor, isInDanger }) => {
 	return (
-		<div className={isDanger ? "countdown danger" : "countdown"}>
-			<p>{value}</p>
-			<span>{type}</span>
+		<div className={isInDanger ? "countdown danger" : "countdown"}>
+			<p>{valueAwayFrom}</p>
+			<span>{discriptor}</span>
 		</div>
 	);
 };

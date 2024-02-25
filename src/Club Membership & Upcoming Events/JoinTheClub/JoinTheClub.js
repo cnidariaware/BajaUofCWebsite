@@ -1,4 +1,4 @@
-//import CountDown from "../../CountDown/CountDown";
+import CountDownTimer from "../../CountDown/CountDownTimer.js";
 import "./JoinTheClub.css";
 
 /**
@@ -10,10 +10,16 @@ import "./JoinTheClub.css";
 //semi-perminant email, do not need to respond but try to be a good alumni
  */
 const JoinTheClub = () => {
+	const recuitmentDate = new Date(2024, 9, 17, 0, 0, 0, 0).getTime();
+	//september 17 2024
+
 	return (
-		<div id='JoinClub'>
+		<div id="JoinClub">
 			<p>Hello World</p>
-			{/* <CountDown></CountDown> */}
+			<CountDownTimer
+				dateFinished={recuitmentDate}
+				messageDisplayAfter={"Hello World"}
+			/>
 		</div>
 	);
 };
