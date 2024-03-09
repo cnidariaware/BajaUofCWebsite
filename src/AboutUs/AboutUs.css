@@ -1,0 +1,25 @@
+#aboutUs {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+#benefits {
+	display: flex;
+	flex-direction: column;
+}
+
+.aboutUs article {
+	display: grid;
+	grid-template-columns: 50% 45%;
+	column-gap: 15px;
+	align-content: center;
+	padding-top: 15px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.aboutUs img {
+	height: 300px;
+	width: 100%;
+}
