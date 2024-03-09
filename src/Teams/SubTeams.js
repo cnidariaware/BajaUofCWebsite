@@ -7,6 +7,15 @@ const SubTeams = () => {
 	// console.log(leadership_json);
 	return (
 		<div>
+			<iframe
+				src="https://docs.google.com/forms/d/e/1FAIpQLSfFquL6lMCBCMJelV-931J3bH6vC9zCCmVzBj_K68xVaT0pgg/viewform?embedded=true"
+				width="640"
+				height="1570"
+				frameborder="0"
+				marginheight="0"
+				marginwidth="0">
+				Loading…
+			</iframe>
 			<div>
 				<h2>Leadership</h2>
 				<p>gallery</p>
