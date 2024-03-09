@@ -1,5 +1,12 @@
 import "./AboutUs.css";
 
+/**
+ * @param {null} null - needs nothing
+ * @returns {JSX.Element} page - returns the content of the page
+ * @description The home/About us Page
+ * @author Brock <darkicewolf50@gmail.com>
+ * @todo Add content in paragraphs, real photos add add banner image slider
+ */
 const AboutsUs = () => {
 	return (
 		<main className="aboutUs">
