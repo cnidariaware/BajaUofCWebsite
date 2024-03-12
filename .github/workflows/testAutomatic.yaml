@@ -42,5 +42,7 @@ jobs:
       - name: checkout to repo
         uses: actions/checkout@v3
 
+      - name: Install modules
+        run: yarn
       - name: Run ESLint
-        uses: stefanoeb/eslint-action@1.0.2
+        run: eslint . --ext .js,.jsx,.ts,.tsx
