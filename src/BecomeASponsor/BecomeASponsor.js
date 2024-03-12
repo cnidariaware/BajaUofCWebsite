@@ -5,7 +5,7 @@ import "./BecomeASponsor.css";
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description Our Sponsors Page
  * @author Brock <darkicewolf50@gmail.com>
- * @todo add link to email us, add text that mades sense, add css
+ * @todo Make and Finish the Page
  */
 const BecomeASponsor = () => {
 	return (
