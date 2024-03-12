@@ -1,11 +1,8 @@
-import { useEffect } from "react";
-import { useState } from "react";
 import "./OurSponsors.css";
+import { useEffect, useState } from "react";
 import sponsorData from "../MockDB/sponsorship.yml";
-//can be removed later
-import fakeDelay from "../TestingTools/fakeDelay";
-import { useNavigate } from "react-router-dom";
 import yaml from "js-yaml";
+import OpenPage from "../Header/OpenPage";
 
 /**
  * @param {null} null - requires onthing
@@ -18,35 +15,26 @@ const OurSponsors = () => {
 	const [sponsorsDict, setSponsorsDict] = useState(); //variable states for the dictionary of sponsors
 
 	useEffect(() => {
-		//get sponsors on startup of page not optimized
 		getSponsors();
 	}, []);
-
-	const OpenPage = (arg) => {
-		const navigate = useNavigate();
-		navigate(arg);
-		console.log(arg);
-	};
 
 	/**
 	 * @param {null} null - requires nothing (link)
 	 * @returns {Object} sponsorsDict - gets a Dictionary of our sponsors from synology drive
 	 * @description Gets the list of sponsors from the synology drive (not implemented), converts the json file into a dictionary
 	 * @author Brock <darkicewolf50@gmail.com>
-	 * @todo add gPRC to backend and front end
+	 * @todo add gPRC to backend and front end add connect to synology drive
 	 */
 	const getSponsors = async () => {
 		const res = await fetch(sponsorData);
 		const rawText = await res.text();
 		const yamlDict = yaml.load(rawText);
 		try {
-			await fakeDelay(1000);
-			console.log("It ran");
 			let res = yamlDict;
 			setSponsorsDict(res);
 		} catch (error) {
 			//error checking
-			console.error("Error sending data to server:", error);
+			console.error("Error recieving data from server:");
 		}
 	};
 
@@ -59,11 +47,12 @@ const OurSponsors = () => {
 		return (
 			<div id="OurSponsors">
 				<div id="BecomeASponsors">
-					<button onClick={() => OpenPage("/BecomeASponsor")}>
-						Become A Sponsor
-					</button>
+					<OpenPage
+						pageToGoTo={"/BecomeASponsor"}
+						textOnButton={"Become a Sponsor"}
+					/>
 				</div>
-				<div>
+				<div id="CurrentSponosrs">
 					<h3>Current Sponsors</h3>
 					{Object.keys(sponsorsDict).map((sponsorTier) => (
 						<div
@@ -80,29 +69,33 @@ const OurSponsors = () => {
 												{sponsor.LogoUrl && (
 													<a
 														href={sponsor.Url}
+														rel="noreferrer"
 														target="_blank">
 														<img
 															src={sponsor.LogoUrl}
-															alt="Sponsor Logo"
+															alt={
+																sponsor.Name +
+																"'s logo, one of the companies that sponsors Schulich Off-Road"
+															}
 														/>
 													</a>
 												)}
 											</div>
 											{sponsor.DescriptionAboutSponsor !== undefined &&
 												sponsor.DecriptionOnHelp !== undefined &&
-												(sponsorTier != "Bronze Tier" ||
-													sponsorTier != "Silver Tier") && (
+												(sponsorTier !== "Bronze Tier" ||
+													sponsorTier !== "Silver Tier") && (
 													<p>Another Element</p>
 												)}
 										</div>
 										{sponsor.DescriptionAboutSponsor !== undefined &&
-											(sponsorTier != "Bronze Tier" ||
-												sponsorTier != "Silver Tier") && (
+											(sponsorTier !== "Bronze Tier" ||
+												sponsorTier !== "Silver Tier") && (
 												<p>{sponsor.DescriptionAboutSponsor}</p>
 											)}
 										{sponsor.DecriptionOnHelp !== undefined &&
-											(sponsorTier != "Bronze Tier" ||
-												sponsorTier != "Silver Tier") && (
+											(sponsorTier !== "Bronze Tier" ||
+												sponsorTier !== "Silver Tier") && (
 												<p>{sponsor.DecriptionOnHelp}</p>
 											)}
 									</div>

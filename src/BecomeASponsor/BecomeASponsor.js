@@ -9,7 +9,7 @@ import "./BecomeASponsor.css";
  */
 const BecomeASponsor = () => {
 	return (
-		<div id='BecomeASponsor'>
+		<div id="BecomeASponsor">
 			<div>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed
@@ -25,12 +25,16 @@ const BecomeASponsor = () => {
 					diam metus sit amet odio. Sed aliquam nulla eu dolor commodo
 					efficitur.
 				</p>
-				<img src='https://static.wixstatic.com/media/5824fc_0d66c0d79eae4882ba76d503d0752012~mv2.jpg/v1/crop/x_0,y_531,w_3120,h_2342/fill/w_752,h_564,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20230429_164752611.jpg'></img>
+				<img
+					src="https://static.wixstatic.com/media/5824fc_0d66c0d79eae4882ba76d503d0752012~mv2.jpg/v1/crop/x_0,y_531,w_3120,h_2342/fill/w_752,h_564,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20230429_164752611.jpg"
+					alt="Student Driving the Green (2019 Car)"
+				/>
 			</div>
 			<div>
 				<img
-					src='https://res.cloudinary.com/dpgrgsh7g/image/upload/v1708797415/Screenshot_from_2024-02-24_10-52-24_nsn9uv.png'
-					alt='Sponsorship Package with Benefits'></img>
+					src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1708797415/Screenshot_from_2024-02-24_10-52-24_nsn9uv.png"
+					alt="Sponsorship Package with Benefits"
+				/>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
 					laoreet nulla eget posuere suscipit. Curabitur vitae porta velit. Nunc
