@@ -1,6 +1,6 @@
 # name of the workflow.
 # this is optional.
-name: EsLint Check for Correctness in Code
+name: Continuous Integration
 
 # events that will trigger this workflow.
 # here, we only have "pull_request", so the workflow will run
@@ -22,7 +22,7 @@ jobs:
       # name of the step.
       # steps run sequentially.
       # this is optionale
-      - name: checkout use
+      - name: checkout
         # each step can either have "uses" or "run".
         # "uses" run an action written somewhere other than this workflow .
         # usually from the community.
@@ -32,8 +32,13 @@ jobs:
 
       # another step.
       # this step runs a bash (Ubuntu's default shell) command
-      - name: Install Modules
-        run: yarn
+      - name: list files
+        run: ls
+  Eslinter:
 
-      - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+    runs-on: ubuntu-latest
+        
+      steps:
+        - name: Run ESLint
+          uses: stefanoeb/eslint-action@1.0.2
+            
