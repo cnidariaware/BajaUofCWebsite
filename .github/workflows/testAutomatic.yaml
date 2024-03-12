@@ -34,11 +34,10 @@ jobs:
       # this step runs a bash (Ubuntu's default shell) command
       - name: list files
         run: ls
-  Eslinter:
 
+  Eslinter:
     runs-on: ubuntu-latest
-        
-      steps:
-        - name: Run ESLint
-          uses: stefanoeb/eslint-action@1.0.2
-            
+
+    steps:
+      - name: Run ESLint
+        uses: stefanoeb/eslint-action@1.0.2
