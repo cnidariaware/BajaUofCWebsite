@@ -39,5 +39,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout to repo
+        uses: actions/checkout@v3
+
       - name: Run ESLint
         uses: stefanoeb/eslint-action@1.0.2
