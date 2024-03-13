@@ -1,24 +1,24 @@
 header {
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
-    margin-top: 0%;
+	display: flex;
+	flex-direction: column;
+	margin: 1%;
+	margin-top: 0%;
 }
 
-.banner {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: aqua;
+#logo {
+	width: 10%;
+	height: 10%;
+	background-color: white;
 }
 
-.logo {
-    width: 10%;
-    height: 10%;
-    background-color: white;
-}
-
+/* not sure what these two are for */
 #title {
-    background-color: blueviolet;
+	background-color: blueviolet;
+}
+.banner {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: aqua;
 }

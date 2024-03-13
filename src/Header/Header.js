@@ -38,12 +38,12 @@ const Header = () => {
 			<header>
 				<div>
 					<img
-						style={{ background: "gray" }}
+						id="logo"
 						onClick={() => LinkTo("/")}
 						src={logo}
-						alt="logo"
+						alt="Schulich Off-Road's logo"
 					/>
-					<p>Schulich Offroad</p>
+					<h2>Schulich Offroad</h2>
 				</div>
 				<nav>
 					<OpenPage
