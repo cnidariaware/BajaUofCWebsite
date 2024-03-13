@@ -4,6 +4,7 @@ import OpenPageButton from "./OpenPageButton";
 import { useNavigate, Outlet } from "react-router-dom";
 import { useState } from "react";
 import "./Header.css";
+import Ender from "../Footer/Ender";
 
 /**
  * @param {null} null -  Takes in nothing
@@ -81,6 +82,7 @@ const Header = () => {
 				</nav>
 			</header>
 			<Outlet />
+			<Ender />
 		</>
 	);
 };
