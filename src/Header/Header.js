@@ -25,10 +25,11 @@ const Header = () => {
 		navigate(arg);
 	};
 
+	//makes the drop down menu visible when the mouse enters the Club Membership & Upcoming events button area
 	const handleMouseEnter = () => {
 		setDropdownVisible(true);
 	};
-
+	//makes the drop down menu invisible when the mouse leaves the Club Membership & Upcoming events button area
 	const handleMouseLeave = () => {
 		setDropdownVisible(false);
 	};
@@ -66,7 +67,9 @@ const Header = () => {
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
 						style={{ background: "red" }}>
-						<button type="button">Club Membership & Upcoming Events</button>
+						{/* dropdown menu is only visible when a mouse enters the area of the button below */}
+						<button type="button">Club Membership & Upcoming Events</button>{" "}
+						{/*this button does nothing yet*/}
 						{isDropdownVisible && <DropdownMenu />}
 					</div>
 					<OpenPageButton
