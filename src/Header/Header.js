@@ -1,23 +1,35 @@
 import logo from "./logo.png";
 import DropdownMenu from "./DropdownMenu";
-// import OpenPage from "./OpenPage";
+import OpenPageButton from "./OpenPageButton";
 import { useNavigate, Outlet } from "react-router-dom";
 import { useState } from "react";
 import "./Header.css";
 
-export default function Header() {
+/**
+ * @param {null} null -  Takes in nothing
+ * @returns {JSX.Element} JSX - HTML tags and JS functionality
+ * @description The top header part of the page includes the naviagtion
+ * @author Brock <darkicewolf50@gmail.com>
+ */
+const Header = () => {
 	const [isDropdownVisible, setDropdownVisible] = useState(false);
 	const navigate = useNavigate();
 
-	const OpenPage = (arg) => {
+	/**
+	 * @param {String} arg -  The page that the button goes to
+	 * @returns {JSX.Element} JSX - HTML tags and JS functionality
+	 * @description Function that move you to the specified place
+	 * @author Brock <darkicewolf50@gmail.com>
+	 */
+	const LinkTo = (arg) => {
 		navigate(arg);
-		console.log(arg);
 	};
 
+	//makes the drop down menu visible when the mouse enters the Club Membership & Upcoming events button area
 	const handleMouseEnter = () => {
 		setDropdownVisible(true);
 	};
-
+	//makes the drop down menu invisible when the mouse leaves the Club Membership & Upcoming events button area
 	const handleMouseLeave = () => {
 		setDropdownVisible(false);
 	};
@@ -25,51 +37,52 @@ export default function Header() {
 	return (
 		<>
 			<header>
-				<div>
+				<figure>
 					<img
-						style={{ background: "gray" }}
-						onClick={() => OpenPage("/")}
+						id="logo"
+						onClick={() => LinkTo("/")}
 						src={logo}
-						alt="logo"
+						alt="Schulich Off-Road's logo"
 					/>
-					<p>Schulich Offroad</p>
-				</div>
-				<div>
-					<button
-						type="button"
-						onClick={() => OpenPage("/")}>
-						About Us
-					</button>
-					<button
-						type="button"
-						onClick={() => OpenPage("/Teams")}>
-						Teams
-					</button>
-					<button
-						type="button"
-						onClick={() => OpenPage("/OurSponsors")}>
-						Our Sponsors
-					</button>
-					<button
-						type="button"
-						onClick={() => OpenPage("/BecomeASponsor")}>
-						Become a Sponsor
-					</button>
+					<figcaption>
+						<h2>Schulich Offroad</h2>
+					</figcaption>
+				</figure>
+				<nav>
+					<OpenPageButton
+						pageToGoTo={"/"}
+						textOnButton={"About Us"}
+					/>
+					<OpenPageButton
+						pageToGoTo={"/Teams"}
+						textOnButton={"Teams"}
+					/>
+					<OpenPageButton
+						pageToGoTo={"/OurSponsors"}
+						textOnButton={"Our Sponsors"}
+					/>
+					<OpenPageButton
+						pageToGoTo={"/BecomeASponsor"}
+						textOnButton={"Become a Sponsor"}
+					/>
 					<div
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
 						style={{ background: "red" }}>
-						<button type="button">Club Membership & Upcoming Events</button>
+						{/* dropdown menu is only visible when a mouse enters the area of the button below */}
+						<button type="button">Club Membership & Upcoming Events</button>{" "}
+						{/*this button does nothing yet*/}
 						{isDropdownVisible && <DropdownMenu />}
 					</div>
-					<button
-						type="button"
-						onClick={() => OpenPage("/Gallery")}>
-						Gallery
-					</button>
-				</div>
+					<OpenPageButton
+						pageToGoTo={"/Gallery"}
+						textOnButton={"Gallery"}
+					/>
+				</nav>
 			</header>
 			<Outlet />
 		</>
 	);
-}
+};
+
+export default Header;
