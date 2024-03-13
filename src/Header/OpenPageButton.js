@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./OpenPageButton.css";
 
 /**
  * @param {String} pageToGoTo -  The page that the button goes to
@@ -6,8 +7,9 @@ import { useNavigate } from "react-router-dom";
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description Button Template that moves you to the
  * @author Brock <darkicewolf50@gmail.com>
+ * @todo refactor so that name is OpenPageButton, add css to the button
  */
-const OpenPage = ({ pageToGoTo, textOnButton }) => {
+const OpenPageButton = ({ pageToGoTo, textOnButton }) => {
 	const navigate = useNavigate();
 	const navigateTo = (param) => {
 		navigate(param);
@@ -22,4 +24,4 @@ const OpenPage = ({ pageToGoTo, textOnButton }) => {
 	);
 };
 
-export default OpenPage;
+export default OpenPageButton;
