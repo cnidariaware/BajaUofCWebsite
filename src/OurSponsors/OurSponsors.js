@@ -9,7 +9,7 @@ import OpenPage from "../Header/OpenPage";
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description Our Sponsors Page
  * @author Brock <darkicewolf50@gmail.com>
- * @todo add link to become a sponsor at top, and thank you message
+ * @todo finish page layout
  */
 const OurSponsors = () => {
 	const [sponsorsDict, setSponsorsDict] = useState(); //variable states for the dictionary of sponsors
@@ -54,11 +54,13 @@ const OurSponsors = () => {
 				</div>
 				<div id="CurrentSponosrs">
 					<h3>Current Sponsors</h3>
+					{/* gets the outmost name of the Object {"Name of tier": {...}} */}
 					{Object.keys(sponsorsDict).map((sponsorTier) => (
 						<div
 							key={sponsorTier}
 							className={sponsorTier}>
 							<h2>{sponsorTier}</h2>
+							{/* gets the keys from the new inner object used so that no two html tags are the "same" */}
 							{Object.keys(sponsorsDict[sponsorTier]).map((sponsorKey) => {
 								const sponsor = sponsorsDict[sponsorTier][sponsorKey];
 								return (
@@ -81,6 +83,7 @@ const OurSponsors = () => {
 													</a>
 												)}
 											</div>
+											{/* puts this in the sponsor's section only if they are silver and above */}
 											{sponsor.DescriptionAboutSponsor !== undefined &&
 												sponsor.DecriptionOnHelp !== undefined &&
 												(sponsorTier !== "Bronze Tier" ||
@@ -88,11 +91,13 @@ const OurSponsors = () => {
 													<p>Another Element</p>
 												)}
 										</div>
+										{/* puts this in the sponsor's section only if they are silver and above */}
 										{sponsor.DescriptionAboutSponsor !== undefined &&
 											(sponsorTier !== "Bronze Tier" ||
 												sponsorTier !== "Silver Tier") && (
 												<p>{sponsor.DescriptionAboutSponsor}</p>
 											)}
+										{/* puts this in the sponsor's section only if they are silver and above */}
 										{sponsor.DecriptionOnHelp !== undefined &&
 											(sponsorTier !== "Bronze Tier" ||
 												sponsorTier !== "Silver Tier") && (
