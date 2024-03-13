@@ -26,12 +26,11 @@ const OurSponsors = () => {
 	 * @todo add gPRC to backend and front end add connect to synology drive
 	 */
 	const getSponsors = async () => {
-		const res = await fetch(sponsorData);
-		const rawText = await res.text();
-		const yamlDict = yaml.load(rawText);
 		try {
-			let res = yamlDict;
-			setSponsorsDict(res);
+			const res = await fetch(sponsorData);
+			const rawText = await res.text();
+			const yamlDict = yaml.load(rawText);
+			setSponsorsDict(yamlDict);
 		} catch (error) {
 			//error checking
 			console.error("Error recieving data from server:");
@@ -40,6 +39,7 @@ const OurSponsors = () => {
 
 	if (!sponsorsDict) {
 		//awaiting for a resposne from the backend
+		//add loading notification to user
 		return <p>Loading...</p>;
 	}
 	if (sponsorsDict) {
