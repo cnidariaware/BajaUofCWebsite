@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import logo from "./logo.webp";
 import DropdownMenu from "./DropdownMenu";
 import OpenPageButton from "./OpenPageButton";
 import { useNavigate, Outlet } from "react-router-dom";
