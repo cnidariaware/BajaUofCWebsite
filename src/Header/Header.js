@@ -1,6 +1,6 @@
 import logo from "./logo.png";
 import DropdownMenu from "./DropdownMenu";
-import OpenPage from "./OpenPage";
+import OpenPageButton from "./OpenPageButton";
 import { useNavigate, Outlet } from "react-router-dom";
 import { useState } from "react";
 import "./Header.css";
@@ -46,19 +46,19 @@ const Header = () => {
 					<h2>Schulich Offroad</h2>
 				</div>
 				<nav>
-					<OpenPage
+					<OpenPageButton
 						pageToGoTo={"/"}
 						textOnButton={"About Us"}
 					/>
-					<OpenPage
+					<OpenPageButton
 						pageToGoTo={"/Teams"}
 						textOnButton={"Teams"}
 					/>
-					<OpenPage
+					<OpenPageButton
 						pageToGoTo={"/OurSponsors"}
 						textOnButton={"Our Sponsors"}
 					/>
-					<OpenPage
+					<OpenPageButton
 						pageToGoTo={"/BecomeASponsor"}
 						textOnButton={"Become a Sponsor"}
 					/>
@@ -69,7 +69,7 @@ const Header = () => {
 						<button type="button">Club Membership & Upcoming Events</button>
 						{isDropdownVisible && <DropdownMenu />}
 					</div>
-					<OpenPage
+					<OpenPageButton
 						pageToGoTo={"/Gallery"}
 						textOnButton={"Gallery"}
 					/>

@@ -1,4 +1,4 @@
-import OpenPage from "./OpenPage";
+import OpenPageButton from "./OpenPageButton";
 
 /**
  * @param {null} null -  Takes in nothing
@@ -9,11 +9,11 @@ import OpenPage from "./OpenPage";
 const DropdownMenu = () => {
 	return (
 		<div>
-			<OpenPage
+			<OpenPageButton
 				pageToGoTo={"/JoinTheClub"}
 				textOnButton={"Join the Club"}
 			/>
-			<OpenPage
+			<OpenPageButton
 				pageToGoTo={"/UpcomingEvents"}
 				textOnButton={"Upcoming Events"}
 			/>
