@@ -5,9 +5,13 @@ header {
 	margin-top: 0%;
 }
 
-#logo {
-	width: 10%;
+figure {
+	margin: 0px;
 	height: 10%;
+}
+
+#logo {
+	height: 5rem;
 	background-color: white;
 }
 

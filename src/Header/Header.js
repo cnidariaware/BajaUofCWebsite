@@ -37,15 +37,17 @@ const Header = () => {
 	return (
 		<>
 			<header>
-				<div>
+				<figure>
 					<img
 						id="logo"
 						onClick={() => LinkTo("/")}
 						src={logo}
 						alt="Schulich Off-Road's logo"
 					/>
-					<h2>Schulich Offroad</h2>
-				</div>
+					<figcaption>
+						<h2>Schulich Offroad</h2>
+					</figcaption>
+				</figure>
 				<nav>
 					<OpenPageButton
 						pageToGoTo={"/"}
