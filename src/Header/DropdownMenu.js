@@ -1,20 +1,24 @@
-// import OpenPage from "./OpenPage";
-import { useNavigate } from "react-router-dom";
+import OpenPage from "./OpenPage";
 
+/**
+ * @param {null} null -  Takes in nothing
+ * @returns {JSX.Element} JSX - HTML tags and JS functionality
+ * @description Drop down menu elements
+ * @author Brock <darkicewolf50@gmail.com>
+ */
 const DropdownMenu = () => {
-  const navigate = useNavigate();
-
-  const OpenPage = (arg) => {    
-      navigate(arg);
-      console.log(arg);
-  };
-
-  return (
-    <div>
-      <button type = "button" onClick = {() => OpenPage('/JoinTheClub')}>Join the Club</button>
-      <button type = "button" onClick = {() => OpenPage('/UpcomingEvents')}>Upcoming Events</button>
-    </div>
-  );
+	return (
+		<div>
+			<OpenPage
+				pageToGoTo={"/JoinTheClub"}
+				textOnButton={"Join the Club"}
+			/>
+			<OpenPage
+				pageToGoTo={"/UpcomingEvents"}
+				textOnButton={"Upcoming Events"}
+			/>
+		</div>
+	);
 };
 
 export default DropdownMenu;
