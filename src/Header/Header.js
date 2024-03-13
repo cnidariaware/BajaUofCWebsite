@@ -38,10 +38,9 @@ const Header = () => {
 	return (
 		<>
 			<header>
-				<figure>
+				<figure onClick={() => LinkTo("/")}>
 					<img
 						id="logo"
-						onClick={() => LinkTo("/")}
 						src={logo}
 						alt="Schulich Off-Road's logo"
 					/>
