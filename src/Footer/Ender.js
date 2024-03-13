@@ -10,7 +10,7 @@ const Ender = () => {
 	return (
 		<footer id="ender">
 			<div>
-				<p>© 2023 by Schulich Off-Road </p>
+				<p>&#169; 2023 by Schulich Off-Road </p>
 				<p
 					onClick={() => window.open("https://www.morphgenix.com/", "_blank")}
 					id="pointerCursor">
