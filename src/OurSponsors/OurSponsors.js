@@ -1,6 +1,7 @@
 import "./OurSponsors.css";
 import { useEffect, useState } from "react";
-import sponsorData from "../MockDB/sponsorship.yml";
+import currentSponsorData from "../MockDB/sponsorship.yml";
+import pastSponsorData from "../MockDB/sponsorship.yml";
 import yaml from "js-yaml";
 import OpenPage from "../Header/OpenPage";
 
@@ -12,10 +13,12 @@ import OpenPage from "../Header/OpenPage";
  * @todo finish page layout
  */
 const OurSponsors = () => {
-	const [sponsorsDict, setSponsorsDict] = useState(); //variable states for the dictionary of sponsors
+	const [currentSponsorsDict, setCurrentSponsorsDict] = useState(); //variable states for the dictionary of sponsors
+	const [pastSponsorsDict, setPastSponsorsDict] = useState();
 
 	useEffect(() => {
-		getSponsors();
+		getCurrentSponsors();
+		getPastSponsors();
 	}, []);
 
 	/**
@@ -25,24 +28,42 @@ const OurSponsors = () => {
 	 * @author Brock <darkicewolf50@gmail.com>
 	 * @todo add gPRC to backend and front end add connect to synology drive
 	 */
-	const getSponsors = async () => {
+	const getCurrentSponsors = async () => {
 		try {
-			const res = await fetch(sponsorData);
+			const res = await fetch(currentSponsorData);
 			const rawText = await res.text();
 			const yamlDict = yaml.load(rawText);
-			setSponsorsDict(yamlDict);
+			setCurrentSponsorsDict(yamlDict);
+		} catch (error) {
+			//error checking
+			console.error("Error recieving data from server:");
+		}
+	};
+	/**
+	 * @param {null} null - requires nothing (link)
+	 * @returns {Object} sponsorsDict - gets a Dictionary of our sponsors from synology drive
+	 * @description Gets the list of sponsors from the synology drive (not implemented), converts the json file into a dictionary
+	 * @author Brock <darkicewolf50@gmail.com>
+	 * @todo add gPRC to backend and front end add connect to synology drive
+	 */
+	const getPastSponsors = async () => {
+		try {
+			const res = await fetch(pastSponsorData);
+			const rawText = await res.text();
+			const yamlDict = yaml.load(rawText);
+			setPastSponsorsDict(yamlDict);
 		} catch (error) {
 			//error checking
 			console.error("Error recieving data from server:");
 		}
 	};
 
-	if (!sponsorsDict) {
+	if (!currentSponsorsDict && !pastSponsorsDict) {
 		//awaiting for a resposne from the backend
 		//add loading notification to user
 		return <p>Loading...</p>;
 	}
-	if (sponsorsDict) {
+	if (currentSponsorsDict && pastSponsorsDict) {
 		//maps out the dictionary and displays the content
 		return (
 			<div id="OurSponsors">
@@ -52,23 +73,91 @@ const OurSponsors = () => {
 						textOnButton={"Become a Sponsor"}
 					/>
 				</div>
-				<div id="CurrentSponosrs">
-					<h3>Current Sponsors</h3>
+				<div>
+					<h3 className="SponsorsTitle">Current Sponsors</h3>
 					{/* gets the outmost name of the Object {"Name of tier": {...}} */}
-					{Object.keys(sponsorsDict).map((sponsorTier) => (
+					{Object.keys(currentSponsorsDict).map((sponsorTier) => (
 						<div
 							key={sponsorTier}
 							className={sponsorTier}>
 							<h2>{sponsorTier}</h2>
 							{/* gets the keys from the new inner object used so that no two html tags are the "same" */}
-							{Object.keys(sponsorsDict[sponsorTier]).map((sponsorKey) => {
-								const sponsor = sponsorsDict[sponsorTier][sponsorKey];
+							{Object.keys(currentSponsorsDict[sponsorTier]).map(
+								(sponsorKey) => {
+									const sponsor = currentSponsorsDict[sponsorTier][sponsorKey];
+									return (
+										<div key={sponsorKey}>
+											<div>
+												<div>
+													{sponsor.Name && <h3>{sponsor.Name}</h3>}
+													{sponsor.LogoUrl && (
+														<a
+															href={sponsor.Url}
+															rel="noreferrer"
+															target="_blank">
+															<img
+																src={sponsor.LogoUrl}
+																alt={
+																	sponsor.Name +
+																	"'s logo, one of the companies that sponsors Schulich Off-Road"
+																}
+															/>
+														</a>
+													)}
+												</div>
+												{/* puts this in the sponsor's section only if they are silver and above */}
+												{sponsor.DescriptionAboutSponsor !== undefined &&
+													sponsor.DecriptionOnHelp !== undefined &&
+													(sponsorTier !== "Bronze Tier" ||
+														sponsorTier !== "Silver Tier") && (
+														<p>Another Element</p>
+													)}
+											</div>
+											{/* puts this in the sponsor's section only if they are silver and above */}
+											{sponsor.DescriptionAboutSponsor !== undefined &&
+												(sponsorTier !== "Bronze Tier" ||
+													sponsorTier !== "Silver Tier") && (
+													<p>{sponsor.DescriptionAboutSponsor}</p>
+												)}
+											{/* puts this in the sponsor's section only if they are silver and above */}
+											{sponsor.DecriptionOnHelp !== undefined &&
+												(sponsorTier !== "Bronze Tier" ||
+													sponsorTier !== "Silver Tier") && (
+													<p>{sponsor.DecriptionOnHelp}</p>
+												)}
+										</div>
+									);
+								}
+							)}
+						</div>
+					))}
+				</div>
+				<div>
+					<h3
+						className="SponsorsTitle"
+						id="SponsorFlexEnd">
+						Past Sponsors
+					</h3>
+					{/* gets the outmost name of the Object {"Name of tier": {...}} */}
+					{Object.keys(pastSponsorsDict).map((sponsorTier) => (
+						<div
+							key={sponsorTier}
+							className={sponsorTier}>
+							<h2>{sponsorTier}</h2>
+							{/* gets the keys from the new inner object used so that no two html tags are the "same" */}
+							{Object.keys(pastSponsorsDict[sponsorTier]).map((sponsorKey) => {
+								const sponsor = pastSponsorsDict[sponsorTier][sponsorKey];
 								return (
 									<div key={sponsorKey}>
 										<div>
 											<div>
-												{sponsor.Name && <h3>{sponsor.Name}</h3>}
-												{sponsor.LogoUrl && (
+												{sponsor.Name && (
+													<h3
+														onClick={() => window.open(sponsor.Url, "_blank")}>
+														{sponsor.Name}
+													</h3>
+												)}
+												{sponsor.LogoUrl && sponsorTier !== "Bronze Tier" && (
 													<a
 														href={sponsor.Url}
 														rel="noreferrer"
@@ -83,13 +172,6 @@ const OurSponsors = () => {
 													</a>
 												)}
 											</div>
-											{/* puts this in the sponsor's section only if they are silver and above */}
-											{sponsor.DescriptionAboutSponsor !== undefined &&
-												sponsor.DecriptionOnHelp !== undefined &&
-												(sponsorTier !== "Bronze Tier" ||
-													sponsorTier !== "Silver Tier") && (
-													<p>Another Element</p>
-												)}
 										</div>
 										{/* puts this in the sponsor's section only if they are silver and above */}
 										{sponsor.DescriptionAboutSponsor !== undefined &&

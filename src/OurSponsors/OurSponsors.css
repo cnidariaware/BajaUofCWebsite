@@ -39,12 +39,21 @@
 	width: 100%;
 }
 
+#OurSponsors div div h3 {
+	cursor: pointer;
+}
+
 #OurSponsors h2 {
 	background-color: aquamarine;
 	text-align: center;
 	margin: 0px;
 }
 
-#OurSponsors h3 {
+#SponsorFlexEnd {
+	text-align: end;
+}
+
+.SponsorsTitle {
 	text-align: left;
+	border-bottom: 2px solid black;
 }
