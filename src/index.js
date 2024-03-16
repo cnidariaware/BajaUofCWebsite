@@ -11,6 +11,7 @@ import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinThe
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
 import Gallery from "./Gallery/Gallery";
 import "./index.css";
+import PreviousEvents from "./Club Membership & Upcoming Events/PreviousEvents/PreviousEvents";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -40,6 +41,9 @@ root.render(
 						path="/Gallery"
 						element={<Gallery />}></Route>
 				</Route>
+				<Route
+					path="/PreviousEvents"
+					element={<PreviousEvents />}></Route>
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>

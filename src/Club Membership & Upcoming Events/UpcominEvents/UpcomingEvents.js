@@ -5,11 +5,11 @@ import eventData from "../../MockDB/currentCompetition.yml";
 import CountDownTimer from "../../CountDown/CountDownTimer";
 
 /**
- * @param {null} null - requires nothing (link)
+ * @param {null} null - requires nothing
  * @returns {JSX.Element} PageContent - gets a Dictionary of our sponsors from synology drive
- * @description Gets the list of upcoming Events from the synology drive (not implemented), converts the yaml file into a dictionary
+ * @description The Upcoming Events Page
  * @author Brock <darkicewolf50@gmail.com>
- * @todo add gPRC to backend and front end add connect to synology drive
+ * @todo css and change to Openpage on merge
  */
 const UpcominEvents = () => {
 	const [competitionsDict, setCompetitionsDict] = useState();
