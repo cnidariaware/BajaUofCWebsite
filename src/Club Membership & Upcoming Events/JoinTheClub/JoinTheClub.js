@@ -41,7 +41,8 @@ const messageToDisplayAfter = () => {
 			<p>Appy using the link below</p>
 			<a
 				href="https://form.jotform.com/232026633865053"
-				target="_blank">
+				target="_blank"
+				rel="noreferrer">
 				<img
 					src="https://www.jotform.com/uploads/darkicewolf50/form_files/232026633865053_1693175101_qrcode_muse.png"
 					width="100%"
