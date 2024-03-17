@@ -1,7 +1,7 @@
 import "./OurSponsors.css";
 import { useEffect, useState } from "react";
 import currentSponsorData from "../MockDB/sponsorship.yml";
-import pastSponsorData from "../MockDB/sponsorship.yml";
+import pastSponsorData from "../MockDB/pastSponsors.yml";
 import yaml from "js-yaml";
 import OpenPage from "../Header/OpenPage";
 
@@ -54,20 +54,18 @@ const OurSponsors = () => {
 			const yamlDict = yaml.load(rawText);
 			setPastSponsorsDict(yamlDict);
 		} catch (error) {
-			//error checking
+			// error checking
 			console.error("Error recieving data from server:");
 		}
 	};
-
+	// needs to change into ? : statement and have content above it
 	if (!currentSponsorsDict && !pastSponsorsDict) {
 		//awaiting for a resposne from the backend
 		//add loading notification to user
-		console.log(currentSponsorsDict);
 		return <p>Loading...</p>;
 	}
 	if (currentSponsorsDict && pastSponsorsDict) {
 		//maps out the dictionary and displays the content
-		console.log(currentSponsorsDict);
 		return (
 			<div id="OurSponsors">
 				<div id="BecomeASponsors">
@@ -76,16 +74,89 @@ const OurSponsors = () => {
 						textOnButton={"Become a Sponsor"}
 					/>
 				</div>
-				<div>
-					<h3 className="SponsorsTitle">Current Sponsors</h3>
-					{/* gets the outmost name of the Object {"Name of tier": {...}} */}
+				<div id="Sponsor">
+					<h2 className="SponsorsTitle">Current Sponsors</h2>
+					{/* gets the outmost name of the Object Name of tier*/}
+					{Object.keys(currentSponsorsDict).map((sponsorsTier) => {
+						return (
+							<div className="Sponsors">
+								<h3>{sponsorsTier}</h3>
+								{/* gets key form list of tier */}
+								{Object.keys(currentSponsorsDict[sponsorsTier]).map(
+									(sponsorsKey) => {
+										return (
+											<div>
+												{/* gets name out of object and gets data of that sponsor preped */}
+												{Object.keys(
+													currentSponsorsDict[sponsorsTier][sponsorsKey]
+												).map((sponsorName) => {
+													let sponsorData =
+														currentSponsorsDict[sponsorsTier][sponsorsKey][
+															sponsorName
+														];
+													return (
+														<a
+															href={sponsorData.Url}
+															target="_blank"
+															rel="noreferrer">
+															<div>
+																<h4>{sponsorName}</h4>
+																<img
+																	src={sponsorData.LogoUrl}
+																	alt={sponsorName + "'s Logo"}
+																/>
+															</div>
+															{(sponsorsTier !== "Silver Tier" ||
+																sponsorsTier !== "Bronze Tier") && (
+																<div>
+																	<p>{sponsorData.DescriptionAboutSponsor}</p>
+																</div>
+															)}
+														</a>
+													);
+												})}
+											</div>
+										);
+									}
+								)}
+							</div>
+						);
+					})}
 				</div>
-				<div>
-					<h3
+				<div id="Sponsor">
+					<h2
 						className="SponsorsTitle"
-						id="SponsorFlexEnd">
+						id="SponsorEnd">
 						Past Sponsors
-					</h3>
+					</h2>
+					{/* gets keys o objects in list */}
+					{Object.keys(pastSponsorsDict).map((pastSponsorKey) => {
+						return (
+							<div className="Sponsors">
+								{/* gets name of sponsor then uses it to get data of past sponsor */}
+								{Object.keys(pastSponsorsDict[pastSponsorKey]).map(
+									(pastSponsorName) => {
+										let pastSponsors =
+											pastSponsorsDict[pastSponsorKey][pastSponsorName];
+										return (
+											<a
+												href={pastSponsors.Url}
+												target="_blank"
+												rel="noreferrer">
+												<div>
+													<h4>{pastSponsorName}</h4>
+													<img
+														src={pastSponsors.LogoUrl}
+														alt={pastSponsorName + "'s Logo"}
+													/>
+												</div>
+											</a>
+										);
+									}
+								)}
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		);
