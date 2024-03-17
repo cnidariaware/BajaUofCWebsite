@@ -7,6 +7,25 @@
 	padding-right: 2%;
 }
 
+#BecomeASponsors {
+	background-color: white;
+}
+
+#BecomeASponsors div {
+	display: flex;
+	flex-direction: row;
+}
+
+#BecomeASponsors a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#BecomeASponsors div a img {
+	height: 18rem;
+	padding-right: 3rem;
+}
+
 #Sponsor {
 	background-color: white;
 }
@@ -38,16 +57,16 @@
 	flex-direction: row;
 }
 
-.Sponsors a div h4 {
+.Sponsors a h4 {
 	width: 30%;
 }
 
-.Sponsors a div img {
+.Sponsors a img {
 	max-height: 8rem;
 	max-width: 70%;
 }
 
-.Sponsors a div p {
+.Sponsors a p {
 	padding: 2rem;
 	padding-top: 5px;
 	padding-bottom: 5px;
