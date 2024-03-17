@@ -36,6 +36,7 @@ const OurSponsors = () => {
 			setCurrentSponsorsDict(yamlDict);
 		} catch (error) {
 			//error checking
+			console.log(error);
 			console.error("Error recieving data from server:");
 		}
 	};
@@ -61,10 +62,12 @@ const OurSponsors = () => {
 	if (!currentSponsorsDict && !pastSponsorsDict) {
 		//awaiting for a resposne from the backend
 		//add loading notification to user
+		console.log(currentSponsorsDict);
 		return <p>Loading...</p>;
 	}
 	if (currentSponsorsDict && pastSponsorsDict) {
 		//maps out the dictionary and displays the content
+		console.log(currentSponsorsDict);
 		return (
 			<div id="OurSponsors">
 				<div id="BecomeASponsors">
@@ -76,61 +79,6 @@ const OurSponsors = () => {
 				<div>
 					<h3 className="SponsorsTitle">Current Sponsors</h3>
 					{/* gets the outmost name of the Object {"Name of tier": {...}} */}
-					{Object.keys(currentSponsorsDict).map((sponsorTier) => (
-						<div
-							key={sponsorTier}
-							className={sponsorTier}>
-							<h2>{sponsorTier}</h2>
-							{/* gets the keys from the new inner object used so that no two html tags are the "same" */}
-							{Object.keys(currentSponsorsDict[sponsorTier]).map(
-								(sponsorKey) => {
-									const sponsor = currentSponsorsDict[sponsorTier][sponsorKey];
-									return (
-										<div key={sponsorKey}>
-											<div>
-												<div>
-													{sponsor.Name && <h3>{sponsor.Name}</h3>}
-													{sponsor.LogoUrl && (
-														<a
-															href={sponsor.Url}
-															rel="noreferrer"
-															target="_blank">
-															<img
-																src={sponsor.LogoUrl}
-																alt={
-																	sponsor.Name +
-																	"'s logo, one of the companies that sponsors Schulich Off-Road"
-																}
-															/>
-														</a>
-													)}
-												</div>
-												{/* puts this in the sponsor's section only if they are silver and above */}
-												{sponsor.DescriptionAboutSponsor !== undefined &&
-													sponsor.DecriptionOnHelp !== undefined &&
-													(sponsorTier !== "Bronze Tier" ||
-														sponsorTier !== "Silver Tier") && (
-														<p>Another Element</p>
-													)}
-											</div>
-											{/* puts this in the sponsor's section only if they are silver and above */}
-											{sponsor.DescriptionAboutSponsor !== undefined &&
-												(sponsorTier !== "Bronze Tier" ||
-													sponsorTier !== "Silver Tier") && (
-													<p>{sponsor.DescriptionAboutSponsor}</p>
-												)}
-											{/* puts this in the sponsor's section only if they are silver and above */}
-											{sponsor.DecriptionOnHelp !== undefined &&
-												(sponsorTier !== "Bronze Tier" ||
-													sponsorTier !== "Silver Tier") && (
-													<p>{sponsor.DecriptionOnHelp}</p>
-												)}
-										</div>
-									);
-								}
-							)}
-						</div>
-					))}
 				</div>
 				<div>
 					<h3
@@ -138,58 +86,6 @@ const OurSponsors = () => {
 						id="SponsorFlexEnd">
 						Past Sponsors
 					</h3>
-					{/* gets the outmost name of the Object {"Name of tier": {...}} */}
-					{Object.keys(pastSponsorsDict).map((sponsorTier) => (
-						<div
-							key={sponsorTier}
-							className={sponsorTier}>
-							<h2>{sponsorTier}</h2>
-							{/* gets the keys from the new inner object used so that no two html tags are the "same" */}
-							{Object.keys(pastSponsorsDict[sponsorTier]).map((sponsorKey) => {
-								const sponsor = pastSponsorsDict[sponsorTier][sponsorKey];
-								return (
-									<div key={sponsorKey}>
-										<div>
-											<div>
-												{sponsor.Name && (
-													<h3
-														onClick={() => window.open(sponsor.Url, "_blank")}>
-														{sponsor.Name}
-													</h3>
-												)}
-												{sponsor.LogoUrl && sponsorTier !== "Bronze Tier" && (
-													<a
-														href={sponsor.Url}
-														rel="noreferrer"
-														target="_blank">
-														<img
-															src={sponsor.LogoUrl}
-															alt={
-																sponsor.Name +
-																"'s logo, one of the companies that sponsors Schulich Off-Road"
-															}
-														/>
-													</a>
-												)}
-											</div>
-										</div>
-										{/* puts this in the sponsor's section only if they are silver and above */}
-										{sponsor.DescriptionAboutSponsor !== undefined &&
-											(sponsorTier !== "Bronze Tier" ||
-												sponsorTier !== "Silver Tier") && (
-												<p>{sponsor.DescriptionAboutSponsor}</p>
-											)}
-										{/* puts this in the sponsor's section only if they are silver and above */}
-										{sponsor.DecriptionOnHelp !== undefined &&
-											(sponsorTier !== "Bronze Tier" ||
-												sponsorTier !== "Silver Tier") && (
-												<p>{sponsor.DecriptionOnHelp}</p>
-											)}
-									</div>
-								);
-							})}
-						</div>
-					))}
 				</div>
 			</div>
 		);
