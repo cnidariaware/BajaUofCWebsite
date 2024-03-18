@@ -1,0 +1,32 @@
+header {
+	display: flex;
+	flex-direction: column;
+	margin: 1%;
+	margin-top: 0%;
+}
+
+figure {
+	margin: 0px;
+	height: 10%;
+}
+
+header figure {
+	cursor: pointer;
+}
+
+#logo {
+	height: 5rem;
+	background-color: white;
+}
+
+/* not sure what these two are for */
+#title {
+	background-color: blueviolet;
+}
+.banner {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: aqua;
+}
