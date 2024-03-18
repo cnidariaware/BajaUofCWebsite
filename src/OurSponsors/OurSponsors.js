@@ -79,6 +79,16 @@ const OurSponsors = () => {
 						a link to the form as well)
 					</p>
 				</div>
+				<p>
+					(Talk about what we can offer our sponsors for helping us briefly or
+					in a listing format. We can also mention how they can find more on the
+					sponsorship package - plus provide some way they can access the
+					package from here)
+				</p>
+				<img
+					src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1708797415/Screenshot_from_2024-02-24_10-52-24_nsn9uv.png"
+					alt="A photo of our sponsorship package"
+				/>
 			</div>
 			<div id="Sponsor">
 				<h2 className="SponsorsTitle">Current Sponsors</h2>

@@ -23,7 +23,13 @@
 
 #BecomeASponsors div a img {
 	height: 18rem;
+	width: auto;
 	padding-right: 3rem;
+}
+
+#BecomeASponsors img {
+	height: auto;
+	width: 60%;
 }
 
 #Sponsor {
