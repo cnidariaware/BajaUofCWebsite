@@ -92,11 +92,12 @@ const OurSponsors = () => {
 			</div>
 			<div id="Sponsor">
 				<h2 className="SponsorsTitle">Current Sponsors</h2>
-				{/* gets the outmost name of the Object Name of tier*/}
+				{/* shows the current sponsors only after the data has been recieved */}
 				{currentSponsorsDict === undefined ? (
 					<p>Loading...</p>
 				) : (
 					<>
+						{/* gets the outmost name of the Object Name of tier*/}
 						{Object.keys(currentSponsorsDict).map((sponsorsTier) => {
 							return (
 								<div className="Sponsors">
@@ -151,6 +152,7 @@ const OurSponsors = () => {
 					id="SponsorEnd">
 					Past Sponsors
 				</h2>
+				{/* shows past sponsors only when recieved, do not duplicate the sponsors from current ones */}
 				{pastSponsorsDict === undefined ? (
 					<p>Loading...</p>
 				) : (
