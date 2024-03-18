@@ -1,21 +1,23 @@
 import "./OurSponsors.css";
 import { useEffect, useState } from "react";
-import sponsorData from "../MockDB/sponsorship.yml";
+import currentSponsorData from "../MockDB/sponsorship.yml";
+import pastSponsorData from "../MockDB/pastSponsors.yml";
 import yaml from "js-yaml";
-import OpenPage from "../Header/OpenPage";
 
 /**
  * @param {null} null - requires onthing
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description Our Sponsors Page
  * @author Brock <darkicewolf50@gmail.com>
- * @todo finish page layout
+ * @todo finsih layout and add content
  */
 const OurSponsors = () => {
-	const [sponsorsDict, setSponsorsDict] = useState(); //variable states for the dictionary of sponsors
+	const [currentSponsorsDict, setCurrentSponsorsDict] = useState(); //variable states for the dictionary of sponsors
+	const [pastSponsorsDict, setPastSponsorsDict] = useState();
 
 	useEffect(() => {
-		getSponsors();
+		getCurrentSponsors();
+		getPastSponsors();
 	}, []);
 
 	/**
@@ -25,93 +27,169 @@ const OurSponsors = () => {
 	 * @author Brock <darkicewolf50@gmail.com>
 	 * @todo add gPRC to backend and front end add connect to synology drive
 	 */
-	const getSponsors = async () => {
+	const getCurrentSponsors = async () => {
 		try {
-			const res = await fetch(sponsorData);
+			const res = await fetch(currentSponsorData);
 			const rawText = await res.text();
-			const yamlDict = yaml.load(rawText);
-			setSponsorsDict(yamlDict);
+			const yamlDict = await yaml.load(rawText);
+			setCurrentSponsorsDict(yamlDict);
 		} catch (error) {
 			//error checking
+			console.log(error);
+			console.error("Error recieving data from server:");
+		}
+	};
+	/**
+	 * @param {null} null - requires nothing (link)
+	 * @returns {Object} sponsorsDict - gets a Dictionary of our sponsors from synology drive
+	 * @description Gets the list of sponsors from the synology drive (not implemented), converts the json file into a dictionary
+	 * @author Brock <darkicewolf50@gmail.com>
+	 * @todo add gPRC to backend and front end add connect to synology drive
+	 */
+	const getPastSponsors = async () => {
+		try {
+			const res = await fetch(pastSponsorData);
+			const rawText = await res.text();
+			const yamlDict = await yaml.load(rawText);
+			setPastSponsorsDict(yamlDict);
+		} catch (error) {
+			// error checking
 			console.error("Error recieving data from server:");
 		}
 	};
 
-	if (!sponsorsDict) {
-		//awaiting for a resposne from the backend
-		//add loading notification to user
-		return <p>Loading...</p>;
-	}
-	if (sponsorsDict) {
-		//maps out the dictionary and displays the content
-		return (
-			<div id="OurSponsors">
-				<div id="BecomeASponsors">
-					<OpenPage
-						pageToGoTo={"/BecomeASponsor"}
-						textOnButton={"Become a Sponsor"}
-					/>
+	return (
+		<div id="OurSponsors">
+			<h1>Sponsor</h1>
+			<div id="BecomeASponsors">
+				<p>(How our team uses what's given by and benefits from sponsors)</p>
+				<div>
+					<a
+						href="https://google.com"
+						target="_blank"
+						rel="noreferrer">
+						<img
+							src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710699982/qr-code_l9q7ik.png"
+							alt="QR code to contanct us form"
+						/>
+						<p>Click on this to open the contact form</p>
+					</a>
+					<p>
+						Talk about how you can reach out to sponsor us. (Maybe also include
+						a link to the form as well)
+					</p>
 				</div>
-				<div id="CurrentSponosrs">
-					<h3>Current Sponsors</h3>
-					{/* gets the outmost name of the Object {"Name of tier": {...}} */}
-					{Object.keys(sponsorsDict).map((sponsorTier) => (
-						<div
-							key={sponsorTier}
-							className={sponsorTier}>
-							<h2>{sponsorTier}</h2>
-							{/* gets the keys from the new inner object used so that no two html tags are the "same" */}
-							{Object.keys(sponsorsDict[sponsorTier]).map((sponsorKey) => {
-								const sponsor = sponsorsDict[sponsorTier][sponsorKey];
-								return (
-									<div key={sponsorKey}>
-										<div>
-											<div>
-												{sponsor.Name && <h3>{sponsor.Name}</h3>}
-												{sponsor.LogoUrl && (
-													<a
-														href={sponsor.Url}
-														rel="noreferrer"
-														target="_blank">
-														<img
-															src={sponsor.LogoUrl}
-															alt={
-																sponsor.Name +
-																"'s logo, one of the companies that sponsors Schulich Off-Road"
-															}
-														/>
-													</a>
-												)}
-											</div>
-											{/* puts this in the sponsor's section only if they are silver and above */}
-											{sponsor.DescriptionAboutSponsor !== undefined &&
-												sponsor.DecriptionOnHelp !== undefined &&
-												(sponsorTier !== "Bronze Tier" ||
-													sponsorTier !== "Silver Tier") && (
-													<p>Another Element</p>
-												)}
-										</div>
-										{/* puts this in the sponsor's section only if they are silver and above */}
-										{sponsor.DescriptionAboutSponsor !== undefined &&
-											(sponsorTier !== "Bronze Tier" ||
-												sponsorTier !== "Silver Tier") && (
-												<p>{sponsor.DescriptionAboutSponsor}</p>
-											)}
-										{/* puts this in the sponsor's section only if they are silver and above */}
-										{sponsor.DecriptionOnHelp !== undefined &&
-											(sponsorTier !== "Bronze Tier" ||
-												sponsorTier !== "Silver Tier") && (
-												<p>{sponsor.DecriptionOnHelp}</p>
-											)}
-									</div>
-								);
-							})}
-						</div>
-					))}
-				</div>
+				<p>
+					(Talk about what we can offer our sponsors for helping us briefly or
+					in a listing format. We can also mention how they can find more on the
+					sponsorship package - plus provide some way they can access the
+					package from here)
+				</p>
+				<img
+					src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1708797415/Screenshot_from_2024-02-24_10-52-24_nsn9uv.png"
+					alt="A photo of our sponsorship package"
+				/>
 			</div>
-		);
-	}
+			<div id="Sponsor">
+				<h2 className="SponsorsTitle">Current Sponsors</h2>
+				{/* shows the current sponsors only after the data has been recieved */}
+				{currentSponsorsDict === undefined ? (
+					<p>Loading...</p>
+				) : (
+					<>
+						{/* gets the outmost name of the Object Name of tier*/}
+						{Object.keys(currentSponsorsDict).map((sponsorsTier) => {
+							return (
+								<div className="Sponsors">
+									<h3>{sponsorsTier}</h3>
+									{/* gets key form list of tier */}
+									{Object.keys(currentSponsorsDict[sponsorsTier]).map(
+										(sponsorsKey) => {
+											return (
+												<>
+													{/* gets name out of object and gets data of that sponsor preped */}
+													{Object.keys(
+														currentSponsorsDict[sponsorsTier][sponsorsKey]
+													).map((sponsorName) => {
+														let sponsorData =
+															currentSponsorsDict[sponsorsTier][sponsorsKey][
+																sponsorName
+															];
+														return (
+															<a
+																href={sponsorData.Url}
+																target="_blank"
+																rel="noreferrer">
+																<div>
+																	<h4>{sponsorName}</h4>
+																	<img
+																		src={sponsorData.LogoUrl}
+																		alt={sponsorName + "'s Logo"}
+																	/>
+																</div>
+																{(sponsorsTier !== "Silver Tier" ||
+																	sponsorsTier !== "Bronze Tier") && (
+																	<div>
+																		<p>{sponsorData.DescriptionAboutSponsor}</p>
+																	</div>
+																)}
+															</a>
+														);
+													})}
+												</>
+											);
+										}
+									)}
+								</div>
+							);
+						})}
+					</>
+				)}
+			</div>
+			<div id="Sponsor">
+				<h2
+					className="SponsorsTitle"
+					id="SponsorEnd">
+					Past Sponsors
+				</h2>
+				{/* shows past sponsors only when recieved, do not duplicate the sponsors from current ones */}
+				{pastSponsorsDict === undefined ? (
+					<p>Loading...</p>
+				) : (
+					<>
+						{/* gets keys o objects in list */}
+						{Object.keys(pastSponsorsDict).map((pastSponsorKey) => {
+							return (
+								<div className="Sponsors">
+									{/* gets name of sponsor then uses it to get data of past sponsor */}
+									{Object.keys(pastSponsorsDict[pastSponsorKey]).map(
+										(pastSponsorName) => {
+											let pastSponsors =
+												pastSponsorsDict[pastSponsorKey][pastSponsorName];
+											return (
+												<a
+													href={pastSponsors.Url}
+													target="_blank"
+													rel="noreferrer">
+													<div>
+														<h4>{pastSponsorName}</h4>
+														<img
+															src={pastSponsors.LogoUrl}
+															alt={pastSponsorName + "'s Logo"}
+														/>
+													</div>
+												</a>
+											);
+										}
+									)}
+								</div>
+							);
+						})}
+					</>
+				)}
+			</div>
+		</div>
+	);
 };
 
 export default OurSponsors;
