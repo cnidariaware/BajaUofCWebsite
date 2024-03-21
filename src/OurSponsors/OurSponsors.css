@@ -3,48 +3,77 @@
 	flex-direction: column;
 	justify-content: center;
 	background-color: gray;
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
-#OurSponsors div div {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+#BecomeASponsors {
 	background-color: white;
 }
 
-#OurSponsors div div div div div img {
-	display: flex;
-	justify-content: left;
-}
-
-#OurSponsors div div div p {
-	display: flex;
-	justify-content: left;
-}
-
-#OurSponsors div div div div div {
-	padding: 0%;
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-}
-
-#OurSponsors div div div div {
+#BecomeASponsors div {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
-	padding: 0%;
-	width: 100%;
 }
 
-#OurSponsors h2 {
-	background-color: aquamarine;
-	text-align: center;
-	margin: 0px;
+#BecomeASponsors a {
+	color: inherit;
+	text-decoration: none;
 }
 
-#OurSponsors h3 {
+#BecomeASponsors div a img {
+	height: 18rem;
+	width: auto;
+	padding-right: 3rem;
+}
+
+#BecomeASponsors img {
+	height: auto;
+	width: 60%;
+}
+
+#Sponsor {
+	background-color: white;
+}
+
+#SponsorEnd {
+	text-align: end;
+}
+
+.SponsorsTitle {
 	text-align: left;
+	border-bottom: 2px solid black;
+}
+
+.Sponsors {
+	background-color: inherit;
+}
+
+.Sponsors a {
+	display: flex;
+	flex-direction: column;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: whitesmoke;
+}
+
+.Sponsors a div {
+	display: flex;
+	flex-direction: row;
+}
+
+.Sponsors a h4 {
+	width: 30%;
+}
+
+.Sponsors a img {
+	max-height: 8rem;
+	max-width: 70%;
+}
+
+.Sponsors a p {
+	padding: 2rem;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
