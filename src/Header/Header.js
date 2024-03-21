@@ -61,16 +61,15 @@ const Header = () => {
 						pageToGoTo={"/OurSponsors"}
 						textOnButton={"Our Sponsors"}
 					/>
-					<OpenPageButton
-						pageToGoTo={"/BecomeASponsor"}
-						textOnButton={"Become a Sponsor"}
-					/>
 					<div
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
 						style={{ background: "red" }}>
 						{/* dropdown menu is only visible when a mouse enters the area of the button below */}
-						<button type="button">Club Membership & Upcoming Events</button>{" "}
+						<OpenPageButton
+							pageToGoTo={"/UpcomingEvents"}
+							textOnButton={"Club Membership & Upcoming Events"}
+						/>
 						{/*this button does nothing yet*/}
 						{isDropdownVisible && <DropdownMenu />}
 					</div>
