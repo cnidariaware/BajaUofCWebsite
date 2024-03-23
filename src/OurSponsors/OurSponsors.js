@@ -14,6 +14,7 @@ import yaml from "js-yaml";
 const OurSponsors = () => {
 	const [currentSponsorsDict, setCurrentSponsorsDict] = useState(); //variable states for the dictionary of sponsors
 	const [pastSponsorsDict, setPastSponsorsDict] = useState();
+	const LinktoSponsorOutForm = "https://google.com";
 
 	useEffect(() => {
 		getCurrentSponsors();
@@ -83,7 +84,7 @@ const OurSponsors = () => {
 				<h1>Become a sponsor</h1>
 				<div>
 					<a
-						href="https://google.com"
+						href={LinktoSponsorOutForm}
 						target="_blank"
 						rel="noreferrer">
 						<img
@@ -127,10 +128,88 @@ const OurSponsors = () => {
 						secure jobs and potential employees
 					</li>
 				</ul>
-				<img
-					src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1708797415/Screenshot_from_2024-02-24_10-52-24_nsn9uv.png"
-					alt="A photo of our sponsorship package"
-				/>
+				<a
+					href={LinktoSponsorOutForm}
+					target="_blank"
+					rel="noreferrer">
+					<table>
+						<thead>
+							<h2>Sponsor Packages</h2>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{/*blank on purpose to add spcae for a black box */}</td>
+								<td>Diamond $10,000+</td>
+								<td>Platinum $5000</td>
+								<td>Gold $1000</td>
+								<td>Silver $500</td>
+								<td>Bronze $200</td>
+							</tr>
+							<tr>
+								<td>Skill Development</td>
+								<td>8</td>
+								<td>4</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>Shop Visits</td>
+								<td>&#10003;</td>
+							</tr>
+							<tr>
+								<td>Interviews</td>
+								<td>&#10003;</td>
+							</tr>
+							<tr>
+								<td>Portfolios</td>
+								<td>&#10003; (Detailed)</td>
+								<td>&#10003;</td>
+							</tr>
+							<tr>
+								<td>Company Into to team</td>
+								<td>&#10003;</td>
+								<td>&#10003;</td>
+								<td>&#10003;</td>
+							</tr>
+							<tr>
+								<td>Custom Gift</td>
+								<td>&#10003;</td>
+								<td>&#10003;</td>
+								<td>&#10003;</td>
+							</tr>
+							<tr>
+								<td>Branding on Apperal (single colour)</td>
+								<td>On full sleeve</td>
+								<td>On Sleeve Forearm</td>
+								<td>Medium on back</td>
+								<td>Small on back</td>
+								<td>Small on back</td>
+							</tr>
+							<tr>
+								<td>Logo on Vehicle</td>
+								<td>
+									36in<sup>2</sup>
+								</td>
+								<td>
+									28in<sup>2</sup>
+								</td>
+								<td>
+									20in<sup>2</sup>
+								</td>
+								<td>
+									10in<sup>2</sup>
+								</td>
+							</tr>
+							<tr>
+								<td>Social Media (Min.)</td>
+								<td>Once/2 Weeks</td>
+								<td>Once/Month</td>
+								<td>Once/3 Month</td>
+								<td>Once/6 Month</td>
+								<td>Once/12 Month</td>
+							</tr>
+						</tbody>
+					</table>
+				</a>
 			</div>
 			<div id="Sponsor">
 				<h1>Current Sponsors</h1>
