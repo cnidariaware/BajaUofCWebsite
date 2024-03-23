@@ -9,7 +9,11 @@
 	flex-direction: column;
 }
 
-.aboutUs article {
+#benefits h2 {
+	text-align: center;
+}
+
+.aboutUs div {
 	display: grid;
 	grid-template-columns: 50% 45%;
 	column-gap: 15px;
@@ -19,7 +23,41 @@
 	padding-right: 5%;
 }
 
+.aboutUs div div {
+	display: flex;
+	flex-direction: column;
+}
+
+.aboutUs h2 {
+	border-bottom: solid 2px black;
+}
+
 .aboutUs img {
 	height: 300px;
 	width: 100%;
+}
+
+.aboutUs div img {
+	padding-top: 4rem;
+}
+
+.aboutUs ul {
+	padding: 0px;
+	padding-left: 10%;
+}
+
+.aboutUs li {
+	max-width: 15rem;
+}
+
+.aboutUs table {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 2rem;
+}
+
+.aboutUs td {
+	padding: 5rem;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
