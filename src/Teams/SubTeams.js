@@ -1,7 +1,7 @@
 import "./SubTeams.css";
 import { useState, useEffect } from "react";
 import yaml from "js-yaml";
-import leadershipData from "../MockDB/Leadership.yml";
+import leadershipData from "../MockDB/SubTeams.yml";
 
 const SubTeams = () => {
 	const [subteamsDict, setSubteamsDict] = useState();
@@ -29,7 +29,6 @@ const SubTeams = () => {
 			console.error("Error recieving data from server:");
 		}
 	};
-	console.log(subteamsDict);
 
 	return (
 		<div id="Subteams">
@@ -45,49 +44,49 @@ const SubTeams = () => {
 								{/* row 1 */}
 								<td>
 									<img
-										src={subteamsArray[0].url}
+										src={subteamsArray[0].iconUrl}
 										alt={subteamsArray[0] + "'s Icon"}
 									/>
 								</td>
 								{/* row 2 */}
 								<td>
 									<img
-										src={subteamsArray[1].url}
+										src={subteamsArray[1].iconUrl}
 										alt={subteamsArray[1] + "'s Icon"}
 									/>
 								</td>
 								{/* row 3 */}
 								<td>
 									<img
-										src={subteamsArray[2].url}
+										src={subteamsArray[2].iconUrl}
 										alt={subteamsArray[2] + "'s Icon"}
 									/>
 								</td>
 								{/* row 4 */}
 								<td>
 									<img
-										src={subteamsArray[3].url}
+										src={subteamsArray[3].iconUrl}
 										alt={subteamsArray[3] + "'s Icon"}
 									/>
 								</td>
 								{/* row 5 */}
 								<td>
 									<img
-										src={subteamsArray[4].url}
+										src={subteamsArray[4].iconUrl}
 										alt={subteamsArray[4] + "'s Icon"}
 									/>
 								</td>
 								{/* row 6 */}
 								<td>
 									<img
-										src={subteamsArray[5].url}
+										src={subteamsArray[5].iconUrl}
 										alt={subteamsArray[5] + "'s Icon"}
 									/>
 								</td>
 								{/* row 7 */}
 								<td>
 									<img
-										src={subteamsArray[6].url}
+										src={subteamsArray[6].iconUrl}
 										alt={subteamsArray[6] + "'s Icon"}
 									/>
 								</td>
@@ -130,8 +129,49 @@ const SubTeams = () => {
 							const className = index % 2 === 0 ? "SubteamsEnd" : "";
 							return (
 								<div>
-									<h2 className={className}>{subteamName}</h2>
-									<p>{subteam.longDescription}</p>
+									{index % 2 === 0 ? (
+										<>
+											<div>
+												<img
+													src={subteam.iconUrl}
+													alt={subteamName + "'s Icon"}
+													className={className}
+												/>
+												<h2 className={className}>{subteamName}</h2>
+											</div>
+											<div>
+												<img
+													src={subteam.subteamAtWork}
+													alt={
+														subteamName +
+														"'s members work or working on a project"
+													}
+												/>
+												<p>{subteam.longDescription}</p>
+											</div>
+										</>
+									) : (
+										<>
+											<div>
+												<h2 className={className}>{subteamName}</h2>
+												<img
+													src={subteam.iconUrl}
+													alt={subteamName + "'s Icon"}
+													className={className}
+												/>
+											</div>
+											<div>
+												<p>{subteam.longDescription}</p>
+												<img
+													src={subteam.subteamAtWork}
+													alt={
+														subteamName +
+														"'s members work or working on a project"
+													}
+												/>
+											</div>
+										</>
+									)}
 								</div>
 							);
 						})}
