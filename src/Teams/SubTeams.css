@@ -1,5 +1,4 @@
 #subteams {
-	background-color: whitesmoke;
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
@@ -19,7 +18,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: grey;
 }
 
 #subteams table td {
@@ -39,7 +37,6 @@
 .subteamsEnd {
 	text-align: end;
 	justify-content: end;
-	background-color: aqua;
 }
 
 .subteamsEnd h2 {
@@ -48,7 +45,6 @@
 }
 
 #subteamContent {
-	background-color: blueviolet;
 	padding-top: 1rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
