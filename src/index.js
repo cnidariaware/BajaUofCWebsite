@@ -6,7 +6,6 @@ import Header from "./Header/Header";
 import AboutUs from "./AboutUs/AboutUs";
 import SubTeams from "./Teams/SubTeams";
 import OurSponsors from "./OurSponsors/OurSponsors";
-import BecomeASponsor from "./BecomeASponsor/BecomeASponsor";
 import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinTheClub";
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
 import Gallery from "./Gallery/Gallery";

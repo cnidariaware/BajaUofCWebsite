@@ -87,7 +87,7 @@ const OurSponsors = () => {
 				</p>
 				<img
 					src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1708797415/Screenshot_from_2024-02-24_10-52-24_nsn9uv.png"
-					alt="A photo of our sponsorship package"
+					alt="Our sponsorship package"
 				/>
 			</div>
 			<div id="Sponsor">
