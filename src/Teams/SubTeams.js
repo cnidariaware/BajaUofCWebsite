@@ -3,6 +3,13 @@ import { useState, useEffect } from "react";
 import yaml from "js-yaml";
 import leadershipData from "../MockDB/SubTeams.yml";
 
+/**
+ * @param {null} null - requires nothing (link)
+ * @returns {JSX.Element} page - page content
+ * @description the subteams page
+ * @author Brock <darkicewolf50@gmail.com>
+ * @todo add gPRC to backend and css
+ */
 const SubTeams = () => {
 	const [subteamsDict, setSubteamsDict] = useState();
 	const [subteamsArray, setSubteamsArray] = useState();
@@ -38,14 +45,14 @@ const SubTeams = () => {
 	 * @todo add css pointer talbe elements
 	 */
 	const ScrolltoSubteamSection = (index) => {
-		const section = document.querySelectorAll(".subteamSection")[index];
+		const section = document.querySelectorAll(".subteamTitle")[index];
 		if (section) {
 			section.scrollIntoView({ behavior: "smooth" });
 		}
 	};
 	return (
-		<div id="Subteams">
-			<h2>Get to Know Our Subteams</h2>
+		<div id="subteams">
+			<h1>Get to Know Our Subteams</h1>
 			{subteamsDict === undefined && subteamsArray === undefined ? (
 				<p>Loading...</p>
 			) : (
@@ -178,18 +185,18 @@ const SubTeams = () => {
 							</tr>
 						</tbody>
 					</table>
-					<div>
+					<div id="subteamContent">
 						{/* lays out content from the subteams dict gets the name of the subteam and index */}
 						{Object.keys(subteamsDict).map((subteamName, index) => {
 							const subteam = subteamsDict[subteamName];
 							//changes location of content based if the second one creates a checkerboard layout
-							const className = index % 2 === 0 ? "SubteamsEnd" : "";
+							let className = index % 2 === 0 ? "subteamsEnd" : "";
 							return (
-								<div>
+								<div key={subteamName}>
 									{/* changes layout if the second or first one */}
 									{index % 2 === 0 ? (
 										<>
-											<div className="subteamSection">
+											<div className={"subteamTitle " + className}>
 												<img
 													src={subteam.iconUrl}
 													alt={subteamName + "'s Icon"}
@@ -197,7 +204,7 @@ const SubTeams = () => {
 												/>
 												<h2 className={className}>{subteamName}</h2>
 											</div>
-											<div>
+											<div className="subteamData">
 												<img
 													src={subteam.subteamAtWork}
 													alt={
@@ -210,7 +217,7 @@ const SubTeams = () => {
 										</>
 									) : (
 										<>
-											<div className="subteamSection">
+											<div className={"subteamTitle" + className}>
 												<h2 className={className}>{subteamName}</h2>
 												<img
 													src={subteam.iconUrl}
@@ -218,7 +225,7 @@ const SubTeams = () => {
 													className={className}
 												/>
 											</div>
-											<div>
+											<div className="subteamData">
 												<p>{subteam.longDescription}</p>
 												<img
 													src={subteam.subteamAtWork}

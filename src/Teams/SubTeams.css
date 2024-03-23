@@ -1,0 +1,76 @@
+#subteams {
+	background-color: whitesmoke;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+#subteams h1 {
+	text-align: center;
+}
+
+#subteams table {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	max-width: 100%;
+}
+
+#subteams table tbody {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: grey;
+}
+
+#subteams table td {
+	cursor: pointer;
+}
+
+#subteams table img {
+	height: 10rem;
+	width: 10rem;
+}
+
+#subteams table p {
+	width: 10rem;
+	text-align: center;
+}
+
+.subteamsEnd {
+	text-align: end;
+	justify-content: end;
+	background-color: aqua;
+}
+
+.subteamsEnd h2 {
+	padding-right: 1rem;
+	padding-left: 0px;
+}
+
+#subteamContent {
+	background-color: blueviolet;
+	padding-top: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.subteamData {
+	display: flex;
+	flex-direction: row;
+	height: 10rem;
+	padding-bottom: 2rem;
+	padding-top: 0.5rem;
+	justify-content: center;
+}
+
+#subteamContent p {
+	max-width: 50%;
+}
+
+.subteamTitle {
+	display: flex;
+	flex-direction: row;
+	height: 5rem;
+	margin: 0px auto;
+	border-bottom: solid 2px black;
+}
