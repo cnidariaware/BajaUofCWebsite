@@ -30,6 +30,19 @@ const SubTeams = () => {
 		}
 	};
 
+	/**
+	 * @param {index} Int - requires the number of the section to go to
+	 * @returns {null} null - moves screen to a specific subteam section
+	 * @description moves screen to the subteam's section upon click
+	 * @author Brock <darkicewolf50@gmail.com>
+	 * @todo add css pointer talbe elements
+	 */
+	const ScrolltoSubteamSection = (index) => {
+		const section = document.querySelectorAll(".subteamSection")[index];
+		if (section) {
+			section.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 	return (
 		<div id="Subteams">
 			<h2>Get to Know Our Subteams</h2>
@@ -42,49 +55,70 @@ const SubTeams = () => {
 							{/* this really sucks it needs to be changed */}
 							<tr>
 								{/* row 1 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(0);
+									}}>
 									<img
 										src={subteamsArray[0].iconUrl}
 										alt={subteamsArray[0] + "'s Icon"}
 									/>
 								</td>
 								{/* row 2 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(1);
+									}}>
 									<img
 										src={subteamsArray[1].iconUrl}
 										alt={subteamsArray[1] + "'s Icon"}
 									/>
 								</td>
 								{/* row 3 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(2);
+									}}>
 									<img
 										src={subteamsArray[2].iconUrl}
 										alt={subteamsArray[2] + "'s Icon"}
 									/>
 								</td>
 								{/* row 4 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(3);
+									}}>
 									<img
 										src={subteamsArray[3].iconUrl}
 										alt={subteamsArray[3] + "'s Icon"}
 									/>
 								</td>
 								{/* row 5 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(4);
+									}}>
 									<img
 										src={subteamsArray[4].iconUrl}
 										alt={subteamsArray[4] + "'s Icon"}
 									/>
 								</td>
 								{/* row 6 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(5);
+									}}>
 									<img
 										src={subteamsArray[5].iconUrl}
 										alt={subteamsArray[5] + "'s Icon"}
 									/>
 								</td>
 								{/* row 7 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(6);
+									}}>
 									<img
 										src={subteamsArray[6].iconUrl}
 										alt={subteamsArray[6] + "'s Icon"}
@@ -93,47 +127,69 @@ const SubTeams = () => {
 							</tr>
 							<tr>
 								{/* row 1 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(0);
+									}}>
 									<p>{subteamsArray[0].shortDescription}</p>
 								</td>
 								{/* row 2 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(1);
+									}}>
 									<p>{subteamsArray[1].shortDescription}</p>
 								</td>
 								{/* row 3 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(2);
+									}}>
 									<p>{subteamsArray[2].shortDescription}</p>
 								</td>
 								{/* row 4 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(3);
+									}}>
 									<p>{subteamsArray[3].shortDescription}</p>
 								</td>
 								{/* row 5 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(4);
+									}}>
 									<p>{subteamsArray[4].shortDescription}</p>
 								</td>
 								{/* row 6 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(5);
+									}}>
 									<p>{subteamsArray[5].shortDescription}</p>
 								</td>
 								{/* row 7 */}
-								<td>
+								<td
+									onClick={() => {
+										ScrolltoSubteamSection(6);
+									}}>
 									<p>{subteamsArray[6].shortDescription}</p>
 								</td>
 							</tr>
 						</tbody>
 					</table>
 					<div>
-						{/* lays out content from the .yml file gets the name of the subteam and ready for layout */}
+						{/* lays out content from the subteams dict gets the name of the subteam and index */}
 						{Object.keys(subteamsDict).map((subteamName, index) => {
 							const subteam = subteamsDict[subteamName];
 							//changes location of content based if the second one creates a checkerboard layout
 							const className = index % 2 === 0 ? "SubteamsEnd" : "";
 							return (
 								<div>
+									{/* changes layout if the second or first one */}
 									{index % 2 === 0 ? (
 										<>
-											<div>
+											<div className="subteamSection">
 												<img
 													src={subteam.iconUrl}
 													alt={subteamName + "'s Icon"}
@@ -154,7 +210,7 @@ const SubTeams = () => {
 										</>
 									) : (
 										<>
-											<div>
+											<div className="subteamSection">
 												<h2 className={className}>{subteamName}</h2>
 												<img
 													src={subteam.iconUrl}
