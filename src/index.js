@@ -28,9 +28,6 @@ root.render(
 						path="/OurSponsors"
 						element={<OurSponsors />}></Route>
 					<Route
-						path="/BecomeASponsor"
-						element={<BecomeASponsor />}></Route>
-					<Route
 						path="/JoinTheClub"
 						element={<JoinTheClub />}></Route>
 					<Route

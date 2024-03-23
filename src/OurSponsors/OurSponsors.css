@@ -1,0 +1,79 @@
+#OurSponsors {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: gray;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+#BecomeASponsors {
+	background-color: white;
+}
+
+#BecomeASponsors div {
+	display: flex;
+	flex-direction: row;
+}
+
+#BecomeASponsors a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#BecomeASponsors div a img {
+	height: 18rem;
+	width: auto;
+	padding-right: 3rem;
+}
+
+#BecomeASponsors img {
+	height: auto;
+	width: 60%;
+}
+
+#Sponsor {
+	background-color: white;
+}
+
+#SponsorEnd {
+	text-align: end;
+}
+
+.SponsorsTitle {
+	text-align: left;
+	border-bottom: 2px solid black;
+}
+
+.Sponsors {
+	background-color: inherit;
+}
+
+.Sponsors a {
+	display: flex;
+	flex-direction: column;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: whitesmoke;
+}
+
+.Sponsors a div {
+	display: flex;
+	flex-direction: row;
+}
+
+.Sponsors a h4 {
+	width: 30%;
+}
+
+.Sponsors a img {
+	max-height: 8rem;
+	max-width: 70%;
+}
+
+.Sponsors a p {
+	padding: 2rem;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
