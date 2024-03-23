@@ -124,8 +124,10 @@ const SubTeams = () => {
 						</tbody>
 					</table>
 					<div>
+						{/* lays out content from the .yml file gets the name of the subteam and ready for layout */}
 						{Object.keys(subteamsDict).map((subteamName, index) => {
 							const subteam = subteamsDict[subteamName];
+							//changes location of content based if the second one creates a checkerboard layout
 							const className = index % 2 === 0 ? "SubteamsEnd" : "";
 							return (
 								<div>
