@@ -8,7 +8,7 @@ import leadershipData from "../MockDB/SubTeams.yml";
  * @returns {JSX.Element} page - page content
  * @description the subteams page
  * @author Brock <darkicewolf50@gmail.com>
- * @todo add gPRC to backend and css
+ * @todo add gPRC to backend and any remaining css
  */
 const SubTeams = () => {
 	const [subteamsDict, setSubteamsDict] = useState();
@@ -42,7 +42,6 @@ const SubTeams = () => {
 	 * @returns {null} null - moves screen to a specific subteam section
 	 * @description moves screen to the subteam's section upon click
 	 * @author Brock <darkicewolf50@gmail.com>
-	 * @todo add css pointer talbe elements
 	 */
 	const ScrolltoSubteamSection = (index) => {
 		const section = document.querySelectorAll(".subteamTitle")[index];
