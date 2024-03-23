@@ -60,9 +60,27 @@ const OurSponsors = () => {
 
 	return (
 		<div id="OurSponsors">
-			<h1>Sponsor</h1>
 			<div id="BecomeASponsors">
-				<p>(How our team uses what's given by and benefits from sponsors)</p>
+				<h1>How sponsors help us</h1>
+				<p>
+					Schulich Off-Road expresses deep appreciation for sponsors' crucial
+					support in various team operations, from sourcing parts to
+					participating in competitions. Tailored sponsorship agreements
+					acknowledge each sponsor's unique contributions. As a student-led
+					team, every form of support, whether monetary or in goods and
+					services, is essential for success. Past sponsor assistance includes:
+				</p>
+				<ul>
+					<li>Design fabrication</li>
+					<li>Material procurement</li>
+					<li>Design consultations</li>
+					<li>Software provision Travel funding for competitions</li>
+				</ul>
+				<p>
+					These partnerships signify a commitment to excellence and innovation
+					in engineering.
+				</p>
+				<h1>Become a sponsor</h1>
 				<div>
 					<a
 						href="https://google.com"
@@ -79,19 +97,43 @@ const OurSponsors = () => {
 						a link to the form as well)
 					</p>
 				</div>
-				<p>
-					(Talk about what we can offer our sponsors for helping us briefly or
-					in a listing format. We can also mention how they can find more on the
-					sponsorship package - plus provide some way they can access the
-					package from here)
-				</p>
+				<h1>Why Sponsor Us?</h1>
+				<ul>
+					<li>
+						Objective: Connect sponsors with next generation of Canadian
+						engineers
+					</li>
+					<li>
+						Opportunity to work with Schulich Off-Road team and wider
+						undergraduate community at University of Calgary who are a part of
+						the Schulich Off-Road team
+					</li>
+					<li>
+						Build mutually beneficial relationships with dedicated and ambitious
+						students
+					</li>
+					<li>
+						Benefits include perks for advertising and promoting services and
+						company to team members
+					</li>
+					<li>
+						Collaboration with leading companies to ensure members learn
+						sought-after skills
+					</li>
+					<li>Mitigate frictional unemployment for graduating team members</li>
+					<li>Networking opportunities for members with potential employers</li>
+					<li>
+						Employers can build connections with new generation of engineers to
+						secure jobs and potential employees
+					</li>
+				</ul>
 				<img
 					src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1708797415/Screenshot_from_2024-02-24_10-52-24_nsn9uv.png"
 					alt="A photo of our sponsorship package"
 				/>
 			</div>
 			<div id="Sponsor">
-				<h2 className="SponsorsTitle">Current Sponsors</h2>
+				<h1>Current Sponsors</h1>
 				{/* shows the current sponsors only after the data has been recieved */}
 				{currentSponsorsDict === undefined ? (
 					<p>Loading...</p>
@@ -147,11 +189,11 @@ const OurSponsors = () => {
 				)}
 			</div>
 			<div id="Sponsor">
-				<h2
+				<h1
 					className="SponsorsTitle"
 					id="SponsorEnd">
 					Past Sponsors
-				</h2>
+				</h1>
 				{/* shows past sponsors only when recieved, do not duplicate the sponsors from current ones */}
 				{pastSponsorsDict === undefined ? (
 					<p>Loading...</p>
