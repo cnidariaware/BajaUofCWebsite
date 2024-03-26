@@ -1,8 +1,5 @@
 import logo from "./logo.png";
-import DropdownMenu from "./DropdownMenu";
-import OpenPageButton from "./OpenPageButton";
-import { useNavigate, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
 
 /**
@@ -13,72 +10,68 @@ import "./Header.css";
  * @todo convert any dropdowns and use <Link> just like <a> https://github.com/Akshpreet02/EventSphere
  */
 const Header = () => {
-	const [isDropdownVisible, setDropdownVisible] = useState(false);
-	const navigate = useNavigate();
-
-	/**
-	 * @param {String} arg -  The page that the button goes to
-	 * @returns {JSX.Element} JSX - HTML tags and JS functionality
-	 * @description Function that move you to the specified place
-	 * @author Brock <darkicewolf50@gmail.com>
-	 */
-	const LinkTo = (arg) => {
-		navigate(arg);
-	};
-
-	//makes the drop down menu visible when the mouse enters the Club Membership & Upcoming events button area
-	const handleMouseEnter = () => {
-		setDropdownVisible(true);
-	};
-	//makes the drop down menu invisible when the mouse leaves the Club Membership & Upcoming events button area
-	const handleMouseLeave = () => {
-		setDropdownVisible(false);
-	};
-
 	return (
 		<>
 			<header>
-				<figure>
-					<img
-						id="logo"
-						onClick={() => LinkTo("/")}
-						src={logo}
-						alt="Schulich Off-Road's logo"
-					/>
-					<figcaption>
-						<h2>Schulich Offroad</h2>
-					</figcaption>
-				</figure>
+				<Link to={"/"}>
+					<figure>
+						<img
+							id="logo"
+							src={logo}
+							alt="Schulich Off-Road's logo"
+						/>
+						<figcaption>
+							<h1>Schulich Offroad</h1>
+						</figcaption>
+					</figure>
+				</Link>
+
 				<nav>
-					<OpenPageButton
-						pageToGoTo={"/"}
-						textOnButton={"About Us"}
-					/>
-					<OpenPageButton
-						pageToGoTo={"/Teams"}
-						textOnButton={"Teams"}
-					/>
-					<OpenPageButton
-						pageToGoTo={"/OurSponsors"}
-						textOnButton={"Our Sponsors"}
-					/>
-					<OpenPageButton
-						pageToGoTo={"/BecomeASponsor"}
-						textOnButton={"Become a Sponsor"}
-					/>
-					<div
-						onMouseEnter={handleMouseEnter}
-						onMouseLeave={handleMouseLeave}
-						style={{ background: "red" }}>
-						{/* dropdown menu is only visible when a mouse enters the area of the button below */}
-						<button type="button">Club Membership & Upcoming Events</button>{" "}
-						{/*this button does nothing yet*/}
-						{isDropdownVisible && <DropdownMenu />}
-					</div>
-					<OpenPageButton
-						pageToGoTo={"/Gallery"}
-						textOnButton={"Gallery"}
-					/>
+					<ul>
+						<Link to={"/"}>
+							<li>About Us</li>
+						</Link>
+						<Link to={"/Teams"}>
+							<li>Teams</li>
+						</Link>
+						<Link to={"/OurSponsors"}>
+							<li>Our Sponsors</li>
+						</Link>
+						<Link to={"/OurSponsors"}>
+							<li>Become a Sponsor</li>
+						</Link>
+						<li className="DropDown">
+							{/* this link and li only exits for styling purposes */}
+							<Link>
+								<li>Club Membership & Upcoming Events</li>
+							</Link>
+
+							<ul className="Hide">
+								<Link to={"/JoinTheClub"}>
+									<li>Join the Club</li>
+								</Link>
+								<Link to={"/UpcomingEvents"}>
+									<li>Upcoming Events</li>
+								</Link>
+								<Link>
+									<li>Previous Events</li>
+								</Link>
+							</ul>
+						</li>
+						<li className="DropDown">
+							<Link>
+								<li>More</li>
+							</Link>
+							<ul className="Hide">
+								<Link>
+									<li>Gallery</li>
+								</Link>
+								<Link>
+									<li>Roster</li>
+								</Link>
+							</ul>
+						</li>
+					</ul>
 				</nav>
 			</header>
 			<Outlet />
