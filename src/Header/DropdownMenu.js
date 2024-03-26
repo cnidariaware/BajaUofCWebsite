@@ -5,6 +5,7 @@ import OpenPageButton from "./OpenPageButton";
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description Drop down menu elements
  * @author Brock <darkicewolf50@gmail.com>
+ * @todo chang to proper drop down menu, convert to using <Link>
  */
 const DropdownMenu = () => {
 	return (

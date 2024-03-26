@@ -10,6 +10,7 @@ import "./Header.css";
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description The top header part of the page includes the naviagtion
  * @author Brock <darkicewolf50@gmail.com>
+ * @todo convert any dropdowns and use <Link> just like <a> https://github.com/Akshpreet02/EventSphere
  */
 const Header = () => {
 	const [isDropdownVisible, setDropdownVisible] = useState(false);
