@@ -14,7 +14,7 @@ import yaml from "js-yaml";
 const OurSponsors = () => {
 	const [currentSponsorsDict, setCurrentSponsorsDict] = useState(); //variable states for the dictionary of sponsors
 	const [pastSponsorsDict, setPastSponsorsDict] = useState();
-	const LinktoSponsorOutForm = "https://google.com";
+	const LinktoSponsorOutreachForm = "https://google.com";
 
 	useEffect(() => {
 		getCurrentSponsors();
@@ -84,7 +84,7 @@ const OurSponsors = () => {
 				<h1>Become a sponsor</h1>
 				<div>
 					<a
-						href={LinktoSponsorOutForm}
+						href={LinktoSponsorOutreachForm}
 						target="_blank"
 						rel="noreferrer">
 						<img
@@ -129,7 +129,7 @@ const OurSponsors = () => {
 					</li>
 				</ul>
 				<a
-					href={LinktoSponsorOutForm}
+					href={LinktoSponsorOutreachForm}
 					target="_blank"
 					rel="noreferrer">
 					<table>
