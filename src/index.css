@@ -12,6 +12,7 @@ code {
 		monospace;
 }
 
+/* for dark mode */
 #root.darkmode img,
 #root.darkmode video,
 #root.darkmode iframe {
