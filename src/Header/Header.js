@@ -81,8 +81,8 @@ const Header = () => {
 						</Link>
 						<li className="DropDown">
 							{/* this link and li only exits for styling purposes */}
-							<Link>
-								<li>Club Membership & Upcoming Events</li>
+							<Link className="DropDownHeader">
+								Club Membership & Upcoming Events
 							</Link>
 
 							<ul className="Hide">
@@ -98,11 +98,9 @@ const Header = () => {
 							</ul>
 						</li>
 						<li className="DropDown">
-							<Link>
-								<li>More</li>
-							</Link>
+							<Link className="DropDownHeader">More...</Link>
 							<ul className="Hide">
-								<Link>
+								<Link to={"/Gallery"}>
 									<li>Gallery</li>
 								</Link>
 								<Link>

@@ -32,7 +32,7 @@ nav a {
 }
 
 nav a li {
-	background-color: none;
+	background-color: white;
 	padding: 0.5rem;
 	border: solid 1px gray;
 }
@@ -48,14 +48,28 @@ nav ul {
 	margin: 0px;
 	padding: 0px;
 }
+/* makes it so that the tags look the same whist having removing browser error */
+.DropDownHeader {
+	display: inline-block;
+	background-color: white;
+	padding: 0.5rem;
+	border: solid 1px gray;
+}
+
+.DropDownHeader:hover {
+	background-color: gray;
+}
 
 .Hide {
 	display: none;
 }
 
 .DropDown {
-	cursor: default;
 	position: relative;
+}
+
+.DropDown a {
+	cursor: default;
 }
 
 /* makes dropdown visible */
