@@ -1,7 +1,8 @@
-import logo from "./logo.png";
+import logo from "./logo.webp";
 import lightDark from "./light-dark.webp";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, Outlet } from "react-router-dom";
 import "./Header.css";
+import Ender from "../Footer/Ender";
 
 /**
  * @param {null} null -  Takes in nothing
@@ -113,6 +114,7 @@ const Header = () => {
 				</nav>
 			</header>
 			<Outlet />
+			<Ender />
 		</>
 	);
 };

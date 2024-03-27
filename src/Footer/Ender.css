@@ -1,0 +1,33 @@
+#ender {
+	display: flex;
+	flex-direction: column;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	justify-content: center;
+	background-color: lightgrey;
+}
+
+#pointerCursor {
+	cursor: pointer;
+}
+
+#ender div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#ender p {
+	padding-left: 2%;
+}
+
+#ender .hidden {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	display: none;
+}
+
+#ender .hidden li {
+	list-style-type: none;
+	padding-right: 2%;
+}
