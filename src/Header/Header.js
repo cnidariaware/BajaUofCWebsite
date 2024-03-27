@@ -1,6 +1,6 @@
 import logo from "./logo.webp";
 import lightDark from "./light-dark.webp";
-import { Outlet, Link, Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
 import Ender from "../Footer/Ender";
 
