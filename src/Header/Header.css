@@ -29,8 +29,12 @@ nav a {
 
 nav a li {
 	background-color: none;
-	padding: 1rem;
-	padding-top: 0px;
+	padding: 0.5rem;
+	border: solid 1px gray;
+}
+
+nav a li:hover {
+	background-color: gray;
 }
 
 nav ul {
@@ -58,4 +62,38 @@ nav ul {
 	text-align: center;
 }
 
-/* not sure what these two are for */
+header div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+header div button {
+	border: none;
+	cursor: pointer;
+	height: 4rem;
+	width: 4rem;
+	align-items: center;
+	background-color: inherit;
+	border: solid 2px gray;
+	border-radius: 1rem;
+}
+
+header div button img {
+	width: 100%;
+}
+
+/* for dark mode */
+
+.darkmode {
+	filter: invert(95%) hue-rotate(180deg);
+	background-color: white;
+}
+
+#root.darkmode #logo.logoAfterDark {
+	filter: hue-rotate(180deg);
+}
+
+#root.darkmode #darkModeToggle {
+	filter: hue-rotate(180deg);
+}
