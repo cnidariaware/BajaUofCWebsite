@@ -14,7 +14,8 @@ import yaml from "js-yaml";
 const OurSponsors = () => {
 	const [currentSponsorsDict, setCurrentSponsorsDict] = useState(); //variable states for the dictionary of sponsors
 	const [pastSponsorsDict, setPastSponsorsDict] = useState();
-	const LinktoSponsorOutreachForm = "https://google.com";
+	const LinktoSponsorOutreachForm =
+		"https://docs.google.com/forms/d/e/1FAIpQLSd8eR1es9QJWjlQfGtpJaf8Jwv63d6Ei2e4FSpoBdkB6OiT4g/viewform?usp=sf_link";
 
 	useEffect(() => {
 		getCurrentSponsors();
@@ -62,154 +63,185 @@ const OurSponsors = () => {
 	return (
 		<div id="OurSponsors">
 			<div id="BecomeASponsors">
-				<h1>How sponsors help us</h1>
-				<p>
-					Schulich Off-Road expresses deep appreciation for sponsors' crucial
-					support in various team operations, from sourcing parts to
-					participating in competitions. Tailored sponsorship agreements
-					acknowledge each sponsor's unique contributions. As a student-led
-					team, every form of support, whether monetary or in goods and
-					services, is essential for success. Past sponsor assistance includes:
-				</p>
-				<ul>
-					<li>Design fabrication</li>
-					<li>Material procurement</li>
-					<li>Design consultations</li>
-					<li>Software provision Travel funding for competitions</li>
-				</ul>
-				<p>
-					These partnerships signify a commitment to excellence and innovation
-					in engineering.
-				</p>
-				<h1>Become a sponsor</h1>
 				<div>
+					<h1>How sponsors help us</h1>
+					<p>
+						Schulich Off-Road expresses deep appreciation for sponsors' crucial
+						support in various team operations, from sourcing parts to
+						participating in competitions. Tailored sponsorship agreements
+						acknowledge each sponsor's unique contributions. As a student-led
+						team, every form of support, whether monetary or in goods and
+						services, is essential for success. Past sponsor assistance
+						includes:
+					</p>
+					<ul>
+						<li>Design fabrication</li>
+						<li>Material procurement</li>
+						<li>Design consultations</li>
+						<li>Software provision Travel funding for competitions</li>
+					</ul>
+					<p>
+						These partnerships signify a commitment to excellence and innovation
+						in engineering.
+					</p>
+				</div>
+				<div>
+					<h1>Become a sponsor</h1>
+					<div>
+						<a
+							href={LinktoSponsorOutreachForm}
+							target="_blank"
+							rel="noreferrer">
+							<img
+								src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710699982/qr-code_l9q7ik.png"
+								alt="QR code to contanct us form"
+							/>
+							<p>Click on this to open the contact form</p>
+						</a>
+						<p>
+							Talk about how you can reach out to sponsor us. (Maybe also
+							include a link to the form as well)
+						</p>
+					</div>
+				</div>
+				<div>
+					<h1>Why Sponsor Us?</h1>
+					<ul>
+						<li>
+							Objective: Connect sponsors with next generation of Canadian
+							engineers
+						</li>
+						<li>
+							Opportunity to work with Schulich Off-Road team and wider
+							undergraduate community at University of Calgary who are a part of
+							the Schulich Off-Road team
+						</li>
+						<li>
+							Build mutually beneficial relationships with dedicated and
+							ambitious students
+						</li>
+						<li>
+							Benefits include perks for advertising and promoting services and
+							company to team members
+						</li>
+						<li>
+							Collaboration with leading companies to ensure members learn
+							sought-after skills
+						</li>
+						<li>
+							Mitigate frictional unemployment for graduating team members
+						</li>
+						<li>
+							Networking opportunities for members with potential employers
+						</li>
+						<li>
+							Employers can build connections with new generation of engineers
+							to secure jobs and potential employees
+						</li>
+					</ul>
 					<a
 						href={LinktoSponsorOutreachForm}
 						target="_blank"
 						rel="noreferrer">
-						<img
-							src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710699982/qr-code_l9q7ik.png"
-							alt="QR code to contanct us form"
-						/>
-						<p>Click on this to open the contact form</p>
+						<table>
+							<caption>
+								<h2>Sponsor Packages</h2>
+							</caption>
+							<thead>
+								<tr>
+									<td>{/*blank on purpose to add spcae for a black box */}</td>
+									<td>Diamond $10,000+</td>
+									<td>Platinum $5000</td>
+									<td>Gold $1000</td>
+									<td>Silver $500</td>
+									<td>Bronze $200</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr className="evenRow">
+									<td>Skill Development</td>
+									<td>8</td>
+									<td>4</td>
+									<td>2</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr className="oddRow">
+									<td>Shop Visits</td>
+									<td>&#10003;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr className="evenRow">
+									<td>Interviews</td>
+									<td>&#10003;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr className="oddRow">
+									<td>Portfolios</td>
+									<td>&#10003; (Detailed)</td>
+									<td>&#10003;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr className="evenRow">
+									<td>Company Into to team</td>
+									<td>&#10003;</td>
+									<td>&#10003;</td>
+									<td>&#10003;</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr className="oddRow">
+									<td>Custom Gift</td>
+									<td>&#10003;</td>
+									<td>&#10003;</td>
+									<td>&#10003;</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr className="evenRow">
+									<td>Branding on Apperal (single colour)</td>
+									<td>On full sleeve</td>
+									<td>On Sleeve Forearm</td>
+									<td>Medium on back</td>
+									<td>Small on back</td>
+									<td>Small on back</td>
+								</tr>
+								<tr className="oddRow">
+									<td>Logo on Vehicle</td>
+									<td>
+										36in<sup>2</sup>
+									</td>
+									<td>
+										28in<sup>2</sup>
+									</td>
+									<td>
+										20in<sup>2</sup>
+									</td>
+									<td>
+										10in<sup>2</sup>
+									</td>
+									<td></td>
+								</tr>
+								<tr className="evenRow">
+									<td>Social Media (Min.)</td>
+									<td>Once/2 Weeks</td>
+									<td>Once/Month</td>
+									<td>Once/3 Month</td>
+									<td>Once/6 Month</td>
+									<td>Once/12 Month</td>
+								</tr>
+							</tbody>
+						</table>
 					</a>
-					<p>
-						Talk about how you can reach out to sponsor us. (Maybe also include
-						a link to the form as well)
-					</p>
 				</div>
-				<h1>Why Sponsor Us?</h1>
-				<ul>
-					<li>
-						Objective: Connect sponsors with next generation of Canadian
-						engineers
-					</li>
-					<li>
-						Opportunity to work with Schulich Off-Road team and wider
-						undergraduate community at University of Calgary who are a part of
-						the Schulich Off-Road team
-					</li>
-					<li>
-						Build mutually beneficial relationships with dedicated and ambitious
-						students
-					</li>
-					<li>
-						Benefits include perks for advertising and promoting services and
-						company to team members
-					</li>
-					<li>
-						Collaboration with leading companies to ensure members learn
-						sought-after skills
-					</li>
-					<li>Mitigate frictional unemployment for graduating team members</li>
-					<li>Networking opportunities for members with potential employers</li>
-					<li>
-						Employers can build connections with new generation of engineers to
-						secure jobs and potential employees
-					</li>
-				</ul>
-				<a
-					href={LinktoSponsorOutreachForm}
-					target="_blank"
-					rel="noreferrer">
-					<table>
-						<thead>
-							<h2>Sponsor Packages</h2>
-						</thead>
-						<tbody>
-							<tr>
-								<td>{/*blank on purpose to add spcae for a black box */}</td>
-								<td>Diamond $10,000+</td>
-								<td>Platinum $5000</td>
-								<td>Gold $1000</td>
-								<td>Silver $500</td>
-								<td>Bronze $200</td>
-							</tr>
-							<tr>
-								<td>Skill Development</td>
-								<td>8</td>
-								<td>4</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td>Shop Visits</td>
-								<td>&#10003;</td>
-							</tr>
-							<tr>
-								<td>Interviews</td>
-								<td>&#10003;</td>
-							</tr>
-							<tr>
-								<td>Portfolios</td>
-								<td>&#10003; (Detailed)</td>
-								<td>&#10003;</td>
-							</tr>
-							<tr>
-								<td>Company Into to team</td>
-								<td>&#10003;</td>
-								<td>&#10003;</td>
-								<td>&#10003;</td>
-							</tr>
-							<tr>
-								<td>Custom Gift</td>
-								<td>&#10003;</td>
-								<td>&#10003;</td>
-								<td>&#10003;</td>
-							</tr>
-							<tr>
-								<td>Branding on Apperal (single colour)</td>
-								<td>On full sleeve</td>
-								<td>On Sleeve Forearm</td>
-								<td>Medium on back</td>
-								<td>Small on back</td>
-								<td>Small on back</td>
-							</tr>
-							<tr>
-								<td>Logo on Vehicle</td>
-								<td>
-									36in<sup>2</sup>
-								</td>
-								<td>
-									28in<sup>2</sup>
-								</td>
-								<td>
-									20in<sup>2</sup>
-								</td>
-								<td>
-									10in<sup>2</sup>
-								</td>
-							</tr>
-							<tr>
-								<td>Social Media (Min.)</td>
-								<td>Once/2 Weeks</td>
-								<td>Once/Month</td>
-								<td>Once/3 Month</td>
-								<td>Once/6 Month</td>
-								<td>Once/12 Month</td>
-							</tr>
-						</tbody>
-					</table>
-				</a>
 			</div>
 			<div id="Sponsor">
 				<h1>Current Sponsors</h1>

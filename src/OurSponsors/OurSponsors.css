@@ -1,3 +1,6 @@
+:root {
+	--tableBackground: white;
+}
 #OurSponsors {
 	display: flex;
 	flex-direction: column;
@@ -13,7 +16,18 @@
 
 #BecomeASponsors div {
 	display: flex;
+	flex-direction: column;
+	border-bottom: 2px solid black;
+	padding-bottom: 4svh;
+	margin-left: 1svw;
+	margin-right: 1svw;
+}
+
+#BecomeASponsors div div {
+	display: flex;
 	flex-direction: row;
+	border-bottom: none;
+	padding: 0px;
 }
 
 #BecomeASponsors a {
@@ -24,6 +38,7 @@
 	border-radius: 5px;
 	margin-left: 1rem;
 	margin-right: 3rem;
+	width: fit-content;
 }
 
 #BecomeASponsors a:hover {
@@ -41,6 +56,32 @@
 	width: 60%;
 }
 
+#BecomeASponsors table {
+	background-color: white;
+}
+
+#BecomeASponsors table caption {
+	background-color: red;
+	color: white;
+	text-align: start;
+	padding-left: 4svw;
+	font-size: larger;
+}
+
+#BecomeASponsors table thead {
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+
+.evenRow {
+	background-color: lightgrey;
+}
+
+.oddRow {
+	background-color: whitesmoke;
+}
+
 #Sponsor {
 	background-color: white;
 }
@@ -52,6 +93,7 @@
 h1 {
 	text-align: left;
 	border-bottom: 2px solid black;
+	width: fit-content;
 }
 
 .Sponsors {
