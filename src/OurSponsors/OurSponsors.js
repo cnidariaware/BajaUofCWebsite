@@ -93,7 +93,7 @@ const OurSponsors = () => {
 							target="_blank"
 							rel="noreferrer">
 							<img
-								src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710699982/qr-code_l9q7ik.png"
+								src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1711588091/qr-code_z5kmef.png"
 								alt="QR code to contanct us form"
 							/>
 							<p>Click on this to open the contact form</p>
