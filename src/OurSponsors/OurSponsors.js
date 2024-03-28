@@ -65,11 +65,11 @@ const OurSponsors = () => {
 				<p>(How our team uses what's given by and benefits from sponsors)</p>
 				<div>
 					<a
-						href="https://google.com"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSd8eR1es9QJWjlQfGtpJaf8Jwv63d6Ei2e4FSpoBdkB6OiT4g/viewform?usp=sf_link"
 						target="_blank"
 						rel="noreferrer">
 						<img
-							src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710699982/qr-code_l9q7ik.png"
+							src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1711588091/qr-code_z5kmef.png"
 							alt="QR code to contanct us form"
 						/>
 						<p>Click on this to open the contact form</p>
