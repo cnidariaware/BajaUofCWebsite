@@ -1,8 +1,6 @@
 import logo from "./logo.webp";
-import DropdownMenu from "./DropdownMenu";
-import OpenPageButton from "./OpenPageButton";
-import { useNavigate, Outlet } from "react-router-dom";
-import { useState } from "react";
+import lightDark from "./light-dark.webp";
+import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
 import Ender from "../Footer/Ender";
 
@@ -11,73 +9,106 @@ import Ender from "../Footer/Ender";
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description The top header part of the page includes the naviagtion
  * @author Brock <darkicewolf50@gmail.com>
+ * @todo final css add baja but eon (baja leads chat)
  */
 const Header = () => {
-	const [isDropdownVisible, setDropdownVisible] = useState(false);
-	const navigate = useNavigate();
-
 	/**
-	 * @param {String} arg -  The page that the button goes to
-	 * @returns {JSX.Element} JSX - HTML tags and JS functionality
-	 * @description Function that move you to the specified place
+	 * @param {null} null -  Takes in nothing
+	 * @returns {CSSStyleRule} CSS - changes page to darkmode
+	 * @description inverts all of the colors of body without touching the pictures
 	 * @author Brock <darkicewolf50@gmail.com>
 	 */
-	const LinkTo = (arg) => {
-		navigate(arg);
+	const switchDarkMode = () => {
+		const body = document.getElementById("root");
+		const logoCss = document.getElementById("logo");
+
+		body.classList.toggle("darkmode");
+		logoCss.classList.toggle("logoAfterDark");
 	};
 
-	//makes the drop down menu visible when the mouse enters the Club Membership & Upcoming events button area
-	const handleMouseEnter = () => {
-		setDropdownVisible(true);
-	};
-	//makes the drop down menu invisible when the mouse leaves the Club Membership & Upcoming events button area
-	const handleMouseLeave = () => {
-		setDropdownVisible(false);
-	};
+	/**
+	 * @param {null} null -  Takes in nothing
+	 * @returns {CSSStyleRule} CSS - makes it compliant with bowser preferances
+	 * @description checks for what the browser prefers
+	 * @author Brock <darkicewolf50@gmail.com>
+	 */
+	document.addEventListener("DOMContentLoaded", () => {
+		const prefersDarkMode =
+			window.matchMedia &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches;
+		if (prefersDarkMode) {
+			switchDarkMode();
+		}
+	});
 
 	return (
 		<>
 			<header>
-				<figure onClick={() => LinkTo("/")}>
-					<img
-						id="logo"
-						src={logo}
-						alt="Schulich Off-Road's logo"
-					/>
-					<figcaption>
-						<h2>Schulich Offroad</h2>
-					</figcaption>
-				</figure>
+				<div>
+					<Link to={"/"}>
+						<figure>
+							<img
+								id="logo"
+								src={logo}
+								alt="Schulich Off-Road's logo"
+							/>
+							<figcaption>
+								<h1>Schulich Offroad</h1>
+							</figcaption>
+						</figure>
+					</Link>
+					<button onClick={switchDarkMode}>
+						<img
+							id="darkModeToggle"
+							src={lightDark}
+							alt="Light/Dark Toggle Symbol"
+						/>
+					</button>
+				</div>
 				<nav>
-					<OpenPageButton
-						pageToGoTo={"/"}
-						textOnButton={"About Us"}
-					/>
-					<OpenPageButton
-						pageToGoTo={"/Teams"}
-						textOnButton={"Teams"}
-					/>
-					<OpenPageButton
-						pageToGoTo={"/OurSponsors"}
-						textOnButton={"Our Sponsors"}
-					/>
-					<OpenPageButton
-						pageToGoTo={"/BecomeASponsor"}
-						textOnButton={"Become a Sponsor"}
-					/>
-					<div
-						onMouseEnter={handleMouseEnter}
-						onMouseLeave={handleMouseLeave}
-						style={{ background: "red" }}>
-						{/* dropdown menu is only visible when a mouse enters the area of the button below */}
-						<button type="button">Club Membership & Upcoming Events</button>{" "}
-						{/*this button does nothing yet*/}
-						{isDropdownVisible && <DropdownMenu />}
-					</div>
-					<OpenPageButton
-						pageToGoTo={"/Gallery"}
-						textOnButton={"Gallery"}
-					/>
+					<ul>
+						<Link to={"/"}>
+							<li>About Us</li>
+						</Link>
+						<Link to={"/Teams"}>
+							<li>Teams</li>
+						</Link>
+						<Link to={"/OurSponsors"}>
+							<li>Our Sponsors</li>
+						</Link>
+						<Link to={"/OurSponsors"}>
+							<li>Become a Sponsor</li>
+						</Link>
+						<li className="DropDown">
+							{/* this link and li only exits for styling purposes */}
+							<Link className="DropDownHeader">
+								Club Membership & Upcoming Events
+							</Link>
+
+							<ul className="Hide">
+								<Link to={"/JoinTheClub"}>
+									<li>Join the Club</li>
+								</Link>
+								<Link to={"/UpcomingEvents"}>
+									<li>Upcoming Events</li>
+								</Link>
+								<Link>
+									<li>Previous Events</li>
+								</Link>
+							</ul>
+						</li>
+						<li className="DropDown">
+							<Link className="DropDownHeader">More...</Link>
+							<ul className="Hide">
+								<Link to={"/Gallery"}>
+									<li>Gallery</li>
+								</Link>
+								<Link>
+									<li>Roster</li>
+								</Link>
+							</ul>
+						</li>
+					</ul>
 				</nav>
 			</header>
 			<Outlet />

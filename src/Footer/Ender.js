@@ -14,7 +14,7 @@ const Ender = () => {
 				<p
 					onClick={() => window.open("https://www.morphgenix.com/", "_blank")}
 					id="pointerCursor">
-					Powered by: Morphgenix
+					Partnered with Morphgenix
 				</p>
 			</div>
 			<ul className="hidden">

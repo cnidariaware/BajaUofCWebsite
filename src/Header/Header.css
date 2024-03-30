@@ -5,6 +5,12 @@ header {
 	margin-top: 0%;
 }
 
+header a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
 figure {
 	margin: 0px;
 	height: 10%;
@@ -19,14 +25,93 @@ header figure {
 	background-color: white;
 }
 
-/* not sure what these two are for */
-#title {
-	background-color: blueviolet;
+nav a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
 }
-.banner {
+
+nav a li {
+	background-color: white;
+	padding: 0.5rem;
+	border: solid 1px gray;
+}
+
+nav a li:hover {
+	background-color: gray;
+}
+
+nav ul {
 	display: flex;
 	flex-direction: row;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+/* makes it so that the tags look the same whist having removing browser error */
+.DropDownHeader {
+	display: inline-block;
+	background-color: white;
+	padding: 0.5rem;
+	border: solid 1px gray;
+}
+
+.DropDownHeader:hover {
+	background-color: gray;
+}
+
+.Hide {
+	display: none;
+}
+
+.DropDown {
+	position: relative;
+}
+
+.DropDown a {
+	cursor: default;
+}
+
+/* makes dropdown visible */
+.DropDown:hover .Hide {
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+header div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
-	justify-content: flex-start;
-	background-color: aqua;
+}
+header div button {
+	border: none;
+	cursor: pointer;
+	height: 4rem;
+	width: 4rem;
+	align-items: center;
+	background-color: inherit;
+	border: solid 2px gray;
+	border-radius: 1rem;
+}
+
+header div button img {
+	width: 100%;
+}
+
+/* for dark mode */
+
+.darkmode {
+	filter: invert(95%) hue-rotate(180deg);
+	background-color: white;
+}
+
+#root.darkmode #logo.logoAfterDark {
+	filter: hue-rotate(180deg);
+}
+
+#root.darkmode #darkModeToggle {
+	filter: hue-rotate(180deg);
 }
