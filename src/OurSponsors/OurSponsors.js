@@ -64,7 +64,7 @@ const OurSponsors = () => {
 		<div id="OurSponsors">
 			<div id="BecomeASponsors">
 				<div>
-					<h1>How sponsors help us</h1>
+					<h1 id="h1Exception">How sponsors help us</h1>
 					<p>
 						Schulich Off-Road expresses deep appreciation for sponsors' crucial
 						support in various team operations, from sourcing parts to
@@ -244,7 +244,10 @@ const OurSponsors = () => {
 				</div>
 			</div>
 			<div id="Sponsor">
-				<h1>Current Sponsors</h1>
+				<div id="sideBorder">
+					<h1>Current Sponsors</h1>
+					<div></div>
+				</div>
 				{/* shows the current sponsors only after the data has been recieved */}
 				{currentSponsorsDict === undefined ? (
 					<p>Loading...</p>
@@ -253,7 +256,9 @@ const OurSponsors = () => {
 						{/* gets the outmost name of the Object Name of tier*/}
 						{Object.keys(currentSponsorsDict).map((sponsorsTier) => {
 							return (
-								<div className="Sponsors">
+								<div
+									key={sponsorsTier}
+									className="Sponsors">
 									<h3>{sponsorsTier}</h3>
 									{/* gets key form list of tier */}
 									{Object.keys(currentSponsorsDict[sponsorsTier]).map(
@@ -270,22 +275,25 @@ const OurSponsors = () => {
 															];
 														return (
 															<a
+																key={sponsorData}
 																href={sponsorData.Url}
 																target="_blank"
 																rel="noreferrer">
 																<div>
-																	<h4>{sponsorName}</h4>
 																	<img
 																		src={sponsorData.LogoUrl}
 																		alt={sponsorName + "'s Logo"}
 																	/>
-																</div>
-																{(sponsorsTier !== "Silver Tier" ||
-																	sponsorsTier !== "Bronze Tier") && (
 																	<div>
-																		<p>{sponsorData.DescriptionAboutSponsor}</p>
+																		<h4>{sponsorName}</h4>
+																		{(sponsorsTier !== "Silver Tier" ||
+																			sponsorsTier !== "Bronze Tier") && (
+																			<p>
+																				{sponsorData.DescriptionAboutSponsor}
+																			</p>
+																		)}
 																	</div>
-																)}
+																</div>
 															</a>
 														);
 													})}

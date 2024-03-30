@@ -1,6 +1,12 @@
 :root {
 	--tableBackground: white;
+	--sponsorBorderWidth: 2px;
+	--sponsorBorderStyle: solid;
+	--sponsorBorderColour: black;
+	--sponsorBorder: var(--sponsorBorderWidth) var(--sponsorBorderStyle)
+		var(--sponsorBorderColour);
 }
+
 #OurSponsors {
 	display: flex;
 	flex-direction: column;
@@ -17,7 +23,6 @@
 #BecomeASponsors div {
 	display: flex;
 	flex-direction: column;
-	border-bottom: 2px solid black;
 	padding-bottom: 4svh;
 	margin-left: 1svw;
 	margin-right: 1svw;
@@ -90,10 +95,48 @@
 	text-align: end;
 }
 
-h1 {
+#OurSponsors h1 {
+	position: relative;
 	text-align: left;
-	border-bottom: 2px solid black;
+	border-bottom: var(--sponsorBorder);
+	border-top: var(--sponsorBorder);
 	width: fit-content;
+	padding-top: 2svh;
+	padding-bottom: 2svh;
+}
+
+#OurSponsors #h1Exception {
+	border-top: none;
+}
+
+/* this hurt me  but we now have a border at the side*/
+#sideBorder {
+	display: flex;
+	flex-direction: row;
+	padding-top: 2svh;
+	padding-bottom: 2svh;
+	margin-top: 2svh;
+	margin-bottom: 4svh;
+	border-bottom: var(--sponsorBorder);
+	align-items: center;
+}
+
+#sideBorder h1 {
+	padding-right: 2svw;
+	margin: 0px;
+	width: fit-content;
+	border: none;
+}
+
+#sideBorder div {
+	background-color: var(--sponsorBorderColour);
+	flex: 1;
+	height: var(--sponsorBorderWidth);
+}
+
+#Sponsor .Sponsors h1 {
+	width: 100%;
+	border: none;
 }
 
 .Sponsors {
@@ -122,17 +165,18 @@ h1 {
 	flex-direction: row;
 }
 
+.Sponsors a div div {
+	display: flex;
+	flex-direction: column;
+	padding-left: 5svw;
+}
+
 .Sponsors a h4 {
-	width: 30%;
+	width: fit-content;
+	border-bottom: var(--sponsorBorder);
 }
 
 .Sponsors a img {
-	max-height: 8rem;
-	max-width: 70%;
-}
-
-.Sponsors a p {
-	padding: 2rem;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	max-height: 24svh;
+	width: 25svw;
 }
