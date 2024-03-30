@@ -139,6 +139,7 @@ const OurSponsors = () => {
 							to secure jobs and potential employees
 						</li>
 					</ul>
+					{/* the sponsorship package replicated */}
 					<a
 						href={LinktoSponsorOutreachForm}
 						target="_blank"
