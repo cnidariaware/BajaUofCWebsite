@@ -1,15 +1,33 @@
 #afterTime {
-	color: red;
+	color: darkred;
+	background-color: red;
+}
+
+#counter.dangerDays {
+	background-color: red;
 }
 
 #counter {
 	display: flex;
 	flex-direction: row;
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-	padding-top: 0.5rem;
+	padding-left: 1svw;
+	padding-right: 1svw;
+	padding-top: 1svw;
 	text-align: center;
-	background-color: grey;
+	background-color: whitesmoke;
+	border: 2px solid black;
+	border-radius: 5px;
+	justify-content: space-between;
+	font-size: x-large;
+}
+
+#counter div {
+	display: flex;
+	flex-direction: row;
+}
+
+#counter div p {
+	padding-left: 1svw;
 }
 
 #counter .countdown-link {
@@ -28,7 +46,7 @@
 }
 
 #counter .countdown {
-	line-height: 1.25rem;
+	line-height: 1.25svb;
 	padding: 0 0.75rem 0 0.75rem;
 	align-items: center;
 	display: flex;
@@ -37,14 +55,4 @@
 
 #counter .countdownDanger {
 	color: #ff0000;
-}
-
-#counter .countdown p {
-	margin: 0;
-}
-
-#counter .countdown span {
-	text-transform: uppercase;
-	font-size: 0.75rem;
-	line-height: 1rem;
 }

@@ -77,8 +77,11 @@ const getReturnValues = (countDown) => {
 };
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
+	let dangerDays = days > 10 ? "" : "dangerDays";
 	return (
-		<div id="counter">
+		<div
+			className={dangerDays}
+			id="counter">
 			<DateTimeDisplay
 				valueAwayFrom={days}
 				discriptor={"Days"}
@@ -106,7 +109,7 @@ const DateTimeDisplay = ({ valueAwayFrom, discriptor }) => {
 	return (
 		<div>
 			<p>{valueAwayFrom}</p>
-			<span>{discriptor}</span>
+			<p>{discriptor}</p>
 		</div>
 	);
 };

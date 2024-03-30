@@ -9,7 +9,7 @@ import CountDownTimer from "../../CountDown/CountDownTimer";
  * @returns {JSX.Element} PageContent - gets a Dictionary of our sponsors from synology drive
  * @description The Upcoming Events Page
  * @author Brock <darkicewolf50@gmail.com>
- * @todo css and change to Openpage on merge
+ * @todo previous events button
  */
 const UpcominEvents = () => {
 	const [competitionsDict, setCompetitionsDict] = useState();
@@ -41,8 +41,11 @@ const UpcominEvents = () => {
 	if (competitionsDict) {
 		return (
 			<div id="upcomingEvents">
-				<h2>Upcoming Competitions</h2>
-				<div>
+				<div id="upcomingEventsSideBorder">
+					<h1>Upcoming Competitions</h1>
+					<div></div>
+				</div>
+				<div id="Events">
 					{Object.keys(competitionsDict).map((competitionKey) => {
 						//Selects make a dictionary of only that event to pull from
 						const competition = competitionsDict[competitionKey];
@@ -73,7 +76,7 @@ const UpcominEvents = () => {
 									<tbody>
 										<tr>
 											<td>
-												<h3>{competition.Name}</h3>
+												<h2>{competition.Name}</h2>
 											</td>
 											<td>
 												<time>{competition.Date}</time>
@@ -91,8 +94,11 @@ const UpcominEvents = () => {
 					})}
 				</div>
 				<div>
-					<h2>Previous Events</h2>
-					<button>Previuos Events</button>
+					<div id="upcomingEventsSideBorder">
+						<div></div>
+						<h1>Previous Events</h1>
+					</div>
+					<button>Previous Events</button>
 					{/* will change to thing below when merged onto dev branch */}
 					{/* <OpenPage pageToGoTo={"/PreviuosEvents"} textOnButton={"Previous Events"} /> */}
 				</div>

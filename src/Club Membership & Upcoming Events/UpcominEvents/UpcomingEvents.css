@@ -1,8 +1,81 @@
+:root {
+	--upcomingEventsTextColour: whitesmoke;
+	--sizeUpcomingEvents: 2%;
+	--upcomingEventsBorderWidth: 2px;
+	--upcomingEventsBorderStyle: solid;
+	--upcomingEventsBorderColour: black;
+	--upcomingEventsBorder: var(--upcomingEventsBorderWidth)
+		var(--upcomingEventsBorderStyle) var(--upcomingEventsBorderColour);
+}
+#upcomingEvents {
+	text-decoration: none;
+}
+
+#upcomingEvents #Events {
+	display: flex;
+	flex-direction: column;
+	margin-left: var(--sizeUpcomingEvents);
+	margin-right: var(--sizeUpcomingEvents);
+	flex: 1;
+}
+
 #upcomingEvents a {
 	text-decoration: none;
 	color: inherit;
+	width: 100%;
 }
 
-#upcomingEvents {
-	text-decoration: none;
+#upcomingEvents table {
+	width: inherit;
+	/* margin-left: 5svw; */
+	margin-bottom: 5svh;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+#upcomingEvents table tr {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: var(--sizeUpcomingEvents);
+	margin-right: var(--sizeUpcomingEvents);
+}
+
+#upcomingEvents table h2 {
+	background-color: var(--upcomingEventsTextColour);
+	border-radius: 5px;
+}
+
+#upcomingEvents table time {
+	background-color: var(--upcomingEventsTextColour);
+	border-radius: 5px;
+	justify-content: end;
+	text-align: end;
+}
+#Events a table tbody tr:nth-child(2) td {
+	width: 100%;
+}
+
+#upcomingEventsSideBorder {
+	display: flex;
+	flex-direction: row;
+	padding-top: 2svh;
+	padding-bottom: 2svh;
+	margin-top: 1svh;
+	margin-bottom: 3svh;
+	align-items: center;
+}
+
+#upcomingEventsSideBorder h1 {
+	padding-right: 2svw;
+	padding-left: 2svw;
+	margin: 0px;
+	width: fit-content;
+	border: none;
+}
+#upcomingEventsSideBorder div {
+	background-color: var(--upcomingEventsBorderColour);
+	flex: 1;
+	height: var(--upcomingEventsBorderWidth);
 }
