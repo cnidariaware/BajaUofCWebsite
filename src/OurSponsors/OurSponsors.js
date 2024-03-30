@@ -145,7 +145,7 @@ const OurSponsors = () => {
 						rel="noreferrer">
 						<table>
 							<caption>
-								<h2>Sponsor Packages</h2>
+								<h3>Sponsor Packages</h3>
 							</caption>
 							<thead>
 								<tr>
@@ -255,52 +255,69 @@ const OurSponsors = () => {
 					<>
 						{/* gets the outmost name of the Object Name of tier*/}
 						{Object.keys(currentSponsorsDict).map((sponsorsTier) => {
+							let changetoGridStyle =
+								sponsorsTier === "Diamond Tier" ||
+								sponsorsTier === "Platinum Tier";
+							let girdContainer = changetoGridStyle
+								? ""
+								: "sponsorGridContainer";
+							let gridItem = changetoGridStyle ? "" : "sponsorGridItem";
+
 							return (
 								<div
 									key={sponsorsTier}
 									className="Sponsors">
 									<h3>{sponsorsTier}</h3>
-									{/* gets key form list of tier */}
-									{Object.keys(currentSponsorsDict[sponsorsTier]).map(
-										(sponsorsKey) => {
-											return (
-												<>
-													{/* gets name out of object and gets data of that sponsor preped */}
-													{Object.keys(
-														currentSponsorsDict[sponsorsTier][sponsorsKey]
-													).map((sponsorName) => {
-														let sponsorData =
-															currentSponsorsDict[sponsorsTier][sponsorsKey][
-																sponsorName
-															];
-														return (
-															<a
-																key={sponsorData}
-																href={sponsorData.Url}
-																target="_blank"
-																rel="noreferrer">
-																<div>
-																	<img
-																		src={sponsorData.LogoUrl}
-																		alt={sponsorName + "'s Logo"}
-																	/>
+									<div className={girdContainer}>
+										{/* gets key form list of tier */}
+										{Object.keys(currentSponsorsDict[sponsorsTier]).map(
+											(sponsorsKey) => {
+												return (
+													<div key={sponsorsKey}>
+														{/* gets name out of object and gets data of that sponsor preped */}
+														{Object.keys(
+															currentSponsorsDict[sponsorsTier][sponsorsKey]
+														).map((sponsorName) => {
+															let sponsorData =
+																currentSponsorsDict[sponsorsTier][sponsorsKey][
+																	sponsorName
+																];
+															let sponsorBronzeSilver =
+																sponsorsTier !== "Silver Tier" &&
+																sponsorsTier !== "Bronze Tier";
+															return (
+																<a
+																	key={sponsorData}
+																	href={sponsorData.Url}
+																	target="_blank"
+																	className={gridItem}
+																	rel="noreferrer">
 																	<div>
-																		<h4>{sponsorName}</h4>
-																		{(sponsorsTier !== "Silver Tier" ||
-																			sponsorsTier !== "Bronze Tier") && (
-																			<p>
-																				{sponsorData.DescriptionAboutSponsor}
-																			</p>
+																		<img
+																			src={sponsorData.LogoUrl}
+																			alt={sponsorName + "'s Logo"}
+																		/>
+																		{sponsorBronzeSilver === true ? (
+																			<div>
+																				<h3>{sponsorName}</h3>
+																				<p>
+																					{sponsorData.DescriptionAboutSponsor}
+																				</p>
+																			</div>
+																		) : (
+																			<div className="sponsorCenter">
+																				<h3>{sponsorName}</h3>
+																			</div>
 																		)}
 																	</div>
-																</div>
-															</a>
-														);
-													})}
-												</>
-											);
-										}
-									)}
+																</a>
+															);
+														})}
+													</div>
+												);
+											}
+										)}
+									</div>
 								</div>
 							);
 						})}
@@ -308,44 +325,53 @@ const OurSponsors = () => {
 				)}
 			</div>
 			<div id="Sponsor">
-				<h1
-					className="SponsorsTitle"
-					id="SponsorEnd">
-					Past Sponsors
-				</h1>
+				<div id="sideBorder">
+					<div></div>
+					<h1
+						className="SponsorsTitle"
+						id="SponsorEnd">
+						Past Sponsors
+					</h1>
+				</div>
+
 				{/* shows past sponsors only when recieved, do not duplicate the sponsors from current ones */}
 				{pastSponsorsDict === undefined ? (
 					<p>Loading...</p>
 				) : (
 					<>
-						{/* gets keys o objects in list */}
-						{Object.keys(pastSponsorsDict).map((pastSponsorKey) => {
-							return (
-								<div className="Sponsors">
-									{/* gets name of sponsor then uses it to get data of past sponsor */}
-									{Object.keys(pastSponsorsDict[pastSponsorKey]).map(
-										(pastSponsorName) => {
-											let pastSponsors =
-												pastSponsorsDict[pastSponsorKey][pastSponsorName];
-											return (
-												<a
-													href={pastSponsors.Url}
-													target="_blank"
-													rel="noreferrer">
-													<div>
-														<h4>{pastSponsorName}</h4>
-														<img
-															src={pastSponsors.LogoUrl}
-															alt={pastSponsorName + "'s Logo"}
-														/>
-													</div>
-												</a>
-											);
-										}
-									)}
-								</div>
-							);
-						})}
+						<div className="Sponsors sponsorGridContainer">
+							{/* gets keys o objects in list */}
+							{Object.keys(pastSponsorsDict).map((pastSponsorKey) => {
+								return (
+									<>
+										{/* gets name of sponsor then uses it to get data of past sponsor */}
+										{Object.keys(pastSponsorsDict[pastSponsorKey]).map(
+											(pastSponsorName) => {
+												let pastSponsors =
+													pastSponsorsDict[pastSponsorKey][pastSponsorName];
+												return (
+													<a
+														href={pastSponsors.Url}
+														target="_blank"
+														className="sponsorGridItem"
+														rel="noreferrer">
+														<div>
+															<img
+																src={pastSponsors.LogoUrl}
+																alt={pastSponsorName + "'s Logo"}
+															/>
+															<div className="sponsorCenter">
+																<h3>{pastSponsorName}</h3>
+															</div>
+														</div>
+													</a>
+												);
+											}
+										)}
+									</>
+								);
+							})}
+						</div>
 					</>
 				)}
 			</div>

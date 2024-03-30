@@ -41,8 +41,8 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: scale 0.3s;
 	border-radius: 5px;
-	margin-left: 1rem;
-	margin-right: 3rem;
+	margin-left: 1svw;
+	margin-right: 3svw;
 	width: fit-content;
 }
 
@@ -52,7 +52,7 @@
 }
 
 #BecomeASponsors div a img {
-	height: 18rem;
+	height: 40svh;
 	width: auto;
 }
 
@@ -89,6 +89,7 @@
 
 #Sponsor {
 	background-color: white;
+	padding-bottom: 3svh;
 }
 
 #SponsorEnd {
@@ -115,8 +116,8 @@
 	flex-direction: row;
 	padding-top: 2svh;
 	padding-bottom: 2svh;
-	margin-top: 2svh;
-	margin-bottom: 4svh;
+	margin-top: 1svh;
+	margin-bottom: 3svh;
 	border-bottom: var(--sponsorBorder);
 	align-items: center;
 }
@@ -152,7 +153,6 @@
 	background-color: whitesmoke;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: scale 0.3s;
-	margin: 1rem;
 }
 
 .Sponsors a:hover {
@@ -163,6 +163,8 @@
 .Sponsors a div {
 	display: flex;
 	flex-direction: row;
+	height: inherit;
+	width: inherit;
 }
 
 .Sponsors a div div {
@@ -171,12 +173,47 @@
 	padding-left: 5svw;
 }
 
-.Sponsors a h4 {
+.Sponsors a h3 {
+	display: flex;
 	width: fit-content;
 	border-bottom: var(--sponsorBorder);
 }
 
 .Sponsors a img {
 	max-height: 24svh;
-	width: 25svw;
+	width: 24svw;
+	padding-top: 1svh;
+	padding-bottom: 1svh;
+}
+
+.sponsorCenter {
+	display: flex;
+	justify-content: center;
+}
+
+.sponsorGridContainer {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-gap: 20px;
+}
+
+.sponsorGridItem {
+	background-color: aqua;
+	width: calc(100%- 20px);
+	height: 100%;
+}
+
+.sponsorGridContainer .sponsorGridItem div div {
+	flex: 1;
+	padding-left: 1svw;
+}
+
+.sponsorGridItem h3 {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.sponsorGridItem {
+	grid-column: span 1;
 }
