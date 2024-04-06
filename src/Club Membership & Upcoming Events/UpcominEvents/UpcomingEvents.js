@@ -3,6 +3,7 @@ import yaml from "js-yaml";
 import "./UpcomingEvents.css";
 import eventData from "../../MockDB/currentCompetition.yml";
 import CountDownTimer from "../../CountDown/CountDownTimer";
+import { Link } from "react-router-dom";
 
 /**
  * @param {null} null - requires nothing
@@ -98,7 +99,9 @@ const UpcominEvents = () => {
 						<div></div>
 						<h1>Previous Events</h1>
 					</div>
-					<button>Previous Events</button>
+					<Link to={"/PreviousEvents"}>
+						<button>Previous Events</button>
+					</Link>
 					{/* will change to thing below when merged onto dev branch */}
 					{/* <OpenPage pageToGoTo={"/PreviuosEvents"} textOnButton={"Previous Events"} /> */}
 				</div>

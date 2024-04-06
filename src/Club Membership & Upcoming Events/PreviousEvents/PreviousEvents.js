@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import yaml from "js-yaml";
 import eventData from "../../MockDB/pastCompetitions.yml";
+import SlideShow from "../../ImageSlider/SlideShow";
+import { Link } from "react-router-dom";
 
 /**
  * @param {null} null - requires nothing
@@ -47,7 +49,7 @@ const PreviousEvents = () => {
 						const competition = previousCompetitionsDict[competitionKey];
 						console.log(competition.SAEYoutubeLink);
 						return (
-							<table>
+							<table key={competitionKey}>
 								<tbody>
 									<thead>
 										<tr>
@@ -94,9 +96,14 @@ const PreviousEvents = () => {
 				</div>
 				<div>
 					<h2>This Year's Events</h2>
-					<button>Upcoming Events</button>
+					<Link to={"/UpcomingEvents"}>
+						<button>Upcoming Events</button>
+					</Link>
 					{/* will change to thing below when merged onto dev branch */}
 					{/* <OpenPage pageToGoTo={"/UpcomingEvents"} textOnButton={"Upcoming Events"} /> */}
+					<SlideShow
+						imgList={previousCompetitionsDict["Oshkosh"]["OurPhotosLinks"]}
+					/>
 				</div>
 			</div>
 		);
