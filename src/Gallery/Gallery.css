@@ -1,0 +1,52 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  
+.galleryItem {
+  min-width: 10vw;
+  min-height: 10vh;
+  max-width: 60vw;
+  max-height: 60vh;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+  
+.galleryItem:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.modalImage {
+  min-width: 20vw;
+  min-height: 20vh;
+  max-width: 70vw;
+  max-height: 70vh;
+}
+
+.modalButton {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 0.5;
+  background-color: #555;
+  color: white;
+  font-size: 15px;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.modalButton:hover {
+  background-color: whitesmoke;
+  color: black;
+}
