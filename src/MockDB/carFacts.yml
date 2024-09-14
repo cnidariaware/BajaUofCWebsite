@@ -1,0 +1,27 @@
+year2019:
+  mainColour:
+  topSpeed:
+  engineModel:
+  weight: heavy #used if unknown
+  races:
+    xyzplace:
+      events:
+        manuverability: 10th
+        # to do add more accurate if known
+    abcplace:
+      events:
+        manuverability: 10th
+
+year2022:
+  mainColour:
+  topSpeed:
+  engineModel:
+  weight: heavy #used if unknown
+  races:
+    xyzplace:
+      events:
+        manuverability: 10th
+        # to do add more accurate if known
+    abcplace:
+      events:
+        manuverability: 10th
