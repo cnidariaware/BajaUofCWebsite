@@ -6,7 +6,12 @@ name: Continuous Integration
 # here, we only have "pull_request", so the workflow will run
 # whenever we create a pull request.
 # other examples: [push] and [pull_request, push]
-on: [pull_request]
+on: 
+  pull_request:
+
+  push:
+    branches: 
+      - main
 
 # each workflow must have at least one job.
 # jobs run in parallel by default (we can change that).
