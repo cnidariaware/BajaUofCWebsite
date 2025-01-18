@@ -9,6 +9,7 @@ import OurSponsors from "./OurSponsors/OurSponsors";
 import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinTheClub";
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
 import Gallery from "./Gallery/Gallery";
+import interviewBooking from "./Interivew Booking/InterviewBooking";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -35,6 +36,10 @@ root.render(
 					<Route
 						path="/Gallery"
 						element={<Gallery />}></Route>
+					<Route
+						path="/InterviewBooking"
+						element={<interviewBooking />}
+					/>
 				</Route>
 			</Routes>
 		</BrowserRouter>
