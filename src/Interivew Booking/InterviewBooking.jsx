@@ -1,3 +1,5 @@
+import InterviewForm from "./InterviewForm";
+
 /**
  * @param {null} null - requires onthing
  * @returns {JSX.Element} Page - HTML tags and JS functionality
@@ -5,8 +7,12 @@
  * @author Brock <darkicewolf50@gmail.com>
  * @todo add who helped developed the site and finalize css
  */
-const interviewBooking = () => {
-	return <p>Hello</p>;
+const InterviewBooking = () => {
+  return (
+    <>
+      <InterviewForm />
+    </>
+  );
 };
 
-export default interviewBooking;
+export default InterviewBooking;

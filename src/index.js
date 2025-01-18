@@ -9,41 +9,26 @@ import OurSponsors from "./OurSponsors/OurSponsors";
 import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinTheClub";
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
 import Gallery from "./Gallery/Gallery";
-import interviewBooking from "./Interivew Booking/InterviewBooking";
+import InterviewBooking from "./Interivew Booking/InterviewBooking";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<Routes>
-				<Route element={<Header />}>
-					<Route
-						path="/"
-						element={<AboutUs />}></Route>
-					<Route
-						path="/Teams"
-						element={<SubTeams />}></Route>
-					<Route
-						path="/OurSponsors"
-						element={<OurSponsors />}></Route>
-					<Route
-						path="/JoinTheClub"
-						element={<JoinTheClub />}></Route>
-					<Route
-						path="/UpcomingEvents"
-						element={<UpcomingEvents />}></Route>
-					<Route
-						path="/Gallery"
-						element={<Gallery />}></Route>
-					<Route
-						path="/InterviewBooking"
-						element={<interviewBooking />}
-					/>
-				</Route>
-			</Routes>
-		</BrowserRouter>
-	</React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Header />}>
+          <Route path="/" element={<AboutUs />}></Route>
+          <Route path="/Teams" element={<SubTeams />}></Route>
+          <Route path="/OurSponsors" element={<OurSponsors />}></Route>
+          <Route path="/JoinTheClub" element={<JoinTheClub />}></Route>
+          <Route path="/UpcomingEvents" element={<UpcomingEvents />}></Route>
+          <Route path="/Gallery" element={<Gallery />}></Route>
+          <Route path="/InterviewBooking" element={<InterviewBooking />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
