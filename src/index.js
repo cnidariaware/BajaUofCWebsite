@@ -24,8 +24,8 @@ root.render(
           <Route path="/JoinTheClub" element={<JoinTheClub />}></Route>
           <Route path="/UpcomingEvents" element={<UpcomingEvents />}></Route>
           <Route path="/Gallery" element={<Gallery />}></Route>
-          <Route path="/InterviewBooking" element={<InterviewBooking />} />
         </Route>
+        <Route path="/InterviewBooking" element={<InterviewBooking />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
