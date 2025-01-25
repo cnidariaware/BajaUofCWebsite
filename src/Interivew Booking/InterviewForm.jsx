@@ -46,8 +46,8 @@ const InterviewForm = () => {
         body: JSON.stringify(formObject),
       }
     );
-
-    console.log(res.text);
+    let data = await res.json();
+    console.log(data);
 
     // dialogRef.current.showModal();
     setIsButtonDisabled(false);
