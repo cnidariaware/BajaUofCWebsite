@@ -36,7 +36,7 @@ const TimeSlotSelector = ({ onTimeSlotSelect }) => {
   };
 
   const handleTimeSlotChange = (e) => {
-    let startTime = e.target.value;
+    let startTime = e.target.innerHTML;
     onTimeSlotSelect((prev) => ({ ...prev, startTime }));
   };
 
@@ -53,17 +53,30 @@ const TimeSlotSelector = ({ onTimeSlotSelect }) => {
       ) : (
         <>
           <h4>Available Time Slots for {selectedDate}:</h4>
-          {timeSlots.length > 0 ? (
-            <select onChange={handleTimeSlotChange}>
-              <option value="">Select a time slot</option>
-              {timeSlots.map((time, index) => (
-                <option key={index} value={time}>
-                  {time}
-                </option>
-              ))}
-            </select>
+          {selectedDate === undefined ? (
+            <>
+              <p>Please select a date.</p>
+            </>
+          ) : timeSlots.length > 0 ? (
+            <>
+              {Object.values(timeSlots).map((time) => {
+                return (
+                  <button
+                    key={time}
+                    onClick={(self) => {
+                      console.log(self.target.innerHTML);
+                      handleTimeSlotChange(self);
+                    }}
+                  >
+                    {time}
+                  </button>
+                );
+              })}
+            </>
           ) : (
-            <p>No available time slots for the selected date.</p>
+            <>
+              <p>No available time slots for the selected date.</p>
+            </>
           )}
         </>
       )}
