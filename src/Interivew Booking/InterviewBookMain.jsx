@@ -1,6 +1,7 @@
 import InterviewForm from "./InterviewForm";
 import logo from "../Header/logo.webp";
 import Ender from "../Footer/Ender";
+import DateTimePicker from "./TestDateSelector";
 /**
  * @param {null} null - requires onthing
  * @returns {JSX.Element} Page - HTML tags and JS functionality
@@ -8,7 +9,7 @@ import Ender from "../Footer/Ender";
  * @author Brock <darkicewolf50@gmail.com>
  * @todo add who helped developed the site and finalize css
  */
-const InterviewBooking = () => {
+export default function InterviewBooking () {
   return (
     <>
       <img id="logo" src={logo} alt="Schulich Off-Road's logo" />
@@ -29,9 +30,10 @@ const InterviewBooking = () => {
         <a href="mailto:uofcbaja@gmail.com">uofcbaja@gmail.com</a> to work out
         an alternate interview time or for rescheduling.
       </p>
+      {/* <DateTimePicker /> */}
       <Ender />
+
+
     </>
   );
 };
-
-export default InterviewBooking;

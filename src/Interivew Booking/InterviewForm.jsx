@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import TimeSlotSelector from "./TimeSlotSelector"; // Import the TimeSlotSelector component
+import TimeDateSelector from "./TimeDateSelector"; // Import the TimeSlotSelector component
 
 /**
  * @param {null} null - Takes in nothing
@@ -74,13 +74,14 @@ const InterviewForm = () => {
         />
 
         {/* Time Slot Selector */}
-        <TimeSlotSelector
+        <TimeDateSelector
           onTimeSlotSelect={(timeSlot) => setSelectedTimeSlot(timeSlot)}
         />
         <button type="submit" disabled={isButtonDisabled}>
           Submit
         </button>
       </form>
+
       {/* Success Dialog */}
       <dialog ref={dialogRef}>
         {" "}
