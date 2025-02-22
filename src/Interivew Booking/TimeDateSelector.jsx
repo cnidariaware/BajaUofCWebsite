@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function TimeDateSelector ({ onTimeSlotSelect }) {
-  const [allTimeDatesAvailable, setAllTimeDatesAvailable] = useState();
+export default function TimeDateSelector ({ onTimeSlotSelect, timeDateSelectorGet }) {
   const [allDatesAvailable, setAllDatesAvailable] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
   const [timeSlotsAvialable, setTimeSlotsAvialable] = useState([]);
@@ -11,14 +10,14 @@ export default function TimeDateSelector ({ onTimeSlotSelect }) {
 
   useEffect(() => {
     getInterviewDates();
-  }, []);
+  }, [timeDateSelectorGet]);
 
   /**
    * @param {null} null - Takes in nothing
    * @returns {null} null - Returns in nothing
-   * @description Gets interview timeslots and dates
-   * @authors Ahmad <ahmadmuhammadofficial@gmail.com>, Brock <darkicewolf50@gmail.com>
-   * @todo refactor to not call backend so much
+   * @description Gets interview timeslots and dates from backend
+   * @author Ahmad <ahmadmuhammadofficial@gmail.com>, Brock <darkicewolf50@gmail.com>
+   * @todo refactor to not call backend so much, see useEffect above
    */
   const getInterviewDates = async () => {
     const res = await fetch(
@@ -28,17 +27,21 @@ export default function TimeDateSelector ({ onTimeSlotSelect }) {
     let json = await res.json();
     
     // can input dates right away, no other requirements to show it
-    let dates = await Object.keys(json["body"]["interviewDates"]);
+    let dates = await json["body"]["interviewDates"];
     await setAllDatesAvailable(dates);
 
-    // storing here for use in time slot selection
-    // date is needed in order to show time
-    await setAllTimeDatesAvailable(json["body"]);
-    console.log(json["body"]);
   };
 
+  // helper section
+
+  /**
+   * @param {Date} date - Takes in a date object from the date picker
+   * @returns {null} null - Returns in nothing
+   * @description checks if date is available from the backend
+   * @author Brock <darkicewolf50@gmail.com>
+   */
   const isDateAvailable = (date) => {
-    return allDatesAvailable.includes(date.toISOString().split('T')[0]);
+    return Object.keys(allDatesAvailable).includes(date.toISOString().split('T')[0]);
   }
 
   const handleDateChange = (date) => {
@@ -46,26 +49,25 @@ export default function TimeDateSelector ({ onTimeSlotSelect }) {
     const selectedDateStr = date.toISOString().split('T')[0];
 
     // get and set time slots for a given day
-    setTimeSlotsAvialable(Object.keys(allTimeDatesAvailable["interviewDates"][selectedDateStr]));
+    setTimeSlotsAvialable(Object.keys(allDatesAvailable[selectedDateStr]));
     setSelectedTime(''); // clear because of date change
   };
 
   const handleTimeSlotChange = (e) => {
     let startTime = e.target.innerHTML;
     setSelectedTime(startTime);
+
+    onTimeSlotSelect({"date": selectedDate.toLocaleDateString(), "startTime": startTime });
   };
 
   return (
     <div>
       <label htmlFor="date-picker"><h3>Select a Date:</h3></label>
-      {/* old and bad */}
-      {/* Replace Calendar with input type="date" */}
-      {/* <input type="date" value={selectedDate} onChange={handleDateChange} /> */}
             <DatePicker
               selected={selectedDate}
               onChange={handleDateChange}
               inline
-              filterDate={isDateAvailable} // Filter out unavailable dates
+              filterDate={isDateAvailable} // Filter/grey out unavailable dates
               dateFormat="yyyy-MM-dd"
               required // Make date selection required
             />
@@ -76,20 +78,19 @@ export default function TimeDateSelector ({ onTimeSlotSelect }) {
         </>
       ) : (
         <>
-          <h4>Available Time Slots for {selectedDate.toISOString().split('T')[0]}:</h4>
+          <label htmlFor="time-picker"><h4>Available Time Slots for {selectedDate.toISOString().split('T')[0]}:</h4></label>
           {selectedDate === undefined ? (
             <>
               <p>Please select a date.</p>
             </>
-          // ) : timeSlots.length 0 > 0 ? (
           ) : timeSlotsAvialable !== '' ? (
             <>
               {Object.values(timeSlotsAvialable).map((time) => {
                 return (
                   <button
                     key={time}
+                    type="button"
                     onClick={(self) => {
-                      console.log(self.target.innerHTML);
                       handleTimeSlotChange(self);
                     }}
                   >
@@ -107,7 +108,7 @@ export default function TimeDateSelector ({ onTimeSlotSelect }) {
         </>
         
       )}
-      {selectedDate && selectedTime && (
+      {/* {selectedDate && selectedTime && (
         <div>
           <p>
             You have selected:
@@ -116,7 +117,7 @@ export default function TimeDateSelector ({ onTimeSlotSelect }) {
             <br />
             Time: {selectedTime}
           </p>
-        </div>)}
+        </div>)} */}
     </div>
   );
 };

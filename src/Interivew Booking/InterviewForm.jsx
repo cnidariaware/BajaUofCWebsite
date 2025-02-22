@@ -13,6 +13,11 @@ const InterviewForm = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const dialogRef = useRef(null);
   const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
+  const [getTimeDates, setGetTimeDates] = useState('');
+
+  // useEffect(() => {
+  //   console.log(selectedTimeSlot);
+  // }, [selectedTimeSlot]);
 
   /**
    * @param {String HTML} event - Takes in form info
@@ -29,8 +34,11 @@ const InterviewForm = () => {
       return;
     }
 
+    // disable button to stop multiple requests
     setIsButtonDisabled(true);
-    await new Promise((res) => setTimeout(res, 1000));
+
+    
+    // await new Promise((res) => setTimeout(res, 1000));
     const formData = new FormData(event.target);
     const formObject = Object.fromEntries(formData.entries());
     formObject.date = selectedTimeSlot["date"]; // Add the selected time slot to form data
@@ -47,9 +55,13 @@ const InterviewForm = () => {
       }
     );
     let data = await res.json();
-    console.log(data);
 
-    // dialogRef.current.showModal();
+    if (data["body"]["Success"] === true) {
+      dialogRef.current.showModal();
+    } else {
+      setGetTimeDates(getTimeDates+'i');
+    }
+    
     setIsButtonDisabled(false);
   };
 
@@ -76,6 +88,7 @@ const InterviewForm = () => {
         {/* Time Slot Selector */}
         <TimeDateSelector
           onTimeSlotSelect={(timeSlot) => setSelectedTimeSlot(timeSlot)}
+          timeDateSelectorGet={getTimeDates}
         />
         <button type="submit" disabled={isButtonDisabled}>
           Submit
