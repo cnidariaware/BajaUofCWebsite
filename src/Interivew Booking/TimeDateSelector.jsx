@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function TimeDateSelector ({ onTimeSlotSelect, timeDateSelectorGet }) {
-  const [allDatesAvailable, setAllDatesAvailable] = useState([]);
+  const [allDatesAvailable, setAllDatesAvailable] = useState({});
   const [selectedDate, setSelectedDate] = useState(null);
   const [timeSlotsAvialable, setTimeSlotsAvialable] = useState([]);
   const [selectedTime, setSelectedTime] = useState('');
@@ -24,12 +24,15 @@ export default function TimeDateSelector ({ onTimeSlotSelect, timeDateSelectorGe
       "https://bajabackend.bajacloud.duckdns.org/getAppointments",
       { method: "GET" }
     );
+    // const res = await fetch(
+    //   "http://127.0.0.1:8000/getAppointments",
+    //   { method: "GET" }
+    // );
     let json = await res.json();
-    
+    // console.log(json);
     // can input dates right away, no other requirements to show it
     let dates = await json["body"]["interviewDates"];
-    await setAllDatesAvailable(dates);
-
+    setAllDatesAvailable(await dates);
   };
 
   // helper section
@@ -57,11 +60,13 @@ export default function TimeDateSelector ({ onTimeSlotSelect, timeDateSelectorGe
     let startTime = e.target.innerHTML;
     setSelectedTime(startTime);
 
-    onTimeSlotSelect({"date": selectedDate.toLocaleDateString(), "startTime": startTime });
+    onTimeSlotSelect({"date": selectedDate.toLocaleDateString(), "startTime": selectedTime });
   };
 
   return (
     <div>
+      {Object.keys(allDatesAvailable).length > 0 ? ( 
+        <>
       <label htmlFor="date-picker"><h3>Select a Date:</h3></label>
             <DatePicker
               selected={selectedDate}
@@ -118,6 +123,9 @@ export default function TimeDateSelector ({ onTimeSlotSelect, timeDateSelectorGe
             Time: {selectedTime}
           </p>
         </div>)} */}
+        </>
+      ): 
+      <p>Loading ...</p>}
     </div>
   );
 };

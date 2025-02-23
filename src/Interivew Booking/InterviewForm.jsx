@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import TimeDateSelector from "./TimeDateSelector"; // Import the TimeSlotSelector component
 
 /**
@@ -14,10 +14,6 @@ const InterviewForm = () => {
   const dialogRef = useRef(null);
   const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
   const [getTimeDates, setGetTimeDates] = useState('');
-
-  // useEffect(() => {
-  //   console.log(selectedTimeSlot);
-  // }, [selectedTimeSlot]);
 
   /**
    * @param {String HTML} event - Takes in form info
@@ -54,6 +50,18 @@ const InterviewForm = () => {
         body: JSON.stringify(formObject),
       }
     );
+    // const res = await fetch(
+    //   "http://127.0.0.1:8000/SelectInterview",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(formObject),
+    //   }
+    // );
+    
+
     let data = await res.json();
 
     if (data["body"]["Success"] === true) {
