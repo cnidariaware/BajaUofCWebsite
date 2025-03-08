@@ -35,7 +35,11 @@ export default function Home() {
 	return (
 		<>
 			<div id="HomeTop">
-				<img id="HomeBannerTop" />
+				<img
+					id="HomeBannerTop"
+					src="https://picsum.photos/200"
+					alt="cool shot of driver in car, replace later"
+				/>
 				<div>
 					<h1>UCalgary Baja</h1>
 					<h2>Catchphase goes here</h2>
@@ -43,7 +47,10 @@ export default function Home() {
 			</div>
 			<div id="HomePageLayout">
 				<div>
-					<img src="https://picsum.photos/200" />
+					<img
+						src="https://picsum.photos/200"
+						alt="the team?"
+					/>
 					<div>
 						<h2>Who We Are</h2>
 						<p>
@@ -87,7 +94,10 @@ export default function Home() {
 						<Link to={"/"}>Learn More</Link>
 						{/* Replace with Join later*/}
 					</div>
-					<img src="https://picsum.photos/200" />
+					<img
+						src="https://picsum.photos/200"
+						alt="possibly a montage mainly showcasing team members working"
+					/>
 				</div>
 				<div>
 					Sponsor Section
@@ -97,7 +107,10 @@ export default function Home() {
 					</div>
 				</div>
 				<div>
-					<img src="https://picsum.photos/200" />
+					<img
+						src="https://picsum.photos/200"
+						alt="something to do with sponsors"
+					/>
 					<div>
 						<h2>Sponsor Us</h2>
 						<p>
@@ -111,7 +124,10 @@ export default function Home() {
 					</div>
 				</div>
 				<div>
-					<img src="https://picsum.photos/200" />
+					<img
+						src="https://picsum.photos/200"
+						alt="(If we do a rotating images thing for the top, and still want to keep this on the bottom, maybe we can change it to a more collage type thing for this box)"
+					/>
 				</div>
 			</div>
 		</>
