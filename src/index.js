@@ -10,6 +10,7 @@ import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinThe
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
 import Gallery from "./Gallery/Gallery";
 import "./index.css";
+import Home from "./Home/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,6 +20,10 @@ root.render(
 				<Route element={<Header />}>
 					<Route
 						path="/"
+						element={<Home />}
+					/>
+					<Route
+						path="/AboutUs"
 						element={<AboutUs />}></Route>
 					<Route
 						path="/Teams"
