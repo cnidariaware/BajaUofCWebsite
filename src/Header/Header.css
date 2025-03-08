@@ -76,6 +76,8 @@ nav ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
+
+	z-index: 1;
 }
 creates dwon downs
 /*  */
