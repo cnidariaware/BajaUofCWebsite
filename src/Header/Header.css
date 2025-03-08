@@ -47,6 +47,8 @@ nav ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
+
+	z-index: 1;
 }
 /* makes it so that the tags look the same whist having removing browser error */
 .DropDownHeader {
