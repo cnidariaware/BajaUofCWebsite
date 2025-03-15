@@ -9,6 +9,7 @@ import { useEffect } from "react";
  * @param {String} titleText - The text to dispaly in the
  * @param {String} subtitleText - The text below the banner text you want
  * @param {String} imgUrl - The url to the image you want as the banner, by default this will be a lorem picsum
+ * @param {String} imgAlt - The alt text for the image banner, this is required for good search results
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description The top header part of the page includes the naviagtion
  * @author Brock <darkicewolf50@gmail.com>
@@ -18,6 +19,7 @@ export default function Header({
 	titleText = "UCalgary Baja",
 	subtitleText = "Hello",
 	imgUrl = "https://picsum.photos/200",
+	imgAlt = "Lorem picsum",
 }) {
 	useEffect(() => {
 		HeaderBannerHeight();
@@ -159,6 +161,7 @@ export default function Header({
 					<img
 						id="temp"
 						src={imgUrl}
+						alt={imgAlt}
 					/>
 					<h1>{titleText}</h1>
 					<h2>{subtitleText}</h2>
