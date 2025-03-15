@@ -3,15 +3,26 @@ import lightDark from "./light-dark.webp";
 import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
 import Ender from "../Footer/Ender";
+import { useEffect } from "react";
 
 /**
- * @param {null} null -  Takes in nothing
+ * @param {String} titleText - The text to dispaly in the
+ * @param {String} subtitleText - The text below the banner text you want
+ * @param {String} imgUrl - The url to the image you want as the banner, by default this will be a lorem picsum
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description The top header part of the page includes the naviagtion
  * @author Brock <darkicewolf50@gmail.com>
  * @todo add appropriate links
  */
-export default function Header(props) {
+export default function Header({
+	titleText = "UCalgary Baja",
+	subtitleText = "Hello",
+	imgUrl = "https://picsum.photos/200",
+}) {
+	useEffect(() => {
+		HeaderBannerHeight();
+	});
+
 	/**
 	 * @param {null} null -  Takes in nothing
 	 * @returns {CSSStyleRule} CSS - changes page to darkmode
@@ -41,6 +52,31 @@ export default function Header(props) {
 		}
 	});
 
+	/**
+	 * @param {null} nothing - This takes in nothing
+	 * @returns {null} nothing - This returns nothing
+	 * @description This makes it so that the banner will always be 100% of the page at the top
+	 * @author Brock <darkicewolf50@gmail.com>
+	 */
+	const HeaderBannerHeight = () => {
+		if (titleText === "" && imgUrl === "") {
+			// return early to avoid error when no banner is desired
+			return;
+		}
+		const headerTop = document.getElementsByTagName("header")[0];
+		const headerTopStyle = getComputedStyle(headerTop);
+		const headerTopInnerHeight = headerTop.offsetHeight;
+		const headerTopMarginTop = parseFloat(headerTopStyle.marginTop);
+		const headerTopMarginHeight = parseFloat(headerTopStyle.marginBottom);
+
+		const headerTopTotalHeight =
+			headerTopInnerHeight + headerTopMarginHeight + headerTopMarginTop;
+
+		const HomeBannerTop = document.getElementById("BannerHeader");
+		// 1svh is to gget the div close enough to the image
+		HomeBannerTop.style.height = `calc(100svh + -${headerTopTotalHeight}px - 1svh)`;
+	};
+
 	return (
 		<>
 			<header>
@@ -68,9 +104,9 @@ export default function Header(props) {
 						<Link to={"/OurSponsors"}>
 							<li>Sponsors</li>
 						</Link>
-						<Link to={"/OurSponsors"}>
+						{/* <Link to={"/OurSponsors"}>
 							<li>Become a Sponsor</li>
-						</Link>
+						</Link> */}
 						{/* Removed as no longer needed */}
 						{/* <li className="DropDown">
 							{/* this link and li only exits for styling purposes }
@@ -116,8 +152,49 @@ export default function Header(props) {
 					</button>
 				</div>
 			</header>
+			{titleText === "" && imgUrl === "" ? (
+				<></>
+			) : (
+				<div id="BannerHeader">
+					<img
+						id="temp"
+						src={imgUrl}
+					/>
+					<h1>{titleText}</h1>
+					<h2>{subtitleText}</h2>
+				</div>
+			)}
+
 			<Outlet />
 			<Ender />
 		</>
 	);
 }
+
+// used like this
+// import { useState, useEffect } from 'react';
+
+// const ChildPage = () => {
+//   // You can modify the banner's content dynamically here
+//   const [bannerInfo, setBannerInfo] = useState({
+//     imgUrl: 'default-image-url.jpg',
+//     text: 'Default Banner Text',
+//   });
+
+//   useEffect(() => {
+//     // Here, you could fetch data or dynamically set the image/text
+//     setBannerInfo({
+//       imgUrl: 'new-banner-image.jpg',
+//       text: 'New Banner Text for this Page',
+//     });
+//   }, []); // This will set it when the component mounts
+
+//   return (
+//     <div>
+//       <h2>Child Page Content</h2>
+//       {/* Other child content goes here */}
+//     </div>
+//   );
+// };
+
+// export default ChildPage;

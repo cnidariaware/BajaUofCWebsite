@@ -3,12 +3,11 @@ header {
 	flex-direction: row;
 	margin: 1%;
 	margin-top: 1svh;
+	padding-right: 0.5svw;
 
 	align-items: center;
-
-	/* background-color: aqua; */
-
-	/* background-image: url(); */
+	justify-content: space-between;
+	background-color: antiquewhite;
 }
 
 header a {
@@ -17,15 +16,36 @@ header a {
 	cursor: pointer;
 }
 
+header div button {
+	cursor: pointer;
+	height: 3rem;
+	width: 3rem;
+	justify-content: end;
+	background-color: inherit;
+	border: solid 2px gray;
+	border-radius: 1rem;
+}
+
+header div button img {
+	height: 2rem;
+}
+
+header div {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 #logo {
 	height: 10svh;
-	/* background-color: white; */
-
 	padding: 0.15rem;
 }
 
+/* naviagation section */
+
+/* determines spacing and total amount of page it takes up*/
 nav {
-	padding-left: 1svw;
+	width: 50%;
 }
 
 nav a {
@@ -37,9 +57,10 @@ nav a {
 nav a li {
 	background-color: white;
 	padding: 0.5rem;
-	border-left: solid 1px gray;
+	/* border-left: solid 2px gray; */
 }
-
+/* removes first divider */
+/* can be removed if no borders from above */
 #FirstNav {
 	border-left: none;
 }
@@ -51,10 +72,13 @@ nav a li:hover {
 nav ul {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
 }
+creates dwon downs
+/*  */
 /* makes it so that the tags look the same whist having removing browser error */
 .DropDownHeader {
 	display: inline-block;
@@ -87,31 +111,50 @@ nav ul {
 	text-align: center;
 }
 
-header div {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-header div button {
-	cursor: pointer;
-	height: 3rem;
-	width: 3rem;
-	justify-content: end;
-	background-color: inherit;
-	border: solid 2px gray;
-	border-radius: 1rem;
+/* For Banner */
+
+#BannerHeader {
+	height: 100svh;
+	width: 100%;
+
+	/* bebug border, use margin to advantage, may cause error later */
+	/* border-bottom: solid 1px black; */
 }
 
-header div button img {
-	height: 2rem;
+#BannerHeader img {
+	position: absolute;
+	height: 100svh;
+	width: inherit;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+
+	z-index: -1;
 }
 
-header div {
+#BannerHeader h1 {
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	flex-grow: 1;
+	width: fit-content;
+
+	margin-left: 3svw;
+
+	font-size: xx-large;
+	font-weight: normal;
+
+	background-color: white;
+}
+
+#BannerHeader h2 {
+	display: flex;
+	width: fit-content;
+
+	margin-left: 3svw;
+
+	font-size: xx-large;
+	font-weight: normal;
+
+	background-color: white;
 }
 
 /* for dark mode */
