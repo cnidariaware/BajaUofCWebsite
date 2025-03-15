@@ -1,4 +1,4 @@
-import logo from "./logo.webp";
+import logo from "./logo.png";
 import lightDark from "./light-dark.webp";
 import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
@@ -9,9 +9,9 @@ import Ender from "../Footer/Ender";
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description The top header part of the page includes the naviagtion
  * @author Brock <darkicewolf50@gmail.com>
- * @todo final css add baja but eon (baja leads chat)
+ * @todo add appropriate links
  */
-const Header = () => {
+export default function Header(props) {
 	/**
 	 * @param {null} null -  Takes in nothing
 	 * @returns {CSSStyleRule} CSS - changes page to darkmode
@@ -44,43 +44,36 @@ const Header = () => {
 	return (
 		<>
 			<header>
-				<div>
-					<Link to={"/"}>
-						<figure>
-							<img
-								id="logo"
-								src={logo}
-								alt="Schulich Off-Road's logo"
-							/>
-							<figcaption>
-								<h1>Schulich Offroad</h1>
-							</figcaption>
-						</figure>
-					</Link>
-					<button onClick={switchDarkMode}>
-						<img
-							id="darkModeToggle"
-							src={lightDark}
-							alt="Light/Dark Toggle Symbol"
-						/>
-					</button>
-				</div>
+				<Link to={"/"}>
+					<img
+						id="logo"
+						src={logo}
+						alt="Schulich Off-Road's logo"
+					/>
+				</Link>
 				<nav>
 					<ul>
 						<Link to={"/"}>
-							<li>About Us</li>
+							<li id="FirstNav">Home</li>
+						</Link>
+						<Link to={"/"}>
+							<li>About</li>
 						</Link>
 						<Link to={"/Teams"}>
-							<li>Teams</li>
+							<li>Team</li>
+						</Link>
+						<Link to={"/"}>
+							<li>History</li>
 						</Link>
 						<Link to={"/OurSponsors"}>
-							<li>Our Sponsors</li>
+							<li>Sponsors</li>
 						</Link>
 						<Link to={"/OurSponsors"}>
 							<li>Become a Sponsor</li>
 						</Link>
-						<li className="DropDown">
-							{/* this link and li only exits for styling purposes */}
+						{/* Removed as no longer needed */}
+						{/* <li className="DropDown">
+							{/* this link and li only exits for styling purposes }
 							<Link className="DropDownHeader">
 								Club Membership & Upcoming Events
 							</Link>
@@ -96,8 +89,8 @@ const Header = () => {
 									<li>Previous Events</li>
 								</Link>
 							</ul>
-						</li>
-						<li className="DropDown">
+						</li> */}
+						{/* <li className="DropDown">
 							<Link className="DropDownHeader">More...</Link>
 							<ul className="Hide">
 								<Link to={"/Gallery"}>
@@ -107,14 +100,24 @@ const Header = () => {
 									<li>Roster</li>
 								</Link>
 							</ul>
-						</li>
+						</li> */}
+						<Link to={"/"}>
+							<li>Contact Us</li>
+						</Link>
 					</ul>
 				</nav>
+				<div>
+					<button onClick={switchDarkMode}>
+						<img
+							id="darkModeToggle"
+							src={lightDark}
+							alt="Light/Dark Toggle Symbol"
+						/>
+					</button>
+				</div>
 			</header>
 			<Outlet />
 			<Ender />
 		</>
 	);
-};
-
-export default Header;
+}
