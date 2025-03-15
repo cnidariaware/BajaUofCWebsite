@@ -35,11 +35,86 @@
 /* #HomeTop div h2 {
 } */
 
-#HomePageLayout div {
+.HomePageLayout div {
 	display: flex;
+	padding-top: 2.5svh;
+	padding-bottom: 2.5svh;
+	margin-left: 15svh;
+	margin-right: 15svh;
 }
 
-#HomePageLayout div div {
+.HomePageLayout img {
+	/* height: 5svh;
+	width: 5svw; */
+	flex-grow: 1;
+}
+
+.HomePageLayout a {
+	/* text-decoration: none; */
+	color: inherit;
+
+	border: solid 2px black;
+	padding: 10px;
+
+	text-align: center;
+}
+
+.HomePageLayout h2 {
+	border-bottom: solid 3px black;
+	padding-left: 2svw;
+	/* margin-left: 2svw; */
+	/* margin-right: 2svw; */
+}
+
+.HomePageLayout div div {
 	display: flex;
 	flex-direction: column;
+	width: 50%;
+	justify-content: space-between;
+	padding: 0px;
+}
+
+#HomeBottomGallery {
+	flex-grow: 0;
+	width: inherit;
+
+	height: 40svh;
+}
+
+#HomeSponsors {
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 15px;
+	border: solid 2px black;
+
+	padding: 30px;
+}
+
+#HomeSponsors div {
+	width: inherit;
+}
+
+#HomeSponsors div div {
+	display: flex;
+	flex-direction: row;
+
+	width: inherit;
+
+	justify-content: space-around;
+	padding: 0px;
+}
+
+#HomeSponsorLinks {
+	display: flex;
+	flex-direction: row;
+	width: inherit;
+
+	justify-content: space-around;
+	background-color: aqua;
+}
+
+#HomeSponsorLinks a {
+	padding-left: 5svw;
+	padding-right: 5svw;
 }
