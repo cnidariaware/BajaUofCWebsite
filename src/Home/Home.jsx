@@ -45,7 +45,7 @@ export default function Home() {
 					<h2>Catchphase goes here</h2>
 				</div>
 			</div>
-			<div id="HomePageLayout">
+			<div className="HomePageLayout">
 				<div>
 					<img
 						src="https://picsum.photos/200"
@@ -99,9 +99,21 @@ export default function Home() {
 						alt="possibly a montage mainly showcasing team members working"
 					/>
 				</div>
-				<div>
-					Sponsor Section
+				<div id="HomeSponsors">
+					<h2>Sponsor Section</h2>
 					<div>
+						<div>
+							<p>Sponsor 1</p>
+							<p>Sponsor 2</p>
+							<p>Sponsor 3</p>
+						</div>
+						<div>
+							<p>Sponsor 4</p>
+							<p>Sponsor 5</p>
+							<p>Sponsor 6</p>
+						</div>
+					</div>
+					<div id="HomeSponsorLinks">
 						<Link to={"/OurSponsors"}>See All</Link>
 						<Link to={"/OurSponsors"}>Support Us</Link>
 					</div>
@@ -123,7 +135,7 @@ export default function Home() {
 						<Link to={"/OurSponsors"}>Learn More</Link>
 					</div>
 				</div>
-				<div>
+				<div id="HomeBottomGallery">
 					<img
 						src="https://picsum.photos/200"
 						alt="(If we do a rotating images thing for the top, and still want to keep this on the bottom, maybe we can change it to a more collage type thing for this box)"
