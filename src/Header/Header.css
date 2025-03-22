@@ -116,6 +116,7 @@ creates dwon downs
 #BannerHeader {
 	height: 100svh;
 	width: 100%;
+	display: flex;
 
 	/* bebug border, use margin to advantage, may cause error later */
 	/* border-bottom: solid 1px black; */
@@ -131,6 +132,11 @@ creates dwon downs
 	background-position: center;
 
 	z-index: -1;
+}
+
+/* used to postiion title and sub title */
+#BannerHeader div {
+	margin-top: 15%;
 }
 
 #BannerHeader h1 {

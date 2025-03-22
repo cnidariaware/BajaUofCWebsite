@@ -3,7 +3,7 @@ import lightDark from "./light-dark.webp";
 import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
 import Ender from "../Footer/Ender";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 /**
  * @param {String} titleText - The text to dispaly in the
@@ -15,18 +15,20 @@ import { useEffect } from "react";
  * @author Brock <darkicewolf50@gmail.com>
  * @todo add appropriate links
  */
-export default function Header({
-	titleText = "UCalgary Baja",
-	subtitleText = "Hello",
-	imgUrl = "https://picsum.photos/200",
-	imgAlt = "Lorem picsum",
-}) {
+export default function Header() {
+	const [bannerInfo, setBannerInfo] = useState({
+		titleText: "UCalgary Baja",
+		subtitleText: "Hello",
+		imgUrl: "https://picsum.photos/200",
+		imgAlt: "Lorem picsum",
+	});
+
 	useEffect(() => {
 		HeaderBannerHeight();
 	});
 
 	/**
-	 * @param {null} null -  Takes in nothing
+	 * @param {null} nothing -  Takes in nothing
 	 * @returns {CSSStyleRule} CSS - changes page to darkmode
 	 * @description inverts all of the colors of body without touching the pictures
 	 * @author Brock <darkicewolf50@gmail.com>
@@ -40,7 +42,7 @@ export default function Header({
 	};
 
 	/**
-	 * @param {null} null -  Takes in nothing
+	 * @param {null} nothing -  Takes in nothing
 	 * @returns {CSSStyleRule} CSS - makes it compliant with bowser preferances
 	 * @description checks for what the browser prefers
 	 * @author Brock <darkicewolf50@gmail.com>
@@ -57,26 +59,66 @@ export default function Header({
 	/**
 	 * @param {null} nothing - This takes in nothing
 	 * @returns {null} nothing - This returns nothing
+	 * @description This makes it so that the banner fades on scroll down
+	 * @author Brock <darkicewolf50@gmail.com>
+	 */
+	document.addEventListener("scroll", () => {
+		ScrollFadeOut();
+	});
+
+	/**
+	 * @param {null} nothing - This takes in nothing
+	 * @returns {null} nothing - This returns nothing
 	 * @description This makes it so that the banner will always be 100% of the page at the top
 	 * @author Brock <darkicewolf50@gmail.com>
 	 */
 	const HeaderBannerHeight = () => {
-		if (titleText === "" && imgUrl === "") {
+		if (bannerInfo.titleText === "" && bannerInfo.imgUrl === "") {
 			// return early to avoid error when no banner is desired
 			return;
 		}
 		const headerTop = document.getElementsByTagName("header")[0];
 		const headerTopStyle = getComputedStyle(headerTop);
 		const headerTopInnerHeight = headerTop.offsetHeight;
-		const headerTopMarginTop = parseFloat(headerTopStyle.marginTop);
+		// 2 is used to align bottom of div with img
+		const headerTopMarginTop = parseFloat(headerTopStyle.marginTop) * 2;
 		const headerTopMarginHeight = parseFloat(headerTopStyle.marginBottom);
 
 		const headerTopTotalHeight =
 			headerTopInnerHeight + headerTopMarginHeight + headerTopMarginTop;
 
 		const HomeBannerTop = document.getElementById("BannerHeader");
+
 		// 1svh is to gget the div close enough to the image
-		HomeBannerTop.style.height = `calc(100svh + -${headerTopTotalHeight}px - 1svh)`;
+		HomeBannerTop.style.height = `calc(100svh + -${headerTopTotalHeight}px)`;
+	};
+
+	/**
+	 * @param {null} nothing - This takes in nothing
+	 * @returns {null} nothing - This returns nothing
+	 * @description This makes it os that the banner fades out on scolling downward
+	 * @author Brock <darkicewolf50@gmail.com>
+	 */
+	const ScrollFadeOut = () => {
+		const bannerImg = document.getElementById("BannerBackgound");
+
+		let opacity = 1;
+
+		let distanceToTop = window.scrollY + bannerImg.getBoundingClientRect().top;
+		let bannerImgHeight = bannerImg.offsetHeight;
+		let scrollTop = document.documentElement.scrollTop;
+
+		if (scrollTop > distanceToTop) {
+			opacity = 1 - (scrollTop - distanceToTop) / bannerImgHeight;
+		}
+
+		if (opacity >= 0) {
+			bannerImg.style.opacity = opacity;
+		}
+	};
+
+	const updateBannerInfo = (newBannerInfo) => {
+		setBannerInfo({ ...newBannerInfo });
 	};
 
 	return (
@@ -154,21 +196,23 @@ export default function Header({
 					</button>
 				</div>
 			</header>
-			{titleText === "" && imgUrl === "" ? (
+			{bannerInfo.titleText === "" && bannerInfo.imgUrl === "" ? (
 				<></>
 			) : (
 				<div id="BannerHeader">
 					<img
-						id="temp"
-						src={imgUrl}
-						alt={imgAlt}
+						id="BannerBackgound"
+						src={bannerInfo.imgUrl}
+						alt={bannerInfo.imgAlt}
 					/>
-					<h1>{titleText}</h1>
-					<h2>{subtitleText}</h2>
+					<div>
+						<h1>{bannerInfo.titleText}</h1>
+						<h2>{bannerInfo.subtitleText}</h2>
+					</div>
 				</div>
 			)}
 
-			<Outlet />
+			<Outlet context={{ updateBannerInfo }} />
 			<Ender />
 		</>
 	);
