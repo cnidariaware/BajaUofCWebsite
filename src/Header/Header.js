@@ -6,10 +6,7 @@ import Ender from "../Footer/Ender";
 import { useEffect, useState } from "react";
 
 /**
- * @param {String} titleText - The text to dispaly in the
- * @param {String} subtitleText - The text below the banner text you want
- * @param {String} imgUrl - The url to the image you want as the banner, by default this will be a lorem picsum
- * @param {String} imgAlt - The alt text for the image banner, this is required for good search results
+ * @param {useOutletContext} dict - List of items to display as the banner, more detals in UpdateBanner.jsx
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description The top header part of the page includes the naviagtion
  * @author Brock <darkicewolf50@gmail.com>
@@ -59,16 +56,6 @@ export default function Header() {
 	/**
 	 * @param {null} nothing - This takes in nothing
 	 * @returns {null} nothing - This returns nothing
-	 * @description This makes it so that the banner fades on scroll down
-	 * @author Brock <darkicewolf50@gmail.com>
-	 */
-	document.addEventListener("scroll", () => {
-		ScrollFadeOut();
-	});
-
-	/**
-	 * @param {null} nothing - This takes in nothing
-	 * @returns {null} nothing - This returns nothing
 	 * @description This makes it so that the banner will always be 100% of the page at the top
 	 * @author Brock <darkicewolf50@gmail.com>
 	 */
@@ -91,34 +78,6 @@ export default function Header() {
 
 		// 1svh is to gget the div close enough to the image
 		HomeBannerTop.style.height = `calc(100svh + -${headerTopTotalHeight}px)`;
-	};
-
-	/**
-	 * @param {null} nothing - This takes in nothing
-	 * @returns {null} nothing - This returns nothing
-	 * @description This makes it os that the banner fades out on scolling downward
-	 * @author Brock <darkicewolf50@gmail.com>
-	 */
-	const ScrollFadeOut = () => {
-		const bannerImg = document.getElementById("BannerBackgound");
-
-		let opacity = 1;
-
-		let distanceToTop = window.scrollY + bannerImg.getBoundingClientRect().top;
-		let bannerImgHeight = bannerImg.offsetHeight;
-		let scrollTop = document.documentElement.scrollTop;
-
-		if (scrollTop > distanceToTop) {
-			opacity = 1 - (scrollTop - distanceToTop) / bannerImgHeight;
-		}
-
-		if (opacity >= 0) {
-			bannerImg.style.opacity = opacity;
-		}
-	};
-
-	const updateBannerInfo = (newBannerInfo) => {
-		setBannerInfo({ ...newBannerInfo });
 	};
 
 	return (
@@ -212,36 +171,16 @@ export default function Header() {
 				</div>
 			)}
 
-			<Outlet context={{ updateBannerInfo }} />
+			<Outlet context={{ bannerInfo, setBannerInfo }} />
 			<Ender />
 		</>
 	);
 }
 
 // used like this
-// import { useState, useEffect } from 'react';
-
-// const ChildPage = () => {
-//   // You can modify the banner's content dynamically here
-//   const [bannerInfo, setBannerInfo] = useState({
-//     imgUrl: 'default-image-url.jpg',
-//     text: 'Default Banner Text',
-//   });
-
-//   useEffect(() => {
-//     // Here, you could fetch data or dynamically set the image/text
-//     setBannerInfo({
-//       imgUrl: 'new-banner-image.jpg',
-//       text: 'New Banner Text for this Page',
-//     });
-//   }, []); // This will set it when the component mounts
-
-//   return (
-//     <div>
-//       <h2>Child Page Content</h2>
-//       {/* Other child content goes here */}
-//     </div>
-//   );
-// };
-
-// export default ChildPage;
+// <UpdateBanner
+// 	updatedTitleText="UCalgary Bajaa"
+// 	updatedSubtitleText="HelloDAAAA"
+// 	updatedImgUrl="https://picsum.photos/200"
+// 	updatetdImgAlt="Lorem Picsum"
+// />

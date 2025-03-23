@@ -1,5 +1,6 @@
-import { useEffect } from "react";
-import { useOutletContext } from "react-router-dom";
+// import { useEffect } from "react";
+// import { useOutletContext } from "react-router-dom";
+import UpdateBanner from "../Header/UpdateBanner";
 
 /**
  * @param {String} imgAlt - This needs nothing
@@ -8,29 +9,14 @@ import { useOutletContext } from "react-router-dom";
  * @author Brock <darkicewolf50@gmail.com>
  */
 export default function MockPage() {
-	const { updateBannerInfo } = useOutletContext();
-
-	var updated = 0;
-
-	const BannerSet = () => {
-		if (updated === 0) {
-			updateBannerInfo({
-				titleText: "UCalgary Baja",
-				subtitleText: "HelloWorld DD",
-				imgUrl: "https://picsum.photos/200",
-				imgAlt: "Lorem S",
-			});
-
-			updated = 1;
-		}
-	};
-
-	useEffect(() => {
-		// Here, you could fetch data or dynamically set the image/text
-		BannerSet();
-	}, []); // This will set it when the component mounts
 	return (
 		<div>
+			<UpdateBanner
+				updatedTitleText="UCalgary Bajaa"
+				updatedSubtitleText="HelloDAAAAAE"
+				updatedImgUrl="https://picsum.photos/200"
+				updatetdImgAlt="Lorem Picsum"
+			/>
 			<p>
 				Aliquam sed massa rhoncus, tincidunt diam quis, dignissim magna. Sed a
 				nisl sed leo auctor pretium. Class aptent taciti sociosqu ad litora
