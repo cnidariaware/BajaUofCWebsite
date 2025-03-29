@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
-import { useEffect } from "react";
+import UpdateBanner from "../Header/UpdateBanner";
 
 /**
  * @param {null} nothing - This takes in nothing
@@ -9,42 +9,14 @@ import { useEffect } from "react";
  * @author Brock <darkicewolf50@gmail.com>
  */
 export default function Home() {
-	useEffect(() => {
-		HeaderBannerHeight();
-	});
-
-	/**
-	 * @param {null} nothing - This takes in nothing
-	 * @returns {null} nothing - This returns nothing
-	 * @description This makes it so that the banner will always be 100% of the page at the top
-	 * @author Brock <darkicewolf50@gmail.com>
-	 */
-	const HeaderBannerHeight = () => {
-		const headerTop = document.getElementsByTagName("header")[0];
-		const headerTopStyle = getComputedStyle(headerTop);
-		const headerTopInnerHeight = headerTop.offsetHeight;
-		// const headerTopMarginTop = parseFloat(headerTop.marginTop);
-		const headerTopMarginHeight = parseFloat(headerTopStyle.marginBottom);
-
-		const headerTopTotalHeight = headerTopInnerHeight + headerTopMarginHeight;
-
-		const HomeBannerTop = document.getElementById("HomeBannerTop");
-
-		HomeBannerTop.style.height = `calc(100svh - ${headerTopTotalHeight}px)`;
-	};
 	return (
 		<>
-			<div id="HomeTop">
-				<img
-					id="HomeBannerTop"
-					src="https://picsum.photos/200"
-					alt="cool shot of driver in car, replace later"
-				/>
-				<div>
-					<h1>UCalgary Baja</h1>
-					<h2>Catchphase goes here</h2>
-				</div>
-			</div>
+			<UpdateBanner
+				updatedTitleText="UCalgary Baja"
+				updatedSubtitleText="Catchphase goes here"
+				updatedImgUrl="https://picsum.photos/200"
+				updatetdImgAlt="cool shot of driver in car, replace later"
+			/>
 			<div className="HomePageLayout">
 				<div>
 					<img
