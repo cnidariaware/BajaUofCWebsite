@@ -10,6 +10,7 @@ import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinThe
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
 import Gallery from "./Gallery/Gallery";
 import "./index.css";
+import MockPage from "./MockDB/MockPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -35,6 +36,9 @@ root.render(
 					<Route
 						path="/Gallery"
 						element={<Gallery />}></Route>
+					<Route
+						path="/MockPage"
+						element={<MockPage />}></Route>
 				</Route>
 			</Routes>
 		</BrowserRouter>

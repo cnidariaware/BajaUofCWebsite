@@ -1,19 +1,31 @@
-import logo from "./logo.webp";
+import logo from "./logo.png";
 import lightDark from "./light-dark.webp";
 import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
 import Ender from "../Footer/Ender";
+import { useEffect, useState } from "react";
 
 /**
- * @param {null} null -  Takes in nothing
+ * @param {null} nothing - Takes in nothing
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description The top header part of the page includes the naviagtion
  * @author Brock <darkicewolf50@gmail.com>
- * @todo final css add baja but eon (baja leads chat)
+ * @todo add appropriate links
  */
-const Header = () => {
+export default function Header() {
+	const [bannerInfo, setBannerInfo] = useState({
+		titleText: "UCalgary Baja",
+		subtitleText: "Hello",
+		imgUrl: "https://picsum.photos/200",
+		imgAlt: "Lorem picsum",
+	});
+
+	useEffect(() => {
+		HeaderBannerHeight();
+	});
+
 	/**
-	 * @param {null} null -  Takes in nothing
+	 * @param {null} nothing -  Takes in nothing
 	 * @returns {CSSStyleRule} CSS - changes page to darkmode
 	 * @description inverts all of the colors of body without touching the pictures
 	 * @author Brock <darkicewolf50@gmail.com>
@@ -27,7 +39,7 @@ const Header = () => {
 	};
 
 	/**
-	 * @param {null} null -  Takes in nothing
+	 * @param {null} nothing -  Takes in nothing
 	 * @returns {CSSStyleRule} CSS - makes it compliant with bowser preferances
 	 * @description checks for what the browser prefers
 	 * @author Brock <darkicewolf50@gmail.com>
@@ -41,46 +53,66 @@ const Header = () => {
 		}
 	});
 
+	/**
+	 * @param {null} nothing - This takes in nothing
+	 * @returns {null} nothing - This returns nothing
+	 * @description This makes it so that the banner will always be 100% of the page at the top
+	 * @author Brock <darkicewolf50@gmail.com>
+	 */
+	const HeaderBannerHeight = () => {
+		if (bannerInfo.titleText === "" && bannerInfo.imgUrl === "") {
+			// return early to avoid error when no banner is desired
+			return;
+		}
+		const headerTop = document.getElementsByTagName("header")[0];
+		const headerTopStyle = getComputedStyle(headerTop);
+		const headerTopInnerHeight = headerTop.offsetHeight;
+		// 2 is used to align bottom of div with img
+		const headerTopMarginTop = parseFloat(headerTopStyle.marginTop) * 2;
+		const headerTopMarginHeight = parseFloat(headerTopStyle.marginBottom);
+
+		const headerTopTotalHeight =
+			headerTopInnerHeight + headerTopMarginHeight + headerTopMarginTop;
+
+		const HomeBannerTop = document.getElementById("BannerHeader");
+
+		// 1svh is to gget the div close enough to the image
+		HomeBannerTop.style.height = `calc(100svh + -${headerTopTotalHeight}px)`;
+	};
+
 	return (
 		<>
 			<header>
-				<div>
-					<Link to={"/"}>
-						<figure>
-							<img
-								id="logo"
-								src={logo}
-								alt="Schulich Off-Road's logo"
-							/>
-							<figcaption>
-								<h1>Schulich Offroad</h1>
-							</figcaption>
-						</figure>
-					</Link>
-					<button onClick={switchDarkMode}>
-						<img
-							id="darkModeToggle"
-							src={lightDark}
-							alt="Light/Dark Toggle Symbol"
-						/>
-					</button>
-				</div>
+				<Link to={"/"}>
+					<img
+						id="logo"
+						src={logo}
+						alt="Schulich Off-Road's logo"
+					/>
+				</Link>
 				<nav>
 					<ul>
 						<Link to={"/"}>
-							<li>About Us</li>
+							<li id="FirstNav">Home</li>
+						</Link>
+						<Link to={"/"}>
+							<li>About</li>
 						</Link>
 						<Link to={"/Teams"}>
-							<li>Teams</li>
+							<li>Team</li>
+						</Link>
+						<Link to={"/"}>
+							<li>History</li>
 						</Link>
 						<Link to={"/OurSponsors"}>
-							<li>Our Sponsors</li>
+							<li>Sponsors</li>
 						</Link>
-						<Link to={"/OurSponsors"}>
+						{/* <Link to={"/OurSponsors"}>
 							<li>Become a Sponsor</li>
-						</Link>
-						<li className="DropDown">
-							{/* this link and li only exits for styling purposes */}
+						</Link> */}
+						{/* Removed as no longer needed */}
+						{/* <li className="DropDown">
+							{/* this link and li only exits for styling purposes }
 							<Link className="DropDownHeader">
 								Club Membership & Upcoming Events
 							</Link>
@@ -96,8 +128,8 @@ const Header = () => {
 									<li>Previous Events</li>
 								</Link>
 							</ul>
-						</li>
-						<li className="DropDown">
+						</li> */}
+						{/* <li className="DropDown">
 							<Link className="DropDownHeader">More...</Link>
 							<ul className="Hide">
 								<Link to={"/Gallery"}>
@@ -107,14 +139,48 @@ const Header = () => {
 									<li>Roster</li>
 								</Link>
 							</ul>
-						</li>
+						</li> */}
+						<Link to={"/"}>
+							<li>Contact Us</li>
+						</Link>
 					</ul>
 				</nav>
+				<div>
+					<button onClick={switchDarkMode}>
+						<img
+							id="darkModeToggle"
+							src={lightDark}
+							alt="Light/Dark Toggle Symbol"
+						/>
+					</button>
+				</div>
 			</header>
-			<Outlet />
+			{bannerInfo.titleText === "" && bannerInfo.imgUrl === "" ? (
+				<></>
+			) : (
+				<div id="BannerHeader">
+					<img
+						id="BannerBackgound"
+						src={bannerInfo.imgUrl}
+						alt={bannerInfo.imgAlt}
+					/>
+					<div>
+						<h1>{bannerInfo.titleText}</h1>
+						<h2>{bannerInfo.subtitleText}</h2>
+					</div>
+				</div>
+			)}
+
+			<Outlet context={{ bannerInfo, setBannerInfo }} />
 			<Ender />
 		</>
 	);
-};
+}
 
-export default Header;
+// used like this
+// <UpdateBanner
+// 	updatedTitleText="UCalgary Bajaa"
+// 	updatedSubtitleText="HelloDAAAA"
+// 	updatedImgUrl="https://picsum.photos/200"
+// 	updatetdImgAlt="Lorem Picsum"
+// />
