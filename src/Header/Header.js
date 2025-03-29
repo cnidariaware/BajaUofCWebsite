@@ -93,19 +93,19 @@ export default function Header() {
 				<nav>
 					<ul>
 						<Link to={"/"}>
-							<li id="FirstNav">Home</li>
+							<li id="FirstNav">HOME</li>
 						</Link>
 						<Link to={"/"}>
-							<li>About</li>
+							<li>ABOUT</li>
 						</Link>
 						<Link to={"/Teams"}>
-							<li>Team</li>
+							<li>TEAM</li>
 						</Link>
 						<Link to={"/"}>
-							<li>History</li>
+							<li>HISTORY</li>
 						</Link>
 						<Link to={"/OurSponsors"}>
-							<li>Sponsors</li>
+							<li>SPONSORS</li>
 						</Link>
 						{/* <Link to={"/OurSponsors"}>
 							<li>Become a Sponsor</li>
@@ -141,7 +141,7 @@ export default function Header() {
 							</ul>
 						</li> */}
 						<Link to={"/"}>
-							<li>Contact Us</li>
+							<li>CONTACT US</li>
 						</Link>
 					</ul>
 				</nav>

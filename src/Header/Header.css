@@ -7,7 +7,7 @@ header {
 
 	align-items: center;
 	justify-content: space-between;
-	background-color: antiquewhite;
+	background-color: #1f1f1f;
 }
 
 header a {
@@ -38,7 +38,9 @@ header div {
 
 #logo {
 	height: 10svh;
+	/* width: 10svw; */
 	padding: 0.15rem;
+	margin-left: 3svw;
 }
 
 /* naviagation section */
@@ -55,8 +57,12 @@ nav a {
 }
 
 nav a li {
-	background-color: white;
-	padding: 0.5rem;
+	background-color: #1f1f1f;
+	color: whitesmoke;
+	padding: 1rem;
+
+	font-size: larger;
+
 	/* border-left: solid 2px gray; */
 }
 /* removes first divider */
@@ -66,7 +72,8 @@ nav a li {
 }
 
 nav a li:hover {
-	background-color: gray;
+	/* background-color: gray; */
+	color: #a80029;
 }
 
 nav ul {
@@ -143,9 +150,9 @@ creates dwon downs
 	display: flex;
 	width: fit-content;
 
-	margin-left: 3svw;
+	margin-left: 15svw;
 
-	font-size: xx-large;
+	font-size: xx-large; /* todo make larger */
 	font-weight: normal;
 
 	background-color: white;
