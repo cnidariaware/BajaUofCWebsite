@@ -6,7 +6,7 @@ import Ender from "../Footer/Ender";
 import { useEffect, useState } from "react";
 
 /**
- * @param {useOutletContext} dict - List of items to display as the banner, more detals in UpdateBanner.jsx
+ * @param {null} nothing - Takes in nothing
  * @returns {JSX.Element} JSX - HTML tags and JS functionality
  * @description The top header part of the page includes the naviagtion
  * @author Brock <darkicewolf50@gmail.com>

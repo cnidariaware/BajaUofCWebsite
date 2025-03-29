@@ -6,6 +6,7 @@ import { useOutletContext } from "react-router-dom";
  * @param {String} subtitleText - The text below the banner text you want
  * @param {String} imgUrl - The url to the image you want as the banner, by default this will be a lorem picsum
  * @param {String} imgAlt - The alt text for the image banner, this is required for good search results
+ * @param {useOutletContext} dict - List of items to display as the banner, more detals in UpdateBanner.jsx
  * @description The way to update the banner from the child
  * @example ```js
     RouteComponent {
