@@ -98,18 +98,34 @@ const InterviewForm = () => {
             <p>(for interview confirmation email)</p>
           </div>
         </div>
-        <div id="TimeDate">
-          <h4>Interview Date</h4>
-          <h4>Interview Time</h4>
-        </div>
+
         {/* Time Slot Selector */}
         <TimeDateSelector
           onTimeSlotSelect={(timeSlot) => setSelectedTimeSlot(timeSlot)}
           timeDateSelectorGet={getTimeDates}
         />
-        <button type="submit" disabled={isButtonDisabled}>
-          Submit
-        </button>
+        <div id="InterviewText">
+          <h4>
+            What to do if I cannot make it to any of the avaliable time slots or
+            need to rescedule?
+          </h4>
+          <p>
+            While we highly encourage sceduling an interview in one of the above
+            time slots, we recongize that not everyone can make it work with
+            their personal and university schedules.
+          </p>
+          <p>
+            Please email us at{" "}
+            <a href="mailto:uofcbaja@gmail.com">uofcbaja@gmail.com</a> to work
+            out an alternate interview time or for rescheduling.
+          </p>
+        </div>
+        <p id="InterviewError"> </p>
+        <div id="InterviewSubmit">
+          <button type="submit" disabled={isButtonDisabled}>
+            Submit
+          </button>
+        </div>
       </form>
 
       {/* Success Dialog */}

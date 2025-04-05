@@ -76,8 +76,9 @@ export default function TimeDateSelector({
       {Object.keys(allDatesAvailable).length > 0 ? (
         <>
           <div className="TimeSlot">
+            <h4>Interview Date</h4>
             <label htmlFor="date-picker">
-              <h4>Select a Date:</h4>
+              <p>Select a Date:</p>
             </label>
             <DatePicker
               selected={selectedDate}
@@ -89,18 +90,27 @@ export default function TimeDateSelector({
             />
           </div>
           <div className="TimeSlot">
+            <h4>Interview Time</h4>
             {!selectedDate ? (
               <>
-                <h4>Available Time Slots:</h4>
-                <p>Please select the a date to see time slots.</p>
+                <p>Available Time Slots:</p>
+                <div
+                  style={{
+                    height: "241.633px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <p>Please select the a date to see time slots.</p>
+                </div>
               </>
             ) : (
               <>
                 <label htmlFor="time-picker">
-                  <h4>
+                  <p>
                     Available Time Slots for{" "}
                     {selectedDate.toISOString().split("T")[0]}:
-                  </h4>
+                  </p>
                 </label>
                 {selectedDate === undefined ? (
                   <>
