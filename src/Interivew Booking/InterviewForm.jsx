@@ -76,7 +76,7 @@ const InterviewForm = () => {
       <form onSubmit={formsubmit}>
         <div id="InterviewForm">
           <div>
-            <label for="name">Name (What to call you):</label>
+            <label for="name">Name:</label>
             <input
               type="text"
               id="fname"
@@ -84,6 +84,7 @@ const InterviewForm = () => {
               placeholder="Jaeinceins"
               required
             />
+            <p>(what to call you)</p>
           </div>
           <div>
             <label for="email">UCalgary Email:</label>
@@ -94,9 +95,13 @@ const InterviewForm = () => {
               placeholder="jaeinceins.bhaja@ucalgary.ca"
               required
             />
+            <p>(for interview confirmation email)</p>
           </div>
         </div>
-
+        <div id="TimeDate">
+          <h4>Interview Date</h4>
+          <h4>Interview Time</h4>
+        </div>
         {/* Time Slot Selector */}
         <TimeDateSelector
           onTimeSlotSelect={(timeSlot) => setSelectedTimeSlot(timeSlot)}
