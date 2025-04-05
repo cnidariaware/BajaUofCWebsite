@@ -13,7 +13,7 @@ const InterviewForm = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const dialogRef = useRef(null);
   const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
-  const [getTimeDates, setGetTimeDates] = useState('');
+  const [getTimeDates, setGetTimeDates] = useState("");
 
   /**
    * @param {String HTML} event - Takes in form info
@@ -33,7 +33,6 @@ const InterviewForm = () => {
     // disable button to stop multiple requests
     setIsButtonDisabled(true);
 
-    
     // await new Promise((res) => setTimeout(res, 1000));
     const formData = new FormData(event.target);
     const formObject = Object.fromEntries(formData.entries());
@@ -60,38 +59,43 @@ const InterviewForm = () => {
     //     body: JSON.stringify(formObject),
     //   }
     // );
-    
 
     let data = await res.json();
 
     if (data["body"]["Success"] === true) {
       dialogRef.current.showModal();
     } else {
-      setGetTimeDates(getTimeDates+'i');
+      setGetTimeDates(getTimeDates + "i");
     }
-    
+
     setIsButtonDisabled(false);
   };
 
   return (
     <>
       <form onSubmit={formsubmit}>
-        <label for="name">Name (What to call you):</label>
-        <input
-          type="text"
-          id="fname"
-          name="intervieweeName"
-          placeholder="Jaeinceins"
-          required
-        />
-        <label for="email">UCalgary Email:</label>
-        <input
-          type="text"
-          id="email"
-          name="intervieweeEmail"
-          placeholder="jaeinceins.bhaja@ucalgary.ca"
-          required
-        />
+        <div id="InterviewForm">
+          <div>
+            <label for="name">Name (What to call you):</label>
+            <input
+              type="text"
+              id="fname"
+              name="intervieweeName"
+              placeholder="Jaeinceins"
+              required
+            />
+          </div>
+          <div>
+            <label for="email">UCalgary Email:</label>
+            <input
+              type="text"
+              id="email"
+              name="intervieweeEmail"
+              placeholder="jaeinceins.bhaja@ucalgary.ca"
+              required
+            />
+          </div>
+        </div>
 
         {/* Time Slot Selector */}
         <TimeDateSelector

@@ -1,0 +1,44 @@
+:root {
+  --interviewspacing: clamp(5px, 2.5svw, 200px);
+}
+#InterviewBooking header {
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  justify-content: space-around;
+  margin: 0px;
+}
+#InterviewBooking form {
+  width: 80%;
+}
+#InterviewForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#InterviewForm div {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--interviewspacing);
+  padding-right: var(--interviewspacing);
+  font-weight: 700;
+  text-align: start;
+}
+
+#InterviewForm div input {
+  width: 20.3svw;
+  margin-top: 1svh;
+  height: 30px;
+}
+#MainForm {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#MainForm form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
