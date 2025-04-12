@@ -72,6 +72,8 @@ export default function TimeDateSelector({
 			date: selectedDateStr,
 			startTime: selectedTime,
 		});
+ selectedTimeButton.id = "";
+ setSelectedTimeButton(null);
 	};
 
 	const handleTimeSlotChange = (e) => {
