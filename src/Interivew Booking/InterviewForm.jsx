@@ -69,7 +69,6 @@ const InterviewForm = () => {
 				} else {
 					setGetTimeDates(getTimeDates + "i");
 				}
-				x;
 			} else {
 				formSubmitTimeErorrs(selectedTimeSlot, errorLine);
 			}
