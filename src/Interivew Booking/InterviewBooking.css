@@ -1,84 +1,122 @@
 :root {
-  --interviewspacing: clamp(5px, 2.5svw, 200px);
-  --interviewwidth: 260px;
+	--interviewspacing: clamp(5px, 2.5svw, 200px);
+	--interviewwidth: 260px;
 }
 #InterviewBooking header {
-  display: flex;
-  flex-direction: row;
-  background-color: lightslategray;
-  justify-content: space-around;
-  margin: 0px;
+	display: flex;
+	flex-direction: row;
+	background-color: lightslategray;
+	justify-content: space-around;
+	margin: 0px;
 }
 #InterviewForm {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
 }
 #InterviewForm div {
-  display: flex;
-  flex-direction: column;
-  padding-left: var(--interviewspacing);
-  padding-right: var(--interviewspacing);
-  text-align: start;
-  width: var(--interviewwidth);
+	display: flex;
+	flex-direction: column;
+	padding-left: var(--interviewspacing);
+	padding-right: var(--interviewspacing);
+	text-align: start;
+	width: var(--interviewwidth);
 }
 #InterviewForm div label {
-  font-weight: 700;
+	font-weight: 700;
 }
 #InterviewForm div p {
-  font-size: x-small;
-  margin: 0px;
+	font-size: x-small;
+	margin: 0px;
 }
 #InterviewForm div input {
-  margin-top: 1svh;
-  height: 30px;
+	margin-top: 1svh;
+	height: 30px;
 }
 #MainForm {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 }
 #MainForm form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
 }
 #TimeSlotSelector {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
 }
 .TimeSlot {
-  padding-left: var(--interviewspacing);
-  padding-right: var(--interviewspacing);
-  width: var(--interviewwidth);
+	padding-left: var(--interviewspacing);
+	padding-right: var(--interviewspacing);
+	width: var(--interviewwidth);
 }
 .TimeSlot h4 {
-  margin: 0px;
-  margin-top: 30px;
+	margin: 0px;
+	margin-top: 30px;
 }
 .TimeSlot p {
-  margin: 0px;
-  margin-bottom: 20px;
+	margin: 0px;
+	margin-bottom: 20px;
 }
 #InterviewSubmit {
-  display: flex;
-  justify-content: center;
-  width: inherit;
+	display: flex;
+	justify-content: center;
+	width: inherit;
 }
 #InterviewSubmit button {
-  background-color: lightgreen;
-  width: 20%;
-  height: 5svh;
-  margin-bottom: 5svh;
-  font-size: large;
-  border: none;
+	background-color: lightgreen;
+	width: 20%;
+	height: 5svh;
+	margin-bottom: 5svh;
+	font-size: large;
+	border: none;
 }
 #InterviewText {
-  padding-left: var(--interviewspacing);
-  padding-right: var(--interviewspacing);
-  width: 80%;
+	padding-left: var(--interviewspacing);
+	padding-right: var(--interviewspacing);
+	width: 80%;
+}
+
+:root {
+	/* used for editing time buttons */
+	--TimeSlotSideWidth: 48%;
+	--TimeSlotSidePaddingTopBottom: 1svh 0px;
+	--TimeSlotSideMarginTopBottom: 0.25svh 1%;
+}
+
+.TimeSlotSide0 {
+	cursor: pointer;
+	border: none;
+
+	width: var(--TimeSlotSideWidth);
+
+	padding: var(--TimeSlotSidePaddingTopBottom);
+	margin: var(--TimeSlotSideMarginTopBottom);
+}
+
+.TimeSlotSide1 {
+	cursor: pointer;
+	border: none;
+	width: var(--TimeSlotSideWidth);
+
+	padding: var(--TimeSlotSidePaddingTopBottom);
+	margin: var(--TimeSlotSideMarginTopBottom);
+}
+
+#interviewLoading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 334.3px;
+}
+
+#CurrentSelected {
+	background-color: lightseagreen;
 }
