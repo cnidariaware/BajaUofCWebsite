@@ -207,13 +207,6 @@ export default function InterviewForm() {
 					<button>Check Out the rest of the site here</button>
 				</Link>
 			</dialog>
-
-			<button
-				onClick={() => {
-					dialogRef.current.showModal();
-				}}>
-				Show the modal
-			</button>
 		</>
 	);
 }
