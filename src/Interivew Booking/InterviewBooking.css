@@ -113,6 +113,12 @@
 	margin: var(--TimeSlotSideMarginTopBottom);
 }
 
+#InterivewNoDateSelected {
+	display: flex;
+	height: 241.633px;
+	align-items: center;
+}
+
 #interviewLoading {
 	display: flex;
 	align-items: center;
@@ -163,4 +169,32 @@ p {
 
 #InterviewDialog p {
 	margin: 0px;
+}
+
+/* phone layout */
+@media only screen and (max-width: 800px) {
+	#InterviewForm {
+		flex-direction: column;
+	}
+	#InterviewForm div {
+		align-self: center;
+	}
+
+	#TimeSlotSelector {
+		flex-direction: column;
+	}
+
+	.TimeSlot {
+		align-self: center;
+
+		/* padding-bottom: 2svh; */
+	}
+
+	#InterivewNoDateSelected {
+		height: auto;
+	}
+
+	#MainForm form {
+		width: 90%;
+	}
 }

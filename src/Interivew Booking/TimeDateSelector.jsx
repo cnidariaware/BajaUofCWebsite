@@ -120,12 +120,7 @@ export default function TimeDateSelector({
 						{!selectedDate ? (
 							<>
 								<p>Available Time Slots:</p>
-								<div
-									style={{
-										height: "241.633px",
-										display: "flex",
-										alignItems: "center",
-									}}>
+								<div id="InterivewNoDateSelected">
 									<p>Please select the a date to see time slots.</p>
 								</div>
 							</>
