@@ -66,14 +66,18 @@ export default function TimeDateSelector({
 
 		// get and set time slots for a given day
 		setTimeSlotsAvialable(Object.keys(allDatesAvailable[selectedDateStr]));
-		setSelectedTime(""); // clear because of date change
+		// clear because of date change
+		setSelectedTime("");
 		// set prematurely for better error messages
 		onTimeSlotSelect({
 			date: selectedDateStr,
-			startTime: selectedTime,
+			// used because setSelectedTime("") does nothing apearantly
+			startTime: "",
 		});
- selectedTimeButton.id = "";
- setSelectedTimeButton(null);
+		if (selectedTimeButton !== null) {
+			selectedTimeButton.id = "";
+		}
+		setSelectedTimeButton(null);
 	};
 
 	const handleTimeSlotChange = (e) => {

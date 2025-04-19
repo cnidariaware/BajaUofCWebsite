@@ -71,12 +71,16 @@
 }
 #InterviewSubmit button {
 	background-color: lightgreen;
-	width: 20%;
+	width: clamp(62px, 16svw, 180px);
+	/* width: 16svw; */
 	height: 5svh;
 	margin-bottom: 5svh;
 	font-size: large;
 	border: none;
+	padding: 0px;
+	color: black;
 }
+
 #InterviewText {
 	padding-left: var(--interviewspacing);
 	padding-right: var(--interviewspacing);
@@ -118,5 +122,45 @@
 }
 
 #CurrentSelected {
-	background-color: lightseagreen;
+	background-color: rgb(28.75, 93.2196969697, 143.75);
+	color: white;
+}
+
+#InterviewError {
+	opacity: 0%;
+	color: red;
+}
+
+#InterviewDialog[open] {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	border: 4px solid grey;
+}
+
+#InterviewDialog::backdrop {
+	background-color: rgba(35, 35, 35, 0.7);
+	backdrop-filter: blur(2px);
+}
+
+#InterviewDialog a {
+	align-self: center;
+	margin-top: 1svh;
+}
+
+#InterviewDialog button {
+	border: 1px solid grey;
+	border-radius: 4px;
+	font-size: large;
+	margin-top: 1svh;
+	padding: 2svh 1svw;
+}
+
+#InterviewDialog h2,
+p {
+	margin-top: 0px;
+}
+
+#InterviewDialog p {
+	margin: 0px;
 }
