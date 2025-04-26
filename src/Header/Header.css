@@ -45,35 +45,34 @@ header div {
 
 /* naviagation section */
 
-/* determines spacing and total amount of page it takes up*/
-nav {
-	width: 50%;
-}
-
 nav a {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
-}
-
-nav a li {
 	background-color: #1f1f1f;
 	color: whitesmoke;
 	padding: 1rem;
 
 	font-size: larger;
 
-	/* border-left: solid 2px gray; */
+	/* border-left: solid 2px white; */
 }
 /* removes first divider */
 /* can be removed if no borders from above */
-#FirstNav {
+nav a:first-child {
 	border-left: none;
 }
+/* #FirstNav {
+	
+} */
 
 nav a li:hover {
-	/* background-color: gray; */
 	color: #a80029;
+}
+
+/* correct colour of links in dark mode */
+.darkmode nav a li::hover {
+	filter: hue-rotate(180deg);
 }
 
 nav ul {
@@ -84,8 +83,7 @@ nav ul {
 	margin: 0px;
 	padding: 0px;
 }
-creates dwon downs
-/*  */
+/* creates drop downs */
 /* makes it so that the tags look the same whist having removing browser error */
 .DropDownHeader {
 	display: inline-block;
@@ -129,6 +127,10 @@ creates dwon downs
 	/* border-bottom: solid 1px black; */
 }
 
+:root {
+	--fade-starts-at: 80%;
+}
+
 #BannerHeader img {
 	position: absolute;
 	height: 100svh;
@@ -139,8 +141,17 @@ creates dwon downs
 	background-position: center;
 
 	z-index: -2;
-	-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent);
-	mask-image: linear-gradient(to bottom, black 80%, transparent);
+
+	-webkit-mask-image: linear-gradient(
+		to bottom,
+		black var(--fade-starts-at),
+		transparent
+	);
+	mask-image: linear-gradient(
+		to bottom,
+		black var(--fade-starts-at),
+		transparent
+	);
 }
 
 /* used to postiion title and sub title */
