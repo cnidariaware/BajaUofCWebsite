@@ -138,7 +138,9 @@ creates dwon downs
 	background-size: cover;
 	background-position: center;
 
-	z-index: -1;
+	z-index: -2;
+	-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent);
+	mask-image: linear-gradient(to bottom, black 80%, transparent);
 }
 
 /* used to postiion title and sub title */
@@ -152,7 +154,7 @@ creates dwon downs
 
 	margin-left: 15svw;
 
-	font-size: xx-large; /* todo make larger */
+	font-size: 80px; /* todo make larger */
 	font-weight: normal;
 
 	background-color: white;
