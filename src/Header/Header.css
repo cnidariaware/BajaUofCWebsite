@@ -129,6 +129,8 @@ nav ul {
 
 :root {
 	--fade-starts-at: 80%;
+	--banner-text-pos-left: 15svw;
+	--banner-text-background: white;
 }
 
 #BannerHeader img {
@@ -162,25 +164,25 @@ nav ul {
 #BannerHeader h1 {
 	display: flex;
 	width: fit-content;
-
-	margin-left: 15svw;
+	margin: 0px;
+	margin-left: var(--banner-text-pos-left);
 
 	font-size: 80px; /* todo make larger */
 	font-weight: normal;
 
-	background-color: white;
+	background-color: var(--banner-text-background);
 }
 
 #BannerHeader h2 {
 	display: flex;
 	width: fit-content;
 
-	margin-left: 3svw;
+	margin-left: var(--banner-text-pos-left);
 
 	font-size: xx-large;
 	font-weight: normal;
 
-	background-color: white;
+	background-color: var(--banner-text-background);
 }
 
 /* for dark mode */
