@@ -5,6 +5,7 @@ import yaml from "js-yaml";
 
 import "./Home.css";
 import sponsorsyaml from "../MockDB/sponsorship.yml";
+import Slideshow from "../Gallery/Slideshow";
 
 export default function Home() {
 	const [currentSponsors, setCurrentSponsors] = useState();
@@ -57,7 +58,6 @@ export default function Home() {
 												currentSponsors[sponsorTier][sponsorListPos][
 													sponsorName
 												];
-											console.log(sponsorTier, sponsorName, sponsorDetail);
 											return sponsorDetail !== null ? (
 												sponsorDetail.Url !== "" &&
 												sponsorDetail.LogoUrl !== null ? (
@@ -78,7 +78,7 @@ export default function Home() {
 						</>
 					)}
 				</div>
-				<div>Mini Gallery</div>
+				<Slideshow />
 				<div id="HomeAboutUs">
 					<img
 						src="https://static.wixstatic.com/media/5824fc_f65d87b07f23407087a1bd60766d9548~mv2.jpg/v1/fill/w_846,h_1194,fp_0.50_0.48,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/thumbnail_DE9F07D7-298D-4FFD-9192-27854CB866AA.jpg"
@@ -98,7 +98,7 @@ export default function Home() {
 							100 teams from all corners of the globe compete in the event - the
 							US, Canada, Mexico, India, China, Brazil, Korea, and more. The
 							competition is ferocious, and the race is treacherous; more than
-							half of the cars that start the race never finish.{" "}
+							half of the cars that start the race never finish.
 						</p>
 						<Link to="/About">Learn More</Link>
 					</div>

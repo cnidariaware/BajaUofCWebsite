@@ -3,7 +3,7 @@
 	flex-direction: column;
 	text-align: center;
 	margin-top: 2svh;
-	padding-top: 2svh;
+	padding-top: 4svh;
 	background-color: rgba(128, 128, 128, 0.2);
 	-webkit-mask-image: linear-gradient(
 		to top,
@@ -36,7 +36,7 @@
 	justify-content: center;
 	text-decoration: none;
 	color: inherit;
-	flex: 0 1 30%;
+	/* flex: 0 1 20%; */
 }
 
 #HomeSponsors a img {
@@ -51,11 +51,12 @@
 #HomeAboutUs {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	column-gap: 4svw;
 	padding: 2svh 4vw;
-	background-color: black;
-	color: white;
+	background-color: white;
+	border-radius: 1rem;
+	margin: 2svh 6svw;
 }
 
 #HomeAboutUs img {
@@ -90,7 +91,7 @@
 	border: none;
 	background-color: white;
 	text-decoration: none;
-	color: black;
+	color: inherit;
 	border-radius: 5px;
 }
 

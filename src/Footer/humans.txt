@@ -1,6 +1,6 @@
 /* TEAM */
-	Lead:Brock
-	Contact: hello [at] humanstxt.org
+	Lead of Soon™:Brock
+	Contact: darkicewolf50@gmail.com
 	Github: darkicewolf50
 
 	UI developer: Maria Macias
