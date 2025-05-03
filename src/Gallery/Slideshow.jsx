@@ -11,6 +11,7 @@ export default function Slideshow() {
 	var slideIndex = 1;
 	useEffect(() => {
 		showSlides(slideIndex);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const plusSlides = (n) => {
@@ -45,16 +46,16 @@ export default function Slideshow() {
 					/>
 				);
 			})}
-			<a
+			<p
 				className="prev-button"
 				onClick={() => plusSlides(-1)}>
 				❮
-			</a>
-			<a
+			</p>
+			<p
 				className="next-button"
 				onClick={() => plusSlides(1)}>
 				❯
-			</a>
+			</p>
 		</div>
 	);
 }
