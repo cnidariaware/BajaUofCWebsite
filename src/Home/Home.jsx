@@ -31,26 +31,7 @@ export default function Home() {
 			console.error("Error recieving data from server:");
 		}
 	};
-	let Sponsors = {
-		"Schulich School of Engineering": {
-			SponsorTier: "Diamond",
-			LogoUrl:
-				"https://static.wixstatic.com/media/5824fc_5fbf9755b7a5425390262c6f5ac17044~mv2.png/v1/fill/w_426,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5824fc_5fbf9755b7a5425390262c6f5ac17044~mv2.png",
-			Url: "https://schulich.ucalgary.ca/",
-		},
-		Morphgenix: {
-			SponsorTier: "Diamond",
-			LogoUrl:
-				"https://static.wixstatic.com/media/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg/v1/crop/x_0,y_1,w_2707,h_1353/fill/w_410,h_206,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg",
-			Url: "https://www.morphgenix.com",
-		},
-		Suri: {
-			SponsorTier: "Diamond",
-			LogoUrl:
-				"https://static.wixstatic.com/media/5824fc_1a5c460f693b4c14baf546a55b02eec6~mv2.png/v1/crop/x_0,y_62,w_500,h_276/fill/w_222,h_123,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5824fc_1a5c460f693b4c14baf546a55b02eec6~mv2.png",
-			Url: "https://www.surimanufacturing.com/",
-		},
-	};
+
 	return (
 		<>
 			<UpdateBanner
