@@ -3,51 +3,56 @@ Diamond Tier:
       LogoUrl: https://static.wixstatic.com/media/5824fc_5fbf9755b7a5425390262c6f5ac17044~mv2.png/v1/fill/w_426,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5824fc_5fbf9755b7a5425390262c6f5ac17044~mv2.png
       Url: https://schulich.ucalgary.ca/
       DescriptionAboutSponsor: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu magna in diam consectetur rhoncus vel nec turpis. Sed finibus mi eu sem varius faucibus. Donec semper erat et bibendum pharetra. Suspendisse cursus lorem sed nisi semper, a rutrum nunc luctus. Nunc ullamcorper enim id orci interdum ultrices. Donec vestibulum nunc vel nisl pretium tempus. Morbi quis ante et ligula eleifend eleifend. Proin bibendum maximus elit vitae congue. Vivamus egestas, ex in tempor posuere, ligula nunc iaculis massa, in imperdiet dui justo eu dolor. Nullam placerat velit quis sem mattis, laoreet pharetra elit tempor.
+  - Suri:
+      LogoUrl: https://static.wixstatic.com/media/5824fc_1a5c460f693b4c14baf546a55b02eec6~mv2.png/v1/crop/x_0,y_62,w_500,h_276/fill/w_222,h_123,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5824fc_1a5c460f693b4c14baf546a55b02eec6~mv2.png
+      Url: https://www.surimanufacturing.com/
+      DescriptionAboutSponsor:
 Platinum Tier:
   - Morphgenix:
       LogoUrl: https://static.wixstatic.com/media/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg/v1/crop/x_0,y_1,w_2707,h_1353/fill/w_410,h_206,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg
       Url: https://www.morphgenix.com
       DescriptionAboutSponsor:
 Gold Tier:
-  - Suri:
-      LogoUrl: https://lh5.googleusercontent.com/WJsBsmcLypQhY0MMOLQtJSGFXrLQqPKNc3502rYUGKPCq_SfS9CxuoB3n541Kn9bKPm2b5aixCnYsCVYZAts2Y8xvmOHWL3nnbKtWUkE1KoFYYQ4bXUlikfF0NPIynxhzQ=w1280
-      Url: https://www.surimanufacturing.com/
+  - Solidworks:
+      LogoUrl: https://static.wixstatic.com/media/5824fc_bf60d1e1d88f44d5a5227aa85bfdb30f~mv2.png/v1/fill/w_593,h_123,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5824fc_bf60d1e1d88f44d5a5227aa85bfdb30f~mv2.png
+      Url: https://www.solidworks.com/
       DescriptionAboutSponsor:
-  - SKF:
-      LogoUrl: https://www.skf.com/v2/assets/img/skf-logo-white.svg
-      Url: https://www.skf.com/ca/en
-      DescriptionAboutSponsor: I am not sure
   - WRMA:
-      LogoUrl: https://wildrosemx.com/wp-content/uploads/2021/08/wild-rose-motocross-calgary-rasterized.png
+      LogoUrl: https://static.wixstatic.com/media/5824fc_07d8e7297fb147fba71a1c6a9468f8e0~mv2.png/v1/fill/w_354,h_278,al_c,lg_1,q_85,enc_avif,quality_auto/5824fc_07d8e7297fb147fba71a1c6a9468f8e0~mv2.png
       Url: https://wildrosemx.com/
       DescriptionAboutSponsor:
   - Trotec:
       LogoUrl: https://www.troteclaser.com/_nuxt/img/logo-trotec.709e7ce.svg
       Url: https://www.troteclaser.com/en-ca/
       DescriptionAboutSponsor:
-  - Solidworks:
-      LogoUrl: https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_solidworks.svg
-      Url: https://www.solidworks.com/
-      DescriptionAboutSponsor:
+
 Silver Tier:
   - Encore Metals:
-      LogoUrl: https://www.encoremetals.com/assets/images/logos/encore-metals-logo.png
+      LogoUrl: https://static.wixstatic.com/media/5824fc_18266e1befde40f1904008d9ae3ccd2c~mv2.png/v1/fill/w_280,h_56,al_c,lg_1,q_85,enc_avif,quality_auto/5824fc_18266e1befde40f1904008d9ae3ccd2c~mv2.png
       Url: https://www.encoremetals.com/
       DescriptionAboutSponsor: Metal supplier
   - CNOOC:
-      LogoUrl: https://cnoocinternational.com/img/cnooc-logo.png
+      LogoUrl: https://static.wixstatic.com/media/5824fc_da06825356ab46da814a57f151d2411c~mv2.png/v1/crop/x_0,y_1,w_2780,h_699/fill/w_593,h_149,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5824fc_da06825356ab46da814a57f151d2411c~mv2.png
       Url: https://cnoocinternational.com/
       DescriptionAboutSponsor:
   - Polaris:
-      LogoUrl: https://cdn1.polaris.com/globalassets/crp/2024/nav-bar-logos/nav-bar-logo-polaris.svg?v=c0e00521
+      LogoUrl: https://static.wixstatic.com/media/5824fc_185cc0a2410f4ad38862564702e3c88e~mv2.png/v1/crop/x_0,y_13,w_292,h_162/fill/w_409,h_216,fp_0.50_0.50,lg_1,q_85,enc_avif,quality_auto/300x200_Polaris%20-%20Copy.png
       Url: https://www.polaris.com/en-ca/
       DescriptionAboutSponsor:
-Bronze Tier:
-  - Redbull:
-      LogoUrl: "https://img.redbull.com/redbullcom/static/redbullcom-logo_double-with-text.svg"
-      Url: https://www.redbull.com/ca-en/
+  - Ansys:
+      LogoUrl: https://www.ansys.com/content/dam/company/brand/logos/ansys-logos/ansys-logo.jpg
+      Url: https://www.ansys.com
       DescriptionAboutSponsor:
-  - Canada Action:
-      LogoUrl:
-      Url:
+Bronze Tier:
+  #   - Redbull:
+  #       LogoUrl: "https://img.redbull.com/redbullcom/static/redbullcom-logo_double-with-text.svg"
+  #       Url: https://www.redbull.com/ca-en/
+  #       DescriptionAboutSponsor:
+  #   - Canada Action:
+  #       LogoUrl:
+  #       Url:
+  #       DescriptionAboutSponsor:
+  - darkicewolf50:
+      LogoUrl: https://gitea.bajacloud.duckdns.org/avatars/736ff895ae4b87101385b87887e5865e?size=512
+      Url: https://darkicewolf50.pages.dev
       DescriptionAboutSponsor:

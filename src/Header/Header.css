@@ -128,7 +128,8 @@ nav ul {
 }
 
 :root {
-	--fade-starts-at: 80%;
+	--fade-starts-at-bottom: 80%;
+	--fade-starts-at-top: 96%;
 	--banner-text-pos-left: 15svw;
 	--banner-text-background: white;
 }
@@ -146,12 +147,12 @@ nav ul {
 
 	-webkit-mask-image: linear-gradient(
 		to bottom,
-		black var(--fade-starts-at),
+		black var(--fade-starts-at-bottom),
 		transparent
 	);
 	mask-image: linear-gradient(
 		to bottom,
-		black var(--fade-starts-at),
+		black var(--fade-starts-at-bottom),
 		transparent
 	);
 }

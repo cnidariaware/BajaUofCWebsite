@@ -2,8 +2,19 @@
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	margin-top: 2svh;
 	padding-top: 2svh;
 	background-color: rgba(128, 128, 128, 0.2);
+	-webkit-mask-image: linear-gradient(
+		to top,
+		black var(--fade-starts-at-top),
+		transparent
+	);
+	mask-image: linear-gradient(
+		to top,
+		black var(--fade-starts-at-top),
+		transparent
+	);
 }
 
 #HomeSponsors {
@@ -19,14 +30,18 @@
 }
 
 #HomeSponsors a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	text-decoration: none;
 	color: inherit;
 	flex: 0 1 30%;
 }
 
 #HomeSponsors a img {
-	max-width: 200px;
 	max-height: 200px;
+	max-width: 200px;
 }
 
 #HomeSponsors a p {

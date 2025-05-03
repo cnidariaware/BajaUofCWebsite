@@ -66,9 +66,9 @@ export default function Home() {
 						<p>Loading...</p>
 					) : (
 						<>
-							{Object.keys(currentSponsors).map((sponsorTier) => {
+							{Object.keys(currentSponsors).map((sponsorTier) =>
 								Object.keys(currentSponsors[sponsorTier]).map(
-									(sponsorListPos) => {
+									(sponsorListPos) =>
 										Object.keys(
 											currentSponsors[sponsorTier][sponsorListPos]
 										).map((sponsorName) => {
@@ -77,22 +77,23 @@ export default function Home() {
 													sponsorName
 												];
 											console.log(sponsorTier, sponsorName, sponsorDetail);
-											return (
-												// {sponsorDetail.Url !== null && sponsorDetail.LogoUrl !== null ? (<></>) :
-												<a
-													href={sponsorDetail.Url}
-													key={sponsorName}>
-													<img
-														src={sponsorDetail.LogoUrl}
-														alt={sponsorName + "'s logo"}
-													/>
-													<p>{sponsorTier} Sponsor</p>
-												</a>
-											);
-										});
-									}
-								);
-							})}
+											return sponsorDetail !== null ? (
+												sponsorDetail.Url !== "" &&
+												sponsorDetail.LogoUrl !== null ? (
+													<a
+														href={sponsorDetail.Url}
+														key={sponsorName}>
+														<img
+															src={sponsorDetail.LogoUrl}
+															alt={sponsorName + "'s logo"}
+														/>
+														<p>{sponsorTier} Sponsor</p>
+													</a>
+												) : null
+											) : null;
+										})
+								)
+							)}
 						</>
 					)}
 				</div>

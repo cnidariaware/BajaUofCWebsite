@@ -77,7 +77,10 @@ export default function Header() {
 		const HomeBannerTop = document.getElementById("BannerHeader");
 
 		// 1svh is to gget the div close enough to the image
-		HomeBannerTop.style.height = `calc(100svh + -${headerTopTotalHeight}px)`;
+		HomeBannerTop.style.setProperty(
+			"height",
+			`calc(100svh + -${headerTopTotalHeight}px)`
+		);
 	};
 
 	return (
