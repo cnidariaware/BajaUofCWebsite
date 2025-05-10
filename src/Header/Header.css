@@ -45,13 +45,22 @@ header div {
 
 /* naviagation section */
 
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	column-gap: 2svw;
+}
+
 nav a {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
 	background-color: #1f1f1f;
 	color: whitesmoke;
-	padding: 1rem;
 
 	font-size: larger;
 
@@ -62,9 +71,6 @@ nav a {
 nav a:first-child {
 	border-left: none;
 }
-/* #FirstNav {
-	
-} */
 
 nav a li:hover {
 	color: #a80029;
@@ -75,14 +81,6 @@ nav a li:hover {
 	filter: hue-rotate(180deg);
 }
 
-nav ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-}
 /* creates drop downs */
 /* makes it so that the tags look the same whist having removing browser error */
 .DropDownHeader {

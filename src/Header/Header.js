@@ -98,7 +98,7 @@ export default function Header() {
 						<Link to={"/"}>
 							<li id="FirstNav">HOME</li>
 						</Link>
-						<Link to={"/"}>
+						<Link to={"/About"}>
 							<li>ABOUT</li>
 						</Link>
 						<Link to={"/Teams"}>
