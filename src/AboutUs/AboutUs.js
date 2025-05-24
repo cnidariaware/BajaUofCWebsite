@@ -318,7 +318,7 @@ export default function AboutsUs() {
 						})}
 					</div>
 				</div>
-				<div>
+				<div id="about-team">
 					<div>
 						<h4>Meet the Rest of the Team</h4>
 						<p>

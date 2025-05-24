@@ -4,10 +4,16 @@ header {
 	margin: 1%;
 	margin-top: 1svh;
 	padding-right: 0.5svw;
+	/* width: 100%; */
 
 	align-items: center;
 	justify-content: space-between;
 	background-color: #1f1f1f;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 header a {
@@ -121,29 +127,15 @@ nav a li:hover {
 	width: 100%;
 	display: flex;
 
-	/* bebug border, use margin to advantage, may cause error later */
-	/* border-bottom: solid 1px black; */
-}
-
-:root {
-	--fade-starts-at-bottom: 80%;
-	--fade-starts-at-top: 96%;
-	--banner-text-pos-left: 15svw;
-	--banner-text-background: white;
-}
-
-#BannerHeader img {
-	position: absolute;
-	height: 100svh;
-	width: inherit;
+	position: relative;
+	z-index: 0;
 	top: 0;
 	left: 0;
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 
-	z-index: -2;
-
-	-webkit-mask-image: linear-gradient(
+	/* -webkit-mask-image: linear-gradient(
 		to bottom,
 		black var(--fade-starts-at-bottom),
 		transparent
@@ -152,12 +144,44 @@ nav a li:hover {
 		to bottom,
 		black var(--fade-starts-at-bottom),
 		transparent
-	);
+	); */
 }
+
+#BannerHeader::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0) var(--fade-starts-at-bottom, 70%),
+		whitesmoke 100%
+	);
+	pointer-events: none;
+	z-index: 1;
+}
+
+:root {
+	--fade-starts-at-bottom: 90%;
+	--fade-starts-at-top: 96%;
+	--banner-text-pos-left: 15svw;
+	--banner-text-background: white;
+}
+
+/* #BannerHeader img {
+	position: relative;
+	height: 100svh;
+	width: inherit;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+
+	z-index: -2;
+} */
 
 /* used to postiion title and sub title */
 #BannerHeader div {
-	margin-top: 15%;
+	margin-top: 25%;
 }
 
 #BannerHeader h1 {

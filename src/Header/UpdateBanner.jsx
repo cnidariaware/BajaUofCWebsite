@@ -35,14 +35,7 @@ export default function UpdateBanner({
 			titleText: updatedTitleText,
 			subtitleText: updatedSubtitleText,
 			imgUrl: updatedImgUrl,
-			imgAlt: updatedImgAlt,
 		});
-	}, [
-		updatedTitleText,
-		updatedSubtitleText,
-		updatedImgUrl,
-		updatedImgAlt,
-		updateBanner,
-	]);
+	}, [updatedTitleText, updatedSubtitleText, updatedImgUrl, updateBanner]);
 	return <></>;
 }

@@ -3,6 +3,12 @@
 	flex-direction: column;
 }
 
+#About img {
+	border-radius: 0.5rem;
+	/* aspect-ratio: 1 /1;
+	object-fit: contain; */
+}
+
 #About h3 {
 	font-size: 100px;
 	margin: 0px;
@@ -149,6 +155,11 @@
 	background-color: whitesmoke;
 }
 
+#leadership img {
+	width: 200px;
+	height: 200px;
+}
+
 #leadership h4 {
 	font-size: 40px;
 	margin: 0px;
@@ -182,14 +193,52 @@
 	flex-flow: row wrap;
 	column-gap: 2svw;
 	row-gap: 2svh;
+	justify-content: space-evenly;
 }
 
 #leadership div div {
 	display: flex;
 	flex-direction: column;
 	column-gap: 0svh;
+	max-width: 20svw;
 }
 
 #leadership div div p {
-	max-width: 20svw;
+	margin: 0px;
+	/* this is horrible DO NOT DO */
+	min-height: 64px;
+}
+
+#about-team > div:nth-child(1) {
+	flex-wrap: nowrap;
+	max-width: 60svw;
+	margin-left: auto;
+	margin-right: auto;
+	column-gap: 2svw;
+}
+
+#about-team h4 {
+	font-size: large;
+	text-wrap: nowrap;
+}
+
+#about-team div {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	column-gap: 2svw;
+	row-gap: 2svh;
+}
+
+#about-team div div {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(128, 128, 128, 0.6);
+	border-radius: 0.5rem;
+	padding: 0.5svh 0.5svw;
+}
+
+#about-team div div p {
+	padding: 0px;
+	margin: 0px;
 }
