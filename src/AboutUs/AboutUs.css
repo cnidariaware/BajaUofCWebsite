@@ -1,0 +1,195 @@
+#About {
+	display: flex;
+	flex-direction: column;
+}
+
+#About h3 {
+	font-size: 100px;
+	margin: 0px;
+	text-align: center;
+}
+
+#About #intro {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 2svh 2svw;
+
+	background-color: black;
+	color: white;
+}
+
+#About #intro p {
+	max-width: 70svw;
+}
+
+#club-stats {
+	display: flex;
+	flex-flow: row nowrap;
+	/* max-width: 60svw; */
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	column-gap: 2svw;
+	row-gap: 2svh;
+	align-items: center;
+	margin: 2svh 2svw;
+}
+
+#club-stats div p {
+	width: 20svw;
+	padding: 0px;
+	margin: 0px;
+}
+
+#club-stats div {
+	display: flex;
+	flex-flow: row wrap;
+	column-gap: 2svw;
+	row-gap: 1svh;
+	justify-content: space-evenly;
+}
+
+#club-stats div div {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
+
+#club-stats h4 {
+	/* align-self: center; */
+	font-size: x-large;
+	text-wrap: nowrap;
+	height: 100%;
+	margin: 0px;
+	align-self: flex-start;
+	margin-top: 10svh;
+}
+
+#club-stats h5 {
+	font-size: larger;
+	text-wrap: nowrap;
+	margin: 0px;
+}
+
+#club-stats h6 {
+	font-size: 40px;
+	font-weight: normal;
+	text-wrap: nowrap;
+	margin: 0px;
+}
+
+#about-subteams > div:nth-child(1) {
+	background-image: url(https://static.wixstatic.com/media/6ee8da_04610849156f4ec5b7bca0b8aebcf8db~mv2.jpg/v1/fill/w_2474,h_600,fp_0.50_0.40,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6ee8da_04610849156f4ec5b7bca0b8aebcf8db~mv2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-size: 30px;
+	padding: 8svh 0svw;
+	margin-bottom: 4svh;
+}
+
+#about-subteams > div:nth-child(1) h3 {
+	font-size: 50px;
+}
+
+#about-subteams {
+	background-color: black;
+	color: white;
+}
+
+#about-subteams div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	row-gap: 4svh;
+}
+
+#about-subteams div div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: start;
+	row-gap: 2svh;
+}
+
+#about-subteams div div div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 50svw;
+	padding: 0svh 1svw;
+}
+
+#about-subteams h4 {
+	font-size: 40px;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+#about-subteams p {
+	padding: 0px;
+	margin: 0px;
+}
+
+#about-subteams img {
+	height: 30svh;
+}
+
+#leadership {
+	display: flex;
+	flex-direction: row;
+	/* align-items: center; */
+	/* justify-content: flex-start; */
+	align-items: flex-start;
+	padding: 2svh 2svw;
+	background-color: whitesmoke;
+}
+
+#leadership h4 {
+	font-size: 40px;
+	margin: 0px;
+}
+
+#leadership h5 {
+	font-size: 28px;
+	margin: 0px;
+}
+
+#leadership h6 {
+	font-size: 20px;
+	margin: 0px;
+	font-weight: normal;
+}
+
+#leadership > div:nth-child(1) {
+	/* font-size: 30px; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 30svw;
+	margin: 0px;
+	margin-top: 8svh;
+	padding-right: 2svw;
+}
+
+#leadership div {
+	display: flex;
+	flex-flow: row wrap;
+	column-gap: 2svw;
+	row-gap: 2svh;
+}
+
+#leadership div div {
+	display: flex;
+	flex-direction: column;
+	column-gap: 0svh;
+}
+
+#leadership div div p {
+	max-width: 20svw;
+}
