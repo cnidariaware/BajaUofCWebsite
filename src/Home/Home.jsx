@@ -24,44 +24,41 @@ export default function Home() {
 						alt="the team?"
 					/>
 					<div>
-						<h2>Who We Are</h2>
+						<h2>What We Do</h2>
 						<p>
 							UCalgary Baja is a student organization which designs, builds, and
-							racing an off-road vehicle in the Baja SAE intercollegiate
-							competition organized by the Society of Automotive Engineers (SAE)
-							every year. Schulich Off-Road's cars are tough, dependable,
-							competitive, and extremely fun to drive.
+							racing an off-road vehicle in the Baja SAE competition organized
+							by the Society of Automotive Engineers (SAE) every year. Schulich
+							Off-Road's cars are tough, dependable, competitive, and extremely
+							fun to drive.
 						</p>
 						<p>
-							UCalgary Baja is a team consisting of talented and determined
-							competitive individuals in engineering who strive to expand their
-							horizons, earn experience, and network with leading companies in
-							their respective fields. Our members achieve this by being a part
-							of one of our 6 sub-teams: Drivetrain, Logistics and Software,
-							Suspension, Chassis and Ergonomics, Steering, and Electrical and
-							Testing.
+							In UCalgary Baja, we gain practical experience in design and
+							manufacturing by constructing various car components. We learn to
+							balance cost, manufacturing limitations, and performance to
+							develop optimal parts, budgets, and processes. This involves using
+							CAD technology like SolidWorks and FEA simulations.
 						</p>
 						<Link to={"AboutUs"}>Learn More</Link>
 					</div>
 				</div>
 				<div>
 					<div>
-						<h2>Join the Team</h2>
+						<h2>Who We Are</h2>
 						<p>
-							Students involved in UCalgary Baja gain practical experience in
-							design and manufacturing by constructing various car components.
-							They learn to balance cost, manufacturing limitations, and
-							performance to develop optimal parts, budgets, and processes. This
-							involves using CAD technology like SolidWorks and FEA simulations.
+							We are a team of engineering and business students who strive to
+							expand our horizons in our respective fields by getting real
+							world, hands on experience. Our members achieve this by being a
+							part of one of our 9 sub-teams: Suspension, Chassis, Ergonomics,
+							Steering, Powertrain, Final Drive, Electrical, Software, and
+							Business.
 						</p>
 						<p>
-							Additionally, members acquire hands-on skills such as welding and
-							operating metal cutting machines. Each team member handles a
-							specific component, collaborating, researching, and
-							troubleshooting throughout the design and execution process. After
-							building the vehicle, students can attend competitions worldwide,
-							where they must address issues promptly and work as a team to
-							replace broken parts to stay competitive.
+							Each subteam handles a specific component, collaborating,
+							researching, and troubleshooting throughout the design process.
+							After building the vehicle, we attend competitions in the United
+							States, where our hard work is put to the test against the other
+							teams from all across the world.
 						</p>
 						<Link to={"/"}>Learn More</Link>
 						{/* Replace with Join later*/}
@@ -75,14 +72,27 @@ export default function Home() {
 					<h2>Sponsor Section</h2>
 					<div>
 						<div>
-							<p>Sponsor 1</p>
-							<p>Sponsor 2</p>
-							<p>Sponsor 3</p>
-						</div>
-						<div>
-							<p>Sponsor 4</p>
-							<p>Sponsor 5</p>
-							<p>Sponsor 6</p>
+							<div>
+								<img
+									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9L3ZGK6WtOmJbzxmCzRxwLXYKGC5SDcAKHb0ScfbUmbtG0IujQt6eQDaI_Pm9g4DZvc&usqp=CAU"
+									alt="Schulich logo"
+								/>
+								<h3>Schulich School of Engineering</h3>
+							</div>
+							<div>
+								<img
+									src="https://static.wixstatic.com/media/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg/v1/crop/x_0,y_1,w_2707,h_1353/fill/w_410,h_206,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg"
+									alt=""
+								/>
+								<h3>Morphgenix</h3>
+							</div>
+							<div>
+								<img
+									src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_solidworks.svg"
+									alt=""
+								/>
+								<h3>Solidworks</h3>
+							</div>
 						</div>
 					</div>
 					<div id="HomeSponsorLinks">

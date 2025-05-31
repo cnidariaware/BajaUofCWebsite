@@ -35,18 +35,29 @@
 /* #HomeTop div h2 {
 } */
 
+.HomePageLayout {
+	margin-left: auto;
+	margin-right: auto;
+	width: 70svw;
+	margin-top: 2svh;
+}
+
 .HomePageLayout div {
 	display: flex;
 	padding-top: 2.5svh;
 	padding-bottom: 2.5svh;
-	margin-left: 15svh;
-	margin-right: 15svh;
+	column-gap: 4svw;
 }
 
 .HomePageLayout img {
 	/* height: 5svh;
 	width: 5svw; */
-	flex-grow: 1;
+	/* flex-grow: 1; */
+	border-radius: 1rem;
+	width: 50%;
+	height: 55svh;
+	margin-top: auto;
+	/* margin: auto 0px; */
 }
 
 .HomePageLayout a {
@@ -54,23 +65,41 @@
 	color: inherit;
 
 	border: solid 2px black;
+	border-radius: 1rem;
 	padding: 10px;
-
+	margin: 0svh 8svw;
+	font-size: large;
+	text-decoration: none;
 	text-align: center;
+	margin-top: 2svh;
+}
+
+.HomePageLayout a:hover {
+	background-color: grey;
 }
 
 .HomePageLayout h2 {
 	border-bottom: solid 3px black;
-	padding-left: 2svw;
+	/* padding-left: 2svw; */
+	padding-bottom: 0.5svh;
+	font-size: 36px;
 	/* margin-left: 2svw; */
 	/* margin-right: 2svw; */
+	/* margin: 0px; */
+	margin-bottom: 2svh;
+}
+
+.HomePageLayout p {
+	padding: 0px;
+	margin: 1svh 0svw;
+	font-size: larger;
 }
 
 .HomePageLayout div div {
 	display: flex;
 	flex-direction: column;
 	width: 50%;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	padding: 0px;
 }
 
@@ -89,6 +118,11 @@
 	border: solid 2px black;
 
 	padding: 30px;
+	margin-top: 4svh;
+}
+
+#HomeSponsors h2 {
+	margin-top: 0px;
 }
 
 #HomeSponsors div {
@@ -98,11 +132,32 @@
 #HomeSponsors div div {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 
 	width: inherit;
 
-	justify-content: space-around;
+	justify-content: center;
 	padding: 0px;
+	row-gap: 2svh;
+	column-gap: 6svw;
+}
+
+#HomeSponsors div div div {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0px;
+	/* justify-content: center; */
+	align-items: center;
+	text-align: center;
+}
+
+#HomeSponsors div div div img {
+	width: 13svw;
+	height: 13svh;
+}
+
+#HomeSponsors div div div h3 {
+	margin: 1svh 0svw;
 }
 
 #HomeSponsorLinks {
@@ -110,11 +165,17 @@
 	flex-direction: row;
 	width: inherit;
 
-	justify-content: space-around;
-	background-color: aqua;
+	justify-content: center;
+	padding-top: 2svh;
 }
 
 #HomeSponsorLinks a {
-	padding-left: 5svw;
-	padding-right: 5svw;
+	margin-top: auto;
+	padding: 1svh 4svw;
+	/* padding-left: 5svw; */
+	/* padding-right: 5svw; */
+	margin: 0px 2svw;
+	width: 8svw;
+	text-wrap: nowrap;
+	text-align: center;
 }
