@@ -4,7 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header/Header";
 import AboutUs from "./AboutUs/AboutUs";
-import SubTeams from "./Teams/SubTeams";
+// import SubTeams from "./Teams/SubTeams";
 import OurSponsors from "./OurSponsors/OurSponsors";
 import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinTheClub";
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
