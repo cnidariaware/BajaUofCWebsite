@@ -12,6 +12,7 @@ import Gallery from "./Gallery/Gallery";
 import "./index.css";
 import MockPage from "./MockDB/MockPage";
 import Home from "./Home/Home";
+import Vehicles from "./Vehicles/Vehicles";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,8 +28,8 @@ root.render(
 						path="/About"
 						element={<AboutUs />}></Route>
 					<Route
-						path="/Teams"
-						element={<SubTeams />}></Route>
+						path="/Vehicles"
+						element={<Vehicles />}></Route>
 					<Route
 						path="/OurSponsors"
 						element={<OurSponsors />}></Route>

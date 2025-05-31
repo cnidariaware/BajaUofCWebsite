@@ -17,6 +17,7 @@ export default function Header() {
 		titleText: "UCalgary Baja",
 		subtitleText: "Hello",
 		imgUrl: "https://picsum.photos/200",
+		headerPostion: "absolute",
 	});
 
 	/**
@@ -50,7 +51,13 @@ export default function Header() {
 
 	return (
 		<>
-			<header>
+			<header
+				style={{
+					position:
+						bannerInfo.titleText === "" && bannerInfo.imgUrl === ""
+							? "relative"
+							: "absolute",
+				}}>
 				<Link to={"/"}>
 					<img
 						id="logo"
@@ -66,8 +73,8 @@ export default function Header() {
 						<Link to={"/About"}>
 							<li>ABOUT</li>
 						</Link>
-						<Link to={"/Teams"}>
-							<li>TEAM</li>
+						<Link to={"/Vehicles"}>
+							<li>OUR VEHICLES</li>
 						</Link>
 						<Link to={"/"}>
 							<li>HISTORY</li>
