@@ -1,0 +1,27 @@
+/* TEAM */
+	Lead:Brock
+	Contact: hello [at] humanstxt.org
+	Github: darkicewolf50
+
+	UI developer: Maria Macias
+	Twitter: @maria_ux
+
+	One eyed illustrator: Carlos Mañas
+	Twitter: @oneeyedman
+
+	Standard Man: Abel Cabans
+	Twitter: @abelcabans
+
+	Web designer: Abel Sutilo
+	Twitter: @abelsutilo
+	From:Sevilla, Andalucia, Spain
+
+/* THANKS */
+
+		
+
+/* SITE */
+	Last update:2025/02/04
+	Language: English
+	Doctype:HTML5
+	IDE: VSCode

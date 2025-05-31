@@ -12,6 +12,7 @@ import Gallery from "./Gallery/Gallery";
 import "./index.css";
 import MockPage from "./MockDB/MockPage";
 import Home from "./Home/Home";
+import Home from "./Home/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

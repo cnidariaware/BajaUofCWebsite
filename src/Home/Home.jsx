@@ -13,9 +13,9 @@ export default function Home() {
 		<>
 			<UpdateBanner
 				updatedTitleText="UCalgary Baja"
-				updatedSubtitleText="Catchphase goes here"
-				updatedImgUrl="https://picsum.photos/200"
-				updatetdImgAlt="cool shot of driver in car, replace later"
+				updatedSubtitleText=""
+				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1748720160/Home_Baja_2025_soty4k.jpg"
+				updatetdImgAlt="Lorem Picsum"
 			/>
 			<div className="HomePageLayout">
 				<div>
