@@ -4,7 +4,8 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	justify-content: center;
-	background-color: lightgrey;
+	background-color: #a80029;
+	color: white;
 }
 
 #pointerCursor {
@@ -15,6 +16,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	column-gap: 2svw;
 }
 #ender p {
 	padding-left: 2%;
@@ -33,5 +35,5 @@
 }
 
 #ender a img {
-	height: 7svh;
+	height: 3svh;
 }

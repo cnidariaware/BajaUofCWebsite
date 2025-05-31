@@ -164,7 +164,7 @@ nav ul {
 	background: linear-gradient(
 		to bottom,
 		rgba(0, 0, 0, 0) var(--fade-starts-at-bottom, 70%),
-		whitesmoke 100%
+		#1f1f1f 100%
 	);
 	pointer-events: none;
 	z-index: 1;
@@ -193,7 +193,10 @@ nav ul {
 /* used to postiion title and sub title */
 #BannerHeader div {
 	margin-top: 40svh;
-	padding-left: 60svw;
+	margin-left: auto;
+	margin-right: 8svw;
+	/* padding-left: 60svw; */
+	/* text-align: end; */
 }
 
 #BannerHeader h1 {

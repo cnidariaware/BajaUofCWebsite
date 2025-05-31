@@ -108,11 +108,12 @@ export default function Home() {
 					<div>
 						<h2>Sponsor Us</h2>
 						<p>
-							UCalgary Baja is a student organization responsible for designing,
-							building, and racing an off-road vehicle in the Baja SAE
-							intercollegiate competition organized by the Society of Automotive
-							Engineers (SAE) every year. Schulich Off-Road's cars are tough,
-							dependable, competitive, and extremely fun to drive.
+							We appreciate all the help we get from sponsors because it helps
+							fund our Baja team with essential parts, materials, manufacturing
+							support, and ability to go to competitions. Their contributions
+							make it possible for us to design, build, and compete at a high
+							level. From donated components to financial backing, our sponsors
+							are a key part of what drives our team forward.
 						</p>
 						<Link to={"/OurSponsors"}>Learn More</Link>
 					</div>

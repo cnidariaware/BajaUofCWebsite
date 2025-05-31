@@ -1,7 +1,6 @@
 import "./Ender.css";
 import linkedInLogo from "./InBug-White.png";
 import instagramLogo from "./instagram-white-icon.png";
-import emailLogo from "./email-white.png";
 import authors from "./humans.txt";
 /**
  * @param {null} null - requires onthing
@@ -36,21 +35,18 @@ export default function Ender() {
 						alt="Intragram Logo"
 					/>
 				</a>
-				<a href={authors}>
-					<img
-						src="https://humanstxt.org/img/oficial-logos/humanstxt-transparent-1ink.png"
-						alt="humans txt"
-					/>
-				</a>
+
 				<a href="mailto:uofcbaja@gmail.com?subject=Lets start something great">
 					<img
-						src={emailLogo}
+						style={{ filter: `invert()` }}
+						src="https://www.svgrepo.com/show/390657/email-envelope-letter-mail-message-communication.svg"
 						alt="email us logo"
 					/>
 				</a>
 				<a href="https://www.facebook.com/schulich.offroad/">
 					<img
-						src="https://img.icons8.com/ios-filled/50/FFFFFF/facebook--v1.png"
+						style={{ filter: `invert()`, height: `3.25svh` }}
+						src="https://www.svgrepo.com/show/521654/facebook.svg"
 						alt="Facebook Logo"
 					/>
 				</a>

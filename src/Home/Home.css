@@ -1,45 +1,11 @@
-#HomeTop {
-	display: flex;
-	position: relative;
-
-	justify-content: flex-end;
-	align-items: center;
-}
-
-#HomeTop img {
-	height: 76svh;
-	width: 100%;
-	background-image: url(https://picsum.photos/200);
-	background-size: cover;
-	background-position: center;
-
-	position: relative;
-	z-index: 0;
-}
-
-#HomeTop div {
-	display: flex;
-	flex-direction: column;
-
-	position: absolute;
-	z-index: 1;
-
-	margin-right: 25svw;
-	margin-bottom: 25svh;
-}
-
-#HomeTop div h1 {
-	margin: 0px;
-}
-
-/* #HomeTop div h2 {
-} */
-
 .HomePageLayout {
 	margin-left: auto;
 	margin-right: auto;
-	width: 70svw;
-	margin-top: 2svh;
+	padding: 0svh 15svw;
+	/* width: 70svw; */
+	padding-top: 2svh;
+	background-color: #1f1f1f;
+	color: white;
 }
 
 .HomePageLayout div {
@@ -64,7 +30,7 @@
 	/* text-decoration: none; */
 	color: inherit;
 
-	border: solid 2px black;
+	/* border: solid 2px white; */
 	border-radius: 1rem;
 	padding: 10px;
 	margin: 0svh 8svw;
@@ -72,14 +38,15 @@
 	text-decoration: none;
 	text-align: center;
 	margin-top: 2svh;
+	background-color: #a80029;
 }
 
 .HomePageLayout a:hover {
-	background-color: grey;
+	background-color: rgba(128, 128, 128, 0.4);
 }
 
 .HomePageLayout h2 {
-	border-bottom: solid 3px black;
+	border-bottom: solid 3px white;
 	/* padding-left: 2svw; */
 	padding-bottom: 0.5svh;
 	font-size: 36px;
@@ -115,7 +82,7 @@
 	flex-direction: column;
 
 	border-radius: 15px;
-	border: solid 2px black;
+	border: solid 2px white;
 
 	padding: 30px;
 	margin-top: 4svh;
@@ -160,6 +127,10 @@
 	margin: 1svh 0svw;
 }
 
+.HomePageLayout > div:nth-child(4) > img {
+	height: 40svh;
+}
+
 #HomeSponsorLinks {
 	display: flex;
 	flex-direction: row;
@@ -178,4 +149,9 @@
 	width: 8svw;
 	text-wrap: nowrap;
 	text-align: center;
+}
+
+#HomeBottomGallery img {
+	width: 100%;
+	height: 100%;
 }
