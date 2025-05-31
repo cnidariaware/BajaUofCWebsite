@@ -6,7 +6,7 @@ export default function AboutsUs() {
 			<UpdateBanner
 				updatedTitleText="UCalgary Baja"
 				updatedSubtitleText=""
-				updatedImgUrl="https://picsum.photos/200"
+				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1748720160/Home_Baja_2025_soty4k.jpg"
 				updatetdImgAlt="Lorem Picsum"
 			/>
 		</>

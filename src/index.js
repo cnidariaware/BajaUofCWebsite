@@ -11,6 +11,7 @@ import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/Up
 import Gallery from "./Gallery/Gallery";
 import "./index.css";
 import MockPage from "./MockDB/MockPage";
+import Home from "./Home/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,6 +21,9 @@ root.render(
 				<Route element={<Header />}>
 					<Route
 						path="/"
+						element={<Home />}></Route>
+					<Route
+						path="/About"
 						element={<AboutUs />}></Route>
 					<Route
 						path="/Teams"

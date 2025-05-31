@@ -3,7 +3,7 @@ import lightDark from "./light-dark.webp";
 import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
 import Ender from "../Footer/Ender";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 /**
  * @param {null} nothing - Takes in nothing
@@ -17,11 +17,7 @@ export default function Header() {
 		titleText: "UCalgary Baja",
 		subtitleText: "Hello",
 		imgUrl: "https://picsum.photos/200",
-		imgAlt: "Lorem picsum",
-	});
-
-	useEffect(() => {
-		HeaderBannerHeight();
+		headerPostion: "absolute",
 	});
 
 	/**
@@ -53,36 +49,15 @@ export default function Header() {
 		}
 	});
 
-	/**
-	 * @param {null} nothing - This takes in nothing
-	 * @returns {null} nothing - This returns nothing
-	 * @description This makes it so that the banner will always be 100% of the page at the top
-	 * @author Brock <darkicewolf50@gmail.com>
-	 */
-	const HeaderBannerHeight = () => {
-		if (bannerInfo.titleText === "" && bannerInfo.imgUrl === "") {
-			// return early to avoid error when no banner is desired
-			return;
-		}
-		const headerTop = document.getElementsByTagName("header")[0];
-		const headerTopStyle = getComputedStyle(headerTop);
-		const headerTopInnerHeight = headerTop.offsetHeight;
-		// 2 is used to align bottom of div with img
-		const headerTopMarginTop = parseFloat(headerTopStyle.marginTop) * 2;
-		const headerTopMarginHeight = parseFloat(headerTopStyle.marginBottom);
-
-		const headerTopTotalHeight =
-			headerTopInnerHeight + headerTopMarginHeight + headerTopMarginTop;
-
-		const HomeBannerTop = document.getElementById("BannerHeader");
-
-		// 1svh is to gget the div close enough to the image
-		HomeBannerTop.style.height = `calc(100svh + -${headerTopTotalHeight}px)`;
-	};
-
 	return (
 		<>
-			<header>
+			<header
+				style={{
+					position:
+						bannerInfo.titleText === "" && bannerInfo.imgUrl === ""
+							? "relative"
+							: "absolute",
+				}}>
 				<Link to={"/"}>
 					<img
 						id="logo"
@@ -95,11 +70,11 @@ export default function Header() {
 						<Link to={"/"}>
 							<li id="FirstNav">HOME</li>
 						</Link>
-						<Link to={"/"}>
+						<Link to={"/About"}>
 							<li>ABOUT</li>
 						</Link>
-						<Link to={"/Teams"}>
-							<li>TEAM</li>
+						<Link to={"/Vehicles"}>
+							<li>OUR VEHICLES</li>
 						</Link>
 						<Link to={"/"}>
 							<li>HISTORY</li>
@@ -158,17 +133,16 @@ export default function Header() {
 			{bannerInfo.titleText === "" && bannerInfo.imgUrl === "" ? (
 				<></>
 			) : (
-				<div id="BannerHeader">
-					<img
-						id="BannerBackgound"
-						src={bannerInfo.imgUrl}
-						alt={bannerInfo.imgAlt}
-					/>
-					<div>
-						<h1>{bannerInfo.titleText}</h1>
-						<h2>{bannerInfo.subtitleText}</h2>
+				<>
+					<div
+						id="BannerHeader"
+						style={{ backgroundImage: `url(${bannerInfo.imgUrl})` }}>
+						<div>
+							<h1>{bannerInfo.titleText}</h1>
+							<h2>{bannerInfo.subtitleText}</h2>
+						</div>
 					</div>
-				</div>
+				</>
 			)}
 
 			<Outlet context={{ bannerInfo, setBannerInfo }} />
