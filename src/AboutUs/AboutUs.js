@@ -127,18 +127,66 @@ export default function AboutsUs() {
 	];
 
 	let member_info = [
-		"temp1",
-		"temp2",
-		"temp3",
-		"temp4",
-		"temp5",
-		"temp6",
-		"temp7",
-		"temp8",
-		"temp9",
-		"temp10",
-		"temp11",
-		"temp12",
+		{
+			name: "temp1",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp2",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp3",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp4",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp5",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp6",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp7",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp8",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp9",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp10",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp11",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
+		{
+			name: "temp12",
+			subteam: "Business",
+			member_pic: "https://picsum.photos/200",
+		},
 	];
 	return (
 		<>
@@ -333,11 +381,11 @@ export default function AboutsUs() {
 							return (
 								<div key={info}>
 									<img
-										src="https://picsum.photos/200/200"
-										alt="test"
+										src={info.member_pic}
+										alt={`${info.name}'s headshot`}
 									/>
-									<p>Name: {info}</p>
-									<p>Subteam on</p>
+									<p>Name: {info.name}</p>
+									<p>Subteam on {info.subteam}</p>
 								</div>
 							);
 						})}
