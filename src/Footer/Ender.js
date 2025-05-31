@@ -1,7 +1,7 @@
 import "./Ender.css";
 import linkedInLogo from "./InBug-White.png";
 import instagramLogo from "./instagram-white-icon.png";
-import authors from "./humans.txt";
+
 /**
  * @param {null} null - requires onthing
  * @returns {JSX.Element} Page - HTML tags and JS functionality
