@@ -139,7 +139,11 @@ export default function Header() {
 						style={{ backgroundImage: `url(${bannerInfo.imgUrl})` }}>
 						<div>
 							<h1>{bannerInfo.titleText}</h1>
-							<h2>{bannerInfo.subtitleText}</h2>
+							{bannerInfo.subtitleText === "" ? (
+								<></>
+							) : (
+								<h2>{bannerInfo.subtitleText}</h2>
+							)}
 						</div>
 					</div>
 				</>

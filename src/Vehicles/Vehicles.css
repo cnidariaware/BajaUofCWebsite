@@ -1,0 +1,91 @@
+#vehicles div {
+	display: flex;
+	flex-flow: row wrap;
+	column-gap: 4svw;
+	row-gap: 4svh;
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 4svh;
+}
+
+#vehicles div div {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0svh;
+	min-width: 360px;
+	max-width: 500px;
+	align-items: normal;
+	margin: 0px;
+}
+
+:root {
+	--vehicle-card-padding: 1svh 1svw;
+}
+#vehicles figure {
+	height: 60svh;
+	/* width: 20svw; */
+	display: flex;
+	margin: 0px;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: flex-end;
+	border-radius: 1rem;
+	padding: var(--vehicle-card-padding);
+}
+
+#vehicles figure h4 {
+	color: white;
+	font-weight: bolder;
+	font-size: 60px;
+	margin: 8svh 0px;
+}
+
+#vehicles figcaption {
+	display: flex;
+	flex-direction: column;
+	text-wrap: wrap;
+	justify-content: center;
+	padding: var(--vehicle-card-padding);
+}
+
+#vehicles figcaption p {
+	margin: 0px;
+	margin-bottom: 1svh;
+	font-weight: bold;
+	align-self: flex-start;
+	justify-self: flex-start;
+}
+
+#vehicles table {
+	text-align: start;
+	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	align-self: center;
+}
+#vehicles thead {
+	/* text-align: center; */
+	margin: 0px auto;
+	margin-bottom: 2svh;
+	font-weight: bold;
+	font-size: larger;
+}
+
+#vehicles tr {
+	display: flex;
+	flex-direction: row;
+}
+#vehicles tr td:first-child {
+	margin-left: 0px;
+}
+#vehicles tr td {
+	margin-left: 1svw;
+}
+
+#vehicles tr td:last-child {
+	margin-left: auto;
+}

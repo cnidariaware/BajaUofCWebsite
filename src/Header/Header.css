@@ -163,7 +163,10 @@ nav a li:hover {
 :root {
 	--fade-starts-at-bottom: 90%;
 	--fade-starts-at-top: 96%;
-	--banner-text-background: white;
+	--banner-text-background: #1f1f1fcc;
+	--banner-text-padding: 2svh 2svw;
+	--banner-text-rounding: 1rem;
+	--banner-text-colour: white;
 }
 
 /* #BannerHeader img {
@@ -193,6 +196,9 @@ nav a li:hover {
 	font-weight: normal;
 
 	background-color: var(--banner-text-background);
+	border-radius: var(--banner-text-rounding);
+	color: var(--banner-text-colour);
+	padding: var(--banner-text-padding);
 }
 
 #BannerHeader h2 {
@@ -203,6 +209,9 @@ nav a li:hover {
 	font-weight: normal;
 
 	background-color: var(--banner-text-background);
+	border-radius: var(--banner-text-rounding);
+	color: var(--banner-text-colour);
+	padding: var(--banner-text-padding);
 }
 
 /* for dark mode */
