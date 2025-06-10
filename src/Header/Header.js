@@ -67,24 +67,24 @@ export default function Header() {
 				</Link>
 				<nav>
 					<ul>
-						<Link to={"/"}>
-							<li id="FirstNav">HOME</li>
-						</Link>
-						<Link to={"/About"}>
-							<li>ABOUT</li>
-						</Link>
-						<Link to={"/Vehicles"}>
-							<li>OUR VEHICLES</li>
-						</Link>
-						<Link to={"/"}>
-							<li>HISTORY</li>
-						</Link>
-						<Link to={"/OurSponsors"}>
-							<li>SPONSORS</li>
-						</Link>
-						{/* <Link to={"/OurSponsors"}>
-							<li>Become a Sponsor</li>
-						</Link> */}
+						<li>
+							<Link to={"/"}>HOME</Link>
+						</li>
+						<li>
+							<Link to={"/About"}>ABOUT</Link>
+						</li>
+						<li>
+							<Link to={"/Vehicles"}>OUR VEHICLES</Link>
+						</li>
+						{/* <li>
+							<Link to={"/"}>HISTORY</Link>
+						</li> */}
+						<li>
+							<Link to={"/OurSponsors"}>SPONSORS</Link>
+						</li>
+						{/* <li>
+							<Link to={"/OurSponsors"}>Become a Sponsor</Link>
+						</li> */}
 						{/* Removed as no longer needed */}
 						{/* <li className="DropDown">
 							{/* this link and li only exits for styling purposes }
@@ -115,9 +115,9 @@ export default function Header() {
 								</Link>
 							</ul>
 						</li> */}
-						<Link to={"/"}>
-							<li>CONTACT US</li>
-						</Link>
+						<li>
+							<Link to={"/Contact"}>CONTACT US</Link>
+						</li>
 					</ul>
 				</nav>
 				<div>

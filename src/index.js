@@ -13,6 +13,7 @@ import "./index.css";
 import MockPage from "./MockDB/MockPage";
 import Home from "./Home/Home";
 import Vehicles from "./Vehicles/Vehicles";
+import Contact from "./Contact/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -42,6 +43,9 @@ root.render(
 					<Route
 						path="/Gallery"
 						element={<Gallery />}></Route>
+					<Route
+						path="/Contact"
+						element={<Contact />}></Route>
 					<Route
 						path="/MockPage"
 						element={<MockPage />}></Route>
