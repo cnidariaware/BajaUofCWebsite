@@ -27,6 +27,7 @@ export default function UpdateBanner({
 	updatedSubtitleText = "Hello",
 	updatedImgUrl = "https://picsum.photos/200",
 	updatedImgAlt = "Lorem picsum",
+	updatedHeaderBackgroundColour = "white",
 }) {
 	const context = useOutletContext();
 	const updateBanner = context.setBannerInfo;
@@ -35,7 +36,14 @@ export default function UpdateBanner({
 			titleText: updatedTitleText,
 			subtitleText: updatedSubtitleText,
 			imgUrl: updatedImgUrl,
+			headerBackgroundColour: updatedHeaderBackgroundColour,
 		});
-	}, [updatedTitleText, updatedSubtitleText, updatedImgUrl, updateBanner]);
+	}, [
+		updatedTitleText,
+		updatedSubtitleText,
+		updatedImgUrl,
+		updateBanner,
+		updatedHeaderBackgroundColour,
+	]);
 	return <></>;
 }

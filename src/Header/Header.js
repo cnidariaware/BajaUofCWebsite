@@ -18,6 +18,7 @@ export default function Header() {
 		subtitleText: "Hello",
 		imgUrl: "https://picsum.photos/200",
 		headerPostion: "absolute",
+		headerBackgroundColour: "white",
 	});
 
 	/**
@@ -57,6 +58,10 @@ export default function Header() {
 						bannerInfo.titleText === "" && bannerInfo.imgUrl === ""
 							? "relative"
 							: "absolute",
+					outline:
+						bannerInfo.titleText === "" && bannerInfo.imgUrl === ""
+							? `1.25svh solid ${bannerInfo.headerBackgroundColour}`
+							: "",
 				}}>
 				<Link to={"/"}>
 					<img

@@ -8,7 +8,8 @@ export default function Contact() {
 				updatedTitleText=""
 				updatedSubtitleText=""
 				updatedImgUrl=""
-				updatetdImgAlt="Lorem Picsum"
+				updatedImgAlt="Lorem Picsum"
+				updatedHeaderBackgroundColour="black"
 			/>
 			<div>
 				<div>

@@ -1,19 +1,22 @@
 header {
 	display: flex;
 	flex-direction: row;
-	margin: 1%;
-	margin-top: 1svh;
-	padding-right: 0.5svw;
+	/* margin: 1%;
+	margin-top: 1svh; */
+	margin: 1svh 0.5svw;
 	/* width: 100%; */
 
 	align-items: center;
 	justify-content: space-between;
 	background-color: #1f1f1f;
+
 	/* position: absolute; */
 	z-index: 1;
 	top: 0;
 	left: 0;
 	right: 0;
+
+	color: whitesmoke;
 }
 
 header a {
@@ -30,6 +33,8 @@ header div button {
 	background-color: inherit;
 	border: solid 2px gray;
 	border-radius: 1rem;
+
+	margin-right: 0.5svw;
 }
 
 header div button img {
@@ -65,25 +70,20 @@ nav a {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
-	background-color: #1f1f1f;
-	color: whitesmoke;
+	/* background-color: #1f1f1f; */
+	/* color: whitesmoke; */
 
 	font-size: larger;
 
 	/* border-left: solid 2px white; */
 }
-/* removes first divider */
-/* can be removed if no borders from above */
-nav a:first-child {
-	border-left: none;
-}
 
-nav a li:hover {
+nav a:hover {
 	color: #a80029;
 }
 
 /* correct colour of links in dark mode */
-.darkmode nav a li::hover {
+.darkmode nav a:hover {
 	filter: hue-rotate(180deg);
 }
 

@@ -44,13 +44,16 @@
 
 #Contact div:nth-child(1) div:last-child {
 	flex-direction: column;
+	margin: 0px;
 	margin-left: auto;
 	margin-right: 16svw;
+	font-size: 30px;
 }
 
 #Contact div:nth-child(1) div:last-child h1 {
 	margin: 0px;
 	font-size: 40px;
+	width: inherit;
 }
 
 #Contact div:nth-child(1) img {
