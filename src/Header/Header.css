@@ -228,3 +228,6 @@ nav a li:hover {
 #root.darkmode #darkModeToggle {
 	filter: hue-rotate(180deg);
 }
+a {
+	cursor: pointer;
+}

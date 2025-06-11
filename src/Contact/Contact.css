@@ -1,0 +1,86 @@
+#Contact a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#Contact ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#Contact img {
+	width: 100px;
+	height: 100px;
+}
+
+#Contact h1,
+#Contact h4,
+#Contact p {
+	margin: 1svh 0svw;
+}
+
+#Contact div {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	row-gap: 2svh;
+}
+
+#Contact div:nth-child(1) {
+	flex-direction: row;
+	column-gap: 2svw;
+	/* justify-content: center; */
+	align-items: center;
+	background: black;
+	color: white;
+	padding: 2svh 0svw;
+}
+
+#Contact div:nth-child(1) div:first-child {
+	flex-direction: row;
+	margin-left: 4svw;
+}
+
+#Contact div:nth-child(1) div:last-child {
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: 16svw;
+}
+
+#Contact div:nth-child(1) div:last-child h1 {
+	margin: 0px;
+	font-size: 40px;
+}
+
+#Contact div:nth-child(1) img {
+	width: 300px;
+	height: 80svh;
+}
+
+#Contact div:nth-child(2) div {
+	flex-direction: column;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0svh 2svw;
+}
+
+#Contact div:nth-child(2) h1 {
+	text-wrap: nowrap;
+	align-self: flex-start;
+	margin-left: 2svw;
+	margin-right: 2svw;
+	font-size: 60px;
+}
+
+#Contact div:nth-child(2) {
+	margin: 0svh 0svw;
+	justify-content: flex-start;
+	height: 40svh;
+}
+
+#Contact div:last-child {
+	margin: 4svh 0svw;
+	justify-content: space-evenly;
+}
