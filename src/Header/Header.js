@@ -70,7 +70,7 @@ export default function Header() {
 						<Link to={"/"}>
 							<li id="FirstNav">HOME</li>
 						</Link>
-						<Link to={"/About"}>
+						<Link to={"/AboutUs"}>
 							<li>ABOUT</li>
 						</Link>
 						<Link to={"/Vehicles"}>
