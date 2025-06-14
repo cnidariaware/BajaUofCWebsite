@@ -1,7 +1,10 @@
 .HomePageLayout {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0svh 15svw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 4svh;
+	padding: 4svh 0px;
+	/* padding: 0svh 15svw; */
 	/* width: 70svw; */
 	padding-top: 2svh;
 	background-color: #1f1f1f;
@@ -10,27 +13,22 @@
 
 .HomePageLayout div {
 	display: flex;
-	padding-top: 2.5svh;
-	padding-bottom: 2.5svh;
 	column-gap: 4svw;
+	padding: 0svh 1svw;
 }
 
-.HomePageLayout img {
-	/* height: 5svh;
-	width: 5svw; */
-	/* flex-grow: 1; */
+.HomePageLayout div img {
 	border-radius: 1rem;
-	width: 50%;
-	height: 55svh;
-	margin-top: auto;
-	/* margin: auto 0px; */
+	/* height: clamp(200px, 100%, 55svh); */
+	/* height: 100%; */
+	/* max-width: 40%; */
+	height: 52svh;
+
+	align-self: center;
 }
 
 .HomePageLayout a {
-	/* text-decoration: none; */
 	color: inherit;
-
-	/* border: solid 2px white; */
 	border-radius: 1rem;
 	padding: 10px;
 	margin: 0svh 8svw;
@@ -47,12 +45,8 @@
 
 .HomePageLayout h2 {
 	border-bottom: solid 3px white;
-	/* padding-left: 2svw; */
 	padding-bottom: 0.5svh;
 	font-size: 36px;
-	/* margin-left: 2svw; */
-	/* margin-right: 2svw; */
-	/* margin: 0px; */
 	margin-bottom: 2svh;
 }
 
@@ -65,16 +59,9 @@
 .HomePageLayout div div {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
-	/* justify-content: space-between; */
-	padding: 0px;
-}
-
-#HomeBottomGallery {
-	flex-grow: 0;
-	width: inherit;
-
-	height: 40svh;
+	/* width: 50%; */
+	max-width: 700px;
+	padding: 0px 1svw;
 }
 
 #HomeSponsors {
@@ -85,7 +72,7 @@
 	border: solid 2px white;
 
 	padding: 30px;
-	margin-top: 4svh;
+	max-width: 800px;
 }
 
 #HomeSponsors h2 {
@@ -113,22 +100,21 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 0px;
-	/* justify-content: center; */
 	align-items: center;
 	text-align: center;
 }
 
 #HomeSponsors div div div img {
-	width: 13svw;
-	height: 13svh;
+	border-radius: 1rem;
+	min-height: 0px;
+	align-self: center;
+	min-width: 200px;
+	max-width: inherit;
+	max-height: 80px;
 }
 
 #HomeSponsors div div div h3 {
 	margin: 1svh 0svw;
-}
-
-.HomePageLayout > div:nth-child(4) > img {
-	height: 40svh;
 }
 
 #HomeSponsorLinks {
@@ -151,7 +137,13 @@
 	text-align: center;
 }
 
+#HomeBottomGallery {
+	width: 70svw;
+
+	height: 60svh;
+}
+
 #HomeBottomGallery img {
-	width: 100%;
-	height: 100%;
+	width: inherit;
+	height: inherit;
 }

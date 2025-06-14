@@ -16,7 +16,6 @@ import { useOutletContext } from "react-router-dom";
                     updatedTitleText="UCalgary Bajaa"
                     updatedSubtitleText="HelloDAAAA"
                     updatedImgUrl="https://picsum.photos/200"
-                    updatetdImgAlt="Lorem Picsum"
 			    />
     // --snip--
     ```
@@ -26,7 +25,6 @@ export default function UpdateBanner({
 	updatedTitleText = "UCalgary Baja",
 	updatedSubtitleText = "Hello",
 	updatedImgUrl = "https://picsum.photos/200",
-	updatedImgAlt = "Lorem picsum",
 }) {
 	const context = useOutletContext();
 	const updateBanner = context.setBannerInfo;
@@ -35,14 +33,7 @@ export default function UpdateBanner({
 			titleText: updatedTitleText,
 			subtitleText: updatedSubtitleText,
 			imgUrl: updatedImgUrl,
-			imgAlt: updatedImgAlt,
 		});
-	}, [
-		updatedTitleText,
-		updatedSubtitleText,
-		updatedImgUrl,
-		updatedImgAlt,
-		updateBanner,
-	]);
+	}, [updatedTitleText, updatedSubtitleText, updatedImgUrl, updateBanner]);
 	return <></>;
 }
