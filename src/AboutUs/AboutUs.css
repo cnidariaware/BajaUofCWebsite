@@ -1,63 +1,97 @@
-#aboutUs {
+#AboutUs {
 	display: flex;
 	flex-direction: column;
-	align-content: center;
+	padding: 4svh 2svw;
+	row-gap: 4svh;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #1f1f1f;
+	color: white;
 }
 
-#benefits {
+#AboutUs h2 {
+	padding-bottom: 0.5svh;
+	font-size: 36px;
+	margin-bottom: 2svh;
+
+	border-bottom: solid 3px white;
+}
+
+#AboutUs #AboutEvents {
+	width: 70svw;
+
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 2svh 2svw;
+
+	border-radius: 1rem;
+	border: 1px solid white;
+}
+
+#AboutUs div {
 	display: flex;
-	flex-direction: column;
+	flex-flow: row wrap;
+	justify-content: center;
+	column-gap: 2svw;
+
+	padding: 2svh 2svw;
 }
 
-#benefits h2 {
+#AboutUs img {
+	width: 400px;
+
+	border-radius: 1rem;
+}
+
+#AboutUs div div {
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 0svh 1svw;
+	max-width: 30svw;
+}
+
+#about-competitions {
+	row-gap: 2svh;
+}
+
+#about-competitions h2 {
 	text-align: center;
 }
 
-.aboutUs div {
-	display: grid;
-	grid-template-columns: 50% 45%;
-	column-gap: 15px;
-	align-content: center;
-	padding-top: 15px;
-	padding-left: 5%;
-	padding-right: 5%;
+#about-competitions ul,
+#about-competitions ol {
+	margin: 0px;
+	padding: 0px;
 }
 
-.aboutUs div div {
+#about-competitions li {
 	display: flex;
-	flex-direction: column;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	border-radius: 1rem;
+	border: 1px solid white;
+	margin: 2svh 0svw;
+	padding: 2svh 2svw;
 }
 
-.aboutUs h2 {
-	border-bottom: solid 2px black;
-}
-
-.aboutUs img {
-	height: 300px;
+#about-competitions li p {
 	width: 100%;
 }
 
-.aboutUs div img {
-	padding-top: 4rem;
-}
-
-.aboutUs ul {
-	padding: 0px;
-	padding-left: 10%;
-}
-
-.aboutUs li {
-	max-width: 15rem;
-}
-
-.aboutUs table {
+#AboutUs article {
 	display: flex;
-	justify-content: center;
-	padding-bottom: 2rem;
+	flex-direction: column;
+	width: 70svw;
+	height: 70svh;
+	border-radius: 1rem;
+	border: 1px solid white;
+	padding: 2svh 2svw;
 }
 
-.aboutUs td {
-	padding: 5rem;
-	padding-top: 0px;
-	padding-bottom: 0px;
+#AboutUs #AboutJoin {
+	width: 70svw;
+	height: 30svh;
+	border-radius: 1rem;
+	border: 1px solid white;
 }
