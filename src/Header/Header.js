@@ -76,7 +76,7 @@ export default function Header() {
 						<Link to={"/Vehicles"}>
 							<li>OUR VEHICLES</li>
 						</Link>
-						<Link to={"/"}>
+						<Link to={"/History"}>
 							<li>HISTORY</li>
 						</Link>
 						<Link to={"/OurSponsors"}>
