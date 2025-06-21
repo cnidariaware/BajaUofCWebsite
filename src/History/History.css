@@ -1,0 +1,179 @@
+#History {
+	display: flex;
+	flex-direction: column;
+	padding: 4svh 4svw;
+	row-gap: 4svh;
+	background-color: black;
+	color: white;
+}
+
+#History div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: center;
+	padding: 2svh 2svw;
+	border: 1px solid white;
+	border-radius: 1rem;
+	row-gap: 2svh;
+}
+
+#History div p {
+	padding: 0px;
+	margin: 0px;
+}
+
+#History div a {
+	color: inherit;
+}
+
+#History div button {
+	background-color: inherit;
+	border-radius: 1rem;
+	border: 1px solid white;
+	padding: 1svh 6svw;
+	color: inherit;
+}
+
+#History div button:hover {
+	background-color: lightblue;
+	color: #a80029;
+}
+
+#History table {
+	border-collapse: collapse;
+	width: auto;
+	margin: 2svh auto;
+}
+
+#History table tbody {
+	color: inherit;
+}
+
+#History table tr {
+	position: relative;
+}
+
+#History tr td {
+	width: 300px;
+	height: 300px;
+	vertical-align: middle;
+}
+
+#History tr td img {
+	width: inherit;
+	height: inherit;
+	border-radius: 1rem;
+	display: block;
+}
+
+#History .HistoryCompInfo {
+	display: block;
+	text-align: center;
+	height: auto;
+	width: inherit;
+
+	padding: 12svh 0svw;
+
+	border: 1px solid white;
+	border-radius: 1rem;
+}
+
+:root {
+	--historyPaddingFromMiddle: 4svw;
+}
+
+#History table tr td:first-child {
+	padding-right: var(--historyPaddingFromMiddle);
+}
+
+#History table tr td:nth-child(3) {
+	padding-left: var(--historyPaddingFromMiddle);
+}
+
+#History .HistoryCompInfo h2,
+#History .HistoryCompInfo h4 {
+	margin: 2svh 0svw;
+}
+
+#History .HistoryCompInfo ul {
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0svh 2svw;
+	margin: 0px;
+}
+
+#History .HistoryCompInfo ul li {
+	padding: 0.5svh 0svw;
+	flex: 50%;
+}
+
+#History .HistoryCompInfo ul li:nth-child(odd) {
+	text-align: start;
+}
+
+#History .HistoryCompInfo ul li:nth-child(even) {
+	text-align: end;
+}
+
+#History .symbol {
+	position: relative;
+	width: 40px;
+	text-align: center;
+}
+
+#History .symbol::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 2px;
+	background-color: rgb(120, 120, 120);
+	transform: translateX(-50%);
+	z-index: 0;
+}
+
+#History .dot {
+	display: inline-block;
+	background-color: rgb(120, 120, 120);
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	position: relative;
+	z-index: 2;
+}
+
+#History tr:first-child .symbol::before {
+	top: 50%;
+}
+
+#HistoryJoin {
+	position: relative;
+	padding: 0;
+	text-align: center;
+}
+
+#History #HistoryJoin div {
+	text-wrap: nowrap;
+	margin: 0;
+	position: relative;
+	background-color: black;
+	z-index: 2; /* above line */
+}
+
+/* without this line will stop at the div */
+/* stop line at last one with these two */
+
+/* #HistoryJoin::before {
+	height: 80%;
+}
+
+
+#History tr:last-child .symbol::before {
+	bottom: 50%;
+} */
