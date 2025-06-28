@@ -8,6 +8,7 @@
 
 	background-color: #1f1f1f;
 	color: white;
+	font-size: larger;
 }
 
 #AboutUs h2 {
@@ -19,8 +20,6 @@
 }
 
 #AboutUs #AboutEvents {
-	width: 70svw;
-
 	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 2svh 2svw;
@@ -34,7 +33,6 @@
 	flex-flow: row wrap;
 	justify-content: center;
 	column-gap: 2svw;
-
 	padding: 2svh 2svw;
 }
 
@@ -48,7 +46,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	padding: 0svh 1svw;
-	max-width: 30svw;
+	max-width: 700px;
 }
 
 #about-competitions {
@@ -63,6 +61,8 @@
 #about-competitions ol {
 	margin: 0px;
 	padding: 0px;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 #about-competitions li {

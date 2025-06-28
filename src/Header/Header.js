@@ -115,7 +115,7 @@ export default function Header() {
 								</Link>
 							</ul>
 						</li> */}
-						<Link to={"/"}>
+						<Link to={"/Contact"}>
 							<li>CONTACT US</li>
 						</Link>
 					</ul>

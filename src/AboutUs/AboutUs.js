@@ -24,29 +24,20 @@ const AboutsUs = () => {
 					<div>
 						<h2>Our Mission</h2>
 						<p>
-							Schulich Off-Road is a student organization responsible for
-							designing, building, and racing an off-road vehicle in the Baja
-							SAE intercollegiate competition organized by the Society of
-							Automotive Engineers (SAE) every year. Schulich Off-Road's cars
-							are tough, dependable, competitive, and extremely fun to drive.
+							UCalgary Baja is a student organization that allows students to
+							design, build, and race an off-road vehicle to participate in the
+							Baja SAE competition organized by the Society of Automotive
+							Engineers (SAE) every year.
 						</p>
 						<p>
-							Schulich Off-road is a team consisting of talented and determined
-							competitive individuals in engineering who strive to expand their
-							horizons, earn experience, and network with leading companies in
-							their respective fields. Our members achieve this by being a part
-							of one of our 6 sub-teams: Drivetrain, Logistics and Software,
-							Suspension, Chassis and Ergonomics, Steering, and Electrical and
-							Testing.
-						</p>
-						<p>
-							More info about the club, expanding on what was on the home page.
-							We have students learn because we build so and so and incorporate
-							all these skills.
-							{/* this is very temporary and bad */}
-							<br />
-							<br />
-							to be removed later
+							We're dedicated to giving members hands-on experience working on
+							the car, which allows them to both learn new skills and
+							techniques, such as using Solidworks, Ansys, machining, and
+							welding, as well as utilizing knowledge learned from classrooms.
+							This is done with practical projects, allowing students to build
+							skills and knowledge that employers are looking for. We strive to
+							bridge the gap between education and application, making learning
+							effective and memorable.
 						</p>
 					</div>
 
@@ -62,13 +53,34 @@ const AboutsUs = () => {
 					/>
 					<div>
 						<h2>The Competition</h2>
-						<p>what the competition is about</p>
+						<p>
+							Every year, we take our car to the United States to compete
+							against other teams from all across the globe. Teams from
+							universities design, build, and race these all-terrain vehicles
+							that are capable of going through a series of rough courses, as
+							well as discuss their findings, such as cost reports and design
+							choices, all in a series of dynamic and static events. We also get
+							the chance to connect with engineering students from around the
+							world, trading advice and making new friends, and network with
+							sponsors to explore future job opportunities.
+						</p>
 					</div>
 				</div>
 				<div id="about-competitions">
 					<div>
 						<h2>Static Events</h2>
-						<ol>
+						<p>
+							Static events are where the whole team steps away from building
+							the car and takes a look at the professional and analytical aspect
+							of the team. The business presentation, cost event, and technical
+							inspection are all events that are equally important as the actual
+							car, as this is where we show real-world understanding of
+							engineering, manufacturing, and business decisions. It's not only
+							about making the car, it's also about demonstrating a clear
+							understanding behind design rationale, cost efficiency, and
+							marketability within a competitive industry.
+						</p>
+						{/* <ol>
 							<li>
 								<h3>SALES PRESENTATION</h3>
 								<h3>Business Team</h3>
@@ -99,14 +111,25 @@ const AboutsUs = () => {
 									etc.)
 								</p>
 							</li>
-						</ol>
+						</ol> */}
 					</div>
 					<div>
 						<h2>Dynamic Events</h2>
-						<ul>
+						<p>
+							Dynamic events are where the car is actually put to the test, with
+							different events each made to test a certain aspect of the car.
+							Acceleration, sled pull, hill climb and maneuverability are all
+							events that show how our vehicle does against other teams. After
+							all these events, the finale comes in the form of the endurance
+							event, a four-hour race filled with jumps, pits, and other
+							obstacles, and teams compete to see how many laps the cars can
+							make. It combines all the factors from previous events, on top of
+							the reliability of our car.
+						</p>
+						{/* <ul>
 							<li>
 								<h3>BRAKE INSPECTION</h3>
-								<p>The cars is tested tyo see if all four wheels stop</p>
+								<p>The cars is tested to see if all four wheels stop</p>
 							</li>
 							<li>
 								<h3>ACCELERATION</h3>
@@ -149,14 +172,10 @@ const AboutsUs = () => {
 									hosts.
 								</p>
 							</li>
-						</ul>
-						HILL CLIMB / SLED PULL - The car's torque is tested by pulling
-						another variable load, or by idk checking if it can drive up a hill?
+						</ul> */}
 					</div>
 				</div>
-				<article>
-					<p>Slight info about our car but also link that leads to history</p>
-				</article>
+
 				<div id="AboutJoin">
 					<p>
 						Intersted in joining?{" "}

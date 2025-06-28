@@ -5,6 +5,7 @@
 	row-gap: 4svh;
 	background-color: black;
 	color: white;
+	font-size: larger;
 }
 
 #History div {
@@ -43,7 +44,7 @@
 #History table {
 	border-collapse: collapse;
 	width: auto;
-	margin: 2svh auto;
+	margin: 0svh auto;
 }
 
 #History table tbody {
@@ -55,9 +56,10 @@
 }
 
 #History tr td {
-	width: 300px;
-	height: 300px;
+	width: 400px;
+	height: 400px;
 	vertical-align: middle;
+	justify-content: center;
 }
 
 #History tr td img {
@@ -70,10 +72,9 @@
 #History .HistoryCompInfo {
 	display: block;
 	text-align: center;
-	height: auto;
+	height: fit-content;
 	width: inherit;
-
-	padding: 12svh 0svw;
+	padding: 4svh 0svw;
 
 	border: 1px solid white;
 	border-radius: 1rem;
@@ -83,13 +84,13 @@
 	--historyPaddingFromMiddle: 4svw;
 }
 
-#History table tr td:first-child {
+/* #History table tr td:first-child {
 	padding-right: var(--historyPaddingFromMiddle);
-}
+} */
 
-#History table tr td:nth-child(3) {
+/* #History table tr td:nth-child(3) {
 	padding-left: var(--historyPaddingFromMiddle);
-}
+} */
 
 #History .HistoryCompInfo h2,
 #History .HistoryCompInfo h4 {
@@ -119,7 +120,7 @@
 
 #History .symbol {
 	position: relative;
-	width: 40px;
+	width: 10px;
 	text-align: center;
 }
 
