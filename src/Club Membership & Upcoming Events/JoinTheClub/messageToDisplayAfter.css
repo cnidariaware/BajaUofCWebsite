@@ -3,6 +3,6 @@
 }
 
 #message a {
-	/* text-align: center; */
-	width: auto;
+	text-decoration: none;
+	color: inherit;
 }

@@ -3,17 +3,23 @@ import "./CountDownTimer.css";
 
 /**
  * @param {Date} dateFinished - Date object with time that it finishes Date(year, monthNumber, day, hour, minute, second)
- * @param {React.JSX.Element} messageDisplayAfter - Message to display afterwards,
+ * @param {React.JSX.Element} messageDisplayAfter - Message to display afterwards
+ * @param {React.JSX.Element} messageDisplayBefore - The Message to display while it is counting down
  * @returns {React.JSX.Element} page - returns the page content
  * @description A fun countdown timer of how many days, minutesz and seconds until x happens
  * @author Brock <darkicewolf50@gmail.com>
- * @todo change messageDisplayAfter to take in another page
  */
-const CountDownTimer = ({ dateFinished, messageDisplayAfter }) => {
+const CountDownTimer = ({
+	dateFinished,
+	messageDisplayAfter,
+	messageDisplayBefore,
+}) => {
 	const [days, hours, minutes, seconds] = useCountdown(dateFinished);
 	if (days + hours + minutes + seconds <= 0) {
 		return (
-			<div id="afterTime">
+			<div
+				id="afterTime"
+				className="countDownTimer">
 				<ShowCounter
 					days={days}
 					hours={hours}
@@ -25,13 +31,16 @@ const CountDownTimer = ({ dateFinished, messageDisplayAfter }) => {
 		);
 	} else {
 		return (
-			<div>
+			<div
+				id="countDownTimer"
+				className="countDownTimer">
 				<ShowCounter
 					days={days}
 					hours={hours}
 					minutes={minutes}
 					seconds={seconds}
 				/>
+				{messageDisplayBefore}
 			</div>
 		);
 	}
