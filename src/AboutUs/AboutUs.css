@@ -2,13 +2,17 @@
 	display: flex;
 	flex-direction: column;
 	padding: 4svh 2svw;
-	row-gap: 4svh;
 	justify-content: center;
 	align-items: center;
 
 	background-color: #1f1f1f;
 	color: white;
 	font-size: larger;
+}
+
+#AboutUs p {
+	padding: 0svh 0svw;
+	margin: 1.5svh 0svw;
 }
 
 #AboutUs h2 {
@@ -24,9 +28,24 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 2svh 2svw;
-
+	max-width: 65svw;
 	border-radius: 1rem;
 	border: 1px solid white;
+}
+
+#AboutEvents ul {
+	display: flex;
+	flex-flow: row wrap;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	justify-content: space-evenly;
+}
+#AboutEvents ul li:first-child {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #AboutUs div {
@@ -39,7 +58,7 @@
 
 #AboutUs img {
 	width: 400px;
-
+	aspect-ratio: 1;
 	border-radius: 1rem;
 }
 
@@ -95,4 +114,16 @@
 	height: 30svh;
 	border-radius: 1rem;
 	border: 1px solid white;
+}
+
+@media only screen and (max-width: 800px) {
+	#AboutEvents {
+		max-width: 80svw;
+	}
+
+	#AboutUs img {
+		width: 300px;
+
+		border-radius: 1rem;
+	}
 }

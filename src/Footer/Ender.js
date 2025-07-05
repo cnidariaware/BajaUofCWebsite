@@ -1,6 +1,4 @@
 import "./Ender.css";
-import linkedInLogo from "./InBug-White.png";
-import instagramLogo from "./instagram-white-icon.png";
 
 /**
  * @param {null} null - requires onthing
@@ -25,13 +23,13 @@ export default function Ender() {
 			<div>
 				<a href="https://www.linkedin.com/company/schulich-off-road/">
 					<img
-						src={linkedInLogo}
+						src="https://www.svgrepo.com/show/521725/linkedin.svg"
 						alt="Linkedin Logo"
 					/>
 				</a>
 				<a href="https://www.instagram.com/uofcbaja/">
 					<img
-						src={instagramLogo}
+						src="https://www.svgrepo.com/show/521711/instagram.svg"
 						alt="Intragram Logo"
 					/>
 				</a>
@@ -45,7 +43,7 @@ export default function Ender() {
 				</a>
 				<a href="https://www.facebook.com/schulich.offroad/">
 					<img
-						style={{ filter: `invert()`, height: `3.25svh` }}
+						style={{ filter: `invert()` }}
 						src="https://www.svgrepo.com/show/521654/facebook.svg"
 						alt="Facebook Logo"
 					/>

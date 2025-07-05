@@ -35,5 +35,8 @@
 }
 
 #ender a img {
-	height: 3svh;
+	height: 30px;
+	width: 30px;
+	aspect-ratio: 1;
+	filter: invert();
 }

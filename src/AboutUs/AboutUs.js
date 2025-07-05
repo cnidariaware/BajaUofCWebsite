@@ -20,18 +20,32 @@ const AboutsUs = () => {
 			<div id="AboutUs">
 				<div id="AboutEvents">
 					<h2>Upcoming Events</h2>
-					<h4>Baja SAE April</h4>
-					<CountDownTimer
-						dateFinished={new Date("April 29, 2026 00:00:00")}
-						messageDisplayBefore={""}
-						messageDisplayAfter={<p>Wish Us Luck!</p>}
-					/>
-					<h4>Baja SAE May</h4>
-					<CountDownTimer
-						dateFinished={new Date("May 22, 2026 00:00:00")}
-						messageDisplayBefore={""}
-						messageDisplayAfter={<p>Ready! Set! Go!</p>}
-					/>
+					<ul>
+						<li>
+							<h4>Recuitment Opens</h4>
+							<CountDownTimer
+								dateFinished={new Date("August 29, 2025 00:00:00")}
+								messageDisplayBefore={""}
+								messageDisplayAfter={<p>Link to google form</p>}
+							/>
+						</li>
+						<li>
+							<h4>Baja SAE April</h4>
+							<CountDownTimer
+								dateFinished={new Date("April 29, 2026 00:00:00")}
+								messageDisplayBefore={""}
+								messageDisplayAfter={<p>Wish Us Luck!</p>}
+							/>
+						</li>
+						<li>
+							<h4>Baja SAE May</h4>
+							<CountDownTimer
+								dateFinished={new Date("May 22, 2026 00:00:00")}
+								messageDisplayBefore={""}
+								messageDisplayAfter={<p>Ready! Set! Go!</p>}
+							/>
+						</li>
+					</ul>
 				</div>
 				<div>
 					<div>
