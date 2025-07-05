@@ -19,7 +19,8 @@
 	border-bottom: solid 3px white;
 }
 
-#AboutUs #AboutEvents {
+#AboutEvents {
+	flex-direction: column !important;
 	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 2svh 2svw;

@@ -1,15 +1,16 @@
-#afterTime #counter {
-	color: black;
+.countDownTimer #afterTime #counter {
+	color: white;
 	background-color: red;
 }
 
-#counter.dangerDays {
+.countDownTimer #counter.dangerDays {
 	background-color: red;
+	color: white;
 }
 
-#counter {
+.countDownTimer #counter {
 	display: flex;
-	flex-direction: row;
+	flex-flow: row nowrap !important;
 	padding: 0.5svh 1svw;
 	text-align: center;
 	background-color: whitesmoke;
@@ -17,18 +18,22 @@
 	border-radius: 1rem;
 	justify-content: space-evenly;
 	font-size: x-large;
+	color: black;
+	column-gap: 10px;
 }
 
-#counter div {
+.countDownTimer #counter div {
 	display: flex;
-	flex-direction: row;
+	flex-flow: row nowrap !important;
+	padding: 0px;
+	column-gap: 10px;
 }
 
-#counter div p {
-	padding-left: 1svw;
+.countDownTimer #counter div p {
+	padding: 0px;
 }
 
-#counter .countdown-link {
+.countDownTimer #counter .countdown-link {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -36,22 +41,20 @@
 	font-weight: 700;
 	font-size: 1.25rem;
 	line-height: 1.75rem;
-	padding: 0.5rem;
 	border: 1px solid #ebebeb;
 	border-radius: 1rem;
 	text-decoration: none;
 	color: #000;
 }
 
-#counter .countdown {
+.countDownTimer #counter .countdown {
 	line-height: 1.25svb;
-	padding: 0.75rem 0.75rem;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 }
 
-#counter .countdownDanger {
+.countDownTimer #counter .countdownDanger {
 	color: #ff0000;
 }
 
@@ -61,6 +64,7 @@
 }
 
 .countDownTimer {
-	width: fit-content;
-	margin: 0.5svh 1svw;
+	width: 525px !important;
+	margin: 0px !important;
+	padding: 0px !important;
 }

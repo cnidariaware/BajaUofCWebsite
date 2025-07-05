@@ -1,4 +1,5 @@
 import UpdateBanner from "../Header/UpdateBanner";
+import CountDownTimer from "../CountDown/CountDownTimer";
 import "./AboutUs.css";
 
 /**
@@ -19,6 +20,18 @@ const AboutsUs = () => {
 			<div id="AboutUs">
 				<div id="AboutEvents">
 					<h2>Upcoming Events</h2>
+					<h4>Baja SAE April</h4>
+					<CountDownTimer
+						dateFinished={new Date("April 29, 2026 00:00:00")}
+						messageDisplayBefore={""}
+						messageDisplayAfter={<p>Wish Us Luck!</p>}
+					/>
+					<h4>Baja SAE May</h4>
+					<CountDownTimer
+						dateFinished={new Date("May 22, 2026 00:00:00")}
+						messageDisplayBefore={""}
+						messageDisplayAfter={<p>Ready! Set! Go!</p>}
+					/>
 				</div>
 				<div>
 					<div>
