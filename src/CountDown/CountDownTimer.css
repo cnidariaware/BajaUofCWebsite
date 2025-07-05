@@ -1,16 +1,16 @@
 .countDownTimer #afterTime #counter {
 	color: white;
-	background-color: red;
+	background-color: var(--BajaRed);
 }
 
 .countDownTimer #counter.dangerDays {
-	background-color: red;
+	background-color: var(--BajaRed);
 	color: white;
 }
 
 .countDownTimer #counter {
 	display: flex;
-	flex-flow: row nowrap !important;
+	flex-flow: row wrap !important;
 	padding: 0.5svh 1svw;
 	text-align: center;
 	background-color: whitesmoke;
@@ -24,7 +24,7 @@
 
 .countDownTimer #counter div {
 	display: flex;
-	flex-flow: row nowrap !important;
+	flex-flow: row wrap !important;
 	padding: 0px;
 	column-gap: 10px;
 }
@@ -55,7 +55,7 @@
 }
 
 .countDownTimer #counter .countdownDanger {
-	color: #ff0000;
+	color: var(--BajaRed);
 }
 
 .countDownTimer a {
@@ -64,7 +64,23 @@
 }
 
 .countDownTimer {
-	width: 525px !important;
+	max-width: 525px !important;
 	margin: 0px !important;
 	padding: 0px !important;
+}
+
+@media only screen and (max-width: 420px) {
+	.countDownTimer #counter #MiddleCounter {
+		visibility: hidden; /* keeps space in layout */
+	}
+
+	.countDownTimer #counter #EndCounter {
+		visibility: visible !important;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.countDownTimer #counter #EndCounter {
+		visibility: hidden; /* keeps space in layout */
+	}
 }

@@ -24,7 +24,7 @@ const AboutsUs = () => {
 						<li>
 							<h4>Recuitment Opens</h4>
 							<CountDownTimer
-								dateFinished={new Date("August 29, 2025 00:00:00")}
+								dateFinished={new Date("August 29, 2024 00:00:00")}
 								messageDisplayBefore={""}
 								messageDisplayAfter={<p>Link to google form</p>}
 							/>

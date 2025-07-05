@@ -1,0 +1,85 @@
+#Team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4svh 0svw;
+	padding-bottom: 16svh;
+	background-color: var(--BajaBlack);
+	color: white;
+}
+
+#Team div {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10svh;
+	color: inherit;
+}
+
+#Team div div {
+	flex-flow: row wrap;
+	column-gap: 2svw;
+
+	/* padding: 0svh 2svw; */
+	color: inherit;
+	justify-content: center;
+	padding: 0svh 2svw;
+}
+
+#Team div div div {
+	flex-direction: column;
+	max-width: 40ch;
+	row-gap: 0px;
+	color: inherit;
+	padding: 0px 4svw;
+	justify-content: flex-start;
+}
+
+#Team img {
+	display: flex;
+	width: 700px;
+	height: 400px;
+	border-radius: 1rem;
+}
+
+#Team h2 {
+	font-size: 80px;
+	text-align: center;
+}
+
+#Team h3 {
+	margin: 0px;
+	padding: 2svh 0svw;
+	color: inherit;
+	font-size: 50px;
+	color: white;
+}
+
+#Team div div:nth-child(2) {
+	text-align: end;
+}
+
+#Team p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 22px;
+	color: inherit;
+}
+
+@media only screen and (max-width: 800px) {
+	#Team div div div {
+		max-width: inherit;
+	}
+
+	#Team div div:nth-child(even) {
+		flex-wrap: wrap-reverse;
+	}
+
+	#Team img {
+		width: 100svw;
+		height: auto;
+	}
+
+	#Team h3 {
+		font-size: 40px;
+	}
+}

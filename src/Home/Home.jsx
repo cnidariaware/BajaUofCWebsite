@@ -69,30 +69,28 @@ export default function Home() {
 					/>
 				</div>
 				<div id="HomeSponsors">
-					<h2>Sponsor Section</h2>
+					<h2>Current Sponsors</h2>
 					<div>
 						<div>
-							<div>
-								<img
-									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9L3ZGK6WtOmJbzxmCzRxwLXYKGC5SDcAKHb0ScfbUmbtG0IujQt6eQDaI_Pm9g4DZvc&usqp=CAU"
-									alt="Schulich logo"
-								/>
-								<h3>Schulich School of Engineering</h3>
-							</div>
-							<div>
-								<img
-									src="https://static.wixstatic.com/media/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg/v1/crop/x_0,y_1,w_2707,h_1353/fill/w_410,h_206,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg"
-									alt=""
-								/>
-								<h3>Morphgenix</h3>
-							</div>
-							<div>
-								<img
-									src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_solidworks.svg"
-									alt=""
-								/>
-								<h3>Solidworks</h3>
-							</div>
+							<img
+								src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9L3ZGK6WtOmJbzxmCzRxwLXYKGC5SDcAKHb0ScfbUmbtG0IujQt6eQDaI_Pm9g4DZvc&usqp=CAU"
+								alt="Schulich logo"
+							/>
+							<h3>Schulich School of Engineering</h3>
+						</div>
+						<div>
+							<img
+								src="https://static.wixstatic.com/media/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg/v1/crop/x_0,y_1,w_2707,h_1353/fill/w_410,h_206,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/5824fc_2eca210b7d4a49298a70ad1f0a61886e~mv2.jpg"
+								alt=""
+							/>
+							<h3>Morphgenix</h3>
+						</div>
+						<div>
+							<img
+								src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_solidworks.svg"
+								alt=""
+							/>
+							<h3>Solidworks</h3>
 						</div>
 					</div>
 					<div id="HomeSponsorLinks">

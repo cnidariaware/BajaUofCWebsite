@@ -3,7 +3,7 @@
 	flex-direction: column;
 	padding: 4svh 4svw;
 	row-gap: 4svh;
-	background-color: black;
+	background-color: var(--BajaBlack);
 	color: white;
 	font-size: larger;
 }
@@ -34,6 +34,8 @@
 	border: 1px solid white;
 	padding: 1svh 6svw;
 	color: inherit;
+	background-color: var(--BajaRed);
+	font-size: larger;
 }
 
 #History div button:hover {
@@ -56,13 +58,14 @@
 }
 
 #History tr td {
-	width: 400px;
-	height: 400px;
+	max-width: 400px;
+	max-height: 400px;
 	vertical-align: middle;
 	justify-content: center;
 }
 
 #History tr td img {
+	aspect-ratio: 1;
 	width: inherit;
 	height: inherit;
 	border-radius: 1rem;
@@ -72,42 +75,36 @@
 #History .HistoryCompInfo {
 	display: block;
 	text-align: center;
-	height: fit-content;
-	width: inherit;
 	padding: 4svh 0svw;
 
 	border: 1px solid white;
 	border-radius: 1rem;
 }
 
-:root {
-	--historyPaddingFromMiddle: 4svw;
+#History td > div {
+	width: 100%;
+	box-sizing: border-box;
 }
-
-/* #History table tr td:first-child {
-	padding-right: var(--historyPaddingFromMiddle);
-} */
-
-/* #History table tr td:nth-child(3) {
-	padding-left: var(--historyPaddingFromMiddle);
-} */
 
 #History .HistoryCompInfo h2,
 #History .HistoryCompInfo h4 {
-	margin: 2svh 0svw;
+	width: fit-content;
+	margin: 2svh auto;
 }
 
 #History .HistoryCompInfo ul {
 	list-style-type: none;
 	display: flex;
 	flex-flow: row wrap;
+	column-gap: 1svw;
+	row-gap: 1svh;
 	padding: 0svh 2svw;
 	margin: 0px;
+	/* width: 90%; */
 }
 
 #History .HistoryCompInfo ul li {
-	padding: 0.5svh 0svw;
-	flex: 50%;
+	flex: 40%;
 }
 
 #History .HistoryCompInfo ul li:nth-child(odd) {
@@ -142,6 +139,7 @@
 	border-radius: 50%;
 	width: 20px;
 	height: 20px;
+	max-width: 20px;
 	line-height: 20px;
 	font-size: 12px;
 	font-weight: bold;

@@ -100,12 +100,12 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
 				valueAwayFrom={hours}
 				discriptor={"Hours"}
 			/>
-			<p>:</p>
+			<p id="MiddleCounter">:</p>
 			<DateTimeDisplay
 				valueAwayFrom={minutes}
 				discriptor={"Mins"}
 			/>
-			<p>:</p>
+			<p id="EndCounter">:</p>
 			<DateTimeDisplay
 				valueAwayFrom={seconds}
 				discriptor={"Seconds"}
@@ -117,7 +117,9 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
 const DateTimeDisplay = ({ valueAwayFrom, discriptor }) => {
 	return (
 		<div>
-			<p>{valueAwayFrom}</p>
+			<p style={discriptor === "Days" ? { width: "3ch" } : undefined}>
+				{valueAwayFrom}
+			</p>
 			<p>{discriptor}</p>
 		</div>
 	);

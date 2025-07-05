@@ -14,6 +14,7 @@ import MockPage from "./MockDB/MockPage";
 import Home from "./Home/Home";
 import History from "./History/History";
 import Contact from "./Contact/Contact";
+import Team from "./Teams/Team";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -52,6 +53,9 @@ root.render(
 					<Route
 						path="/Contact"
 						element={<Contact />}></Route>
+					<Route
+						path="/Team"
+						element={<Team />}></Route>
 				</Route>
 			</Routes>
 		</BrowserRouter>

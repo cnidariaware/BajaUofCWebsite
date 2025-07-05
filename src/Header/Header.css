@@ -1,3 +1,12 @@
+:root {
+	/* --BajaBlack: #1f1f1f; */
+	--BajaBlack: #1c1c1c;
+
+	/* --BajaRed: rgb(100, 0, 0); */
+	/* --BajaRed: #c1011c; */
+	--BajaRed: #a80029;
+}
+
 header {
 	display: flex;
 	flex-direction: row;
@@ -8,7 +17,7 @@ header {
 
 	align-items: center;
 	justify-content: space-between;
-	background-color: #1f1f1f;
+	background-color: var(--BajaBlack);
 	/* position: absolute; */
 	z-index: 1;
 	top: 0;
@@ -65,7 +74,7 @@ nav a {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
-	background-color: #1f1f1f;
+	background-color: var(--BajaBlack);
 	color: whitesmoke;
 
 	font-size: larger;
@@ -79,7 +88,7 @@ nav a:first-child {
 }
 
 nav a li:hover {
-	color: #a80029;
+	color: var(--BajaRed);
 }
 nav ul {
 	display: flex;

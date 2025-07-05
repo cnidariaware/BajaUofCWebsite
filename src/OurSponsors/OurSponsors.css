@@ -11,84 +11,61 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: gray;
-	padding-left: 2%;
-	padding-right: 2%;
+	/* background-color: gray; */
 }
 
-#BecomeASponsors {
-	background-color: white;
-}
-
-#BecomeASponsors div {
+#SponsorsAbout {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 4svh;
-	margin-left: 1svw;
-	margin-right: 1svw;
-}
-
-#BecomeASponsors div div {
-	display: flex;
-	flex-direction: row;
-	border-bottom: none;
-	padding: 0px;
-}
-
-#BecomeASponsors a {
-	color: inherit;
-	text-decoration: none;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	transition: scale 0.3s;
-	border-radius: 5px;
-	margin-left: 1svw;
-	margin-right: 3svw;
-	width: fit-content;
-}
-
-#BecomeASponsors a:hover {
-	cursor: pointer;
-	scale: 1.05;
-}
-
-#BecomeASponsors div a img {
-	height: 40svh;
-	width: auto;
-}
-
-#BecomeASponsors img {
-	height: auto;
-	width: 60%;
-}
-
-#BecomeASponsors table {
-	background-color: white;
-}
-
-#BecomeASponsors table caption {
-	background-color: red;
+	align-items: center;
+	padding: 4svh 0svw;
+	background-color: var(--BajaBlack);
 	color: white;
-	text-align: start;
-	padding-left: 4svw;
+}
+
+#SponsorsAbout h2 {
+	margin: 0px;
+	padding: 2svh 0svw;
+	padding-top: 4svh;
+	font-size: 30px;
+}
+
+#SponsorsAbout p {
 	font-size: larger;
+	padding: 0px;
+	margin: 0px;
+	max-width: 120ch;
+	text-align: center;
 }
 
-#BecomeASponsors table thead {
-	background-color: black;
+#SponsorsAbout ul {
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+	column-gap: 4svw;
+	padding: 0svh 0svw;
+	padding-top: 4svh;
+}
+
+#SponsorsAbout a {
+	text-decoration: none;
 	color: white;
-	padding: 10px;
+	background-color: var(--BajaRed);
+	border-radius: 15px;
+	padding: 2svh 2svw;
 }
 
-.evenRow {
-	background-color: lightgrey;
+#SponsorsAbout a:hover {
+	background-color: rgba(128, 128, 128, 0.4);
+	color: var(--BajaBlack);
 }
 
-.oddRow {
-	background-color: whitesmoke;
+#Sponsor .Sponsors h3 {
+	font-size: xx-large;
+	margin: 2svh 1svw;
 }
 
 #Sponsor {
-	background-color: white;
 	padding-bottom: 3svh;
 }
 
@@ -110,38 +87,17 @@
 	border-top: none;
 }
 
-/* this hurt me  but we now have a border at the side*/
-#sideBorder {
-	display: flex;
-	flex-direction: row;
-	padding-top: 2svh;
-	padding-bottom: 2svh;
-	margin-top: 1svh;
-	margin-bottom: 3svh;
-	border-bottom: var(--sponsorBorder);
-	align-items: center;
-}
-
-#sideBorder h1 {
-	padding-right: 2svw;
-	margin: 0px;
-	width: fit-content;
-	border: none;
-}
-
-#sideBorder div {
-	background-color: var(--sponsorBorderColour);
-	flex: 1;
-	height: var(--sponsorBorderWidth);
-}
-
 #Sponsor .Sponsors h1 {
 	width: 100%;
 	border: none;
 }
 
 .Sponsors {
+	display: flex;
+	flex-direction: column;
 	background-color: inherit;
+	align-items: center;
+	width: 70svw;
 }
 
 .Sponsors a {
@@ -153,6 +109,7 @@
 	background-color: whitesmoke;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: scale 0.3s;
+	width: inherit;
 }
 
 .Sponsors a:hover {
@@ -164,13 +121,14 @@
 	display: flex;
 	flex-direction: row;
 	height: inherit;
-	width: inherit;
+	width: fit-content;
 }
 
 .Sponsors a div div {
 	display: flex;
 	flex-direction: column;
 	padding-left: 5svw;
+	max-width: 60ch;
 }
 
 .Sponsors a h3 {
