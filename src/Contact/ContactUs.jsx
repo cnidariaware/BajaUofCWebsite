@@ -29,6 +29,7 @@ export default function ContactUs() {
 			content: `***New Message***\n*Name*: ${formObject.Name}\n*Email*: [${formObject.Email}](mailto:${formObject.Email})\n*Message*: ${formObject.Message}`,
 		};
 
+		// eslint-disable-next-line
 		const res = await fetch(
 			"https://discord.com/api/webhooks/1393689764888182794/1pLu0Kup643V9wetwb9jzo-QIkoy4qqY5ES_LwwCZrDugLGO5Xaj2F7Ioy39qNIz1XYo",
 			{
@@ -40,7 +41,7 @@ export default function ContactUs() {
 			}
 		);
 
-		console.log("submitted ", formObject);
+		// console.log("submitted ", formObject);
 		setIsButtonDisabled(false);
 		submitButton.innerHTML = "Submit";
 		submitButton.style.background = "rgba(0, 128, 0, 0.6)";
