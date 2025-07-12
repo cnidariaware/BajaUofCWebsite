@@ -58,10 +58,10 @@ const OurSponsors = () => {
 				</p>
 				<ul>
 					<li>
-						<a href="">Learn More</a>
+						<a href="/">Learn More</a>
 					</li>
 					<li>
-						<a href="">Support Us</a>
+						<a href="/">Support Us</a>
 					</li>
 				</ul>
 			</div>

@@ -1,5 +1,6 @@
 import UpdateBanner from "../Header/UpdateBanner";
 import "./Contact.css";
+import ContactUs from "./ContactUs";
 
 export default function Contact() {
 	return (
@@ -43,27 +44,7 @@ export default function Contact() {
 					</ul>
 				</div>
 			</div>
-
-			<div id="ContactUs">
-				<div>
-					<h2>Get in Touch</h2>
-					<p>
-						Please feel free to reach out about questions, opporunities or just
-						want to connect. Feel free to either fill out this form or contact
-						me through one of the many of the platforms below
-					</p>
-				</div>
-				<div>
-					<label>Name</label>
-					<input data-dioxus-id="360" />
-					<label>Email</label>
-					<input data-dioxus-id="361" />
-					<label>Message</label>
-					<textarea data-dioxus-id="362"></textarea>
-					<p></p>
-					<button data-dioxus-id="363">Submit</button>
-				</div>
-			</div>
+			<ContactUs />
 		</div>
 	);
 }

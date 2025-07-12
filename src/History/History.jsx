@@ -146,16 +146,15 @@ function CompetitionInfo({ year, competitions }) {
 			className="HistoryCompInfo">
 			<h2>{year}</h2>
 			<h4>Overall Competition Results</h4>
-			<ul>
-				{competitions.map((comp, index) => {
-					return (
-						<React.Fragment key={comp + index}>
-							<li key={index + "location"}>{comp.location}</li>
-							<li key={index + "place"}>{comp.placement} place</li>
-						</React.Fragment>
-					);
-				})}
-			</ul>
+
+			{competitions.map((comp, index) => {
+				return (
+					<ul key={comp + index}>
+						<li key={index + "location"}>{comp.location}</li>
+						<li key={index + "place"}>{comp.placement} place</li>
+					</ul>
+				);
+			})}
 		</div>
 	);
 }

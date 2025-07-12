@@ -9,30 +9,25 @@
 	margin: 0px;
 }
 
-#Contact img {
-	width: 100px;
-	height: 100px;
-}
-
 #Contact h1,
 #Contact h4,
 #Contact p {
 	margin: 1svh 0svw;
+	text-wrap: wrap;
 }
 
-#Contact div {
+#Contact > div:nth-child(1) {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	row-gap: 2svh;
 }
 
-#Contact div:nth-child(1) {
+#Contact > div:nth-child(1) {
 	flex-direction: row;
 	column-gap: 2svw;
-	/* justify-content: center; */
 	align-items: center;
-	background: black;
+	background: var(--BajaBlack);
 	color: white;
 	padding: 2svh 0svw;
 }
@@ -58,54 +53,25 @@
 
 #Contact div:nth-child(1) img {
 	width: 300px;
-	height: 80svh;
+	height: 600px;
 }
 
-#Contact div:nth-child(2) div {
-	flex-direction: column;
-	font-size: 30px;
-	font-weight: bold;
-	margin: 0px;
-	padding: 0svh 2svw;
+@media only screen and (max-width: 1025px) {
+	#Contact > div:nth-child(1) > div:nth-child(1) > img:nth-child(1) {
+		display: none;
+	}
+
+	#Contact > div:nth-child(1) > div:nth-child(1) > img:nth-child(2) {
+		display: none;
+	}
+
+	#Contact div:nth-child(1) div:last-child {
+		font-size: large;
+	}
 }
 
-#Contact div:nth-child(2) h1 {
-	text-wrap: nowrap;
-	align-self: flex-start;
-	margin-left: 2svw;
-	margin-right: 2svw;
-	font-size: 60px;
-}
-
-#Contact div:nth-child(2) {
-	margin: 0svh 0svw;
-	justify-content: flex-start;
-	height: 40svh;
-}
-
-#Contact div:last-child {
-	margin: 4svh 0svw;
-	justify-content: space-evenly;
-}
-
-#Contact #ContactUs {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-}
-
-#Contact #ContactUs div {
-	display: flex;
-	flex-direction: column;
-	max-width: 450px;
-	min-width: 300px;
-	height: auto;
-	padding: 1svh 1svw;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
-	border-radius: 1rem;
-	justify-content: space-between;
-	align-items: flex-start;
-	margin: 0px;
-	row-gap: 0px;
+@media only screen and (max-width: 550px) {
+	#Contact > div:nth-child(1) > div:nth-child(1) > img:nth-child(3) {
+		display: none;
+	}
 }

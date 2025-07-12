@@ -1,0 +1,85 @@
+:root {
+	--card-background-color: rgba(38, 38, 38, 0.5);
+	--card-border-radius: 0.5rem;
+}
+
+#ContactUs {
+	display: flex;
+	flex-flow: row wrap;
+	column-gap: 2svw;
+	row-gap: 4svh;
+	min-height: 70svh;
+	padding: 4svh 0svw;
+	justify-content: space-evenly;
+	color: white;
+	background-color: var(--BajaBlack);
+}
+
+#ContactUs div {
+	display: flex;
+	flex-grow: 1;
+	background-color: var(--card-background-color) !important;
+	border-radius: var(--card-border-radius);
+	flex-direction: column !important;
+	justify-content: center;
+	margin: 2svh 0.5svw !important;
+	padding: 2svh 1svw !important;
+	max-width: 600px !important;
+	height: inherit !important;
+}
+
+#ContactUs p {
+	margin: 2svh 0svw;
+	padding: 0svh 0svw;
+}
+
+#ContactUs input {
+	background-color: var(--card-background-color);
+	border-radius: var(--card-border-radius);
+	border-color: rgba(245, 245, 245, 0.5);
+	border-width: 2px;
+	padding: 1svh 0svw;
+	margin: 1svh 0.5svw;
+	color: inherit;
+	align-items: start;
+}
+
+#ContactUs textarea {
+	background-color: var(--card-background-color);
+	border-radius: var(--card-border-radius);
+	border-color: rgba(245, 245, 245, 0.4);
+	border-width: 2px;
+	padding: 1svh 0svw;
+	margin: 1svh 0.5svw;
+	color: inherit;
+	align-items: start;
+	min-height: 25svh;
+}
+
+#ContactUs button {
+	border-radius: var(--card-border-radius);
+	color: inherit;
+	background-color: rgba(0, 128, 0, 0.6);
+	border-color: transparent;
+	align-items: start;
+	margin: 1svh 0.5svw;
+	padding: 1svh 0svw;
+	/* width: 99%; */
+}
+
+#ContactUs button:hover {
+	cursor: pointer;
+	color: #91a4d2;
+	background-color: rgba(0, 150, 0, 0.6);
+}
+
+#ContactUs span {
+	background-color: var(--card-background-color);
+	border-radius: var(--card-border-radius);
+	border-color: rgba(245, 245, 245, 0.5);
+	border-width: 2px;
+	padding: 1svh 0.25svw;
+	margin: 1svh 0.5svw;
+	color: inherit;
+	align-items: start;
+}

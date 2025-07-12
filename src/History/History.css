@@ -55,21 +55,30 @@
 
 #History table tr {
 	position: relative;
+	margin: 4svh 0svw;
 }
 
 #History tr td {
 	max-width: 400px;
 	max-height: 400px;
 	vertical-align: middle;
-	justify-content: center;
 }
 
 #History tr td img {
 	aspect-ratio: 1;
-	width: inherit;
-	height: inherit;
+	min-width: 192px;
+	max-width: 400px;
+	height: 400px;
+	margin: 0svh auto;
 	border-radius: 1rem;
 	display: block;
+}
+
+@media only screen and (max-width: 1025px) {
+	#History tr td img {
+		width: 10svw;
+		height: inherit;
+	}
 }
 
 #History .HistoryCompInfo {
@@ -83,29 +92,29 @@
 
 #History td > div {
 	width: 100%;
+	/* width: fit-content; */
 	box-sizing: border-box;
 }
 
 #History .HistoryCompInfo h2,
 #History .HistoryCompInfo h4 {
-	width: fit-content;
-	margin: 2svh auto;
+	margin: 2svh 2svw;
+	text-align: center;
 }
 
 #History .HistoryCompInfo ul {
 	list-style-type: none;
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: space-evenly;
 	column-gap: 1svw;
-	row-gap: 1svh;
-	padding: 0svh 2svw;
-	margin: 0px;
-	/* width: 90%; */
+	padding: 0px;
+	margin: 0.5svh 0svw;
 }
-
+/* 
 #History .HistoryCompInfo ul li {
-	flex: 40%;
-}
+	width: 10ch;
+} */
 
 #History .HistoryCompInfo ul li:nth-child(odd) {
 	text-align: start;
@@ -119,6 +128,7 @@
 	position: relative;
 	width: 10px;
 	text-align: center;
+	padding: 0px;
 }
 
 #History .symbol::before {
@@ -159,10 +169,11 @@
 
 #History #HistoryJoin div {
 	text-wrap: nowrap;
-	margin: 0;
 	position: relative;
 	background-color: black;
 	z-index: 2; /* above line */
+	margin: 0svh 0svw;
+	margin-bottom: 4svh;
 }
 
 /* without this line will stop at the div */
