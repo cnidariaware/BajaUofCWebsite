@@ -15,7 +15,8 @@
 	background-color: var(--BajaBlack);
 }
 
-#ContactUs div {
+#ContactUs div,
+#ContactUs form {
 	display: flex;
 	flex-grow: 1;
 	background-color: var(--card-background-color) !important;
