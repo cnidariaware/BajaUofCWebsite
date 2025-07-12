@@ -57,16 +57,25 @@
 
 #SponsorsAbout a:hover {
 	background-color: rgba(128, 128, 128, 0.4);
-	color: var(--BajaBlack);
+}
+
+#Sponsor {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 3svh;
+	background-color: var(--BajaBlack);
+	color: white;
 }
 
 #Sponsor .Sponsors h3 {
 	font-size: xx-large;
-	margin: 2svh 1svw;
+	margin: 4svh 1svw;
 }
 
-#Sponsor {
-	padding-bottom: 3svh;
+#Sponsor .Sponsors h4 {
+	font-size: xx-large;
+	margin: 1svh 1svw;
+	text-align: center;
 }
 
 #SponsorEnd {
@@ -96,20 +105,30 @@
 	display: flex;
 	flex-direction: column;
 	background-color: inherit;
-	align-items: center;
-	width: 70svw;
+	/* align-items: center; */
+	/* width: 70svw; */
+}
+
+.Sponsors div {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 2svh 2svw;
+	column-gap: 2svw;
+	row-gap: 2svh;
 }
 
 .Sponsors a {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	color: inherit;
 	text-decoration: none;
 	cursor: pointer;
-	background-color: whitesmoke;
+	background-color: rgba(38, 38, 38, 0.5);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: scale 0.3s;
-	width: inherit;
+	padding: 1svh 1svw;
+	border-radius: 1rem;
 }
 
 .Sponsors a:hover {
@@ -119,59 +138,52 @@
 
 .Sponsors a div {
 	display: flex;
-	flex-direction: row;
+	flex-flow: row nowrap;
 	height: inherit;
-	width: fit-content;
+	padding: 0px;
+	column-gap: 1svw;
+	align-items: center;
 }
 
 .Sponsors a div div {
-	display: flex;
 	flex-direction: column;
-	padding-left: 5svw;
+	row-gap: 0.5svh;
+	min-width: 30ch;
 	max-width: 60ch;
+	margin: 2svh 0svw;
+}
+
+.Sponsors a div div p {
+	margin: 0px;
 }
 
 .Sponsors a h3 {
 	display: flex;
-	width: fit-content;
+	/* width: fit-content; */
 	border-bottom: var(--sponsorBorder);
 }
 
 .Sponsors a img {
+	min-height: 10svh;
 	max-height: 24svh;
-	width: 24svw;
-	padding-top: 1svh;
-	padding-bottom: 1svh;
+	min-width: 100px;
+	max-width: 240px;
+	padding: 1svh 0.5svw;
+	background-color: grey;
+	border-radius: 0.5rem;
 }
 
 .sponsorCenter {
-	display: flex;
-	justify-content: center;
+	width: 72%;
 }
 
-.sponsorGridContainer {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	grid-gap: 20px;
-}
+@media only screen and (max-width: 1025px) {
+	.Sponsors a {
+		flex-grow: 1;
+	}
 
-.sponsorGridItem {
-	background-color: aqua;
-	width: calc(100%- 20px);
-	height: 100%;
-}
-
-.sponsorGridContainer .sponsorGridItem div div {
-	flex: 1;
-	padding-left: 1svw;
-}
-
-.sponsorGridItem h3 {
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-}
-
-.sponsorGridItem {
-	grid-column: span 1;
+	.Sponsors a div div {
+		max-width: none;
+		min-width: 1px;
+	}
 }

@@ -73,66 +73,50 @@ const OurSponsors = () => {
 					<>
 						{/* gets the outmost name of the Object Name of tier*/}
 						{Object.keys(currentSponsorsDict).map((sponsorsTier) => {
-							let changetoGridStyle =
-								sponsorsTier === "Diamond Tier" ||
-								sponsorsTier === "Platinum Tier";
-							let girdContainer = changetoGridStyle
-								? ""
-								: "sponsorGridContainer";
-							let gridItem = changetoGridStyle ? "" : "sponsorGridItem";
-
 							return (
 								<div
 									key={sponsorsTier}
 									className="Sponsors">
 									<h3>{sponsorsTier}</h3>
-									<div className={girdContainer}>
+									<div>
 										{/* gets key form list of tier */}
 										{Object.keys(currentSponsorsDict[sponsorsTier]).map(
 											(sponsorsKey) => {
-												return (
-													<div key={sponsorsKey}>
-														{/* gets name out of object and gets data of that sponsor preped */}
-														{Object.keys(
-															currentSponsorsDict[sponsorsTier][sponsorsKey]
-														).map((sponsorName) => {
-															let sponsorData =
-																currentSponsorsDict[sponsorsTier][sponsorsKey][
-																	sponsorName
-																];
-															let sponsorBronzeSilver =
-																sponsorsTier !== "Silver Tier" &&
-																sponsorsTier !== "Bronze Tier";
-															return (
-																<a
-																	key={sponsorData}
-																	href={sponsorData.Url}
-																	target="_blank"
-																	className={gridItem}
-																	rel="noreferrer">
+												const sponsorsGroup =
+													currentSponsorsDict[sponsorsTier][sponsorsKey];
+												return Object.keys(sponsorsGroup).map((sponsorName) => {
+													let sponsorData =
+														currentSponsorsDict[sponsorsTier][sponsorsKey][
+															sponsorName
+														];
+													let sponsorBronzeSilver =
+														sponsorsTier !== "Silver Tier" &&
+														sponsorsTier !== "Bronze Tier";
+													return (
+														<a
+															key={sponsorData}
+															href={sponsorData.Url}
+															target="_blank"
+															rel="noreferrer">
+															<div>
+																<img
+																	src={sponsorData.LogoUrl}
+																	alt={sponsorName + "'s Logo"}
+																/>
+																{sponsorBronzeSilver === true ? (
 																	<div>
-																		<img
-																			src={sponsorData.LogoUrl}
-																			alt={sponsorName + "'s Logo"}
-																		/>
-																		{sponsorBronzeSilver === true ? (
-																			<div>
-																				<h3>{sponsorName}</h3>
-																				<p>
-																					{sponsorData.DescriptionAboutSponsor}
-																				</p>
-																			</div>
-																		) : (
-																			<div className="sponsorCenter">
-																				<h3>{sponsorName}</h3>
-																			</div>
-																		)}
+																		<h4>{sponsorName}</h4>
+																		<p>{sponsorData.DescriptionAboutSponsor}</p>
 																	</div>
-																</a>
-															);
-														})}
-													</div>
-												);
+																) : (
+																	<div className="sponsorCenter">
+																		<h4>{sponsorName}</h4>
+																	</div>
+																)}
+															</div>
+														</a>
+													);
+												});
 											}
 										)}
 									</div>

@@ -31,16 +31,16 @@
 #History div button {
 	background-color: inherit;
 	border-radius: 1rem;
-	border: 1px solid white;
-	padding: 1svh 6svw;
+	border: none;
+	padding: 2svh 5svw;
 	color: inherit;
 	background-color: var(--BajaRed);
 	font-size: larger;
 }
 
 #History div button:hover {
-	background-color: lightblue;
-	color: #a80029;
+	background-color: rgba(128, 128, 128, 0.4);
+	/* color: #a80029; */
 }
 
 #History table {
