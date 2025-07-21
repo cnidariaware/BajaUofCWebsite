@@ -168,7 +168,7 @@
 .Sponsors a img {
 	min-height: 10svh;
 	max-height: 24svh;
-	min-width: 100px;
+	min-width: 240px;
 	max-width: 240px;
 	padding: 1svh 0.5svw;
 	background-color: grey;
