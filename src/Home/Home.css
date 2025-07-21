@@ -13,17 +13,28 @@
 
 .HomePageLayout div {
 	display: flex;
-	column-gap: 4svw;
+	flex-flow: row wrap;
+	justify-content: center;
+	column-gap: 2svw;
+	row-gap: 2svh;
+	padding: 2svh 2svw;
+}
+
+.HomePageLayout div div {
+	flex-direction: column;
+	justify-content: flex-start;
 	padding: 0svh 1svw;
+	max-width: 800px;
+	row-gap: 0svh;
 }
 
 .HomePageLayout div img {
 	border-radius: 1rem;
-	/* height: clamp(200px, 100%, 55svh); */
-	/* height: 100%; */
-	/* max-width: 40%; */
-	height: 350px;
-	width: 350px;
+	aspect-ratio: 1;
+	height: 400px;
+	width: 400px;
+
+	/* margin-top: 4svh; */
 
 	align-self: center;
 }
@@ -53,8 +64,11 @@
 }
 
 .HomePageLayout p {
-	padding: 0px;
-	margin: 1svh 0svw;
+	/* padding: 0px;
+	margin: 1svh 0svw; */
+	min-width: none;
+	padding: 0svh 0svw;
+	margin: 1.5svh 0svw;
 	font-size: larger;
 }
 
@@ -64,6 +78,14 @@
 	/* width: 50%; */
 	max-width: 700px;
 	padding: 0px 1svw;
+}
+
+@media only screen and (max-width: 800px) {
+	.HomePageLayout img {
+		width: 300px;
+
+		border-radius: 1rem;
+	}
 }
 
 #HomeSponsors {

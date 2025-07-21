@@ -14,11 +14,6 @@ export default function Ender() {
 		<footer id="ender">
 			<div>
 				<p>&#169; {date.getFullYear()} UCalgary Baja </p>
-				<p
-					onClick={() => window.open("https://www.morphgenix.com/", "_blank")}
-					id="pointerCursor">
-					Partnered with Morphgenix
-				</p>
 			</div>
 			<div>
 				<a href="https://www.linkedin.com/company/schulich-off-road/">

@@ -57,14 +57,12 @@ const AboutsUs = () => {
 							Engineers (SAE) every year.
 						</p>
 						<p>
-							We're dedicated to giving members hands-on experience working on
-							the car, which allows them to both learn new skills and
+							Our members are given opportunities to gain hands-on experience
+							working on the car, which allows them to both learn new skills and
 							techniques, such as using Solidworks, Ansys, machining, and
 							welding, as well as utilizing knowledge learned from classrooms.
-							This is done with practical projects, allowing students to build
-							skills and knowledge that employers are looking for. We strive to
-							bridge the gap between education and application, making learning
-							effective and memorable.
+							This is done with practical projects, allowing members to build
+							skills and knowledge that employers are looking for.
 						</p>
 					</div>
 
@@ -83,13 +81,12 @@ const AboutsUs = () => {
 						<p>
 							Every year, we take our car to the United States to compete
 							against other teams from all across the globe. Teams from
-							universities design, build, and race these all-terrain vehicles
-							that are capable of going through a series of rough courses, as
-							well as discuss their findings, such as cost reports and design
-							choices, all in a series of dynamic and static events. We also get
-							the chance to connect with engineering students from around the
-							world, trading advice and making new friends, and network with
-							sponsors to explore future job opportunities.
+							universities design, build, and race these vehicles capable of
+							going through a series of rough courses. In addition, teams
+							discuss their findings, such as cost reports and design choices.
+							All of this is done in a series of dynamic and static events. On
+							top of this, we also get the chance to connect with students and
+							sponsors from all over the world.
 						</p>
 					</div>
 				</div>
@@ -100,106 +97,23 @@ const AboutsUs = () => {
 							Static events are where the whole team steps away from building
 							the car and takes a look at the professional and analytical aspect
 							of the team. The business presentation, cost event, and technical
-							inspection are all events that are equally important as the actual
-							car, as this is where we show real-world understanding of
-							engineering, manufacturing, and business decisions. It's not only
-							about making the car, it's also about demonstrating a clear
-							understanding behind design rationale, cost efficiency, and
-							marketability within a competitive industry.
+							inspection are all events where we show real-world understanding
+							of engineering, manufacturing, and business decisions. This is
+							done through presentations and tests before the race.
 						</p>
-						{/* <ol>
-							<li>
-								<h3>SALES PRESENTATION</h3>
-								<h3>Business Team</h3>
-								<p>
-									In collaboration with the rest of the team, develops a concept
-									proposal and presents it to a panel of industry judges to gain
-									support, such as funding.
-								</p>
-							</li>
-							<li>
-								<h3>COST EVENT</h3>
-								<h3>Mechanical and Electrical Teams</h3>
-								<p>
-									- bruh idfk DESIGN - The team presents the design, research,
-									and testing of the vehicle to a panel of judges.
-								</p>
-							</li>
-							<li>
-								<h3>TECHNICAL INSPECTIONS</h3>
-								<h3>Whole Team</h3>
-								<p>
-									(maybe take off) - Judges inspect every aspect of the car in
-									order to make sure it complies with competition rules and
-									ensure safety.
-								</p>
-								<p>
-									(maybe sperate? ie Frame Tech, Engine Tech, General Tech,
-									etc.)
-								</p>
-							</li>
-						</ol> */}
 					</div>
 					<div>
 						<h2>Dynamic Events</h2>
 						<p>
-							Dynamic events are where the car is actually put to the test, with
-							different events each made to test a certain aspect of the car.
-							Acceleration, sled pull, hill climb and maneuverability are all
-							events that show how our vehicle does against other teams. After
-							all these events, the finale comes in the form of the endurance
-							event, a four-hour race filled with jumps, pits, and other
-							obstacles, and teams compete to see how many laps the cars can
-							make. It combines all the factors from previous events, on top of
-							the reliability of our car.
+							Dynamic events put the car to the test, each one targeting a
+							specific aspect of its capability. Acceleration, sled pull, hill
+							climb and maneuverability are all events that compare our
+							performance against other teams. After that, we compete in the
+							endurance event, a four-hour race filled with many obstacles to
+							see how many laps each car can complete. This combines all the
+							factors from previous events, on top of the reliability of our
+							car.
 						</p>
-						{/* <ul>
-							<li>
-								<h3>BRAKE INSPECTION</h3>
-								<p>The cars is tested to see if all four wheels stop</p>
-							</li>
-							<li>
-								<h3>ACCELERATION</h3>
-								<p>The car is tested for speed by uhh i forgot</p>
-							</li>
-							<li>
-								<h3>SLED PULL</h3>
-								<p>The car's torque is tested by pulling variable load</p>
-							</li>
-							<li>
-								<h3>HILL CLIMB</h3>
-								<p>
-									The car is tested to see how high the car can climb up a
-									variable slope
-								</p>
-							</li>
-							<li>
-								<h3>MANEUVERABILITY</h3>
-								<p>
-									Obstacle course, where the fastest and most accurate vehicles
-									are awarded more points
-								</p>
-							</li>
-							<li>
-								<h3>ROCK CRAWL</h3>
-								<p>
-									This one is self explanitory, drive over boulders and large
-									logs
-								</p>
-							</li>
-							<li>
-								<h3>ENDURANCE</h3>
-								<p>
-									All the cars in the competition race for four hours, seeing
-									how many laps each car can handle. This event is worth the
-									most points and is the most exciting.
-								</p>
-								<p>
-									Fun Fact: This is the only wheel to wheel event that SAE
-									hosts.
-								</p>
-							</li>
-						</ul> */}
 					</div>
 				</div>
 

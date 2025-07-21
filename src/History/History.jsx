@@ -64,10 +64,10 @@ export default function History() {
 			/>
 			<div>
 				<p>
-					The history of our cars are below. They include overall competition
-					results (as well as old competition stats if u wanna include that).
-					Learn more about what we do at competition here.
+					Here's a look at our past vehicles and the competition results they
+					achieved.
 				</p>
+				<p>Each result showcases the dedication and growth of our team.</p>
 				<Link to={"/AboutUs"}>
 					<button>Learn More</button>
 				</Link>
@@ -80,13 +80,14 @@ export default function History() {
 				</colgroup> */}
 				<tbody>
 					<tr>
-						<td></td>
+						{/* <td></td> */}
 						<td
 							className="symbol"
-							id="HistoryJoin">
+							id="HistoryJoin"
+							colSpan={3}>
 							<div>Where You Join!</div>
 						</td>
-						<td></td>
+						{/* <td></td> */}
 					</tr>
 					{historyTimeLineInfo.map((yearInfo, index) => {
 						return (

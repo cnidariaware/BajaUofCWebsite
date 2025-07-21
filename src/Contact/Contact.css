@@ -16,44 +16,51 @@
 	text-wrap: wrap;
 }
 
-#Contact > div:nth-child(1) {
+#Contact > div:nth-child(2) {
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
 	align-items: flex-start;
 	row-gap: 2svh;
-}
+	column-gap: 8svw;
 
-#Contact > div:nth-child(1) {
-	flex-direction: row;
-	column-gap: 2svw;
 	align-items: center;
+	justify-content: center;
 	background: var(--BajaBlack);
 	color: white;
 	padding: 2svh 0svw;
 }
 
-#Contact div:nth-child(1) div:first-child {
-	flex-direction: row;
+#Contact div:nth-child(2) div:first-child {
+	flex-flow: row wrap;
 	margin-left: 4svw;
 }
 
-#Contact div:nth-child(1) div:last-child {
+#Contact div:nth-child(2) div:last-child {
 	flex-direction: column;
 	margin: 0px;
-	margin-left: auto;
-	margin-right: 16svw;
+	/* margin-left: auto;
+	margin-right: 16svw; */
 	font-size: 30px;
 }
 
-#Contact div:nth-child(1) div:last-child h1 {
+#Contact div:nth-child(2) div:last-child h1 {
 	margin: 0px;
 	font-size: 40px;
 	width: inherit;
 }
 
-#Contact div:nth-child(1) img {
+#Contact div:nth-child(2) img {
 	width: 300px;
 	height: 600px;
+}
+
+#Contact div:nth-child(2) iframe {
+	margin: 0px;
+	border: none;
+	border-radius: 1rem;
+	width: inherit;
+
+	height: 300px;
 }
 
 @media only screen and (max-width: 1025px) {
@@ -74,4 +81,8 @@
 	#Contact > div:nth-child(1) > div:nth-child(1) > img:nth-child(3) {
 		display: none;
 	}
+
+	/* #Contact div:nth-child(2) iframe {
+		width: inherit;
+	} */
 }

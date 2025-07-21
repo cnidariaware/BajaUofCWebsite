@@ -53,7 +53,7 @@ const OurSponsors = () => {
 				<p>
 					By supporting us, you're helping shape the next generation of
 					engineers. Our club members develop real-world skills, problem-solving
-					abilities, and teamwork. And of course, with your help, we’re one step
+					abilities, and teamwork. And of course, with your help, we're one step
 					closer to victory.
 				</p>
 				<ul>
@@ -125,6 +125,29 @@ const OurSponsors = () => {
 						})}
 					</>
 				)}
+			</div>
+			<div id="SponsorAfter">
+				<h2>Sponsorship Information</h2>
+				<p>
+					Our sponsors are the backbone of UCalgary Baja's success, providing
+					support that allows our members to gain hands-on engineering
+					experience as part of their education. Our team is entirely
+					student-run, allowing members to develop skills beyond engineering,
+					including design, fundraising, sourcing materials, team management,
+					and project coordination.
+				</p>
+				<p>
+					We deeply value the partnership with our sponsors, as their support
+					makes every project and competition possible.
+				</p>
+				<p>
+					If you're interested in sponsoring UCalgary Baja, please contact our
+					team captain at []/click here/idk what else lol. Below, you can find
+					our sponsorship package detailing the opportunities available.
+				</p>
+				<div>
+					<p>Sponsorship Package (probably just a link)</p>
+				</div>
 			</div>
 		</div>
 	);

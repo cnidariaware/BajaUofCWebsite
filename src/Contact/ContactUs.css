@@ -39,7 +39,7 @@
 	border-radius: var(--card-border-radius);
 	border-color: rgba(245, 245, 245, 0.5);
 	border-width: 2px;
-	padding: 1svh 0svw;
+	padding: 1svh 1ch;
 	margin: 1svh 0.5svw;
 	color: inherit;
 	align-items: start;
@@ -50,7 +50,7 @@
 	border-radius: var(--card-border-radius);
 	border-color: rgba(245, 245, 245, 0.4);
 	border-width: 2px;
-	padding: 1svh 0svw;
+	padding: 1svh 1ch;
 	margin: 1svh 0.5svw;
 	color: inherit;
 	align-items: start;

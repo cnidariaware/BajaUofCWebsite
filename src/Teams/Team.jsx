@@ -15,10 +15,10 @@ export default function Team() {
 					<div>
 						<h3>Suspension</h3>
 						<p>
-							Our subteam is responsible for the car's handling and terrain
-							performance. We assemble components like the arms, shocks,
-							steering knuckles, and rear bearing carriers. We also perform
-							simulations, calculations, and welding.
+							Our subteam works on the car's handling and terrain performance.
+							We assemble components like the arms, shocks, steering knuckles,
+							and rear bearing carriers. We also perform simulations,
+							calculations, and welding.
 						</p>
 					</div>
 					<img
@@ -36,8 +36,8 @@ export default function Team() {
 						<p>
 							Our subteam designs and manufactures the skeleton of the car,
 							incorporating all subsystems and ensuring driver protection. We
-							utilize manufacturing techniques such as welding, tube coping and
-							tube bending.
+							learn manufacturing techniques like welding, tube coping and tube
+							bending.
 						</p>
 					</div>
 				</div>
@@ -45,10 +45,10 @@ export default function Team() {
 					<div>
 						<h3>Ergonomics</h3>
 						<p>
-							Our subteam works to ensure driver comfort, integrating human and
-							mechanical factors. We work to increase the number of eligible
-							drivers within the car and decrease driver fatigue by optimizing
-							the seat, head rest, pedals, and pedal foot resets.
+							Our subteam works to ensure driver comfort, increase the number of
+							eligible drivers that can drive the car, and decrease driver
+							fatigue by optimizing the seat, head rest, pedals, and pedal foot
+							resets.
 						</p>
 					</div>
 					<img
@@ -65,9 +65,8 @@ export default function Team() {
 						<h3>Steering</h3>
 						<p>
 							Our subteam designs the steering behaviors of the car, including
-							turning radius, pinion and rack ratio, and implementing Ackerman
-							geometry. We use FEA analysis to professional CNC machining to
-							optimize driving dynamics.
+							turning radius, pinion and rack ratio. We use FEA analysis to
+							professional CNC machining to optimize driving dynamics.
 						</p>
 					</div>
 				</div>
@@ -100,17 +99,31 @@ export default function Team() {
 				</div>
 				<div>
 					<div>
-						<h3>Electrical</h3>
+						<h3>Telemetry</h3>
 						<p>
-							Our subteam does the testing, wiring sensors and doing data
-							collection and analysis, as well as implementing the wiring and
-							electrical system in the vehicle.
+							Our subteam is responsible for wiring sensors and transmitting
+							real-time data from the vehicle, letting the team to monitor
+							performance and diagnose issues during testing.
 						</p>
 					</div>
 					<img
 						src="https://picsum.photos/200"
 						alt="sus related"
 					/>
+				</div>
+				<div>
+					<img
+						src="https://picsum.photos/200"
+						alt="Data acc related"
+					/>
+					<div>
+						<h3>Data Acquisition</h3>
+						<p>
+							Our subteam focuses on integrating sensors and managing the
+							vehicle's wiring system to accurately collect, store, and analyze
+							performance data for post-test evaluation.
+						</p>
+					</div>
 				</div>
 				<div>
 					<img
@@ -126,20 +139,20 @@ export default function Team() {
 						</p>
 					</div>
 				</div>
+
 				<div>
-					<div>
-						<h3>Business</h3>
-						<p>
-							Our subteam develops sponsorship relationships, creates content to
-							post on social media, develop brand strategies for marketing
-							campaigns, arrange travel bookings, handles payments, and manages
-							team merch.
-						</p>
-					</div>
 					<img
 						src="https://picsum.photos/200"
 						alt="sus related"
 					/>
+					<div>
+						<h3>Business</h3>
+						<p>
+							Our subteam develops sponsorship relationships, creates content to
+							post on social media, develop marketing campaigns, arrange travel
+							bookings, handles payments, and manages team merch.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

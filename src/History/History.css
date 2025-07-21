@@ -81,6 +81,13 @@
 	}
 }
 
+/* @media only screen and (max-width: 500px) {
+	#History tr td img {
+		width: 1svw;
+		height: inherit;
+	}
+} */
+
 #History .HistoryCompInfo {
 	display: block;
 	text-align: center;
@@ -128,7 +135,9 @@
 	position: relative;
 	width: 10px;
 	text-align: center;
-	padding: 0px;
+	padding: 0svh 2svw;
+	/* min-width: 40px; */
+	max-height: none;
 }
 
 #History .symbol::before {
@@ -172,7 +181,8 @@
 	position: relative;
 	background-color: black;
 	z-index: 2; /* above line */
-	margin: 0svh 0svw;
+	width: fit-content;
+	margin: 0svh auto;
 	margin-bottom: 4svh;
 }
 

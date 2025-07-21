@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Home.css";
 import UpdateBanner from "../Header/UpdateBanner";
 
@@ -27,19 +26,17 @@ export default function Home() {
 						<h2>What We Do</h2>
 						<p>
 							UCalgary Baja is a student organization which designs, builds, and
-							racing an off-road vehicle in the Baja SAE competition organized
-							by the Society of Automotive Engineers (SAE) every year. Schulich
-							Off-Road's cars are tough, dependable, competitive, and extremely
-							fun to drive.
+							races an off-road vehicle in the Baja SAE competition organized by
+							the Society of Automotive Engineers (SAE) every year.
 						</p>
 						<p>
 							In UCalgary Baja, we gain practical experience in design and
-							manufacturing by constructing various car components. We learn to
-							balance cost, manufacturing limitations, and performance to
-							develop optimal parts, budgets, and processes. This involves using
-							CAD technology like SolidWorks and FEA simulations.
+							manufacturing by constructing various car components. Our work
+							combines mechanical design, project management, and hands-on
+							manufacturing experience. This involves using CAD technology like
+							SolidWorks and FEA simulations.
 						</p>
-						<Link to={"AboutUs"}>Learn More</Link>
+						<a href={"/AboutUs"}>Learn More</a>
 					</div>
 				</div>
 				<div>
@@ -47,20 +44,18 @@ export default function Home() {
 						<h2>Who We Are</h2>
 						<p>
 							We are a team of engineering and business students who strive to
-							expand our horizons in our respective fields by getting real
-							world, hands on experience. Our members achieve this by being a
-							part of one of our 9 sub-teams: Suspension, Chassis, Ergonomics,
-							Steering, Powertrain, Final Drive, Electrical, Software, and
-							Business.
+							expand our horizons by getting real world, hands-on experience.
+							Our members achieve this by being a part of one of our 10
+							sub-teams: Suspension, Chassis, Ergonomics, Steering, Powertrain,
+							Final Drive, Telemetry, Data Acquisition, Software, and Business.
 						</p>
 						<p>
-							Each subteam handles a specific component, collaborating,
-							researching, and troubleshooting throughout the design process.
-							After building the vehicle, we attend competitions in the United
-							States, where our hard work is put to the test against the other
-							teams from all across the world.
+							Each subteam handles a specific component, working with other
+							members through the design process. After building the vehicle, we
+							attend competitions in the United States, where our hard work is
+							put to the test against the teams from all across the world.
 						</p>
-						<Link to={"/"}>Learn More</Link>
+						<a href={"/"}>Learn More</a>
 						{/* Replace with Join later*/}
 					</div>
 					<img
@@ -94,8 +89,8 @@ export default function Home() {
 						</div>
 					</div>
 					<div id="HomeSponsorLinks">
-						<Link to={"/OurSponsors"}>See All</Link>
-						<Link to={"/OurSponsors"}>Support Us</Link>
+						<a href={"/OurSponsors"}>See All</a>
+						<a href={"/OurSponsors"}>Support Us</a>
 					</div>
 				</div>
 				<div>
@@ -106,14 +101,13 @@ export default function Home() {
 					<div>
 						<h2>Sponsor Us</h2>
 						<p>
-							We appreciate all the help we get from sponsors because it helps
-							fund our Baja team with essential parts, materials, manufacturing
-							support, and ability to go to competitions. Their contributions
-							make it possible for us to design, build, and compete at a high
-							level. From donated components to financial backing, our sponsors
-							are a key part of what drives our team forward.
+							We appreciate all the help we get from sponsors, as it helps fund
+							our Baja team with essential parts, materials, manufacturing
+							support, and ability to go to competitions. From donated
+							components to financial backing, our sponsors are a key part of
+							what drives our team forward.
 						</p>
-						<Link to={"/OurSponsors"}>Learn More</Link>
+						<a href={"/OurSponsors"}>Learn More</a>
 					</div>
 				</div>
 				<div id="HomeBottomGallery">

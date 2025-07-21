@@ -18,9 +18,10 @@
 	justify-content: center;
 	column-gap: 2svw;
 }
-#ender p {
+
+/* #ender p {
 	padding-left: 2%;
-}
+} */
 
 #ender .hidden {
 	display: flex;

@@ -53,6 +53,7 @@
 	background-color: var(--BajaRed);
 	border-radius: 15px;
 	padding: 2svh 2svw;
+	font-size: large;
 }
 
 #SponsorsAbout a:hover {
@@ -105,7 +106,7 @@
 	display: flex;
 	flex-direction: column;
 	background-color: inherit;
-	/* align-items: center; */
+	align-items: center;
 	/* width: 70svw; */
 }
 
@@ -115,6 +116,7 @@
 	padding: 2svh 2svw;
 	column-gap: 2svw;
 	row-gap: 2svh;
+	justify-content: center;
 }
 
 .Sponsors a {
@@ -186,4 +188,28 @@
 		max-width: none;
 		min-width: 1px;
 	}
+}
+
+#SponsorAfter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4svh 0svw;
+	background-color: var(--BajaBlack);
+	color: white;
+	text-align: center;
+}
+
+#SponsorAfter p {
+	max-width: 120ch;
+	font-size: large;
+	/* margin: 0px; */
+}
+
+#SponsorAfter h2 {
+	max-width: 120ch;
+	margin: 0px;
+	padding: 2svh 0svw;
+	padding-top: 4svh;
+	font-size: 30px;
 }
