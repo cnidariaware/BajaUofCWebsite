@@ -126,10 +126,6 @@ export default function Team() {
 					</div>
 				</div>
 				<div>
-					<img
-						src="https://picsum.photos/200"
-						alt="chas related"
-					/>
 					<div>
 						<h3>Software</h3>
 						<p>
@@ -138,6 +134,10 @@ export default function Team() {
 							storage system.
 						</p>
 					</div>
+					<img
+						src="https://picsum.photos/200"
+						alt="chas related"
+					/>
 				</div>
 
 				<div>

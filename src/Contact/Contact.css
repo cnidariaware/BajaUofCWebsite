@@ -9,6 +9,10 @@
 	margin: 0px;
 }
 
+#Contact ul li {
+	margin: 1svh 0svw;
+}
+
 #Contact h1,
 #Contact h4,
 #Contact p {
@@ -21,13 +25,14 @@
 	flex-flow: row wrap;
 	align-items: flex-start;
 	row-gap: 2svh;
-	column-gap: 8svw;
+	column-gap: 4svw;
 
 	align-items: center;
 	justify-content: center;
-	background: var(--BajaBlack);
-	color: white;
-	padding: 2svh 0svw;
+	background: white;
+	/* background: var(--BajaBlack); */
+	/* color: white; */
+	padding: 8svh 0svw;
 }
 
 #Contact div:nth-child(2) div:first-child {
@@ -37,6 +42,7 @@
 
 #Contact div:nth-child(2) div:last-child {
 	flex-direction: column;
+
 	margin: 0px;
 	/* margin-left: auto;
 	margin-right: 16svw; */
@@ -44,9 +50,22 @@
 }
 
 #Contact div:nth-child(2) div:last-child h1 {
-	margin: 0px;
+	margin: 2svh 0svw;
 	font-size: 40px;
 	width: inherit;
+	border-bottom: 3px solid var(--BajaBlack);
+}
+
+#Contact div:nth-child(2) h4 {
+	font-weight: normal;
+}
+
+#Contact div:nth-child(2) a h4 {
+	font-weight: bold;
+}
+
+#Contact div:nth-child(2) a:hover {
+	color: var(--BajaRed);
 }
 
 #Contact div:nth-child(2) img {
