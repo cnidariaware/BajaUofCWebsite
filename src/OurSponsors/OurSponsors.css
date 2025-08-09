@@ -14,6 +14,10 @@
 	/* background-color: gray; */
 }
 
+#OurSponsors img {
+	object-fit: contain;
+}
+
 #SponsorsAbout {
 	display: flex;
 	flex-direction: column;
