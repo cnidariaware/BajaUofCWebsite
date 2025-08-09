@@ -99,6 +99,10 @@
 	width: 100%;
 }
 
+#about-competitions div {
+	max-width: 600px !important;
+}
+
 #AboutUs article {
 	display: flex;
 	flex-direction: column;

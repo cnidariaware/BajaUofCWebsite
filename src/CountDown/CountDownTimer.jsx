@@ -117,7 +117,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
 const DateTimeDisplay = ({ valueAwayFrom, discriptor }) => {
 	return (
 		<div>
-			<p style={discriptor === "Days" ? { width: "3ch" } : undefined}>
+			<p style={discriptor === "Days" ? { width: "3ch" } : { width: "2ch" }}>
 				{valueAwayFrom}
 			</p>
 			<p>{discriptor}</p>

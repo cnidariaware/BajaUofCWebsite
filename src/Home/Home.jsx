@@ -13,13 +13,13 @@ export default function Home() {
 			<UpdateBanner
 				updatedTitleText="UCalgary Baja"
 				updatedSubtitleText=""
-				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1748720160/Home_Baja_2025_soty4k.jpg"
+				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754170619/DSC_0766-min-2_j7sxoz.jpg"
 				updatetdImgAlt="Lorem Picsum"
 			/>
 			<div className="HomePageLayout">
 				<div>
 					<img
-						src="https://picsum.photos/200"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/ar_1:1,c_fill,g_auto,w_1000/v1754168551/PXL_20250501_043345191-min_avprss.jpg"
 						alt="the team?"
 					/>
 					<div>
@@ -59,7 +59,7 @@ export default function Home() {
 						{/* Replace with Join later*/}
 					</div>
 					<img
-						src="https://picsum.photos/200"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754168541/DSC_0004-min_irsgkt.jpg"
 						alt="possibly a montage mainly showcasing team members working"
 					/>
 				</div>

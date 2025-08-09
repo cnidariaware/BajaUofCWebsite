@@ -7,7 +7,7 @@ export default function Team() {
 			<UpdateBanner
 				updatedTitleText="The Team"
 				updatedSubtitleText=""
-				updatedImgUrl="https://picsum.photos/200"
+				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754761232/DSC05631-min_itywlo.jpg"
 			/>
 			<h2>SUBTEAMS</h2>
 			<div>
@@ -22,14 +22,14 @@ export default function Team() {
 						</p>
 					</div>
 					<img
-						src="https://picsum.photos/200"
-						alt="sus related"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/c_fill,w_700,h_400/v1754169379/IMG_3532_c6mnwf_asokvg.jpg"
+						alt="Welding suspension arms"
 					/>
 				</div>
 				<div>
 					<img
-						src="https://picsum.photos/200"
-						alt="chas related"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754167885/chassis2_gct4iq.png"
+						alt="chassis in ansys stress simulation"
 					/>
 					<div>
 						<h3>Chassis</h3>
@@ -86,8 +86,8 @@ export default function Team() {
 				</div>
 				<div>
 					<img
-						src="https://picsum.photos/200"
-						alt="chas related"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754168541/brakes-min_bgmnyc.jpg"
+						alt="top down shot of our brake system"
 					/>
 					<div>
 						<h3>Final Drive</h3>

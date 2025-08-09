@@ -27,10 +27,10 @@
 
 #Team div div div {
 	flex-direction: column;
-	max-width: 40ch;
+	max-width: 48ch;
 	row-gap: 0px;
 	color: inherit;
-	padding: 0px 4svw;
+	/* padding: 0px 3svw; */
 	justify-content: flex-start;
 }
 

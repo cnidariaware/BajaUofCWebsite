@@ -11,7 +11,8 @@ export default function History() {
 	let historyTimeLineInfo = [
 		{
 			year: "2024-2025",
-			competitionCarImg: "https://picsum.photos/200",
+			competitionCarImg:
+				"https://res.cloudinary.com/dpgrgsh7g/image/upload/ar_1:1,c_fill,g_auto,w_400/v1754759943/DSCN7262_ithpcq.jpg",
 			competitions: [
 				{ location: "California", placement: "26th" },
 				{ location: "Williamsport", placement: "65th" },
@@ -60,7 +61,7 @@ export default function History() {
 			<UpdateBanner
 				updatedTitleText="History"
 				updatedSubtitleText=""
-				updatedImgUrl="https://picsum.photos/200"
+				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754760952/DSCN7263_map0j4.jpg"
 			/>
 			<div>
 				<p>

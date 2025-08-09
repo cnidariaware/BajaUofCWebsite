@@ -201,24 +201,22 @@ nav ul {
 
 /* used to postiion title and sub title */
 #BannerHeader div {
-	margin-top: 40svh;
+	margin-top: 35svh;
 	margin-left: auto;
-	margin-right: 8svw;
+	margin-right: 4svw;
 	/* padding-left: 60svw; */
 	/* text-align: end; */
 }
 
 #BannerHeader h1 {
-	display: flex;
-	width: fit-content;
-	margin: 0px;
-
-	font-size: 80px; /* todo make larger */
+	font-size: 100px; /* todo make larger */
 	font-weight: normal;
-
+	text-align: end;
+	width: 11ch;
 	color: white;
-	background-color: var(--banner-text-background);
+	/* background-color: var(--banner-text-background); */
 	padding: var(--banner-text-padding);
+	margin: 0px;
 	border-radius: var(--banner-text-rounding);
 	font-weight: bolder;
 }
@@ -231,7 +229,7 @@ nav ul {
 	font-weight: normal;
 
 	color: white;
-	background-color: var(--banner-text-background);
+	/* background-color: var(--banner-text-background); */
 	padding: var(--banner-text-padding);
 	border-radius: var(--banner-text-rounding);
 }
