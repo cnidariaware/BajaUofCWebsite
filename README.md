@@ -1,3 +1,11 @@
+# Soon to be Depricated
+
+This is due to a number of reasons:
+
+1. npx create-react-app is no longer maintained and is slowly dying
+1. The code has so much technical debt that it needs to be thrown away
+1. The code smells like a sewer and its hard to find anything
+
 # Baja Website
 
 [![Continuous Integration Testing](https://github.com/UofCBaja/BajaUofCWebsite/actions/workflows/testAutomatic.yaml/badge.svg?branch=dev)](https://github.com/UofCBaja/BajaUofCWebsite/actions/workflows/testAutomatic.yaml)
@@ -59,10 +67,10 @@ Uses [JSDocs](https://jsdoc.app), gives a good way to describe what a function d
 //semi-perminant email, do not need to respond but try to be a good alumni
  */
 const exampleFunct = (inputVar) => {
-  const varExample0 = 0; //constant variable cannot change, not strongly typed
-  let varExample1 = 0; //local varialbe, not strongly typed can be any data type
-  var varExample2 = 0; //global variable, not strongly typed can be any data type
-  return 0; //example function does nothing significant
+	const varExample0 = 0; //constant variable cannot change, not strongly typed
+	let varExample1 = 0; //local varialbe, not strongly typed can be any data type
+	var varExample2 = 0; //global variable, not strongly typed can be any data type
+	return 0; //example function does nothing significant
 };
 
 /**
@@ -74,10 +82,10 @@ const exampleFunct = (inputVar) => {
 //semi-perminant email, do not need to respond but try to be a good alumni
  */
 function exampleFunct2(inputVar) {
-  const varExample0 = 0; //constant variable cannot change, not strongly typed
-  let varExample1 = 0; //local varialbe, not strongly typed can be any data type
-  var varExample2 = 0; //global variable, not strongly typed can be any data type
-  return 0; //example function does nothing significant
+	const varExample0 = 0; //constant variable cannot change, not strongly typed
+	let varExample1 = 0; //local varialbe, not strongly typed can be any data type
+	var varExample2 = 0; //global variable, not strongly typed can be any data type
+	return 0; //example function does nothing significant
 }
 ```
 

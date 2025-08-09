@@ -13,15 +13,24 @@
 	flex-direction: column;
 	align-items: center;
 	align-self: center;
+	text-align: center;
 	padding: 2svh 2svw;
-	border: 1px solid white;
+	/* border: 1px solid white; */
 	border-radius: 1rem;
 	row-gap: 2svh;
+}
+
+#History > div > h2 {
+	margin: 0px;
+	padding: 0svh 0svw;
+	padding-top: 4svh;
+	font-size: 30px;
 }
 
 #History div p {
 	padding: 0px;
 	margin: 0px;
+	font-size: larger;
 }
 
 #History div a {
@@ -29,17 +38,19 @@
 }
 
 #History div button {
-	background-color: inherit;
-	border-radius: 1rem;
-	border: none;
-	padding: 2svh 5svw;
-	color: inherit;
+	text-decoration: none;
+	color: white;
 	background-color: var(--BajaRed);
-	font-size: larger;
+	border-radius: 15px;
+	padding: 2svh 2svw;
+	margin-top: 4svh;
+	font-size: large;
+	border: none;
+	width: 25svw;
 }
 
 #History div button:hover {
-	background-color: rgba(128, 128, 128, 0.4);
+	background-color: var(--BajaHover);
 	/* color: #a80029; */
 }
 
@@ -91,7 +102,7 @@
 #History .HistoryCompInfo {
 	display: block;
 	text-align: center;
-	padding: 4svh 0svw;
+	padding: 10svh 0svw;
 
 	border: 1px solid white;
 	border-radius: 1rem;

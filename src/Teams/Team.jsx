@@ -7,7 +7,8 @@ export default function Team() {
 			<UpdateBanner
 				updatedTitleText="The Team"
 				updatedSubtitleText=""
-				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754761232/DSC05631-min_itywlo.jpg"
+				// updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754761232/DSC05631-min_itywlo.jpg"
+				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754767548/DSC05631-min_rxx8km.jpg"
 			/>
 			<h2>SUBTEAMS</h2>
 			<div>

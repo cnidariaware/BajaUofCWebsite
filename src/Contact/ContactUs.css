@@ -6,9 +6,9 @@
 #ContactUs {
 	display: flex;
 	flex-flow: row wrap;
-	column-gap: 2svw;
+	/* column-gap: 2svw; */
 	row-gap: 4svh;
-	min-height: 70svh;
+	min-height: 60svh;
 	padding: 4svh 0svw;
 	justify-content: space-evenly;
 	color: white;
@@ -29,9 +29,23 @@
 	height: inherit !important;
 }
 
+#ContactUs div h2,
+#ContactUs div p {
+	padding: 0svh 2svw;
+	margin: 1svh 0svw;
+}
+
+#ContactUs div p {
+	font-size: larger;
+}
+
 #ContactUs p {
 	margin: 2svh 0svw;
 	padding: 0svh 0svw;
+}
+
+#ContactUs label {
+	margin: 0svh 0.25svw;
 }
 
 #ContactUs input {
@@ -40,7 +54,7 @@
 	border-color: rgba(245, 245, 245, 0.5);
 	border-width: 2px;
 	padding: 1svh 1ch;
-	margin: 1svh 0.5svw;
+	margin: 1svh 0svw;
 	color: inherit;
 	align-items: start;
 }
@@ -51,27 +65,30 @@
 	border-color: rgba(245, 245, 245, 0.4);
 	border-width: 2px;
 	padding: 1svh 1ch;
-	margin: 1svh 0.5svw;
+	margin: 1svh 0svw;
 	color: inherit;
 	align-items: start;
-	min-height: 25svh;
+	min-height: 15svh;
 }
 
 #ContactUs button {
 	border-radius: var(--card-border-radius);
 	color: inherit;
-	background-color: rgba(0, 128, 0, 0.6);
+	background-color: var(--BajaRed);
 	border-color: transparent;
 	align-items: start;
 	margin: 1svh 0.5svw;
 	padding: 1svh 0svw;
-	/* width: 99%; */
+	font-size: large;
 }
 
 #ContactUs button:hover {
 	cursor: pointer;
-	color: #91a4d2;
-	background-color: rgba(0, 150, 0, 0.6);
+	background-color: var(--BajaHover);
+}
+
+#ContactUs div p a:hover {
+	color: var(--BajaRed);
 }
 
 #ContactUs span {

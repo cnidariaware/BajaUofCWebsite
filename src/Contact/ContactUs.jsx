@@ -50,11 +50,11 @@ export default function ContactUs() {
 	return (
 		<div id="ContactUs">
 			<div>
-				<h2>Get in Touch</h2>
+				<h2>Get in Touch.</h2>
 				<p>
-					Please feel free to reach out about questions, opporunities or just
-					want to connect. Feel free to either fill out this form or contact me
-					through one of the many of the platforms below
+					Fill out the form for questions, opportunities, or if you just want to
+					connect. You could also email us at{" "}
+					<a href="mailto:uofcbaja@gmail.com">uofcbaja@gmail.com</a>.
 				</p>
 			</div>
 			<form onSubmit={formSubmit}>

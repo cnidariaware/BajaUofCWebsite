@@ -5,15 +5,21 @@
 	/* --BajaRed: rgb(100, 0, 0); */
 	/* --BajaRed: #c1011c; */
 	--BajaRed: #a80029;
+
+	--BajaHover: rgba(128, 128, 128, 0.4);
+}
+
+img {
+	object-fit: cover;
+	object-position: center;
 }
 
 header {
 	display: flex;
 	flex-direction: row;
-	margin: 1%;
-	margin-top: 1svh;
+	height: 84px;
+	margin: 0%;
 	padding-right: 0.5svw;
-	/* width: 100%; */
 
 	align-items: center;
 	justify-content: space-between;
@@ -29,6 +35,8 @@ header a {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
+	flex: 1;
+	height: inherit;
 }
 
 header div button {
@@ -49,21 +57,26 @@ header div {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	flex: 1;
 }
 
 #logo {
-	height: 10svh;
+	height: inherit;
 	/* width: 10svw; */
-	padding: 0.15rem;
+	padding: 0svh 0.15rem;
 	margin-left: 3svw;
 }
 
 /* naviagation section */
 
+nav {
+	flex: 1;
+}
+
 nav ul {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
@@ -93,12 +106,15 @@ nav a li:hover {
 nav ul {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
+}
 
-	z-index: 1;
+nav li {
+	text-wrap: nowrap;
+	text-align: center;
 }
 
 /* correct colour of links in dark mode */

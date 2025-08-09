@@ -53,7 +53,7 @@
 }
 
 .HomePageLayout a:hover {
-	background-color: rgba(128, 128, 128, 0.4);
+	background-color: var(--BajaHover);
 }
 
 .HomePageLayout h2 {
@@ -138,6 +138,7 @@
 	max-width: inherit;
 	max-height: 80px;
 	width: auto;
+	object-fit: contain;
 }
 
 #HomeSponsors div div div h3 {
@@ -164,13 +165,15 @@
 }
 
 #HomeBottomGallery {
-	width: 70svw;
-	height: 60svh;
+	width: 780px;
+	height: 400px;
 }
 
 #HomeBottomGallery img {
 	width: inherit;
 	height: inherit;
+	object-fit: cover;
+	object-position: center;
 }
 
 @media only screen and (max-width: 800px) {

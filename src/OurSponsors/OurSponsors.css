@@ -57,7 +57,7 @@
 }
 
 #SponsorsAbout a:hover {
-	background-color: rgba(128, 128, 128, 0.4);
+	background-color: var(--BajaHover);
 }
 
 #Sponsor {
