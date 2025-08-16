@@ -15,7 +15,7 @@ const AboutsUs = () => {
 			<UpdateBanner
 				updatedTitleText="About Us"
 				updatedSubtitleText=""
-				updatedImgUrl="https://picsum.photos/200"
+				updatedImgUrl="https://media.discordapp.net/attachments/1339423014378541087/1406378221527765115/IMG20240517082911.jpg?ex=68a23f49&is=68a0edc9&hm=7b5e671a85e599ed868a5bb15ebef70fece0dbd263d123b96a476856880968d3&=&format=webp&width=1107&height=831"
 			/>
 			<div id="AboutUs">
 				<div id="AboutEvents">
@@ -67,14 +67,14 @@ const AboutsUs = () => {
 					</div>
 
 					<img
-						src="https://picsum.photos/200"
+						src="https://cdn.discordapp.com/attachments/1339423014378541087/1406388205883887746/IMG-20230521-WA0004.jpg?ex=68a24895&is=68a0f715&hm=aef13e490bf25c157e42ec2456e6caf682df66ed66937a4c643b2d1dc4b1fbea&"
 						alt="temp"
 					/>
 				</div>
 				<div>
 					<img
-						src="https://picsum.photos/200"
-						alt="temp"
+						src="https://media.discordapp.net/attachments/1339423014378541087/1406376678904823858/20240428_105011.jpg?ex=68a23dd9&is=68a0ec59&hm=67cb25d34190b4bde96d235f1ba1b3270e3af9e723a1689e67fc930c97e62575&=&format=webp&width=731&height=974"
+						alt="Baja Car driving down track"
 					/>
 					<div>
 						<h2>The Competition</h2>

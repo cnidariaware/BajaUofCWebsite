@@ -46,7 +46,7 @@ const OurSponsors = () => {
 			<UpdateBanner
 				updatedTitleText="Sponsors"
 				updatedSubtitleText=""
-				updatedImgUrl="https://picsum.photos/200"
+				updatedImgUrl="https://media.discordapp.net/attachments/1339423014378541087/1406384398856622220/IMG_6671.jpg?ex=68a2450a&is=68a0f38a&hm=4e51a7199cef5fb8d49e89f9aceab70d3bfec6c2f7051ddcfd35542e99b26511&=&format=webp&width=1230&height=819"
 			/>
 			<div id="SponsorsAbout">
 				<h2>Our partners are the foundation of our success.</h2>

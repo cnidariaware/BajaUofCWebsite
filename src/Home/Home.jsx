@@ -95,7 +95,7 @@ export default function Home() {
 				</div>
 				<div>
 					<img
-						src="https://picsum.photos/200"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/c_fill,w_400,h_400/v1755376324/PXL_20250503_154645931-min_gi8qlf.jpg"
 						alt="something to do with sponsors"
 					/>
 					<div>

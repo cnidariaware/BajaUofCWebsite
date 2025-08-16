@@ -59,7 +59,7 @@ export default function Team() {
 				</div>
 				<div>
 					<img
-						src="https://picsum.photos/200"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/c_fill,w_700,h_400/v1754168547/DSC_0946_2-min_qmqkfr.jpg"
 						alt="chas related"
 					/>
 					<div>
@@ -143,8 +143,8 @@ export default function Team() {
 
 				<div>
 					<img
-						src="https://picsum.photos/200"
-						alt="sus related"
+						src="https://cdn.discordapp.com/attachments/1339423014378541087/1406392835170898001/DSC_0432.JPG?ex=68a24ce5&is=68a0fb65&hm=f3400754fdd460d9ae4ca090c6d2835c76012bcd784ee85a98c30e60796e116a&"
+						alt="member wearing ucalgary baja t-shirt"
 					/>
 					<div>
 						<h3>Business</h3>

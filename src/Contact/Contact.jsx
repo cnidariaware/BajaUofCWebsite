@@ -15,7 +15,7 @@ export default function Contact() {
 			<UpdateBanner
 				updatedTitleText="Contact Us"
 				updatedSubtitleText=""
-				updatedImgUrl="https://picsum.photos/200"
+				updatedImgUrl="https://media.discordapp.net/attachments/1339423014378541087/1406391358045818980/DSC_0393.JPG?ex=68a24b85&is=68a0fa05&hm=2943ecedd114273f513568c9a2c1f7014bc632af72c5638ed01cab7bc8c42c06&=&format=webp&width=1229&height=819"
 			/>
 
 			<ContactUs />
