@@ -15,7 +15,7 @@ const AboutsUs = () => {
 			<UpdateBanner
 				updatedTitleText="About Us"
 				updatedSubtitleText=""
-				updatedImgUrl="https://media.discordapp.net/attachments/1339423014378541087/1406378221527765115/IMG20240517082911.jpg?ex=68a23f49&is=68a0edc9&hm=7b5e671a85e599ed868a5bb15ebef70fece0dbd263d123b96a476856880968d3&=&format=webp&width=1107&height=831"
+				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1755914208/IMG20240517082914_vuhtt1.jpg"
 			/>
 			<div id="AboutUs">
 				<div id="AboutEvents">
@@ -67,13 +67,13 @@ const AboutsUs = () => {
 					</div>
 
 					<img
-						src="https://cdn.discordapp.com/attachments/1339423014378541087/1406388205883887746/IMG-20230521-WA0004.jpg?ex=68a24895&is=68a0f715&hm=aef13e490bf25c157e42ec2456e6caf682df66ed66937a4c643b2d1dc4b1fbea&"
-						alt="temp"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1755914383/IMG-20230521-WA0004_lzabyt.jpg"
+						alt="Car without body pannels"
 					/>
 				</div>
 				<div>
 					<img
-						src="https://media.discordapp.net/attachments/1339423014378541087/1406376678904823858/20240428_105011.jpg?ex=68a23dd9&is=68a0ec59&hm=67cb25d34190b4bde96d235f1ba1b3270e3af9e723a1689e67fc930c97e62575&=&format=webp&width=731&height=974"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1755914532/20240428_105011_emgwkv.jpg"
 						alt="Baja Car driving down track"
 					/>
 					<div>
@@ -117,12 +117,12 @@ const AboutsUs = () => {
 					</div>
 				</div>
 
-				<div id="AboutJoin">
+				{/* <div id="AboutJoin">
 					<p>
 						Intersted in joining?{" "}
 						<a href="mailto:uofcbaja@gmail.com">email us</a>
 					</p>
-				</div>
+				</div> */}
 			</div>
 		</>
 	);

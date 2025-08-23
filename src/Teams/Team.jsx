@@ -53,14 +53,14 @@ export default function Team() {
 						</p>
 					</div>
 					<img
-						src="https://picsum.photos/200"
-						alt="ergo related"
+						src="https://cdn.discordapp.com/attachments/1339423014378541087/1408627816253358100/18HASpcxac4zjPwWZSpbQs94v0ooAX-3hmw4emI_0zO4qfnSYTO5XBMXSH7dow2E.png?ex=68aa6e62&is=68a91ce2&hm=3022abc4e7f0de0d572763d2ec239f46b602c830df9a83f6f6cde05626b64f0e&"
+						alt="brakes and gas pedal CAD"
 					/>
 				</div>
 				<div>
 					<img
-						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/c_fill,w_700,h_400/v1754168547/DSC_0946_2-min_qmqkfr.jpg"
-						alt="chas related"
+						src="https://cdn.discordapp.com/attachments/1339423014378541087/1408627285560397975/19yTuNKZMp1QCQoaBz86d-zpvATvP6Rx1SaVjynMSV6RQFROM2d7anw3zAD4.png?ex=68aa6de3&is=68a91c63&hm=e6455ec340a52283d4baea8346a33043100f7865bdf91134861e8161617f22a0&"
+						alt="Suspensions arms and steering"
 					/>
 					<div>
 						<h3>Steering</h3>
@@ -81,8 +81,8 @@ export default function Team() {
 						</p>
 					</div>
 					<img
-						src="https://picsum.photos/200"
-						alt="sus related"
+						src="https://cdn.discordapp.com/attachments/1339423014378541087/1408623242561851432/image.png?ex=68aa6a1f&is=68a9189f&hm=9b1da30f89ce556dc7a9406c48694c4f19b1d0680c569e36fe2b82067f58f341&"
+						alt="cvt"
 					/>
 				</div>
 				<div>
@@ -108,14 +108,14 @@ export default function Team() {
 						</p>
 					</div>
 					<img
-						src="https://picsum.photos/200"
-						alt="sus related"
+						src="https://cdn.discordapp.com/attachments/1339423014378541087/1408627893164048434/12ZRS9P9XwyNLusJ59EfL98Yc_ZMpbdoYvATMAQKqnf0atoxj0ZUA2vtgQYh09a8.png?ex=68aa6e74&is=68a91cf4&hm=f89656c4c66aaea8d59cc95f9e7ed546ca686625559c1183cfc637df1decf614&"
+						alt="strain gauge"
 					/>
 				</div>
 				<div>
 					<img
-						src="https://picsum.photos/200"
-						alt="Data acc related"
+						src="https://media.discordapp.net/attachments/1339423014378541087/1408623144436109423/image.png?ex=68aa6a08&is=68a91888&hm=eeae0d6555aeae9d9bedd5fb343b3c031bf0bb42643e3875c6140150dca632cb&=&format=webp&quality=lossless&width=938&height=564"
+						alt="weight scale"
 					/>
 					<div>
 						<h3>Data Acquisition</h3>
@@ -136,14 +136,14 @@ export default function Team() {
 						</p>
 					</div>
 					<img
-						src="https://picsum.photos/200"
-						alt="chas related"
+						src="bhttps://cdn.discordapp.com/attachments/1339423014378541087/1408626692683075615/image.png?ex=68aa6d56&is=68a91bd6&hm=3e5ecfd2f4bfa1726b13068e6d3f80ab2eb519f6574bb4cefbd61418ec25084d&"
+						alt="jsx code from our sponsors"
 					/>
 				</div>
 
 				<div>
 					<img
-						src="https://cdn.discordapp.com/attachments/1339423014378541087/1406392835170898001/DSC_0432.JPG?ex=68a24ce5&is=68a0fb65&hm=f3400754fdd460d9ae4ca090c6d2835c76012bcd784ee85a98c30e60796e116a&"
+						src="https://cdn.discordapp.com/attachments/1339423014378541087/1406392835170898001/DSC_0432.JPG?ex=68aa35e5&is=68a8e465&hm=0ccaef2eb3589009d0078559a8279c3741f81fee8470cdb746733d43a1c7838c&"
 						alt="member wearing ucalgary baja t-shirt"
 					/>
 					<div>
