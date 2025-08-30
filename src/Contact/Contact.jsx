@@ -15,6 +15,7 @@ export default function Contact() {
 			<UpdateBanner
 				updatedTitleText="Contact Us"
 				updatedSubtitleText=""
+				updatedTitleAdditive="Contact"
 				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1755914996/DSC_0393_inuw2z.jpg"
 			/>
 

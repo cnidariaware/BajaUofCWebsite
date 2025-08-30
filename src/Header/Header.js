@@ -18,6 +18,7 @@ export default function Header() {
 		subtitleText: "Hello",
 		imgUrl: "https://picsum.photos/200",
 		headerPostion: "absolute",
+		titleAdditive: "",
 	});
 
 	// /**
@@ -51,6 +52,13 @@ export default function Header() {
 
 	return (
 		<>
+			<title>
+				UCalgary Baja
+				{bannerInfo.titleAdditive !== ""
+					? ` - ${bannerInfo.titleAdditive}`
+					: ""}
+			</title>
+
 			<header
 				style={{
 					position:

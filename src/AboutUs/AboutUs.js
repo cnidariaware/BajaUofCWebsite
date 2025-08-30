@@ -15,6 +15,7 @@ const AboutsUs = () => {
 			<UpdateBanner
 				updatedTitleText="About Us"
 				updatedSubtitleText=""
+				updatedTitleAdditive="About"
 				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1755914208/IMG20240517082914_vuhtt1.jpg"
 			/>
 			<div id="AboutUs">

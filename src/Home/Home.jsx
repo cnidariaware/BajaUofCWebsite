@@ -13,6 +13,7 @@ export default function Home() {
 			<UpdateBanner
 				updatedTitleText="UCalgary Baja"
 				updatedSubtitleText=""
+				updatedTitleAdditive="Home"
 				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754170619/DSC_0766-min-2_j7sxoz.jpg"
 				updatetdImgAlt="Lorem Picsum"
 			/>
@@ -112,7 +113,7 @@ export default function Home() {
 				</div>
 				<div id="HomeBottomGallery">
 					<img
-						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/c_fill,w_780,h_400/v1754771390/DSC_0970-min_telnpf.jpg"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1756589650/DSC_0970-min_telnpf_c_fill_w_780_h_400_o4vqdc.jpg"
 						alt="(If we do a rotating images thing for the top, and still want to keep this on the bottom, maybe we can change it to a more collage type thing for this box)"
 					/>
 				</div>

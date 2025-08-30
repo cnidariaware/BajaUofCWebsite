@@ -7,6 +7,7 @@ export default function Team() {
 			<UpdateBanner
 				updatedTitleText="The Team"
 				updatedSubtitleText=""
+				updatedTitleAdditive="Team"
 				// updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754761232/DSC05631-min_itywlo.jpg"
 				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754767548/DSC05631-min_rxx8km.jpg"
 			/>
@@ -136,7 +137,7 @@ export default function Team() {
 						</p>
 					</div>
 					<img
-						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1755915327/code_iuwwdd.png"
+						src="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1756590700/code-min_uqjr6m_c_fill_w_700_h_400_fftttm.png"
 						alt="jsx code from our sponsors"
 					/>
 				</div>
