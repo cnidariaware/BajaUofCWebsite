@@ -46,7 +46,6 @@ const OurSponsors = () => {
 			<UpdateBanner
 				updatedTitleText="Sponsors"
 				updatedSubtitleText=""
-				updatedTitleAdditive="Sponsors"
 				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1755914692/IMG_6671_daaeeq.jpg"
 			/>
 			<div id="SponsorsAbout">

@@ -51,7 +51,6 @@ export default function History() {
 			<UpdateBanner
 				updatedTitleText="History"
 				updatedSubtitleText=""
-				updatedTitleAdditive="History"
 				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754760952/DSCN7263_map0j4.jpg"
 			/>
 			<div>

@@ -13,7 +13,6 @@ export default function Home() {
 			<UpdateBanner
 				updatedTitleText="UCalgary Baja"
 				updatedSubtitleText=""
-				updatedTitleAdditive="Home"
 				updatedImgUrl="https://res.cloudinary.com/dpgrgsh7g/image/upload/v1754170619/DSC_0766-min-2_j7sxoz.jpg"
 				updatetdImgAlt="Lorem Picsum"
 			/>

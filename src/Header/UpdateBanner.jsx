@@ -25,7 +25,6 @@ export default function UpdateBanner({
 	updatedTitleText = "UCalgary Baja",
 	updatedSubtitleText = "Hello",
 	updatedImgUrl = "https://picsum.photos/200",
-	updatedTitleAdditive = "",
 }) {
 	const context = useOutletContext();
 	const updateBanner = context.setBannerInfo;
@@ -34,14 +33,7 @@ export default function UpdateBanner({
 			titleText: updatedTitleText,
 			subtitleText: updatedSubtitleText,
 			imgUrl: updatedImgUrl,
-			titleAdditive: updatedTitleAdditive,
 		});
-	}, [
-		updatedTitleText,
-		updatedSubtitleText,
-		updatedImgUrl,
-		updatedTitleAdditive,
-		updateBanner,
-	]);
+	}, [updatedTitleText, updatedSubtitleText, updatedImgUrl, updateBanner]);
 	return <></>;
 }
