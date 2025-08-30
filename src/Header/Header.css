@@ -70,17 +70,20 @@ header div {
 /* naviagation section */
 
 nav {
-	flex: 1;
+	flex-grow: 1;
+	height: inherit;
 }
 
 nav ul {
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
 	justify-content: center;
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
 	column-gap: 2svw;
+	height: inherit;
+	align-items: center;
 }
 
 nav a {
@@ -106,10 +109,20 @@ nav a li:hover {
 nav ul {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+	nav ul {
+		justify-content: space-evenly;
+	}
+	#BannerHeader h1 {
+		font-size: 80px !important;
+		width: auto !important;
+	}
 }
 
 nav li {

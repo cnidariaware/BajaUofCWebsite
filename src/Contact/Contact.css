@@ -22,7 +22,7 @@
 
 #Contact > div:nth-child(2) {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row wrap-reverse;
 	align-items: flex-start;
 	row-gap: 2svh;
 	column-gap: 4svw;
@@ -35,9 +35,21 @@
 	padding: 8svh 0svw;
 }
 
+@media only screen and (max-width: 800px) {
+	#Contact div:nth-child(2) div:first-child {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#Contact div:nth-child(2) img {
+		margin: 1svh 0svw;
+	}
+}
+
 #Contact div:nth-child(2) div:first-child {
-	flex-flow: row wrap;
-	margin-left: 4svw;
+	/* flex-flow: row wrap; */
+	margin: 0svh 2svw;
 }
 
 #Contact div:nth-child(2) div:last-child {
