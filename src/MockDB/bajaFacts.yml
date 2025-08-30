@@ -1,0 +1,20 @@
+memberData:
+  Leads: 10
+  Seniors: 17
+  Junoirs: 0
+subTeams:
+  - Captain
+  - Software
+  - Powertrain
+  - Business
+  - Steering
+  - Final Drive
+  - Powertrain
+  - Suspension
+  - Egronomics
+  - Chassis
+  - Eletrical
+funFacts:
+  startDate: 1989
+  recentPlacement: 50
+  placementLocation: Gorman, California

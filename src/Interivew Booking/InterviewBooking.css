@@ -1,0 +1,219 @@
+:root {
+	--interviewspacing: clamp(5px, 2.5svw, 200px);
+	--interviewwidth: 260px;
+}
+#InterviewBooking header {
+	display: flex;
+	flex-direction: row;
+	background-color: var(--BajaBlack);
+	justify-content: space-around;
+	color: whitesmoke;
+	margin: 0px;
+}
+#InterviewForm {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+#InterviewForm div {
+	display: flex;
+	flex-direction: column;
+	padding-left: var(--interviewspacing);
+	padding-right: var(--interviewspacing);
+	text-align: start;
+	width: var(--interviewwidth);
+}
+#InterviewForm div label {
+	font-weight: 700;
+}
+#InterviewForm div p {
+	font-size: x-small;
+	margin: 0px;
+}
+#InterviewForm div input {
+	margin-top: 1svh;
+	height: 30px;
+}
+#MainForm {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+#MainForm form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
+}
+#TimeSlotSelector {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+.TimeSlot {
+	padding-left: var(--interviewspacing);
+	padding-right: var(--interviewspacing);
+	width: var(--interviewwidth);
+}
+.TimeSlot h4 {
+	margin: 0px;
+	margin-top: 30px;
+}
+.TimeSlot p {
+	margin: 0px;
+	margin-bottom: 20px;
+}
+#InterviewSubmit {
+	display: flex;
+	justify-content: center;
+	width: inherit;
+}
+
+#InterviewSubmit button {
+	background-color: lightgreen;
+	width: clamp(62px, 16svw, 180px);
+	/* width: 16svw; */
+	height: 5svh;
+	margin-bottom: 5svh;
+	font-size: large;
+	border: none;
+	padding: 0px;
+	border-radius: var(--card-border-radius);
+	color: inherit;
+	background-color: var(--BajaRed);
+}
+
+#InterviewSubmit button:hover {
+	cursor: pointer;
+	background-color: var(--BajaHover);
+}
+
+#InterviewText {
+	padding-left: var(--interviewspacing);
+	padding-right: var(--interviewspacing);
+	width: calc(var(--interviewwidth) * 3);
+}
+
+#InterviewText a {
+	font-weight: bold;
+	color: inherit;
+	text-decoration: none;
+}
+
+#InterviewText a:hover {
+	color: var(--BajaRed);
+}
+
+:root {
+	/* used for editing time buttons */
+	--TimeSlotSideWidth: 48%;
+	--TimeSlotSidePaddingTopBottom: 1svh 0px;
+	--TimeSlotSideMarginTopBottom: 0.25svh 1%;
+}
+
+.TimeSlotSide0 {
+	cursor: pointer;
+	border: none;
+
+	width: var(--TimeSlotSideWidth);
+
+	padding: var(--TimeSlotSidePaddingTopBottom);
+	margin: var(--TimeSlotSideMarginTopBottom);
+}
+
+.TimeSlotSide1 {
+	cursor: pointer;
+	border: none;
+	width: var(--TimeSlotSideWidth);
+
+	padding: var(--TimeSlotSidePaddingTopBottom);
+	margin: var(--TimeSlotSideMarginTopBottom);
+}
+
+#InterivewNoDateSelected {
+	display: flex;
+	height: 241.633px;
+	align-items: center;
+}
+
+#interviewLoading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 334.3px;
+}
+
+#CurrentSelected {
+	background-color: rgb(28.75, 93.2196969697, 143.75);
+	color: white;
+}
+
+#InterviewError {
+	opacity: 0%;
+	color: red;
+}
+
+#InterviewDialog[open] {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	border: 4px solid grey;
+}
+
+#InterviewDialog::backdrop {
+	background-color: rgba(35, 35, 35, 0.7);
+	backdrop-filter: blur(2px);
+}
+
+#InterviewDialog a {
+	align-self: center;
+	margin-top: 1svh;
+}
+
+#InterviewDialog button {
+	border: 1px solid grey;
+	border-radius: 4px;
+	font-size: large;
+	margin-top: 1svh;
+	padding: 2svh 1svw;
+}
+
+#InterviewDialog h2,
+p {
+	margin-top: 0px;
+}
+
+#InterviewDialog p {
+	margin: 0px;
+}
+
+/* phone layout */
+@media only screen and (max-width: 800px) {
+	#InterviewForm {
+		flex-direction: column;
+	}
+	#InterviewForm div {
+		align-self: center;
+	}
+
+	#TimeSlotSelector {
+		flex-direction: column;
+	}
+
+	.TimeSlot {
+		align-self: center;
+
+		/* padding-bottom: 2svh; */
+	}
+
+	#InterivewNoDateSelected {
+		height: auto;
+	}
+
+	#MainForm form {
+		width: 90%;
+	}
+}

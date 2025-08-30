@@ -1,3 +1,11 @@
+# Soon to be Depricated
+
+This is due to a number of reasons:
+
+1. npx create-react-app is no longer maintained and is slowly dying
+1. The code has so much technical debt that it needs to be thrown away
+1. The code smells like a sewer and its hard to find anything
+
 # Baja Website
 
 [![Continuous Integration Testing](https://github.com/UofCBaja/BajaUofCWebsite/actions/workflows/testAutomatic.yaml/badge.svg?branch=dev)](https://github.com/UofCBaja/BajaUofCWebsite/actions/workflows/testAutomatic.yaml)
@@ -5,48 +13,52 @@
 The website is located at [BajaUofC.com](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 # How to Commit
+
 ```
 <type>(scope or file that has been changed): short description
 ```
-! for any breaking commits
+
+! for any commits that break a component or system
+
 ### Example
+
 ```
 feat(api)!: send an email to the customer when a product is shipped
 ```
 
-
-
 ### Type
+
 Must be one of the following:
 
-* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-* **docs**: Documentation only changes
-* **feat**: A new feature
-* **fix**: A bug fix
-* **perf**: A code change that improves performance
-* **refactor**: A code change that neither fixes a bug nor adds a feature
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-* **test**: Adding missing tests or correcting existing tests
-* **chore**:
-* **added**: Added content but not a complete feature
-* **removed**: Removed files or content only
-* **merged**: Used when a branch's content is merged into another branch
-  
+- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+- **docs**: Documentation only changes
+- **feat**: A new feature
+- **fix**: A bug fix
+- **perf**: A code change that improves performance
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **test**: Adding missing tests or correcting existing tests
+- **chore**:
+- **added**: Added content but not a complete feature
+- **removed**: Removed files or content only
+- **merged**: Used when a branch's content is merged into another branch
+
 ### Subject
+
 The subject contains a succinct description of the change:
 
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize the first letter
-* no dot (.) at the end
+- use the imperative, present tense: "change" not "changed" nor "changes"
+- don't capitalize the first letter
+- no dot (.) at the end
 
 # Starting JS templates
+
 Uses [JSDocs](https://jsdoc.app), gives a good way to describe what a function does and needs
 
 ```js
-
 //More prefered arrow function just need to call function and does function immediately
-  /**
+/**
  * @param {Object} inputVar - one argument into the function should be its name
  * @param {number} b - one argument into the function should be its name
  * @returns {Promise<number>} c - what the program returns with type
@@ -55,11 +67,11 @@ Uses [JSDocs](https://jsdoc.app), gives a good way to describe what a function d
 //semi-perminant email, do not need to respond but try to be a good alumni
  */
 const exampleFunct = (inputVar) => {
-    const varExample0 = 0   //constant variable cannot change, not strongly typed  
-    let varExample1 = 0     //local varialbe, not strongly typed can be any data type
-    var varExample2 = 0     //global variable, not strongly typed can be any data type
-    return 0;               //example function does nothing significant
-}
+	const varExample0 = 0; //constant variable cannot change, not strongly typed
+	let varExample1 = 0; //local varialbe, not strongly typed can be any data type
+	var varExample2 = 0; //global variable, not strongly typed can be any data type
+	return 0; //example function does nothing significant
+};
 
 /**
  * @param {Object} inputVar - one argument into the function should be its name
@@ -69,11 +81,11 @@ const exampleFunct = (inputVar) => {
  * @author Name <semiperminant@exmaplemail.com>
 //semi-perminant email, do not need to respond but try to be a good alumni
  */
-function exampleFunct2 (inputVar) {
-    const varExample0 = 0   //constant variable cannot change, not strongly typed  
-    let varExample1 = 0     //local varialbe, not strongly typed can be any data type
-    var varExample2 = 0     //global variable, not strongly typed can be any data type
-    return 0;               //example function does nothing significant
+function exampleFunct2(inputVar) {
+	const varExample0 = 0; //constant variable cannot change, not strongly typed
+	let varExample1 = 0; //local varialbe, not strongly typed can be any data type
+	var varExample2 = 0; //global variable, not strongly typed can be any data type
+	return 0; //example function does nothing significant
 }
 ```
 

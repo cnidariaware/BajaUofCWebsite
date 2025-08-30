@@ -4,12 +4,18 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header/Header";
 import AboutUs from "./AboutUs/AboutUs";
-import Teams from "./Teams/Teams";
+import SubTeams from "./Teams/SubTeams";
 import OurSponsors from "./OurSponsors/OurSponsors";
 import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinTheClub";
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
 import Gallery from "./Gallery/Gallery";
+import InterviewBooking from "./Interivew Booking/InterviewBookMain";
 import "./index.css";
+import MockPage from "./MockDB/MockPage";
+import Home from "./Home/Home";
+import History from "./History/History";
+import Contact from "./Contact/Contact";
+import Team from "./Teams/Team";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,10 +25,14 @@ root.render(
 				<Route element={<Header />}>
 					<Route
 						path="/"
+						element={<Home />}
+					/>
+					<Route
+						path="/AboutUs"
 						element={<AboutUs />}></Route>
 					<Route
 						path="/Teams"
-						element={<Teams />}></Route>
+						element={<SubTeams />}></Route>
 					<Route
 						path="/OurSponsors"
 						element={<OurSponsors />}></Route>
@@ -35,7 +45,23 @@ root.render(
 					<Route
 						path="/Gallery"
 						element={<Gallery />}></Route>
+					<Route
+						path="/MockPage"
+						element={<MockPage />}></Route>
+					<Route
+						path="/History"
+						element={<History />}></Route>
+					<Route
+						path="/Contact"
+						element={<Contact />}></Route>
+					<Route
+						path="/Team"
+						element={<Team />}></Route>
 				</Route>
+				<Route
+					path="/InterviewBooking"
+					element={<InterviewBooking />}
+				/>
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>

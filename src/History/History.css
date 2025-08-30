@@ -1,0 +1,227 @@
+#History {
+	display: flex;
+	flex-direction: column;
+	padding: 4svh 4svw;
+	row-gap: 4svh;
+	background-color: var(--BajaBlack);
+	color: white;
+	font-size: larger;
+}
+
+#History div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: center;
+	text-align: center;
+	padding: 2svh 2svw;
+	/* border: 1px solid white; */
+	border-radius: 1rem;
+	row-gap: 2svh;
+}
+
+#History > div > h2 {
+	margin: 0px;
+	padding: 0svh 0svw;
+	padding-top: 4svh;
+	font-size: 30px;
+}
+
+#History div p {
+	padding: 0px;
+	margin: 0px;
+	font-size: larger;
+}
+
+#History div a {
+	color: inherit;
+}
+
+#History div button {
+	text-decoration: none;
+	color: white;
+	background-color: var(--BajaRed);
+	border-radius: 15px;
+	padding: 2svh 14svw;
+	margin-top: 4svh;
+	font-size: large;
+	border: none;
+}
+
+#History div button:hover {
+	background-color: var(--BajaHover);
+	/* color: #a80029; */
+}
+
+#History table {
+	border-collapse: collapse;
+	width: auto;
+	margin: 0svh auto;
+}
+
+#History table tbody {
+	color: inherit;
+}
+
+#History table tr {
+	position: relative;
+	margin: 4svh 0svw;
+}
+
+#History tr td {
+	max-width: 400px;
+	max-height: 400px;
+	vertical-align: middle;
+}
+
+#History tr td img {
+	aspect-ratio: 1;
+	/* min-width: 192px; */
+	width: 100%;
+	/* max-width: 400px; */
+	height: 400px;
+	margin: 0svh auto;
+	border-radius: 1rem;
+	display: block;
+}
+
+@media only screen and (max-width: 1025px) {
+	#History tr td img {
+		/* width: 10svw; */
+		height: inherit;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#History tr td {
+		max-width: 200px;
+	}
+	/* #History tr td img {
+		width: 100%;
+		min-width: 0px;
+		height: inherit;
+	} */
+
+	#History .HistoryCompInfo ul {
+		flex-direction: column !important;
+		column-gap: 0svw !important;
+		align-items: center !important;
+		margin: 1svh 0svw;
+	}
+}
+/* @media only screen and (max-width: 500px) {
+	#History tr td img {
+		width: 1svw;
+		height: inherit;
+	}
+} */
+
+#History .HistoryCompInfo {
+	display: block;
+	text-align: center;
+	padding: 10svh 0svw;
+
+	border: 1px solid white;
+	border-radius: 1rem;
+}
+
+#History td > div {
+	width: 100%;
+	/* width: fit-content; */
+	box-sizing: border-box;
+}
+
+#History .HistoryCompInfo h2,
+#History .HistoryCompInfo h4 {
+	margin: 2svh 2svw;
+	text-align: center;
+}
+
+#History .HistoryCompInfo ul {
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	column-gap: 1svw;
+	padding: 0px;
+	margin: 0.5svh 0svw;
+}
+/* 
+#History .HistoryCompInfo ul li {
+	width: 10ch;
+} */
+
+#History .HistoryCompInfo ul li:nth-child(odd) {
+	text-align: start;
+}
+
+#History .HistoryCompInfo ul li:nth-child(even) {
+	text-align: end;
+}
+
+#History .symbol {
+	position: relative;
+	width: 10px;
+	text-align: center;
+	padding: 0svh 2svw;
+	/* min-width: 40px; */
+	max-height: none;
+}
+
+#History .symbol::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 2px;
+	background-color: rgb(120, 120, 120);
+	transform: translateX(-50%);
+	z-index: 0;
+}
+
+#History .dot {
+	display: inline-block;
+	background-color: rgb(120, 120, 120);
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	max-width: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	position: relative;
+	z-index: 2;
+}
+
+#History tr:first-child .symbol::before {
+	top: 50%;
+}
+
+#HistoryJoin {
+	position: relative;
+	padding: 0;
+	text-align: center;
+}
+
+#History #HistoryJoin div {
+	text-wrap: nowrap;
+	position: relative;
+	background-color: black;
+	z-index: 2; /* above line */
+	width: fit-content;
+	margin: 0svh auto;
+	margin-bottom: 4svh;
+}
+
+/* without this line will stop at the div */
+/* stop line at last one with these two */
+
+/* #HistoryJoin::before {
+	height: 80%;
+}
+
+
+#History tr:last-child .symbol::before {
+	bottom: 50%;
+} */

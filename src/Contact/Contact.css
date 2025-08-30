@@ -1,0 +1,119 @@
+#Contact a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#Contact ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#Contact ul li {
+	margin: 1svh 0svw;
+}
+
+#Contact h1,
+#Contact h4,
+#Contact p {
+	margin: 1svh 0svw;
+	text-wrap: wrap;
+}
+
+#Contact > div:nth-child(2) {
+	display: flex;
+	flex-flow: row wrap-reverse;
+	align-items: flex-start;
+	row-gap: 2svh;
+	column-gap: 4svw;
+
+	align-items: center;
+	justify-content: center;
+	background: white;
+	/* background: var(--BajaBlack); */
+	/* color: white; */
+	padding: 8svh 0svw;
+}
+
+@media only screen and (max-width: 800px) {
+	#Contact div:nth-child(2) div:first-child {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#Contact div:nth-child(2) img {
+		margin: 1svh 0svw;
+	}
+}
+
+#Contact div:nth-child(2) div:first-child {
+	/* flex-flow: row wrap; */
+	margin: 0svh 2svw;
+}
+
+#Contact div:nth-child(2) div:last-child {
+	flex-direction: column;
+
+	margin: 0px;
+	/* margin-left: auto;
+	margin-right: 16svw; */
+	font-size: 30px;
+}
+
+#Contact div:nth-child(2) div:last-child h1 {
+	margin: 2svh 0svw;
+	font-size: 40px;
+	width: inherit;
+	border-bottom: 3px solid var(--BajaBlack);
+}
+
+#Contact div:nth-child(2) h4 {
+	font-weight: normal;
+}
+
+#Contact div:nth-child(2) a h4 {
+	font-weight: bold;
+}
+
+#Contact div:nth-child(2) a:hover {
+	color: var(--BajaRed);
+}
+
+#Contact div:nth-child(2) img {
+	width: 300px;
+	height: 600px;
+}
+
+#Contact div:nth-child(2) iframe {
+	margin: 0px;
+	border: none;
+	border-radius: 1rem;
+	width: inherit;
+
+	height: 300px;
+}
+
+@media only screen and (max-width: 1025px) {
+	#Contact > div:nth-child(1) > div:nth-child(1) > img:nth-child(1) {
+		display: none;
+	}
+
+	#Contact > div:nth-child(1) > div:nth-child(1) > img:nth-child(2) {
+		display: none;
+	}
+
+	#Contact div:nth-child(1) div:last-child {
+		font-size: large;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#Contact > div:nth-child(1) > div:nth-child(1) > img:nth-child(3) {
+		display: none;
+	}
+
+	/* #Contact div:nth-child(2) iframe {
+		width: inherit;
+	} */
+}

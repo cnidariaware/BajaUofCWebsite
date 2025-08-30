@@ -4,7 +4,8 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	justify-content: center;
-	background-color: lightgrey;
+	background-color: var(--BajaRed);
+	color: white;
 }
 
 #pointerCursor {
@@ -15,10 +16,12 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	column-gap: 2svw;
 }
-#ender p {
+
+/* #ender p {
 	padding-left: 2%;
-}
+} */
 
 #ender .hidden {
 	display: flex;
@@ -30,4 +33,11 @@
 #ender .hidden li {
 	list-style-type: none;
 	padding-right: 2%;
+}
+
+#ender a img {
+	height: 30px;
+	width: 30px;
+	aspect-ratio: 1;
+	filter: invert();
 }

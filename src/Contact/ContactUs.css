@@ -1,0 +1,103 @@
+:root {
+	--card-background-color: rgba(38, 38, 38, 0.5);
+	--card-border-radius: 0.5rem;
+}
+
+#ContactUs {
+	display: flex;
+	flex-flow: row wrap;
+	/* column-gap: 2svw; */
+	row-gap: 4svh;
+	min-height: 60svh;
+	padding: 4svh 0svw;
+	justify-content: space-evenly;
+	color: white;
+	background-color: var(--BajaBlack);
+}
+
+#ContactUs div,
+#ContactUs form {
+	display: flex;
+	flex-grow: 1;
+	background-color: var(--card-background-color) !important;
+	border-radius: var(--card-border-radius);
+	flex-direction: column !important;
+	justify-content: center;
+	margin: 2svh 0.5svw !important;
+	padding: 2svh 1svw !important;
+	max-width: 600px !important;
+	height: inherit !important;
+}
+
+#ContactUs div h2,
+#ContactUs div p {
+	padding: 0svh 2svw;
+	margin: 1svh 0svw;
+}
+
+#ContactUs div p {
+	font-size: larger;
+}
+
+#ContactUs p {
+	margin: 2svh 0svw;
+	padding: 0svh 0svw;
+}
+
+#ContactUs label {
+	margin: 0svh 0.25svw;
+}
+
+#ContactUs input {
+	background-color: var(--card-background-color);
+	border-radius: var(--card-border-radius);
+	border-color: rgba(245, 245, 245, 0.5);
+	border-width: 2px;
+	padding: 1svh 1ch;
+	margin: 1svh 0svw;
+	color: inherit;
+	align-items: start;
+}
+
+#ContactUs textarea {
+	background-color: var(--card-background-color);
+	border-radius: var(--card-border-radius);
+	border-color: rgba(245, 245, 245, 0.4);
+	border-width: 2px;
+	padding: 1svh 1ch;
+	margin: 1svh 0svw;
+	color: inherit;
+	align-items: start;
+	min-height: 15svh;
+}
+
+#ContactUs button {
+	border-radius: var(--card-border-radius);
+	color: inherit;
+	background-color: var(--BajaRed);
+	border-color: transparent;
+	align-items: start;
+	margin: 1svh 0.5svw;
+	padding: 1svh 0svw;
+	font-size: large;
+}
+
+#ContactUs button:hover {
+	cursor: pointer;
+	background-color: var(--BajaHover);
+}
+
+#ContactUs div p a:hover {
+	color: var(--BajaRed);
+}
+
+#ContactUs span {
+	background-color: var(--card-background-color);
+	border-radius: var(--card-border-radius);
+	border-color: rgba(245, 245, 245, 0.5);
+	border-width: 2px;
+	padding: 1svh 0.25svw;
+	margin: 1svh 0.5svw;
+	color: inherit;
+	align-items: start;
+}

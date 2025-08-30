@@ -1,0 +1,35 @@
+Chassis and Ergonomics: #to be fixed
+  iconUrl: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+  shortDescription: The chassis and ergo team builds the Main Chassis of the Car and builds the components for the driver to sit in
+  longDescription: Step into the world of the Chassis and Ergonomics Team, where comfort meets performance in every curve and contour. With an eye for detail and a passion for perfection, they sculpt the backbone of our vehicle, ensuring it's not just built to last, but to excel. From optimizing seating positions to fine-tuning weight distribution, they're the architects of a ride that feels as good as it looks. Join us as we push the boundaries of design and functionality, driven by the ingenuity of our Chassis and Ergonomics Team.
+  subteamAtWork: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+Final Drive:
+  iconUrl: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+  shortDescription: The drivetrain team connects the engine to the wheels
+  longDescription: The drivetrain subteam plays a pivotal role in ensuring efficient power transfer from the engine to the wheels, overseeing key components such as gearboxes, axles, and driveshafts. Through hands-on learning and mentorship, members develop a comprehensive skill set in CAD, FEA, CAM, and machining, empowering them to design, analyze, and manufacture critical vehicle components with a focus on innovation and practical applications.
+  subteamAtWork: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+Steering:
+  iconUrl: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+  shortDescription: The steering team builds the componets that allow the driver to control the car
+  longDescription: In the steering subteam, we design and develop the steering behaviors of the car. This includes the turning radius, the ratio between the seeing pinion and rack, and implementing Ackerman geometry. every year we use a wide variety of machining techniques and software to bring our designs to life, ranging from FEA analysis to professional CNC machining. Our goal is to develop the most compact and lightweight system to achieve the optimal driving dynamics.
+  subteamAtWork: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+Suspension:
+  iconUrl: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+  shortDescription: The suspension team makes it so that the car is able to handle all of the bumps and jumps
+  longDescription: The suspension subteam manages the vehicle's manoeuvrability and handling capabilities. As an offroad buggy, suspension setups must endure all terrain types, including rough rocks and fast jumps. Beyond their endurance capabilities, the vehicle’s handling characteristics are determined through rigorous development of the suspension geometry in simulation software and hand calculations. This subteam collaborates frequently with the chassis and steering subteams to optimize geometries. Suspension assemblies primarily comprised of arms, shocks, steering knuckles, and rear bearing carriers.
+  subteamAtWork: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+Electrical:
+  iconUrl: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+  shortDescription: The electrical team connects some of the instruments the car uses and supports the team in additional ways
+  longDescription: The electrical team is pivotal in ensuring the performance, safety, and reliability of the racing car during competitions. They design robust electronics and safety mechanisms capable of withstanding the rigors of endurance racing. Additionally, they provide technological support to other sub-teams, integrating data collection systems that directly influence the design process for all components. Their responsibilities encompass designing, testing, and optimizing electrical systems while leveraging data to enhance vehicle performance and safety.
+  subteamAtWork: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+Business:
+  iconUrl: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+  shortDescription: The logistics team handles the business side of the club and handles planning of trips to competitions
+  longDescription: We handle generating a majority of the money needed for operation of the club, travel funds and our social media pages. As part of our responsibility to our sponsors we handle organizing and training all of our members to an industry standard level, all of our work from software, sponsorship, professional outreach, CAD and manufacturing processes.
+  subteamAtWork: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+Software:
+  iconUrl: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
+  shortDescription: The software team hanldes the data collection systems, our data storage server, and this website
+  longDescription: The software team works very closely with electrical team with the creation of our onboard data collection unit, ensuring that all of the code we produce is up to industry standard as well as we handle the creation and maintenence of this site, including the backend which we run on our very own server.
+  subteamAtWork: https://res.cloudinary.com/dpgrgsh7g/image/upload/v1710016930/IMG-20240207-WA0000_e1jcf4.jpg
