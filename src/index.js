@@ -9,6 +9,7 @@ import OurSponsors from "./OurSponsors/OurSponsors";
 import JoinTheClub from "./Club Membership & Upcoming Events/JoinTheClub/JoinTheClub";
 import UpcomingEvents from "./Club Membership & Upcoming Events/UpcominEvents/UpcomingEvents";
 import Gallery from "./Gallery/Gallery";
+import InterviewBooking from "./Interivew Booking/InterviewBookMain";
 import "./index.css";
 import MockPage from "./MockDB/MockPage";
 import Home from "./Home/Home";
@@ -57,6 +58,10 @@ root.render(
 						path="/Team"
 						element={<Team />}></Route>
 				</Route>
+				<Route
+					path="/InterviewBooking"
+					element={<InterviewBooking />}
+				/>
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>
