@@ -42,11 +42,10 @@
 	color: white;
 	background-color: var(--BajaRed);
 	border-radius: 15px;
-	padding: 2svh 2svw;
+	padding: 2svh 14svw;
 	margin-top: 4svh;
 	font-size: large;
 	border: none;
-	width: 25svw;
 }
 
 #History div button:hover {
@@ -77,8 +76,9 @@
 
 #History tr td img {
 	aspect-ratio: 1;
-	min-width: 192px;
-	max-width: 400px;
+	/* min-width: 192px; */
+	width: 100%;
+	/* max-width: 400px; */
 	height: 400px;
 	margin: 0svh auto;
 	border-radius: 1rem;
@@ -87,11 +87,28 @@
 
 @media only screen and (max-width: 1025px) {
 	#History tr td img {
-		width: 10svw;
+		/* width: 10svw; */
 		height: inherit;
 	}
 }
 
+@media only screen and (max-width: 800px) {
+	#History tr td {
+		max-width: 200px;
+	}
+	/* #History tr td img {
+		width: 100%;
+		min-width: 0px;
+		height: inherit;
+	} */
+
+	#History .HistoryCompInfo ul {
+		flex-direction: column !important;
+		column-gap: 0svw !important;
+		align-items: center !important;
+		margin: 1svh 0svw;
+	}
+}
 /* @media only screen and (max-width: 500px) {
 	#History tr td img {
 		width: 1svw;

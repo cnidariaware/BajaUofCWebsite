@@ -142,11 +142,20 @@ const OurSponsors = () => {
 				</p>
 				<p>
 					If you're interested in sponsoring UCalgary Baja, please contact our
-					team captain at []/click here/idk what else lol. Below, you can find
-					our sponsorship package detailing the opportunities available.
+					team captain at{" "}
+					<a href="mailto:uofcbaja@gmail.com">
+						<h4>uofcbaja@gmail.com</h4>
+					</a>
+					.
+				</p>
+				<p>
+					Below, you can find our sponsorship package detailing the
+					opportunities available.
 				</p>
 				<div>
-					<p>Sponsorship Package (probably just a link)</p>
+					<a href="https://drive.google.com/file/d/132qCyCNnqtVGPQiedJHb8BNBo-mz8apl/view?usp=sharing">
+						<button>Sponsorship Package</button>
+					</a>
 				</div>
 			</div>
 		</div>

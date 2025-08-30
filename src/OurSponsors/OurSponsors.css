@@ -126,7 +126,7 @@
 .Sponsors a {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	color: inherit;
 	text-decoration: none;
 	cursor: pointer;
@@ -149,6 +149,12 @@
 	padding: 0px;
 	column-gap: 1svw;
 	align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+	.Sponsors a div {
+		flex-wrap: wrap;
+	}
 }
 
 .Sponsors a div div {
@@ -216,4 +222,33 @@
 	padding: 2svh 0svw;
 	padding-top: 4svh;
 	font-size: 30px;
+}
+
+#SponsorAfter a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+
+#SponsorAfter a:hover {
+	color: var(--BajaRed);
+}
+
+#SponsorAfter a h4 {
+	display: inline-block;
+	margin: 0px;
+}
+
+#SponsorAfter button {
+	text-decoration: none;
+	color: white;
+	background-color: var(--BajaRed);
+	border-radius: 15px;
+	padding: 2svh 4svw;
+	font-size: large;
+	border: none;
+}
+
+#SponsorAfter button:hover {
+	background-color: var(--BajaHover);
 }
