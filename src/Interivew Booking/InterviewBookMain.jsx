@@ -10,25 +10,24 @@ import "./InterviewBooking.css";
  * @todo add who helped developed the site and finalize css
  */
 export default function InterviewBooking() {
-  return (
-    <div id="InterviewBooking">
-      <header>
-        <img
-          id="logo"
-          src={logo}
-          alt="Schulich Off-Road's logo"
-          style={{ backgroundColor: "inherit" }}
-        />
-        <h1>UCalgary Baja</h1>
-      </header>
-      <div id="MainForm">
-        <h2>Booking Interview Form</h2>
-        <p>Please kindly fill out the form and our team will contact you.</p>
-        <InterviewForm />
+	return (
+		<div id="InterviewBooking">
+			<header>
+				<img
+					id="logo"
+					src={logo}
+					alt="Schulich Off-Road's logo"
+				/>
+				<h1>UCalgary Baja</h1>
+			</header>
+			<div id="MainForm">
+				<h2>Booking Interview Form</h2>
+				<p>Please kindly fill out the form and our team will contact you.</p>
+				<InterviewForm />
 
-        {/* <DateTimePicker /> */}
-      </div>
-      <Ender />
-    </div>
-  );
+				{/* <DateTimePicker /> */}
+			</div>
+			<Ender />
+		</div>
+	);
 }

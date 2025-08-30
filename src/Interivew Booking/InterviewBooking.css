@@ -5,8 +5,9 @@
 #InterviewBooking header {
 	display: flex;
 	flex-direction: row;
-	background-color: lightslategray;
+	background-color: var(--BajaBlack);
 	justify-content: space-around;
+	color: whitesmoke;
 	margin: 0px;
 }
 #InterviewForm {
@@ -69,6 +70,7 @@
 	justify-content: center;
 	width: inherit;
 }
+
 #InterviewSubmit button {
 	background-color: lightgreen;
 	width: clamp(62px, 16svw, 180px);
@@ -78,13 +80,30 @@
 	font-size: large;
 	border: none;
 	padding: 0px;
-	color: black;
+	border-radius: var(--card-border-radius);
+	color: inherit;
+	background-color: var(--BajaRed);
+}
+
+#InterviewSubmit button:hover {
+	cursor: pointer;
+	background-color: var(--BajaHover);
 }
 
 #InterviewText {
 	padding-left: var(--interviewspacing);
 	padding-right: var(--interviewspacing);
-	width: 80%;
+	width: calc(var(--interviewwidth) * 3);
+}
+
+#InterviewText a {
+	font-weight: bold;
+	color: inherit;
+	text-decoration: none;
+}
+
+#InterviewText a:hover {
+	color: var(--BajaRed);
 }
 
 :root {
