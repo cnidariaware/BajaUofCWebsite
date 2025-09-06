@@ -171,14 +171,29 @@
 #InterviewDialog a {
 	align-self: center;
 	margin-top: 1svh;
+	/* text-decoration: none; */
+	color: inherit;
+}
+
+#InterviewDialog a:hover {
+	color: var(--BajaRed);
 }
 
 #InterviewDialog button {
-	border: 1px solid grey;
+	/* border: 1px solid grey; */
+	border: none;
+	background-color: var(--BajaRed);
+	color: black;
 	border-radius: 4px;
 	font-size: large;
 	margin-top: 1svh;
 	padding: 2svh 1svw;
+}
+
+#InterviewDialog button:hover {
+	cursor: pointer;
+	color: black;
+	background-color: var(--BajaHover);
 }
 
 #InterviewDialog h2,

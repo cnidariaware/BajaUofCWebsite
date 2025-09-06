@@ -69,11 +69,13 @@ export default function InterviewForm() {
 				let data = await res.json();
 
 				if (
-					data["body"]["Success"] === true &&
-					data["body"]["validEmail"] === true
+					data["body"]["Success"] == true &&
+					data["body"]["validEmail"] === "true"
 				) {
 					dialogRef.current.showModal();
 				} else {
+					// console.log(data["body"]["validEmail"] === "true");
+
 					// psuedo update, used to refresh page
 					setGetTimeDates(getTimeDates + "i");
 
@@ -116,12 +118,13 @@ export default function InterviewForm() {
 		// makes error line visible after we write the error message
 		errorLine.style.opacity = "100%";
 	};
+
 	return (
 		<>
 			<form onSubmit={formsubmit}>
 				<div id="InterviewForm">
 					<div>
-						<label for="name">Name:</label>
+						<label htmlFor="name">Name:</label>
 						<input
 							type="text"
 							id="fname"
@@ -132,9 +135,9 @@ export default function InterviewForm() {
 						<p>(what to call you)</p>
 					</div>
 					<div>
-						<label for="email">UCalgary Email:</label>
+						<label htmlFor="email">UCalgary Email:</label>
 						<input
-							type="text"
+							type="email"
 							id="email"
 							name="intervieweeEmail"
 							placeholder="jaeinceins.bhaja@ucalgary.ca"

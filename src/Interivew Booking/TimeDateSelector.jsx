@@ -16,7 +16,6 @@ export default function TimeDateSelector({
 	const [allDatesAvailable, setAllDatesAvailable] = useState({});
 	const [selectedDate, setSelectedDate] = useState(null);
 	const [timeSlotsAvialable, setTimeSlotsAvialable] = useState([]);
-	const [selectedTime, setSelectedTime] = useState("");
 	const [selectedTimeButton, setSelectedTimeButton] = useState(null);
 
 	useEffect(() => {
@@ -66,12 +65,11 @@ export default function TimeDateSelector({
 
 		// get and set time slots for a given day
 		setTimeSlotsAvialable(Object.keys(allDatesAvailable[selectedDateStr]));
-		// clear because of date change
-		setSelectedTime("");
+
 		// set prematurely for better error messages
 		onTimeSlotSelect({
 			date: selectedDateStr,
-			// used because setSelectedTime("") does nothing apearantly
+			// clear because of date change
 			startTime: "",
 		});
 		if (selectedTimeButton !== null) {
@@ -83,17 +81,16 @@ export default function TimeDateSelector({
 	const handleTimeSlotChange = (e) => {
 		e.currentTarget.id = "CurrentSelected";
 
-		if (selectedTimeButton !== null) {
+		if (selectedTimeButton !== null && selectedTimeButton !== e.currentTarget) {
 			selectedTimeButton.id = "";
 		}
 		setSelectedTimeButton(e.currentTarget);
 
 		let startTime = e.currentTarget.dataset.time;
-		setSelectedTime(startTime);
 
 		onTimeSlotSelect({
 			date: selectedDate.toLocaleDateString(),
-			startTime: selectedTime,
+			startTime: startTime,
 		});
 	};
 
