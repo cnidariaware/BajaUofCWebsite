@@ -69,7 +69,7 @@ export default function InterviewForm() {
 				let data = await res.json();
 
 				if (
-					data["body"]["Success"] == true &&
+					data["body"]["Success"] === true &&
 					data["body"]["validEmail"] === "true"
 				) {
 					dialogRef.current.showModal();
