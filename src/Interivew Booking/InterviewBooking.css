@@ -96,6 +96,12 @@
 	width: calc(var(--interviewwidth) * 3);
 }
 
+@media only screen and (max-width: 800px) {
+	#InterviewText {
+		width: auto;
+	}
+}
+
 #InterviewText a {
 	font-weight: bold;
 	color: inherit;
