@@ -5,7 +5,7 @@ Diamond Tier:
       DescriptionAboutSponsor: The Schulich School of Engineering at the University of Calgary is the foundation of Baja at UCalgary. Schulich allows the team to be able to turn their dreams of creating an off-roading car into a reality.
 Platinum Tier:
   - darkicewolf50:
-      LogoUrl: https://darkicewolf50.dev/favicon.ico
+      LogoUrl: https://darkicewolf50.dev/favicon.png
       Url: https://darkicewolf50.dev
       DescriptionAboutSponsor:
 Gold Tier:
@@ -28,6 +28,10 @@ Gold Tier:
   - Solidworks:
       LogoUrl: https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_solidworks.svg
       Url: https://www.solidworks.com/
+      DescriptionAboutSponsor:
+  - KISSsoft:
+      LogoUrl: https://www.kisssoft.com/images/kisssoft-logo.svg
+      Url: https://www.kisssoft.com/en
       DescriptionAboutSponsor:
 Silver Tier:
   - Encore Metals:
